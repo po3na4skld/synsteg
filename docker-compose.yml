@@ -1,0 +1,13 @@
+version: '3.7'
+
+networks:
+  net:
+    driver: bridge
+
+services:
+  synsteg:
+    build: .
+    volumes:
+      - .:/synsteg
+    networks:
+      - net
