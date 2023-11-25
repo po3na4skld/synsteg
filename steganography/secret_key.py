@@ -53,7 +53,12 @@ def align_container_and_secret_key(container, secret_key):
 
     secret_key = clean_secret_key(secret_key)
     for idx, token in enumerate(clean_container(remove_brackets(container)).split()):
-        secret_key_token = list(secret_key[secret_key_idx].keys())[0]
+        try:
+            secret_key_token = list(secret_key[secret_key_idx].keys())[0]
+        except IndexError:
+            new_secret_key.append({token: {'0': token, '1': token}})
+            continue
+
         if token.lower() != secret_key_token.lower():
             new_secret_key.append({token: {'0': token, '1': token}})
         else:

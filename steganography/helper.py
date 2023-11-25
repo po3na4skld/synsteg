@@ -60,3 +60,7 @@ def check_is_end_of_word(sequence, next_idx):
         return True
     else:
         return sequence[next_idx] == ' '
+
+
+def to_plain_text(text: str) -> str:
+    return text.replace('_', ' ').capitalize()

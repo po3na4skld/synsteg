@@ -64,3 +64,18 @@ TOPICS = [
     "Criminal Justice Reform and Rehabilitation",
     "The Art of Persuasion: Media and Advertising"
 ]
+
+PAGE_SIZE = 20
+
+
+class Procedures:
+    ENCODING = 'Encoding'
+    DECODING = 'Decoding'
+    values = [ENCODING, DECODING]
+
+
+class DBMethods:
+    INSERT = 'insert'
+    UPDATE = 'update'
+    DELETE = 'delete'
+    values = [INSERT, UPDATE, DELETE]

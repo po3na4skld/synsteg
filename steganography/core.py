@@ -18,7 +18,9 @@ def encode_message(message: str) -> (str, SYNONYM_MAP, dict[str, float]):
     container_splits = helper.divide_chunks(container, 100)
     secret_key = generate_secret_key_mp(container_splits)
     time_report['secret_key_generation'] = round(time.time() - s, 2)
+    print(container)
 
+    print(secret_key)
     secret_key = align_container_and_secret_key(container, secret_key)
 
     encoded_message, current_idx = [], 0
@@ -43,10 +45,12 @@ def encode_message(message: str) -> (str, SYNONYM_MAP, dict[str, float]):
         else:  # Skipping token
             encoded_message.append(token + ends_with_special)
 
-    return ' '.join(encoded_message), secret_key, time_report
+    return container, ' '.join(encoded_message), secret_key, time_report
 
 
 def decode_message(container: str, secret_key: SYNONYM_MAP) -> str:
+    start_time = time.time()
+
     clean_encoded_message = helper.clean_container(container)
     binary_sequence, current_idx, counter = '', 0, 0
     for replacement_token in secret_key:
@@ -77,4 +81,6 @@ def decode_message(container: str, secret_key: SYNONYM_MAP) -> str:
         if not is_found:
             break
 
-    return helper.get_text_from_binary(binary_sequence)
+    decoded_message = helper.get_text_from_binary(binary_sequence)
+    spent_time = time.time() - start_time
+    return decoded_message, spent_time
