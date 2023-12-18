@@ -38,12 +38,8 @@ def get_logger(name):
     )
 
     logging.getLogger('urllib3').setLevel(logging.ERROR)
-    logging.getLogger('telegram').setLevel(logging.INFO)
-    logging.getLogger('apscheduler').setLevel(logging.INFO)
-    logging.getLogger('gql').setLevel(logging.WARNING)
-    logging.getLogger('web3').setLevel(logging.WARNING)
-    logging.getLogger('uniswap').setLevel(logging.ERROR)
-    logging.getLogger('matplotlib').setLevel(logging.ERROR)
-    logging.getLogger('backoff').setLevel(logging.ERROR)
-
+    logging.getLogger('backoff').setLevel(logging.INFO)
+    logging.getLogger('httpx').setLevel(logging.ERROR)
+    logging.getLogger('httpcore').setLevel(logging.ERROR)
+    logging.getLogger('openai').setLevel(logging.WARNING)
     return LogWrapper(logging.getLogger(name))

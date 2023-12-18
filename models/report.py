@@ -1,3 +1,5 @@
+import json
+
 from models.base import BaseModel
 
 
@@ -12,7 +14,8 @@ class ReportModel(BaseModel):
         'encoded_message',
         'encoding_time_report',
         'decoding_time',
-        'decoded_message'
+        'decoded_message',
+        'error_message'
     ]
 
     collection_name = 'reports'
@@ -26,3 +29,8 @@ class ReportModel(BaseModel):
         self.encoding_time_report = kwargs['encoding_time_report']
         self.decoding_time = kwargs.get('decoding_time', '')
         self.decoded_message = kwargs.get('decoded_message', '')
+        self.error_message = kwargs.get('error_message', '')
+
+    def to_json(self, base_path: str):
+        with open(f'{base_path}/{self.uuid}.json', 'w') as f:
+            json.dump({k: getattr(self, k) for k in self.fields if k not in ['created', 'modified']}, f)

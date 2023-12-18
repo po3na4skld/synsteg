@@ -18,6 +18,8 @@ def get_openai_json_output(prompt: str, input_message: str, output_key: str = No
         response_format={"type": "json_object"}
     )
 
+    print('SECRET KEY', response.usage.completion_tokens, response.usage.prompt_tokens)
+
     if output_key:
         return json.loads(response.choices[0].message.content)[output_key]
     else:
@@ -33,7 +35,7 @@ def get_openai_output(prompt: str, input_message: str, temperature: float = 1.0)
         temperature=temperature,
         messages=[{"role": "system", "content": prompt}, {'role': 'user', 'content': input_message}]
     )
-
+    print('CONTAINER', response.usage.completion_tokens, response.usage.prompt_tokens)
     return response.choices[0].message.content if response.choices else None
 
 
