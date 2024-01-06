@@ -16,6 +16,21 @@ class BaseModel:
         self.modified = datetime.now()
 
     def to_dict(self, fields, modified=False):
+        """
+        Convert the object's specified attributes to a dictionary.
+
+        This method creates a dictionary representation of the object by extracting
+        the values of specified attributes listed in the 'fields' parameter.
+
+        Args:
+            fields (list): A list of attribute names to include in the resulting dictionary.
+            modified (bool, optional): If True, apply modifications to the object before extracting
+                attribute values. Defaults to False.
+
+        Returns:
+            dict: A dictionary containing the specified attribute names as keys and their
+                  corresponding values from the object.
+        """
         if modified:
             self.modify()
 
@@ -58,6 +73,7 @@ class BaseModel:
 
     @classmethod
     def get_last(cls, database):
+        """Returns last created model instance"""
         instance = database.fetch_one(**{
             'collection': cls.collection_name,
             'query': {},
@@ -68,6 +84,15 @@ class BaseModel:
         else:
             return None
 
-    def __repr__(self):
+    def __repr__(self) -> str:
+        """
+        Return a string representation of the object suitable for debugging.
+
+        This method generates a string representation of the object by collecting
+        the values of its attributes specified in the 'fields' attribute.
+
+        Returns:
+            str: A string representation of the object for debugging purposes.
+        """
         items = {name: getattr(self, name) for name in self.fields}
         return f"{items!r}"

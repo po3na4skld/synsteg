@@ -6,6 +6,7 @@ N_ASCII_BITS = 8
 OPENAI_MODEL_CONTAINER = 'gpt-3.5-turbo'
 OPENAI_MODEL_SYNONYMS = 'gpt-4-1106-preview'
 
+SPECIAL_TOKENS = [',', '.', '!', '?', '...']
 PUNCTUATION = ',.?!'
 BRACKETS = '[](){}'
 
@@ -79,3 +80,8 @@ class DBMethods:
     UPDATE = 'update'
     DELETE = 'delete'
     values = [INSERT, UPDATE, DELETE]
+
+
+PASSWORD_HASH = """
+49c958022a2c126e7d0f624fb0f9e048b7a277c8275aed85de10719cdf25c7c8f
+2da117feb40463a46bd976fa2b7260b36eb39518258319d3b753b0534016b94""".replace('\n', '')

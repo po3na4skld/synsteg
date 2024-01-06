@@ -7,6 +7,23 @@ from utils.constants import SYNONYM_MAP
 
 
 def encode_message(message: str, binarize: bool = True) -> (str, SYNONYM_MAP, dict[str, float]):
+    """
+    Encodes a message using a container-based technique.
+
+    Args:
+        message (str): The input message to be encoded.
+        binarize (bool, optional): If True, the input message is binarized using helper.binarize_message.
+            Defaults to True.
+
+    Returns:
+        Tuple[str, SYNONYM_MAP, dict[str, float]]: A tuple containing the encoded message, the synonym map,
+            and a dictionary with time measurement information.
+
+    Note:
+        This function uses a container-based encoding technique to replace tokens in the input message
+        with corresponding values from the generated secret key.
+    """
+
     time_report = {}
 
     if binarize:
@@ -50,6 +67,22 @@ def encode_message(message: str, binarize: bool = True) -> (str, SYNONYM_MAP, di
 
 
 def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool = True) -> str:
+    """
+    Decode a message hidden within a container using a provided secret key.
+
+    Args:
+        container (str): The container string containing the encoded message.
+        secret_key (SYNONYM_MAP): A mapping of base tokens to their synonyms and binary representations.
+        clean_output (bool, optional): If True, the decoded message will be returned as plain text;
+            if False, it will be returned as a binary sequence. Default is True.
+
+    Returns:
+        str: The decoded message.
+
+    Note:
+        The decoding process involves identifying and replacing base tokens with their corresponding binary sequences
+        according to the provided secret_key. The decoded message is returned along with the time spent on decoding.
+    """
     start_time = time.time()
 
     clean_encoded_message = helper.clean_container(container)

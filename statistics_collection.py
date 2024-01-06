@@ -13,7 +13,7 @@ from utils.logger import get_logger
 
 LOGGER = get_logger(__name__)
 BASE_PATH = 'json_reports'
-MESSAGE_LENGTHS = [256]
+MESSAGE_LENGTHS = [64, 128, 256]
 N_ITERATIONS = 100
 
 
@@ -21,14 +21,14 @@ def get_random_message(n: int) -> str:
     return "".join(str(random.randint(0, 1)) for _ in range(n))
 
 
-def get_number_of_iterations_for_message_length(message_length: int):
-    n_iterations = 0
+def get_number_of_iterations_for_message_length(message_len: int):
+    iterations_left = 0
     for item in glob(f'{BASE_PATH}/*.json'):
         with open(item) as f:
-            report = json.load(f)
-            if len(report['message']) == message_length:
-                n_iterations += 1
-    return n_iterations
+            report_data = json.load(f)
+            if len(report_data['message']) == message_len:
+                iterations_left += 1
+    return iterations_left
 
 
 if __name__ == '__main__':

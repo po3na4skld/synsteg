@@ -2,9 +2,7 @@ from hashlib import sha512
 
 import streamlit as st
 
-PASSWORD_HASH = """
-49c958022a2c126e7d0f624fb0f9e048b7a277c8275aed85de10719cdf25c7c8f
-2da117feb40463a46bd976fa2b7260b36eb39518258319d3b753b0534016b94""".replace('\n', '')
+from utils.constants import PASSWORD_HASH
 
 
 def check_password():
