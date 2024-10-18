@@ -3,9 +3,12 @@ import math
 from itertools import product
 from typing import Any
 
+import numpy as np
+
 from steganography.gpt import get_openai_json_output
+from steganography.helper import clean_container, remove_brackets, generate_random_sequences
+from models.pool_arguments import PoolArguments, SecretKeyGenerationBody
 from utils import prompts
-from steganography.helper import clean_container, remove_brackets
 
 
 def binarize_synonyms(base_token: str, synonyms: list[str]) -> dict[str, str]:
@@ -22,40 +25,79 @@ def binarize_synonyms(base_token: str, synonyms: list[str]) -> dict[str, str]:
     Returns:
         dict[str, str]: A dictionary mapping binary indices to corresponding synonyms.
                       If the list of synonyms is empty, a default mapping is returned with
-                      '0' and '1' pointing to the base token.
+                      "0" and "1" pointing to the base token.
     """
 
     if not len(synonyms):
-        return {'0': base_token, '1': base_token}
+        return {"0": base_token, "1": base_token}
     return {
-        ''.join(index): synonym
-        for index, synonym in zip(product('01', repeat=int(math.log2(len(synonyms)))), synonyms)
+        "".join(index): synonym
+        for index, synonym in zip(product("01", repeat=int(math.log2(len(synonyms)))), synonyms)
     }
 
 
-def generate_synonyms(context: str) -> dict[str, list[str]]:
+def binarize_synonyms_partially(
+        synonyms: list[str], include_sequence: str, selected_synonym: str | None = None
+) -> dict[str, str]:
+    """
+        Binarize a base token by assigning binary indices to synonyms so that include_sequence always will be used.
+
+        This function takes a base token and a list of synonyms, then generates a dictionary
+        where each synonym is associated with a unique binary index.
+        For example if maximum bits per word by default is 4, with this function, we can use more bits in binarization
+        with len(include_sequence) lengths the only requirement is that include sequence will be
+        included 100% in that set.
+
+        Args:
+            synonyms (list[str]): A list of synonyms to be assigned binary indices.
+            include_sequence (str): A binary sequence to include in binarization.
+            selected_synonym (str | None): A synonym to map to include_sequence if specified
+
+        Returns:
+            dict[str, str]: A dictionary mapping binary indices to corresponding synonyms.
+                          If the list of synonyms is empty, a default mapping is returned with
+                          "0" and "1" pointing to the base token.
+        """
+
+    if not len(synonyms):
+        raise ValueError("synonyms cannot be empty in this function")
+
+    binary_sequences = generate_random_sequences(len(include_sequence), len(synonyms))
+    if include_sequence not in binary_sequences:
+        binary_sequences[np.random.randint(0, len(binary_sequences))] = include_sequence
+
+    if selected_synonym:
+        binarized_synonyms = {selected_synonym: include_sequence}
+        binary_sequences.remove(include_sequence)
+        for synonym, binary_sequence in zip([s for s in synonyms if s != selected_synonym], binary_sequences):
+            binarized_synonyms[synonym] = binary_sequence
+    else:
+        binarized_synonyms = {synonym: binary_sequence for synonym, binary_sequence in zip(synonyms, binary_sequences)}
+
+    return {binarized_synonyms[k]: k for k in sorted(list(binarized_synonyms), key=lambda _: np.random.random())}
+
+
+def generate_synonyms(pool_arguments: PoolArguments) -> dict[str, list[str]]:
     """
     Generate synonyms for words related to the given context.
 
     Args:
-        context (str): The context for which synonyms are to be generated.
+        pool_arguments (PoolArguments): The context for which synonyms are to be generated.
 
     Returns:
         dict[str, list[str]]: A dictionary containing word categories as keys and lists of
         binarized synonyms as values. Each synonym list corresponds to a specific word category.
     """
-    input_message = prompts.ALL_SYNONYMS_GENERATION_INPUT.format(context=context)
-    synonyms = get_openai_json_output(prompts.ALL_SYNONYMS_GENERATION_PROMPT, input_message, "words")
-    binarized_synonyms = []
-    for synonym in synonyms:
-        for key, value in synonym.items():
-            synonym[key] = binarize_synonyms(key, value)
-        binarized_synonyms.append(synonym)
+    input_message = prompts.ALL_SYNONYMS_GENERATION_INPUT.format(context=pool_arguments.container_split)
+    prompt = prompts.ALL_SYNONYMS_GENERATION_PROMPT.replace("N_SYNONYMS", str(2**pool_arguments.bits_per_word))
+    synonyms, usage = get_openai_json_output(prompt, input_message, "words", 0.7)
+    if synonyms and isinstance(synonyms[0], str):
+        synonyms, usage = get_openai_json_output(prompt, input_message, "words", 0.7)
 
-    return binarized_synonyms
+    return synonyms, usage
 
 
-def generate_secret_key_mp(container_chunks):
+def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody):
     """
     Generate a secret key using multiprocessing.
 
@@ -63,17 +105,35 @@ def generate_secret_key_mp(container_chunks):
     pool to concurrently generate secret key chunks using the `generate_synonyms` function.
 
     Args:
-        container_chunks (list): A list of container chunks used as input for secret key generation.
+        secret_key_generation_body (SecretKeyGenerationBody): A list of container chunks,
+            bits per word and additional bits used as input for secret key generation.
 
     Returns:
         list: A list of secret key chunks generated using multiprocessing.
     """
 
-    secret_key_chunks = []
+    secret_key, synonyms_chunks, usage_report, is_filled = [], [], [], False
     with Pool() as pool:
-        for result in pool.imap(generate_synonyms, container_chunks):
-            secret_key_chunks += result
-    return secret_key_chunks
+        for (result, usage) in pool.imap(generate_synonyms, secret_key_generation_body.pool_arguments):
+            synonyms_chunks += result
+            usage_report.append(usage)
+
+    for idx, synonym in enumerate(synonyms_chunks):
+        if is_filled:
+            break
+
+        for key, value in synonym.items():  # Always only one cycle
+            if secret_key_generation_body.additional_bits:
+                try:
+                    binary_message_chunk = secret_key_generation_body.binary_message_chunks[idx]
+                    partially_binarized = binarize_synonyms_partially(list(set(value)), binary_message_chunk)
+                    secret_key.append({key: partially_binarized})
+                except IndexError:
+                    is_filled = True
+            else:
+                secret_key.append({key: binarize_synonyms(key, value)})
+
+    return secret_key, usage_report
 
 
 def clean_secret_key(secret_key: list[dict]):
@@ -109,7 +169,7 @@ def align_container_and_secret_key(container, secret_key):
     Returns:
         list: A new list representing the aligned secret key, with each element being a dictionary.
               Each dictionary contains the token from the container as the key and a nested dictionary
-              {'0': token, '1': token} or the corresponding values from the secret key.
+              {"0": token, "1": token} or the corresponding values from the secret key.
     """
 
     new_secret_key = []
@@ -120,14 +180,14 @@ def align_container_and_secret_key(container, secret_key):
         try:
             secret_key_token = list(secret_key[secret_key_idx].keys())[0]
         except IndexError:
-            new_secret_key.append({token: {'0': token, '1': token}})
+            new_secret_key.append({token: {"0": token, "1": token}})
             continue
 
         if token.lower() != secret_key_token.lower():
-            new_secret_key.append({token: {'0': token, '1': token}})
+            new_secret_key.append({token: {"0": token, "1": token}})
         else:
             if len(list(secret_key[secret_key_idx].values())[0]) < 2:
-                new_secret_key.append({token: {'0': secret_key_token, '1': secret_key_token}})
+                new_secret_key.append({token: {"0": secret_key_token, "1": secret_key_token}})
             else:
                 new_secret_key.append(secret_key[secret_key_idx])
             secret_key_idx += 1
@@ -152,7 +212,7 @@ def fix_token_container_size(tokens: dict[str, str], new_token_container_size: i
     """
     new_tokens_size = 2 ** new_token_container_size
     new_tokens = list(tokens.values())[:new_tokens_size]
-    return {''.join(i): t for i, t in zip(product('01', repeat=int(math.log2(new_tokens_size))), new_tokens)}
+    return {"".join(i): t for i, t in zip(product("01", repeat=int(math.log2(new_tokens_size))), new_tokens)}
 
 
 def is_secret_key_valid(secret_key: Any) -> bool:

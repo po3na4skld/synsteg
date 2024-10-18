@@ -6,19 +6,24 @@ from models.base import BaseModel
 class Config(BaseModel):
 
     fields = [
-        'uuid',
-        'created',
-        'modified',
-        'openai_api_key'
-        'mongodb',
+        "uuid",
+        "created",
+        "modified",
+        "openai_api_key",
+        "bits_per_word",
+        "additional_bits",
+        "mongodb",
     ]
 
-    collection_name = 'configs'
+    collection_name = "configs"
 
     def __init__(self, **kwargs):
         super(Config, self).__init__(**kwargs)
-        self.openai_api_key = kwargs['openai_api_key']
-        self.mongodb = kwargs['mongodb']
+        self.openai_api_key = kwargs["openai_api_key"]
+        self.bits_per_word = kwargs["bits_per_word"]
+        self.additional_bits = kwargs["additional_bits"]
+
+        self.mongodb = kwargs["mongodb"]
 
     @classmethod
     def from_json(cls, path_to_json: str):

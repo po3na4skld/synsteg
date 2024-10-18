@@ -3,15 +3,27 @@ import time
 from steganography import helper
 from steganography.gpt import generate_container
 from steganography.secret_key import generate_secret_key_mp, align_container_and_secret_key, fix_token_container_size
+from models.pool_arguments import SecretKeyGenerationBody
 from utils.constants import SYNONYM_MAP
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
-def encode_message(message: str, binarize: bool = True) -> (str, SYNONYM_MAP, dict[str, float]):
+def encode_message(
+    message: str,
+    bits_per_word: int,
+    additional_bits: int = 0,
+    binarize: bool = True
+) -> (str, SYNONYM_MAP, dict[str, float]):
     """
     Encodes a message using a container-based technique.
 
     Args:
         message (str): The input message to be encoded.
+        bits_per_word (int): How may bits per word should be encoded (No more than MAX_BITS_PER_WORD).
+        additional_bits (int, optional): How many additional bits needs to be added to bits_per_word
+            (No more than bits_per_word * MAX_ADDITIONAL_BITS_MULTIPLIER). Defaults to 0.
         binarize (bool, optional): If True, the input message is binarized using helper.binarize_message.
             Defaults to True.
 
@@ -23,26 +35,38 @@ def encode_message(message: str, binarize: bool = True) -> (str, SYNONYM_MAP, di
         This function uses a container-based encoding technique to replace tokens in the input message
         with corresponding values from the generated secret key.
     """
+    time_report, usage_report = {}, {}
 
-    time_report = {}
-
-    if binarize:
-        binary_message = helper.binarize_message(message)
+    binary_message = helper.binarize_message(message) if binarize else message
+    if additional_bits:
+        chunk_size = bits_per_word + additional_bits
+        binary_message_chunks = list(helper.divide_chunks(binary_message, chunk_size))
     else:
-        binary_message = message
+        binary_message_chunks = []
 
     s = time.time()
-    container = generate_container(len(binary_message))
-    time_report['container_generation'] = round(time.time() - s, 2)
+    container, usage = generate_container(len(binary_message) // (bits_per_word + additional_bits))
+    time_report["container_generation"] = round(time.time() - s, 2)
+    usage_report["container_generation"] = usage
 
     s = time.time()
-    container_splits = helper.divide_chunks(container, 100)
-    secret_key = generate_secret_key_mp(container_splits)
-    time_report['secret_key_generation'] = round(time.time() - s, 2)
+    container_splits = helper.divide_chunks(container.split(), 10)
+
+    secret_key_generation_body = SecretKeyGenerationBody.from_list(
+        container_splits,
+        bits_per_word,
+        additional_bits,
+        binary_message_chunks,
+    )
+
+    secret_key, usage = generate_secret_key_mp(secret_key_generation_body)
+    time_report["secret_key_generation"] = round(time.time() - s, 2)
+    usage_report["secret_key_generation"] = usage
+
     secret_key = align_container_and_secret_key(container, secret_key)
 
     encoded_message, current_idx = [], 0
-    for token, replacement_token in zip(helper.remove_brackets(container).split(), secret_key):
+    for token, replacement_token in zip(container.split(), secret_key):
         ends_with_special, token = helper.check_endswith_special(token)
         if helper.is_token_replacable(token, replacement_token) and current_idx < len(binary_message):  # Ingest token
             if helper.has_duplicates(replacement_token):
@@ -54,6 +78,7 @@ def encode_message(message: str, binarize: bool = True) -> (str, SYNONYM_MAP, di
             message_part = binary_message[current_idx:current_idx + token_container_size]
             if len(message_part) != token_container_size:
                 replacement_token[token] = fix_token_container_size(replacement_token[token], len(message_part))
+
             new_token = replacement_token[token][message_part]
             if was_capital:
                 new_token = new_token.capitalize()
@@ -63,7 +88,7 @@ def encode_message(message: str, binarize: bool = True) -> (str, SYNONYM_MAP, di
         else:  # Skipping token
             encoded_message.append(token + ends_with_special)
 
-    return container, ' '.join(encoded_message), secret_key, time_report
+    return container, " ".join(encoded_message), secret_key, time_report, usage_report
 
 
 def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool = True) -> str:
@@ -86,7 +111,7 @@ def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool =
     start_time = time.time()
 
     clean_encoded_message = helper.clean_container(container)
-    binary_sequence, current_idx, counter = '', 0, 0
+    binary_sequence, current_idx, counter = "", 0, 0
     for replacement_token in secret_key:
         base_token = list(replacement_token.keys())[0]
         mapping = sorted(

@@ -1,3 +1,5 @@
+from random import sample
+
 from utils.constants import N_ASCII_BITS, PUNCTUATION, BRACKETS, SPECIAL_TOKENS
 
 
@@ -28,8 +30,7 @@ def check_endswith_special(token: str) -> (str, str):
 def has_duplicates(replacement_token: dict) -> bool:
     """Check if the replacement token has duplicated values"""
     tokens = list(replacement_token.values())[0]
-    key = list(replacement_token.keys())[0]
-    if len(tokens) != len(set(tokens.values())) or key in tokens.values():
+    if len(tokens) != len(set(tokens.values())):
         return True
     return False
 
@@ -39,11 +40,10 @@ def remove_brackets(container: str) -> str:
     return container.translate(str.maketrans('', '', BRACKETS))
 
 
-def divide_chunks(container: str, chunk_size: int) -> list[str]:
-    """Split container string into chunks with specified chunk_size"""
-    cleaned_container = remove_brackets(clean_container(container)).split()
-    for i in range(0, len(cleaned_container), chunk_size):
-        yield cleaned_container[i:i + chunk_size]
+def divide_chunks(text: str | list, chunk_size: int) -> list[str]:
+    """Split string into chunks with specified chunk_size"""
+    for i in range(0, len(text), chunk_size):
+        yield text[i:i + chunk_size]
 
 
 def is_token_replacable(token: str, replacement_token: dict) -> bool:
@@ -82,3 +82,12 @@ def check_is_end_of_word(sequence: str, next_idx: int) -> bool:
 def to_plain_text(text: str) -> str:
     """Helper function for better debugging"""
     return text.replace('_', ' ').capitalize()
+
+
+def generate_random_sequences(sequence_length: int, n_sequences: int) -> list[str]:
+    if n_sequences > 2**sequence_length:
+        sequence_length = n_sequences
+    return [
+        "".join([str(i) for i in map(int, f'{n:0>32b}')])[-sequence_length:]
+        for n in sample(range(2**sequence_length + 1), n_sequences)
+    ]

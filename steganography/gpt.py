@@ -40,9 +40,9 @@ def get_openai_json_output(prompt: str, input_message: str, output_key: str = No
     )
 
     if output_key:
-        return json.loads(response.choices[0].message.content)[output_key]
+        return json.loads(response.choices[0].message.content)[output_key], response.usage.model_dump()
     else:
-        return json.loads(response.choices[0].message.content)
+        return json.loads(response.choices[0].message.content), response.usage.model_dump()
 
 
 @backoff.on_exception(backoff.expo, (openai.RateLimitError, openai.APIStatusError))
@@ -67,7 +67,7 @@ def get_openai_output(prompt: str, input_message: str, temperature: float = 1.0)
         messages=[{"role": "system", "content": prompt}, {'role': 'user', 'content': input_message}]
     )
 
-    return response.choices[0].message.content if response.choices else None
+    return response.choices[0].message.content if response.choices else None, response.usage.model_dump()
 
 
 def generate_container(words_number: int) -> str:
@@ -96,12 +96,13 @@ def generate_container(words_number: int) -> str:
         words_number=int(words_number * constants.CONTAINER_BUFFER)
     )
 
-    container = get_openai_output(
+    container, usage = get_openai_output(
         prompt=prompts.CONTAINER_GENERATION_PROMPT,
         input_message=input_message,
         temperature=constants.CONTAINER_TEMPERATURE
-    ).replace('.\n\n', '. ').replace('\n\n', '. ').replace('\n', '').replace(' . ', ' ')
+    )
 
+    container = container.replace('.\n\n', '. ').replace('\n\n', '. ').replace('\n', '').replace(' . ', ' ')
     if len(container.split()) < words_number:
         return generate_container(words_number)
-    return container
+    return container, usage
