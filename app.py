@@ -30,7 +30,7 @@ with st.form(key="main_form"):
         message = st.text_input("Please, enter your message...")
         binary_message = helper.binarize_message(message)
         st.write(
-            f"The binary length of your message: {len(binary_message)}, it is recommended to use 320 message length"
+            f"The binary length of your message: {len(binary_message)}."
         )
     else:
         uploaded_file = st.file_uploader("Choose encoded message file")
@@ -66,7 +66,12 @@ if encoding_submit and choice == Procedures.ENCODING:
     st.write("Encoding, please wait...")
     request_uuid = str(uuid4())
 
-    container, encoded_message, secret_key, time_report = core.encode_message(message)
+    container, encoded_message, secret_key, time_report, usage_report = core.encode_message(
+        binary_message,
+        bits_per_word=_config.bits_per_word,
+        additional_bits=_config.additional_bits,
+        binarize=False,
+    )
 
     text = "Here is your container message and secret key. Please download them.\n"
     text += "Time spent:\n"
@@ -78,6 +83,7 @@ if encoding_submit and choice == Procedures.ENCODING:
         message=message,
         encoded_message=encoded_message,
         encoding_time_report=time_report,
+        encoding_usage_report=usage_report,
         secret_key=secret_key,
         container=container
     )
