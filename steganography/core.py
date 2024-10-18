@@ -45,12 +45,13 @@ def encode_message(
         binary_message_chunks = []
 
     s = time.time()
-    container, usage = generate_container(len(binary_message) // (bits_per_word + additional_bits))
+    container_length = len(binary_message) // (bits_per_word + additional_bits) * 1.5
+    container, usage = generate_container(container_length)
     time_report["container_generation"] = round(time.time() - s, 2)
     usage_report["container_generation"] = usage
 
     s = time.time()
-    container_splits = helper.divide_chunks(container.split(), 10)
+    container_splits = helper.divide_chunks(container.split(), 5)
 
     secret_key_generation_body = SecretKeyGenerationBody.from_list(
         container_splits,

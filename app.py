@@ -87,7 +87,7 @@ if encoding_submit and choice == Procedures.ENCODING:
         secret_key=secret_key,
         container=container
     )
-    database.execute(**report.save())
+    # database.execute(**report.save())
 
     buf = BytesIO()
     with zipfile.ZipFile(buf, "x") as zip_file:
@@ -108,9 +108,9 @@ elif encoding_submit and choice == Procedures.DECODING:
         st.write(f"Here is your decoded message: {decoded_message}")
         st.write(f"Spent time on decoding: {spent_time} seconds")
 
-    report = ReportModel(**database.fetch_one(**ReportModel.get(message_request_uuid)))
-    report.decoded_message = decoded_message
-    report.decoding_time = spent_time
-    database.execute(**report.update())
+    # report = ReportModel(**database.fetch_one(**ReportModel.get(message_request_uuid)))
+    # report.decoded_message = decoded_message
+    # report.decoding_time = spent_time
+    # database.execute(**report.update())
 
 st.write("Reload the page to repeat the procedure")
