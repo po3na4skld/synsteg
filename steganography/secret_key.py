@@ -112,11 +112,19 @@ def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody):
         list: A list of secret key chunks generated using multiprocessing.
     """
 
-    secret_key, synonyms_chunks, usage_report, is_filled = [], [], [], False
+    secret_key, synonyms_chunks, is_filled = [], [], False
+    usage_report = {
+        "completion_tokens": 77,
+        "prompt_tokens": 268,
+        "total_tokens": 345,
+    }
+
     with Pool() as pool:
         for (result, usage) in pool.imap(generate_synonyms, secret_key_generation_body.pool_arguments):
             synonyms_chunks += result
-            usage_report.append(usage)
+            usage_report["completion_tokens"] += usage["completion_tokens"]
+            usage_report["prompt_tokens"] += usage["prompt_tokens"]
+            usage_report["total_tokens"] += usage["total_tokens"]
 
     for idx, synonym in enumerate(synonyms_chunks):
         if is_filled:

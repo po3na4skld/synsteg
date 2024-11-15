@@ -1,4 +1,4 @@
-from random import sample
+from random import sample, randint
 
 from utils.constants import N_ASCII_BITS, PUNCTUATION, BRACKETS, SPECIAL_TOKENS
 
@@ -91,3 +91,7 @@ def generate_random_sequences(sequence_length: int, n_sequences: int) -> list[st
         "".join([str(i) for i in map(int, f'{n:0>32b}')])[-sequence_length:]
         for n in sample(range(2**sequence_length + 1), n_sequences)
     ]
+
+
+def get_random_message(n_bits: int) -> str:
+    return "".join(str(randint(0, 1)) for _ in range(n_bits))

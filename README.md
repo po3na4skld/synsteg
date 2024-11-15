@@ -1,90 +1,67 @@
 # Synonym Steganography Bot
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+# local_runner.py Script
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+This Python script encodes and decodes a hidden message within a text-based container file using steganography. 
+It creates a secure, random message of specified length and encodes it using parameters such as bits per word, additional bits, and container buffer.
 
-## Add your files
+## Features
+- Generates a random secret message of specified bit length.
+- Embeds the message within a text container using customizable encoding parameters.
+- Provides logging for encoding/decoding steps and saves reports as JSON files in the specified output path.
+- Ensures security and message fitting within the container constraints.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/po3na4skld/spot_futures_arbitrage.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/po3na4skld/spot_futures_arbitrage/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## Requirements
+- Python 3.10.10 or higher
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+1. Clone the repository.
+3. Install required modules and dependencies.
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Run the script with the following arguments:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```bash
+python local_runner.py -container_path <path_to_container> -openai_key <your_openai_key> -bits_per_word <bits>
+```
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+### Arguments
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- **`-container_path`**: Required. Path to the `.txt` file containing the container message for encoding.
+- **`-output_path`**: Optional. Directory path for output artifacts (default is `artifacts/`).
+- **`-message_length`**: Optional. Length of the random secret message in bits. Choose from `[128, 256, 512]`.
+- **`-bits_per_word`**: Required. Specifies the number of bits to encode per word.
+- **`-additional_bits`**: Optional. Number of additional bits to encode per word (default is `0`).
+- **`-config_path`**: Optional. Path to the configuration file containing hyperparameters (default is `config.json`).
+- **`-openai_key`**: Required. Your OpenAI API key for processing.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+### Example
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+```bash
+python local_runner.py -container_path container.txt -output_path artifacts -message_length 256 -bits_per_word 5 -additional_bits 1 -openai_key your_openai_api_key
+```
 
-## License
-For open source projects, say how it is licensed.
+## Output
+- Logs key processing steps to the console.
+- Generates a JSON report containing encoding/decoding details in `artifacts/`.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Logging and Debugging
+The script uses a logger to display important messages, warnings, and errors. 
+To modify the logging configuration, edit the logger in `utils/logger.py`.
+
+## Constraints
+- `bits_per_word` should not exceed `MAX_BITS_PER_WORD` from `utils.constants`.
+- The sum of `bits_per_word` and `additional_bits` should be within limits defined by `MAX_ADDITIONAL_BITS_MULTIPLIER`.
+
+## Example Workflow
+1. **Container Loading**: Loads a `.txt` container file.
+2. **Random Message Generation**: Creates a random secret message.
+3. **Encoding**: Encodes the message in the container using specified parameters.
+4. **Decoding**: Decodes the message to validate the encoding.
+5. **Reporting**: Saves results, including time and usage reports, to a JSON file.
