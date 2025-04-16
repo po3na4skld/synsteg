@@ -68,4 +68,6 @@ To modify the logging configuration, edit the logger in `utils/logger.py`.
 
 ## Reports file (Dataset) link
 
-(dataset link)[https://drive.google.com/drive/folders/1e0kVpgAABiMc7sK5o6OjlTLv01bFTINB?usp=sharing]
+Access request should be sent before downloading any files.
+
+https://drive.google.com/drive/folders/1e0kVpgAABiMc7sK5o6OjlTLv01bFTINB?usp=sharing
