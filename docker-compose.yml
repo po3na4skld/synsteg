@@ -1,0 +1,15 @@
+version: '3.7'
+
+networks:
+  net:
+    driver: bridge
+
+services:
+  synsteg:
+    build: .
+    ports:
+      - "80:8501"
+    volumes:
+      - .:/synsteg
+    networks:
+      - net

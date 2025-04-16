@@ -1,0 +1,11 @@
+{
+  "openai_api_key": "",
+  "bits_per_word": 5,
+  "additional_bits": 2,
+  "mongodb": {
+    "username": "",
+    "password": "",
+    "host": "",
+    "name": "synonyms_steganography"
+  }
+}
