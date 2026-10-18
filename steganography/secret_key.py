@@ -147,7 +147,7 @@ def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody):
                 except IndexError:
                     is_filled = True
             else:
-                secret_key.append({key: binarize_synonyms(key, value, secret_key_generation_body.bits_per_word)})
+                secret_key.append({key: binarize_synonyms(key, value, secret_key_generation_body.pool_arguments[0].bits_per_word)})
 
     return secret_key, usage_report
 
