@@ -8,6 +8,7 @@ from utils.constants import SYNONYM_MAP
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+MAX_CAPACITY_ATTEMPTS = 3
 
 
 def encode_message(
@@ -46,53 +47,65 @@ def encode_message(
     else:
         binary_message_chunks = []
 
-    s = time.time()
-    if container is None:
-        container_length = len(binary_message) // (bits_per_word + additional_bits) * 1.5
-        container, usage = generate_container(container_length)
-        time_report["container_generation"] = round(time.time() - s, 2)
-        usage_report["container_generation"] = usage
+    user_container = container is not None
+    container_length = len(binary_message) // (bits_per_word + additional_bits) * 1.5
+    for attempt in range(MAX_CAPACITY_ATTEMPTS):
+        sfx = f"_{attempt}" if attempt else ""
+        s = time.time()
+        if not user_container:
+            container, usage = generate_container(container_length)
+            time_report[f"container_generation{sfx}"] = round(time.time() - s, 2)
+            usage_report[f"container_generation{sfx}"] = usage
 
-    s = time.time()
-    container_splits = helper.divide_chunks(container.split(), 5)
+        s = time.time()
+        secret_key_generation_body = SecretKeyGenerationBody.from_list(
+            helper.divide_chunks(container.split(), 5), bits_per_word, additional_bits, binary_message_chunks,
+        )
+        secret_key, usage = generate_secret_key_mp(secret_key_generation_body)
+        time_report[f"secret_key_generation{sfx}"] = round(time.time() - s, 2)
+        usage_report[f"secret_key_generation{sfx}"] = usage
+        secret_key = align_container_and_secret_key(container, secret_key)
 
-    secret_key_generation_body = SecretKeyGenerationBody.from_list(
-        container_splits,
-        bits_per_word,
-        additional_bits,
-        binary_message_chunks,
-    )
+        encoded_message, n_embedded = embed(container, secret_key, binary_message)
+        if n_embedded == len(binary_message):
+            break
+        if user_container:
+            raise ValueError(f"Container holds {n_embedded} of {len(binary_message)} bits")
+        # the container was too short for this key: generate a longer one in proportion to the shortfall
+        container_length *= 1.2 * len(binary_message) / max(n_embedded, 1)
+    else:
+        raise ValueError(f"Message did not fit after {MAX_CAPACITY_ATTEMPTS} containers")
 
-    secret_key, usage = generate_secret_key_mp(secret_key_generation_body)
-    time_report["secret_key_generation"] = round(time.time() - s, 2)
-    usage_report["secret_key_generation"] = usage
+    return container, encoded_message, secret_key, time_report, usage_report
 
-    secret_key = align_container_and_secret_key(container, secret_key)
 
+def embed(container: str, secret_key: SYNONYM_MAP, binary_message: str) -> tuple[str, int]:
+    """Replace words of the container by synonyms from the key; returns the stegotext and the number of bits embedded."""
+    # in place on purpose: fix_token_container_size shortens the codes of the last used position, and the decoder
+    # must see that (a key from a failed attempt is discarded anyway)
     encoded_message, current_idx = [], 0
     for token, replacement_token in zip(container.split(), secret_key):
         ends_with_special, token = helper.check_endswith_special(token)
-        if helper.is_token_replacable(token, replacement_token) and current_idx < len(binary_message):  # Ingest token
-            if helper.has_duplicates(replacement_token):
+        if helper.is_token_replacable(token, replacement_token) and current_idx < len(binary_message):
+            if helper.has_duplicates(replacement_token):  # unusable position
                 encoded_message.append(token + ends_with_special)
                 continue
 
-            token, was_capital = helper.check_capitalization(token, replacement_token)
+            original, (token, was_capital) = token, helper.check_capitalization(token, replacement_token)
             token_container_size = len(list(replacement_token[token].keys())[0])
             message_part = binary_message[current_idx:current_idx + token_container_size]
             if len(message_part) != token_container_size:
                 replacement_token[token] = fix_token_container_size(replacement_token[token], len(message_part))
 
-            new_token = replacement_token[token][message_part]
-            if was_capital:
-                new_token = new_token.capitalize()
-
-            encoded_message.append(new_token + ends_with_special)
-            current_idx += token_container_size
-        else:  # Skipping token
+            new_token = replacement_token[token].get(message_part)
+            if new_token is None:  # no synonym for this code here: keep the word, it carries no bits
+                encoded_message.append(original + ends_with_special)
+                continue
+            encoded_message.append((new_token.capitalize() if was_capital else new_token) + ends_with_special)
+            current_idx += len(message_part)
+        else:
             encoded_message.append(token + ends_with_special)
-
-    return container, " ".join(encoded_message), secret_key, time_report, usage_report
+    return " ".join(encoded_message), current_idx
 
 
 def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool = True) -> str:
@@ -139,6 +152,12 @@ def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool =
                 current_idx += len(token) + 1
                 is_found = True
                 break
+
+        if not is_found:  # the original word left in place carries no bits
+            span = clean_encoded_message[current_idx:current_idx + len(base_token)]
+            if span.lower() == base_token.lower() and helper.check_is_end_of_word(clean_encoded_message, current_idx + len(base_token)):
+                current_idx += len(base_token) + 1
+                is_found = True
 
         counter += 1
         if not is_found:

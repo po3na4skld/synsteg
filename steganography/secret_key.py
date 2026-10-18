@@ -11,29 +11,31 @@ from models.pool_arguments import PoolArguments, SecretKeyGenerationBody
 from utils import prompts
 
 
-def binarize_synonyms(base_token: str, synonyms: list[str]) -> dict[str, str]:
+MIN_DISTINCT_SHARE = 0.9  # a word is used only if at least 90 % of its 2^b synonyms are distinct
+
+
+def binarize_synonyms(base_token: str, synonyms: list[str], bits_per_word: int) -> dict[str, str]:
     """
-    Binarize a base token by assigning binary indices to synonyms.
+    Assign b-bit codes to the distinct synonyms of a word.
 
-    This function takes a base token and a list of synonyms, then generates a dictionary
-    where each synonym is associated with a unique binary index.
-
-    Args:
-        base_token (str): The base token to be binarized.
-        synonyms (list[str]): A list of synonyms to be assigned binary indices.
-
-    Returns:
-        dict[str, str]: A dictionary mapping binary indices to corresponding synonyms.
-                      If the list of synonyms is empty, a default mapping is returned with
-                      "0" and "1" pointing to the base token.
+    Repeated synonyms, the word itself and phrases that start with it are dropped. If at least MIN_DISTINCT_SHARE of the 2^b codes still have
+    a synonym, the word keeps b bits per position and the codes left without a synonym are simply absent: when the
+    message needs such a code here, the encoder keeps the original word and the decoder reads it as "no bits".
+    Otherwise the word is not used ({"0": word, "1": word}, the existing marker of an unusable position).
     """
-
-    if not len(synonyms):
+    n_codes = 2 ** bits_per_word
+    distinct, seen = [], {base_token.lower()}
+    for synonym in synonyms:
+        # "think critically" for "think" would let the decoder read the kept word plus the next one as a synonym
+        if synonym.lower().startswith((base_token.lower() + " ", base_token.lower() + "-")):
+            continue
+        if synonym.lower() not in seen:
+            seen.add(synonym.lower())
+            distinct.append(synonym)
+    distinct = distinct[:n_codes]
+    if len(distinct) < max(2, MIN_DISTINCT_SHARE * n_codes):
         return {"0": base_token, "1": base_token}
-    return {
-        "".join(index): synonym
-        for index, synonym in zip(product("01", repeat=int(math.log2(len(synonyms)))), synonyms)
-    }
+    return {"".join(code): synonym for code, synonym in zip(product("01", repeat=bits_per_word), distinct)}
 
 
 def binarize_synonyms_partially(
@@ -90,9 +92,15 @@ def generate_synonyms(pool_arguments: PoolArguments) -> dict[str, list[str]]:
     """
     input_message = prompts.ALL_SYNONYMS_GENERATION_INPUT.format(context=pool_arguments.container_split)
     prompt = prompts.ALL_SYNONYMS_GENERATION_PROMPT.replace("N_SYNONYMS", str(2**pool_arguments.bits_per_word))
-    synonyms, usage = get_openai_json_output(prompt, input_message, "words", 0.7)
-    if synonyms and isinstance(synonyms[0], str):
-        synonyms, usage = get_openai_json_output(prompt, input_message, "words", 0.7)
+    for attempt in range(3):  # the model sometimes returns JSON without "words" or a flat list of strings
+        try:
+            synonyms, usage = get_openai_json_output(prompt, input_message, "words", 0.7)
+        except (KeyError, ValueError):
+            continue
+        if synonyms and isinstance(synonyms[0], dict):
+            break
+    else:
+        raise ValueError("synonym table not returned in the expected format after 3 attempts")
 
     return synonyms, usage
 
@@ -139,7 +147,7 @@ def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody):
                 except IndexError:
                     is_filled = True
             else:
-                secret_key.append({key: binarize_synonyms(key, value)})
+                secret_key.append({key: binarize_synonyms(key, value, secret_key_generation_body.bits_per_word)})
 
     return secret_key, usage_report
 
