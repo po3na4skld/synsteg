@@ -11,6 +11,7 @@ from steganography.secret_key import binarize_synonyms
 syn = [f"w{i}" for i in range(30)] + ["w0", "w1"]
 k = binarize_synonyms("base", syn, 5); assert len(k) == 30 and "11111" not in k
 assert binarize_synonyms("base", [f"w{i}" for i in range(20)] * 2, 5) == {"0": "base", "1": "base"}
+assert "Up" not in binarize_synonyms("up.", ["Up", "up", "upward", "higher"], 2).values()  # punctuation/case of the word
 
 random.seed(1)
 for folder in ("gpt6_luna_series", "qwen_series"):

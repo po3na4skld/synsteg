@@ -24,13 +24,15 @@ def binarize_synonyms(base_token: str, synonyms: list[str], bits_per_word: int) 
     Otherwise the word is not used ({"0": word, "1": word}, the existing marker of an unusable position).
     """
     n_codes = 2 ** bits_per_word
-    distinct, seen = [], {base_token.lower()}
+    norm = lambda word: clean_container(word).strip().lower()  # compare as the decoder sees the text
+    base = norm(base_token)
+    distinct, seen = [], {base}
     for synonym in synonyms:
         # "think critically" for "think" would let the decoder read the kept word plus the next one as a synonym
-        if synonym.lower().startswith((base_token.lower() + " ", base_token.lower() + "-")):
+        if norm(synonym).startswith((base + " ", base + "-")):
             continue
-        if synonym.lower() not in seen:
-            seen.add(synonym.lower())
+        if norm(synonym) not in seen:
+            seen.add(norm(synonym))
             distinct.append(synonym)
     distinct = distinct[:n_codes]
     if len(distinct) < max(2, MIN_DISTINCT_SHARE * n_codes):
