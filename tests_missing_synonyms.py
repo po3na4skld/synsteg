@@ -12,6 +12,7 @@ syn = [f"w{i}" for i in range(30)] + ["w0", "w1"]
 k = binarize_synonyms("base", syn, 5); assert len(k) == 30 and "11111" not in k
 assert binarize_synonyms("base", [f"w{i}" for i in range(20)] * 2, 5) == {"0": "base", "1": "base"}
 assert "Up" not in binarize_synonyms("up.", ["Up", "up", "upward", "higher"], 2).values()  # punctuation/case of the word
+assert "by means of trade" not in binarize_synonyms("through", ["via", "by means of", "by means of trade", "across", "over"], 2).values()  # prefix-free
 
 random.seed(1)
 for folder in ("gpt6_luna_series", "qwen_series"):
@@ -30,3 +31,18 @@ for folder in ("gpt6_luna_series", "qwen_series"):
     for L in (128, 256, 512):
         r = [x for x in rows if x["L"] == L]
         if r: print(f"   L={L}: fits {sum(x['full'] for x in r)}/{len(r)}, embedded {st.mean(x['n'] / L for x in r):.0%}")
+
+# stress test on the new-rule series: 20 random messages per stored key (keys rebuilt from the stored synonym lists)
+for folder, b in (("gpt6_luna_missing", 5), ("qwen_missing_b3", 3)):
+    ok = tot = 0
+    for f in glob.glob(f"{REPO}/reports/{folder}/*.json"):
+        d = json.load(open(f))
+        if not d["secret_key"]: continue
+        for _ in range(20):
+            msg = "".join(random.choice("01") for _ in range(len(d["message"])))
+            key = [{w: binarize_synonyms(w, list(m.values()), b)} for e in d["secret_key"] for w, m in e.items()]
+            stego, n = core.embed(d["container"], key, msg)
+            dec, _ = core.decode_message(stego, key, clean_output=False)
+            tot += 1; ok += dec == msg[:n]
+    print(folder, "stress: decoded == embedded", ok, "/", tot)
+

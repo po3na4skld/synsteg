@@ -18,7 +18,8 @@ def binarize_synonyms(base_token: str, synonyms: list[str], bits_per_word: int) 
     """
     Assign b-bit codes to the distinct synonyms of a word.
 
-    Repeated synonyms, the word itself and phrases that start with it are dropped. If at least MIN_DISTINCT_SHARE of the 2^b codes still have
+    Repeated synonyms, the word itself, phrases that start with it and phrases that start with another synonym
+    are dropped. If at least MIN_DISTINCT_SHARE of the 2^b codes still have
     a synonym, the word keeps b bits per position and the codes left without a synonym are simply absent: when the
     message needs such a code here, the encoder keeps the original word and the decoder reads it as "no bits".
     Otherwise the word is not used ({"0": word, "1": word}, the existing marker of an unusable position).
@@ -34,6 +35,9 @@ def binarize_synonyms(base_token: str, synonyms: list[str], bits_per_word: int) 
         if norm(synonym) not in seen:
             seen.add(norm(synonym))
             distinct.append(synonym)
+    # prefix-free by words: with "by means of" and "by means of economic exchange" in one list the decoder cannot
+    # tell the short synonym followed by the next word's synonym from the long one, so the longer phrase is dropped
+    distinct = [s for s in distinct if not any(t is not s and norm(s).startswith(norm(t) + " ") for t in distinct)]
     distinct = distinct[:n_codes]
     if len(distinct) < max(2, MIN_DISTINCT_SHARE * n_codes):
         return {"0": base_token, "1": base_token}
