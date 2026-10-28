@@ -1,0 +1,10 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<02:08,  2.62it/s]Loading weights:  62%|██████▏   | 209/338 [00:00<00:00, 566.38it/s]Loading weights:  98%|█████████▊| 330/338 [00:00<00:00, 574.82it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 489.97it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<01:58,  2.85it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 577.17it/s]Loading weights:  93%|█████████▎| 315/338 [00:00<00:00, 570.87it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 499.11it/s]
+D4_binoculars luna_missing {'n': 300, 'auc_container': 0.464, 'auc_stego': 0.192, 'tpr5_container': 0.0, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.169}
+D4_binoculars qwen_missing_b3 {'n': 75, 'auc_container': 0.712, 'auc_stego': 0.245, 'tpr5_container': 0.08, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.038}
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<01:55,  2.92it/s]Loading weights:  65%|██████▍   | 219/338 [00:00<00:00, 621.25it/s]Loading weights:  99%|█████████▉| 334/338 [00:00<00:00, 620.16it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 527.41it/s]
+D5_fast_detectgpt luna_missing {'n': 300, 'auc_container': 0.512, 'auc_stego': 0.135, 'tpr5_container': 0.0, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.08}
+D5_fast_detectgpt qwen_missing_b3 {'n': 75, 'auc_container': 0.649, 'auc_stego': 0.194, 'tpr5_container': 0.027, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.025}
+saved /Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/model_series/../../reports/detectors_luna_missing_qwen_missing_b3.json

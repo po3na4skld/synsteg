@@ -1,0 +1,52 @@
+gpt6_luna_b5 s0 TS-CNN         acc=0.933 f1=0.933 stego%=0.50 ep=20 75s
+gpt6_luna_b5 s0 TS-RNN         acc=0.850 f1=0.827 stego%=0.37 ep=19 74s
+gpt6_luna_b5 s0 Bi-LSTM-Dense  acc=0.892 f1=0.881 stego%=0.41 ep=13 89s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 12586.96it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+gpt6_luna_b5 s0 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=60 176s
+gpt6_luna_b5 s1 TS-CNN         acc=0.950 f1=0.948 stego%=0.47 ep=24 107s
+gpt6_luna_b5 s1 TS-RNN         acc=0.975 f1=0.974 stego%=0.47 ep=23 85s
+gpt6_luna_b5 s1 Bi-LSTM-Dense  acc=0.958 f1=0.957 stego%=0.46 ep=22 143s
+gpt6_luna_b5 s1 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=60 157s
+gpt6_luna_b5 s2 TS-CNN         acc=0.925 f1=0.919 stego%=0.42 ep=17 60s
+gpt6_luna_b5 s2 TS-RNN         acc=0.975 f1=0.976 stego%=0.53 ep=15 56s
+gpt6_luna_b5 s2 Bi-LSTM-Dense  acc=0.675 f1=0.519 stego%=0.17 ep=16 100s
+gpt6_luna_b5 s2 BERT-LSTM-Att  acc=0.983 f1=0.983 stego%=0.50 ep=60 163s
+qwen3_30b_b3 s0 TS-CNN         acc=0.933 f1=0.929 stego%=0.43 ep=40 30s
+qwen3_30b_b3 s0 TS-RNN         acc=0.867 f1=0.857 stego%=0.43 ep=16 20s
+qwen3_30b_b3 s0 Bi-LSTM-Dense  acc=0.900 f1=0.909 stego%=0.60 ep=21 46s
+qwen3_30b_b3 s0 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=60 53s
+qwen3_30b_b3 s1 TS-CNN         acc=0.933 f1=0.933 stego%=0.50 ep=18 18s
+qwen3_30b_b3 s1 TS-RNN         acc=1.000 f1=1.000 stego%=0.50 ep=22 26s
+qwen3_30b_b3 s1 Bi-LSTM-Dense  acc=0.900 f1=0.889 stego%=0.40 ep=30 57s
+qwen3_30b_b3 s1 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=17 14s
+qwen3_30b_b3 s2 TS-CNN         acc=1.000 f1=1.000 stego%=0.50 ep=48 41s
+qwen3_30b_b3 s2 TS-RNN         acc=0.767 f1=0.741 stego%=0.40 ep=14 19s
+qwen3_30b_b3 s2 Bi-LSTM-Dense  acc=0.900 f1=0.903 stego%=0.53 ep=19 36s
+qwen3_30b_b3 s2 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=60 48s
+cross s0 TS-CNN         acc=0.740 f1=0.794 stego%=0.76 ep=47
+cross s0 TS-RNN         acc=0.940 f1=0.943 stego%=0.55 ep=14
+cross s0 Bi-LSTM-Dense  acc=0.747 f1=0.725 stego%=0.42 ep=15
+cross s0 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=60
+cross s1 TS-CNN         acc=0.660 f1=0.746 stego%=0.84 ep=14
+cross s1 TS-RNN         acc=0.953 f1=0.954 stego%=0.52 ep=30
+cross s1 Bi-LSTM-Dense  acc=0.773 f1=0.790 stego%=0.58 ep=15
+cross s1 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=52
+cross s2 TS-CNN         acc=0.640 f1=0.733 stego%=0.85 ep=17
+cross s2 TS-RNN         acc=0.927 f1=0.927 stego%=0.51 ep=20
+cross s2 Bi-LSTM-Dense  acc=0.827 f1=0.849 stego%=0.65 ep=17
+cross s2 BERT-LSTM-Att  acc=1.000 f1=1.000 stego%=0.50 ep=60
+wrote /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/steganalysis_missing.json 3136 s

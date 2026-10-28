@@ -1,0 +1,786 @@
+[
+{
+"id": "wm00",
+"words": 190,
+"tables": 190,
+"tables_global": 190,
+"usable_b5": 155
+},
+{
+"id": "wm01",
+"words": 189,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 144
+},
+{
+"id": "wm02",
+"words": 191,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 141
+},
+{
+"id": "wm03",
+"words": 195,
+"tables": 195,
+"tables_global": 195,
+"usable_b5": 149
+},
+{
+"id": "wm04",
+"words": 188,
+"tables": 183,
+"tables_global": 183,
+"usable_b5": 142
+},
+{
+"id": "wm05",
+"words": 196,
+"tables": 196,
+"tables_global": 196,
+"usable_b5": 150
+},
+{
+"id": "wm06",
+"words": 193,
+"tables": 193,
+"tables_global": 193,
+"usable_b5": 150
+},
+{
+"id": "wm07",
+"words": 208,
+"tables": 202,
+"tables_global": 80,
+"usable_b5": 146
+},
+{
+"id": "wm08",
+"words": 187,
+"tables": 185,
+"tables_global": 185,
+"usable_b5": 140
+},
+{
+"id": "wm09",
+"words": 193,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 152
+},
+{
+"id": "wm10",
+"words": 184,
+"tables": 184,
+"tables_global": 184,
+"usable_b5": 148
+},
+{
+"id": "wm11",
+"words": 193,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 145
+},
+{
+"id": "wm12",
+"words": 204,
+"tables": 202,
+"tables_global": 202,
+"usable_b5": 158
+},
+{
+"id": "wm13",
+"words": 168,
+"tables": 166,
+"tables_global": 166,
+"usable_b5": 135
+},
+{
+"id": "wm14",
+"words": 191,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 152
+},
+{
+"id": "wm15",
+"words": 185,
+"tables": 185,
+"tables_global": 185,
+"usable_b5": 135
+},
+{
+"id": "wm16",
+"words": 198,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 151
+},
+{
+"id": "wm17",
+"words": 193,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 159
+},
+{
+"id": "wm18",
+"words": 188,
+"tables": 184,
+"tables_global": 184,
+"usable_b5": 146
+},
+{
+"id": "wm19",
+"words": 197,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 169
+},
+{
+"id": "wm20",
+"words": 186,
+"tables": 185,
+"tables_global": 185,
+"usable_b5": 150
+},
+{
+"id": "wm21",
+"words": 187,
+"tables": 185,
+"tables_global": 185,
+"usable_b5": 136
+},
+{
+"id": "wm22",
+"words": 198,
+"tables": 196,
+"tables_global": 196,
+"usable_b5": 138
+},
+{
+"id": "wm23",
+"words": 188,
+"tables": 188,
+"tables_global": 188,
+"usable_b5": 150
+},
+{
+"id": "wm24",
+"words": 183,
+"tables": 178,
+"tables_global": 178,
+"usable_b5": 141
+},
+{
+"id": "wm25",
+"words": 198,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 145
+},
+{
+"id": "wm26",
+"words": 205,
+"tables": 200,
+"tables_global": 175,
+"usable_b5": 149
+},
+{
+"id": "wm27",
+"words": 192,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 145
+},
+{
+"id": "wm28",
+"words": 197,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 153
+},
+{
+"id": "wm29",
+"words": 192,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 137
+},
+{
+"id": "wm30",
+"words": 183,
+"tables": 183,
+"tables_global": 183,
+"usable_b5": 148
+},
+{
+"id": "wm31",
+"words": 186,
+"tables": 182,
+"tables_global": 86,
+"usable_b5": 140
+},
+{
+"id": "wm32",
+"words": 193,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 150
+},
+{
+"id": "wm33",
+"words": 190,
+"tables": 190,
+"tables_global": 190,
+"usable_b5": 148
+},
+{
+"id": "wm34",
+"words": 198,
+"tables": 198,
+"tables_global": 198,
+"usable_b5": 154
+},
+{
+"id": "wm35",
+"words": 194,
+"tables": 193,
+"tables_global": 193,
+"usable_b5": 141
+},
+{
+"id": "wm36",
+"words": 197,
+"tables": 191,
+"tables_global": 130,
+"usable_b5": 145
+},
+{
+"id": "wm37",
+"words": 194,
+"tables": 193,
+"tables_global": 193,
+"usable_b5": 150
+},
+{
+"id": "wm38",
+"words": 192,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 148
+},
+{
+"id": "wm39",
+"words": 199,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 146
+},
+{
+"id": "wm40",
+"words": 202,
+"tables": 201,
+"tables_global": 201,
+"usable_b5": 149
+},
+{
+"id": "wm41",
+"words": 196,
+"tables": 195,
+"tables_global": 195,
+"usable_b5": 145
+},
+{
+"id": "wm42",
+"words": 195,
+"tables": 194,
+"tables_global": 194,
+"usable_b5": 146
+},
+{
+"id": "wm43",
+"words": 205,
+"tables": 204,
+"tables_global": 204,
+"usable_b5": 157
+},
+{
+"id": "wm44",
+"words": 193,
+"tables": 193,
+"tables_global": 193,
+"usable_b5": 155
+},
+{
+"id": "wm45",
+"words": 179,
+"tables": 173,
+"tables_global": 173,
+"usable_b5": 130
+},
+{
+"id": "wm46",
+"words": 197,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 149
+},
+{
+"id": "wm47",
+"words": 195,
+"tables": 194,
+"tables_global": 194,
+"usable_b5": 148
+},
+{
+"id": "wm48",
+"words": 199,
+"tables": 198,
+"tables_global": 198,
+"usable_b5": 152
+},
+{
+"id": "wm49",
+"words": 191,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 155
+},
+{
+"id": "wm50",
+"words": 189,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 144
+},
+{
+"id": "wm51",
+"words": 190,
+"tables": 183,
+"tables_global": 183,
+"usable_b5": 133
+},
+{
+"id": "wm52",
+"words": 200,
+"tables": 195,
+"tables_global": 55,
+"usable_b5": 163
+},
+{
+"id": "wm53",
+"words": 187,
+"tables": 182,
+"tables_global": 170,
+"usable_b5": 129
+},
+{
+"id": "wm54",
+"words": 193,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 145
+},
+{
+"id": "wm55",
+"words": 197,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 158
+},
+{
+"id": "h00",
+"words": 190,
+"tables": 188,
+"tables_global": 188,
+"usable_b5": 151
+},
+{
+"id": "h01",
+"words": 189,
+"tables": 188,
+"tables_global": 188,
+"usable_b5": 144
+},
+{
+"id": "h02",
+"words": 191,
+"tables": 190,
+"tables_global": 190,
+"usable_b5": 144
+},
+{
+"id": "h03",
+"words": 195,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 156
+},
+{
+"id": "h04",
+"words": 188,
+"tables": 175,
+"tables_global": 175,
+"usable_b5": 133
+},
+{
+"id": "h05",
+"words": 196,
+"tables": 190,
+"tables_global": 190,
+"usable_b5": 155
+},
+{
+"id": "h06",
+"words": 193,
+"tables": 181,
+"tables_global": 181,
+"usable_b5": 153
+},
+{
+"id": "h07",
+"words": 208,
+"tables": 207,
+"tables_global": 207,
+"usable_b5": 147
+},
+{
+"id": "h08",
+"words": 187,
+"tables": 182,
+"tables_global": 75,
+"usable_b5": 136
+},
+{
+"id": "h09",
+"words": 193,
+"tables": 185,
+"tables_global": 185,
+"usable_b5": 146
+},
+{
+"id": "h10",
+"words": 184,
+"tables": 180,
+"tables_global": 180,
+"usable_b5": 141
+},
+{
+"id": "h11",
+"words": 193,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 155
+},
+{
+"id": "h12",
+"words": 204,
+"tables": 201,
+"tables_global": 201,
+"usable_b5": 154
+},
+{
+"id": "h13",
+"words": 168,
+"tables": 158,
+"tables_global": 31,
+"usable_b5": 119
+},
+{
+"id": "h14",
+"words": 191,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 148
+},
+{
+"id": "h15",
+"words": 185,
+"tables": 182,
+"tables_global": 182,
+"usable_b5": 147
+},
+{
+"id": "h16",
+"words": 198,
+"tables": 194,
+"tables_global": 194,
+"usable_b5": 150
+},
+{
+"id": "h17",
+"words": 193,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 151
+},
+{
+"id": "h18",
+"words": 188,
+"tables": 186,
+"tables_global": 186,
+"usable_b5": 151
+},
+{
+"id": "h19",
+"words": 197,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 153
+},
+{
+"id": "h20",
+"words": 186,
+"tables": 179,
+"tables_global": 178,
+"usable_b5": 145
+},
+{
+"id": "h21",
+"words": 187,
+"tables": 181,
+"tables_global": 181,
+"usable_b5": 152
+},
+{
+"id": "h22",
+"words": 198,
+"tables": 194,
+"tables_global": 194,
+"usable_b5": 139
+},
+{
+"id": "h23",
+"words": 188,
+"tables": 175,
+"tables_global": 144,
+"usable_b5": 134
+},
+{
+"id": "h24",
+"words": 183,
+"tables": 179,
+"tables_global": 179,
+"usable_b5": 137
+},
+{
+"id": "h25",
+"words": 198,
+"tables": 188,
+"tables_global": 29,
+"usable_b5": 137
+},
+{
+"id": "h26",
+"words": 205,
+"tables": 201,
+"tables_global": 201,
+"usable_b5": 160
+},
+{
+"id": "h27",
+"words": 192,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 144
+},
+{
+"id": "h28",
+"words": 197,
+"tables": 192,
+"tables_global": 192,
+"usable_b5": 141
+},
+{
+"id": "h29",
+"words": 192,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 154
+},
+{
+"id": "h30",
+"words": 183,
+"tables": 179,
+"tables_global": 179,
+"usable_b5": 159
+},
+{
+"id": "h31",
+"words": 186,
+"tables": 181,
+"tables_global": 151,
+"usable_b5": 143
+},
+{
+"id": "h32",
+"words": 193,
+"tables": 190,
+"tables_global": 190,
+"usable_b5": 150
+},
+{
+"id": "h33",
+"words": 190,
+"tables": 186,
+"tables_global": 186,
+"usable_b5": 140
+},
+{
+"id": "h34",
+"words": 198,
+"tables": 198,
+"tables_global": 198,
+"usable_b5": 138
+},
+{
+"id": "h35",
+"words": 194,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 152
+},
+{
+"id": "h36",
+"words": 197,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 148
+},
+{
+"id": "h37",
+"words": 194,
+"tables": 193,
+"tables_global": 193,
+"usable_b5": 139
+},
+{
+"id": "h38",
+"words": 192,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 137
+},
+{
+"id": "h39",
+"words": 199,
+"tables": 188,
+"tables_global": 104,
+"usable_b5": 146
+},
+{
+"id": "h40",
+"words": 202,
+"tables": 198,
+"tables_global": 177,
+"usable_b5": 153
+},
+{
+"id": "h41",
+"words": 196,
+"tables": 194,
+"tables_global": 194,
+"usable_b5": 151
+},
+{
+"id": "h42",
+"words": 195,
+"tables": 188,
+"tables_global": 173,
+"usable_b5": 135
+},
+{
+"id": "h43",
+"words": 205,
+"tables": 203,
+"tables_global": 203,
+"usable_b5": 162
+},
+{
+"id": "h44",
+"words": 193,
+"tables": 191,
+"tables_global": 191,
+"usable_b5": 147
+},
+{
+"id": "h45",
+"words": 179,
+"tables": 176,
+"tables_global": 176,
+"usable_b5": 130
+},
+{
+"id": "h46",
+"words": 197,
+"tables": 197,
+"tables_global": 197,
+"usable_b5": 145
+},
+{
+"id": "h47",
+"words": 195,
+"tables": 191,
+"tables_global": 42,
+"usable_b5": 143
+},
+{
+"id": "h48",
+"words": 199,
+"tables": 181,
+"tables_global": 181,
+"usable_b5": 148
+},
+{
+"id": "h49",
+"words": 191,
+"tables": 186,
+"tables_global": 186,
+"usable_b5": 127
+},
+{
+"id": "h50",
+"words": 189,
+"tables": 188,
+"tables_global": 188,
+"usable_b5": 138
+},
+{
+"id": "h51",
+"words": 190,
+"tables": 187,
+"tables_global": 187,
+"usable_b5": 149
+},
+{
+"id": "h52",
+"words": 200,
+"tables": 193,
+"tables_global": 193,
+"usable_b5": 143
+},
+{
+"id": "h53",
+"words": 187,
+"tables": 183,
+"tables_global": 183,
+"usable_b5": 133
+},
+{
+"id": "h54",
+"words": 193,
+"tables": 189,
+"tables_global": 189,
+"usable_b5": 148
+},
+{
+"id": "h55",
+"words": 197,
+"tables": 193,
+"tables_global": 147,
+"usable_b5": 157
+}
+]

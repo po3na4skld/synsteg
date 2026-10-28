@@ -1,0 +1,2909 @@
+{
+  "uuid": "0a937326-32f3-4c07-928e-e602970351b2",
+  "message": "1111101110101001000110000111100000110000101011011110000110111011000101001011011101011000010001100110000000011110001001010000011110011111000101100010010100000111000100110101011110010000101110110011111100001001100101111101100001001111011010011010001011111100",
+  "secret_key": [
+    {
+      "Racial": {
+        "0": "Ethnic",
+        "1": "Cultural"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "gender": {
+        "0": "gender",
+        "1": "gender"
+      }
+    },
+    {
+      "equality": {
+        "00": "equity",
+        "01": "parity",
+        "10": "fairness",
+        "11": "impartiality"
+      }
+    },
+    {
+      "in": {
+        "0": "within",
+        "1": "inside"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "workplace": {
+        "0": "work environment",
+        "1": "office"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "crucial": {
+        "00": "vital",
+        "01": "essential",
+        "10": "critical",
+        "11": "pivotal"
+      }
+    },
+    {
+      "issue": {
+        "00": "matter",
+        "01": "subject",
+        "10": "topic",
+        "11": "concern"
+      }
+    },
+    {
+      "that": {
+        "0": "which",
+        "1": "that"
+      }
+    },
+    {
+      "needs": {
+        "0": "requires",
+        "1": "demands"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "be": {
+        "0": "be",
+        "1": "be"
+      }
+    },
+    {
+      "addressed": {
+        "00": "tackled",
+        "01": "confronted",
+        "10": "dealt with",
+        "11": "resolved"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "order": {
+        "0": "order",
+        "1": "order"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "create": {
+        "00": "establish",
+        "01": "develop",
+        "10": "build",
+        "11": "foster"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "fair": {
+        "00": "just",
+        "01": "equitable",
+        "10": "impartial",
+        "11": "non-discriminatory"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "inclusive": {
+        "0": "comprehensive",
+        "1": "all-encompassing"
+      }
+    },
+    {
+      "environment": {
+        "00": "setting",
+        "01": "climate",
+        "10": "milieu",
+        "11": "ambiance"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "all": {
+        "0": "all",
+        "1": "all"
+      }
+    },
+    {
+      "employees": {
+        "00": "workers",
+        "01": "staff",
+        "10": "personnel",
+        "11": "colleagues"
+      }
+    },
+    {
+      "Discrimination": {
+        "00": "Bias",
+        "01": "Prejudice",
+        "10": "Exclusion",
+        "11": "Bigotry"
+      }
+    },
+    {
+      "based": {
+        "0": "predicated",
+        "1": "founded"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "race": {
+        "0": "ethnicity",
+        "1": "heritage"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "gender": {
+        "0": "gender",
+        "1": "gender"
+      }
+    },
+    {
+      "not": {
+        "0": "not",
+        "1": "not"
+      }
+    },
+    {
+      "only": {
+        "0": "only",
+        "1": "only"
+      }
+    },
+    {
+      "violates": {
+        "00": "breaches",
+        "01": "infringes",
+        "10": "contravenes",
+        "11": "disregards"
+      }
+    },
+    {
+      "fundamental": {
+        "00": "basic",
+        "01": "core",
+        "10": "essential",
+        "11": "primary"
+      }
+    },
+    {
+      "human": {
+        "0": "human",
+        "1": "human"
+      }
+    },
+    {
+      "rights": {
+        "0": "rights",
+        "1": "rights"
+      }
+    },
+    {
+      "but": {
+        "0": "but",
+        "1": "but"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "also": {
+        "0": "also",
+        "1": "also"
+      }
+    },
+    {
+      "hampers": {
+        "00": "impedes",
+        "01": "obstructs",
+        "10": "inhibits",
+        "11": "thwarts"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "overall": {
+        "00": "general",
+        "01": "total",
+        "10": "aggregate",
+        "11": "comprehensive"
+      }
+    },
+    {
+      "productivity": {
+        "00": "efficiency",
+        "01": "output",
+        "10": "yield",
+        "11": "performance"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "growth": {
+        "0": "development",
+        "1": "expansion"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "an": {
+        "0": "an",
+        "1": "an"
+      }
+    },
+    {
+      "organization": {
+        "00": "company",
+        "01": "institution",
+        "10": "corporation",
+        "11": "enterprise"
+      }
+    },
+    {
+      "In": {
+        "0": "In",
+        "1": "In"
+      }
+    },
+    {
+      "this": {
+        "0": "this",
+        "1": "this"
+      }
+    },
+    {
+      "essay": {
+        "00": "paper",
+        "01": "article",
+        "10": "study",
+        "11": "discourse"
+      }
+    },
+    {
+      "we": {
+        "0": "we",
+        "1": "we"
+      }
+    },
+    {
+      "will": {
+        "0": "will",
+        "1": "will"
+      }
+    },
+    {
+      "explore": {
+        "00": "examine",
+        "01": "investigate",
+        "10": "study",
+        "11": "analyze"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "importance": {
+        "00": "significance",
+        "01": "relevance",
+        "10": "value",
+        "11": "necessity"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "racial": {
+        "0": "ethnic",
+        "1": "cultural"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "gender": {
+        "0": "gender",
+        "1": "gender"
+      }
+    },
+    {
+      "equality": {
+        "00": "equity",
+        "01": "parity",
+        "10": "fairness",
+        "11": "impartiality"
+      }
+    },
+    {
+      "in": {
+        "0": "within",
+        "1": "inside"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "workplace": {
+        "0": "work environment",
+        "1": "office"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "discuss": {
+        "00": "talk about",
+        "01": "debate",
+        "10": "consider",
+        "11": "deliberate on"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "steps": {
+        "00": "measures",
+        "01": "actions",
+        "10": "procedures",
+        "11": "strategies"
+      }
+    },
+    {
+      "that": {
+        "0": "which",
+        "1": "that"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "be": {
+        "0": "be",
+        "1": "be"
+      }
+    },
+    {
+      "taken": {
+        "00": "implemented",
+        "01": "adopted",
+        "10": "executed",
+        "11": "enforced"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "achieve": {
+        "00": "attain",
+        "01": "realize",
+        "10": "accomplish",
+        "11": "fulfill"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "Racial": {
+        "0": "Ethnic",
+        "1": "Cultural"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "gender": {
+        "0": "gender",
+        "1": "gender"
+      }
+    },
+    {
+      "discrimination": {
+        "00": "bias",
+        "01": "inequality",
+        "10": "prejudice",
+        "11": "unfairness"
+      }
+    },
+    {
+      "in": {
+        "0": "within",
+        "1": "inside"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "workplace": {
+        "0": "work environment",
+        "1": "office"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "take": {
+        "0": "assume",
+        "1": "adopt"
+      }
+    },
+    {
+      "many": {
+        "0": "various",
+        "1": "numerous"
+      }
+    },
+    {
+      "forms": {
+        "0": "forms",
+        "1": "forms"
+      }
+    },
+    {
+      "including": {
+        "0": "including",
+        "1": "including"
+      }
+    },
+    {
+      "unequal": {
+        "0": "disproportionate",
+        "1": "lopsided"
+      }
+    },
+    {
+      "pay": {
+        "00": "compensation",
+        "01": "wages",
+        "10": "remuneration",
+        "11": "salary"
+      }
+    },
+    {
+      "limited": {
+        "0": "restricted",
+        "1": "constrained"
+      }
+    },
+    {
+      "opportunities": {
+        "00": "chances",
+        "01": "prospects",
+        "10": "possibilities",
+        "11": "openings"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "advancement": {
+        "00": "promotion",
+        "01": "progress",
+        "10": "growth",
+        "11": "ascension"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "biased": {
+        "00": "prejudiced",
+        "01": "partial",
+        "10": "one-sided",
+        "11": "slanted"
+      }
+    },
+    {
+      "hiring": {
+        "00": "recruitment",
+        "01": "employment",
+        "10": "staffing",
+        "11": "enlisting"
+      }
+    },
+    {
+      "practices": {
+        "00": "methods",
+        "01": "procedures",
+        "10": "routines",
+        "11": "protocols"
+      }
+    },
+    {
+      "These": {
+        "0": "The following",
+        "1": "Such"
+      }
+    },
+    {
+      "inequalities": {
+        "00": "disparities",
+        "01": "imbalances",
+        "10": "inequities",
+        "11": "unfairnesses"
+      }
+    },
+    {
+      "not": {
+        "0": "not",
+        "1": "never"
+      }
+    },
+    {
+      "only": {
+        "0": "solely",
+        "1": "merely"
+      }
+    },
+    {
+      "affect": {
+        "00": "influence",
+        "01": "impact",
+        "10": "alter",
+        "11": "change"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "people",
+        "10": "members",
+        "11": "participants"
+      }
+    },
+    {
+      "directly": {
+        "00": "immediately",
+        "01": "straight",
+        "10": "direct",
+        "11": "squarely"
+      }
+    },
+    {
+      "but": {
+        "00": "but",
+        "01": "however",
+        "10": "yet",
+        "11": "nevertheless"
+      }
+    },
+    {
+      "they": {
+        "0": "they",
+        "1": "those"
+      }
+    },
+    {
+      "also": {
+        "00": "also",
+        "01": "additionally",
+        "10": "furthermore",
+        "11": "moreover"
+      }
+    },
+    {
+      "contribute": {
+        "00": "add",
+        "01": "lead",
+        "10": "give",
+        "11": "aid"
+      }
+    },
+    {
+      "to": {
+        "00": "toward",
+        "01": "towards",
+        "10": "into",
+        "11": "upon"
+      }
+    },
+    {
+      "a": {
+        "00": "a",
+        "01": "one",
+        "10": "an",
+        "11": "any"
+      }
+    },
+    {
+      "negative": {
+        "00": "adverse",
+        "01": "unfavorable",
+        "10": "detrimental",
+        "11": "harmful"
+      }
+    },
+    {
+      "work": {
+        "00": "work",
+        "01": "job",
+        "10": "employment",
+        "11": "occupation"
+      }
+    },
+    {
+      "culture": {
+        "00": "culture",
+        "01": "environment",
+        "10": "ethos",
+        "11": "climate"
+      }
+    },
+    {
+      "and": {
+        "00": "and",
+        "01": "as well as",
+        "10": "along with",
+        "11": "in addition to"
+      }
+    },
+    {
+      "low": {
+        "00": "low",
+        "01": "poor",
+        "10": "reduced",
+        "11": "depressed"
+      }
+    },
+    {
+      "employee": {
+        "00": "worker",
+        "01": "staff",
+        "10": "workforce",
+        "11": "personnel"
+      }
+    },
+    {
+      "morale": {
+        "00": "spirits",
+        "01": "morale",
+        "10": "confidence",
+        "11": "enthusiasm"
+      }
+    },
+    {
+      "It": {
+        "0": "It",
+        "1": "This"
+      }
+    },
+    {
+      "is": {
+        "00": "is",
+        "01": "remains",
+        "10": "constitutes",
+        "11": "stands"
+      }
+    },
+    {
+      "essential": {
+        "00": "crucial",
+        "01": "vital",
+        "10": "indispensable",
+        "11": "important"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "which"
+      }
+    },
+    {
+      "organizations": {
+        "00": "institutions",
+        "01": "entities",
+        "10": "companies",
+        "11": "corporations"
+      }
+    },
+    {
+      "recognize": {
+        "00": "acknowledge",
+        "01": "accept",
+        "10": "realize",
+        "11": "comprehend"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "value": {
+        "00": "worth",
+        "01": "merit",
+        "10": "significance",
+        "11": "importance"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "diversity": {
+        "00": "variety",
+        "01": "heterogeneity",
+        "10": "multiplicity",
+        "11": "divergence"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "work": {
+        "00": "labor",
+        "01": "task",
+        "10": "duty",
+        "11": "activity"
+      }
+    },
+    {
+      "towards": {
+        "0": "toward",
+        "1": "in the direction of"
+      }
+    },
+    {
+      "creating": {
+        "00": "establishing",
+        "01": "developing",
+        "10": "forging",
+        "11": "producing"
+      }
+    },
+    {
+      "an": {
+        "0": "an",
+        "1": "a"
+      }
+    },
+    {
+      "inclusive": {
+        "00": "comprehensive",
+        "01": "embracing",
+        "10": "all-inclusive",
+        "11": "integrative"
+      }
+    },
+    {
+      "environment": {
+        "00": "setting",
+        "01": "surroundings",
+        "10": "habitat",
+        "11": "milieu"
+      }
+    },
+    {
+      "where": {
+        "0": "where",
+        "1": "in which"
+      }
+    },
+    {
+      "everyone": {
+        "00": "everybody",
+        "01": "all",
+        "10": "each one",
+        "11": "every person"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "treated": {
+        "00": "handled",
+        "01": "dealt with",
+        "10": "managed",
+        "11": "addressed"
+      }
+    },
+    {
+      "with": {
+        "0": "with",
+        "1": "using"
+      }
+    },
+    {
+      "respect": {
+        "00": "respect",
+        "01": "dignity",
+        "10": "esteem",
+        "11": "regard"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "given": {
+        "00": "provided",
+        "01": "offered",
+        "10": "afforded",
+        "11": "granted"
+      }
+    },
+    {
+      "equal": {
+        "00": "equivalent",
+        "01": "identical",
+        "10": "uniform",
+        "11": "even"
+      }
+    },
+    {
+      "opportunities": {
+        "00": "chances",
+        "01": "prospects",
+        "10": "possibilities",
+        "11": "openings"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "succeed": {
+        "00": "thrive",
+        "01": "prosper",
+        "10": "advance",
+        "11": "prevail"
+      }
+    },
+    {
+      "One": {
+        "0": "One",
+        "1": "A single"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "key": {
+        "00": "crucial",
+        "01": "central",
+        "10": "fundamental",
+        "11": "vital"
+      }
+    },
+    {
+      "steps": {
+        "00": "measures",
+        "01": "actions",
+        "10": "initiatives",
+        "11": "procedures"
+      }
+    },
+    {
+      "towards": {
+        "0": "toward",
+        "1": "toward achieving"
+      }
+    },
+    {
+      "achieving": {
+        "00": "attaining",
+        "01": "realizing",
+        "10": "reaching",
+        "11": "accomplishing"
+      }
+    },
+    {
+      "racial": {
+        "0": "ethnic",
+        "1": "race-based"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "gender": {
+        "0": "gender-based",
+        "1": "sex-based"
+      }
+    },
+    {
+      "equality": {
+        "00": "parity",
+        "01": "equity",
+        "10": "fairness",
+        "11": "justice"
+      }
+    },
+    {
+      "in": {
+        "0": "within",
+        "1": "inside"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "workplace": {
+        "00": "workplace",
+        "01": "work environment",
+        "10": "job site",
+        "11": "office"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "implementing": {
+        "00": "enacting",
+        "01": "applying",
+        "10": "executing",
+        "11": "putting into practice"
+      }
+    },
+    {
+      "policies": {
+        "00": "rules",
+        "01": "regulations",
+        "10": "guidelines",
+        "11": "directives"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "practices": {
+        "00": "practices",
+        "01": "protocol",
+        "10": "procedure",
+        "11": "customs"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "promote": {
+        "00": "encourage",
+        "01": "foster",
+        "10": "advance",
+        "11": "support"
+      }
+    },
+    {
+      "diversity": {
+        "0": "diversity",
+        "1": "diversity"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "inclusion": {
+        "00": "inclusivity",
+        "01": "integration",
+        "10": "embracement",
+        "11": "incorporation"
+      }
+    },
+    {
+      "This": {
+        "0": "This",
+        "1": "This"
+      }
+    },
+    {
+      "includes": {
+        "00": "encompasses",
+        "01": "comprises",
+        "10": "entails",
+        "11": "incorporates"
+      }
+    },
+    {
+      "establishing": {
+        "00": "setting up",
+        "01": "forming",
+        "10": "creating",
+        "11": "founding"
+      }
+    },
+    {
+      "clear": {
+        "00": "explicit",
+        "01": "definite",
+        "10": "unambiguous",
+        "11": "straightforward"
+      }
+    },
+    {
+      "guidelines": {
+        "00": "instructions",
+        "01": "principles",
+        "10": "criteria",
+        "11": "standards"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "regarding"
+      }
+    },
+    {
+      "fair": {
+        "00": "equitable",
+        "01": "just",
+        "10": "unbiased",
+        "11": "impartial"
+      }
+    },
+    {
+      "hiring": {
+        "00": "recruitment",
+        "01": "employing",
+        "10": "appointment",
+        "11": "engagement"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "promotion": {
+        "00": "advancement",
+        "01": "elevation",
+        "10": "upgrading",
+        "11": "ascent"
+      }
+    },
+    {
+      "processes": {
+        "00": "procedures",
+        "01": "methods",
+        "10": "operations",
+        "11": "mechanisms"
+      }
+    },
+    {
+      "as": {
+        "0": "as",
+        "1": "just as"
+      }
+    },
+    {
+      "well": {
+        "0": "well",
+        "1": "well"
+      }
+    },
+    {
+      "as": {
+        "0": "as",
+        "1": "as"
+      }
+    },
+    {
+      "offering": {
+        "00": "providing",
+        "01": "supplying",
+        "10": "presenting",
+        "11": "extending"
+      }
+    },
+    {
+      "training": {
+        "00": "training",
+        "01": "instruction",
+        "10": "education",
+        "11": "preparation"
+      }
+    },
+    {
+      "programs": {
+        "00": "programs",
+        "01": "courses",
+        "10": "workshops",
+        "11": "seminars"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "promote": {
+        "00": "encourage",
+        "01": "nurture",
+        "10": "cultivate",
+        "11": "stimulate"
+      }
+    },
+    {
+      "diversity": {
+        "0": "diversity",
+        "1": "diversity"
+      }
+    },
+    {
+      "awareness": {
+        "00": "consciousness",
+        "01": "recognition",
+        "10": "realization",
+        "11": "awareness"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "cultural": {
+        "00": "cultural",
+        "01": "social",
+        "10": "ethnic",
+        "11": "communal"
+      }
+    },
+    {
+      "competence": {
+        "00": "proficiency",
+        "01": "capability",
+        "10": "expertise",
+        "11": "adeptness"
+      }
+    },
+    {
+      "Companies": {
+        "00": "Firms",
+        "01": "Corporations",
+        "10": "Enterprises",
+        "11": "Businesses"
+      }
+    },
+    {
+      "should": {
+        "0": "should",
+        "1": "should"
+      }
+    },
+    {
+      "also": {
+        "00": "additionally",
+        "01": "moreover",
+        "10": "furthermore",
+        "11": "besides"
+      }
+    },
+    {
+      "make": {
+        "00": "create",
+        "01": "formulate",
+        "10": "devise",
+        "11": "construct"
+      }
+    },
+    {
+      "an": {
+        "0": "an",
+        "1": "an"
+      }
+    },
+    {
+      "effort": {
+        "00": "endeavor",
+        "01": "attempt",
+        "10": "try",
+        "11": "strive"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "address": {
+        "00": "tackle",
+        "01": "confront",
+        "10": "deal with",
+        "11": "handle"
+      }
+    },
+    {
+      "any": {
+        "0": "any",
+        "1": "any"
+      }
+    },
+    {
+      "unconscious": {
+        "00": "subconscious",
+        "01": "latent",
+        "10": "involuntary",
+        "11": "unintentional"
+      }
+    },
+    {
+      "biases": {
+        "00": "prejudices",
+        "01": "partialities",
+        "10": "inequities",
+        "11": "favoritisms"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "may": {
+        "0": "might",
+        "1": "could"
+      }
+    },
+    {
+      "exist": {
+        "00": "occur",
+        "01": "prevail",
+        "10": "subsist",
+        "11": "reside"
+      }
+    },
+    {
+      "within": {
+        "0": "inside",
+        "1": "in"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "organization": {
+        "00": "institution",
+        "01": "company",
+        "10": "corporation",
+        "11": "agency"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "take": {
+        "00": "adopt",
+        "01": "undertake",
+        "10": "execute",
+        "11": "implement"
+      }
+    },
+    {
+      "steps": {
+        "00": "measures",
+        "01": "actions",
+        "10": "procedures",
+        "11": "initiatives"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "mitigate": {
+        "00": "alleviate",
+        "01": "reduce",
+        "10": "lessen",
+        "11": "diminish"
+      }
+    },
+    {
+      "them": {
+        "0": "them",
+        "1": "them"
+      }
+    },
+    {
+      "Furthermore": {
+        "00": "Moreover",
+        "01": "Additionally",
+        "10": "Also",
+        "11": "Besides"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "important": {
+        "00": "crucial",
+        "01": "vital",
+        "10": "essential",
+        "11": "significant"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "ensure": {
+        "00": "guarantee",
+        "01": "secure",
+        "10": "certify",
+        "11": "ascertain"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "there": {
+        "0": "there",
+        "1": "there"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "equal": {
+        "00": "equivalent",
+        "01": "uniform",
+        "10": "identical",
+        "11": "like"
+      }
+    },
+    {
+      "pay": {
+        "00": "remuneration",
+        "01": "salary",
+        "10": "compensation",
+        "11": "wages"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "equal": {
+        "00": "comparable",
+        "01": "analogous",
+        "10": "commensurate",
+        "11": "corresponding"
+      }
+    },
+    {
+      "work": {
+        "00": "labor",
+        "01": "employment",
+        "10": "occupation",
+        "11": "task"
+      }
+    },
+    {
+      "Studies": {
+        "00": "Research",
+        "01": "Investigations",
+        "10": "Analyses",
+        "11": "Examinations"
+      }
+    },
+    {
+      "have": {
+        "0": "have",
+        "1": "have"
+      }
+    },
+    {
+      "shown": {
+        "00": "demonstrated",
+        "01": "revealed",
+        "10": "indicated",
+        "11": "proved"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "women": {
+        "0": "women",
+        "1": "women"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "people": {
+        "0": "individuals",
+        "1": "persons"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "color": {
+        "0": "color backgrounds",
+        "1": "non-white ethnicities"
+      }
+    },
+    {
+      "are": {
+        "0": "are",
+        "1": "are"
+      }
+    },
+    {
+      "often": {
+        "00": "frequently",
+        "01": "regularly",
+        "10": "commonly",
+        "11": "usually"
+      }
+    },
+    {
+      "paid": {
+        "00": "remunerated",
+        "01": "compensated",
+        "10": "recompensed",
+        "11": "rewarded"
+      }
+    },
+    {
+      "less": {
+        "0": "lower",
+        "1": "inferior"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "doing": {
+        "00": "performing",
+        "01": "executing",
+        "10": "conducting",
+        "11": "carrying out"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "same": {
+        "00": "identical",
+        "01": "equivalent",
+        "10": "unaltered",
+        "11": "unchanged"
+      }
+    },
+    {
+      "job": {
+        "00": "position",
+        "01": "role",
+        "10": "occupation",
+        "11": "employment"
+      }
+    },
+    {
+      "as": {
+        "0": "as",
+        "1": "as"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "white": {
+        "0": "white",
+        "1": "white"
+      }
+    },
+    {
+      "male": {
+        "0": "male",
+        "1": "male"
+      }
+    },
+    {
+      "counterparts": {
+        "00": "equivalents",
+        "01": "peers",
+        "10": "compeers",
+        "11": "colleagues"
+      }
+    },
+    {
+      "This": {
+        "0": "This",
+        "1": "This"
+      }
+    },
+    {
+      "wage": {
+        "00": "income",
+        "01": "earnings",
+        "10": "pay",
+        "11": "salary"
+      }
+    },
+    {
+      "gap": {
+        "00": "disparity",
+        "01": "difference",
+        "10": "rift",
+        "11": "divide"
+      }
+    },
+    {
+      "not": {
+        "0": "not",
+        "1": "not"
+      }
+    },
+    {
+      "only": {
+        "0": "only",
+        "1": "only"
+      }
+    },
+    {
+      "perpetuates": {
+        "00": "continues",
+        "01": "maintains",
+        "10": "propagates",
+        "11": "extends"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "unfairness",
+        "10": "imbalance",
+        "11": "inequity"
+      }
+    },
+    {
+      "but": {
+        "0": "but",
+        "1": "but"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "also": {
+        "00": "additionally",
+        "01": "as well",
+        "10": "too",
+        "11": "furthermore"
+      }
+    },
+    {
+      "undermines": {
+        "00": "weakens",
+        "01": "subverts",
+        "10": "impairs",
+        "11": "undercuts"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "hard": {
+        "00": "strenuous",
+        "01": "arduous",
+        "10": "intensive",
+        "11": "toilsome"
+      }
+    },
+    {
+      "work": {
+        "00": "effort",
+        "01": "labor",
+        "10": "toil",
+        "11": "exertion"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "skills": {
+        "00": "expertise",
+        "01": "abilities",
+        "10": "proficiencies",
+        "11": "competencies"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "these": {
+        "0": "these",
+        "1": "these"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "people",
+        "10": "characters",
+        "11": "personalities"
+      }
+    },
+    {
+      "Organizations": {
+        "00": "Institutions",
+        "01": "Companies",
+        "10": "Corporations",
+        "11": "Associations"
+      }
+    },
+    {
+      "should": {
+        "0": "should",
+        "1": "should"
+      }
+    },
+    {
+      "conduct": {
+        "00": "perform",
+        "01": "carry out",
+        "10": "execute",
+        "11": "undertake"
+      }
+    },
+    {
+      "regular": {
+        "00": "periodic",
+        "01": "routine",
+        "10": "systematic",
+        "11": "recurrent"
+      }
+    },
+    {
+      "pay": {
+        "0": "salary",
+        "1": "wage"
+      }
+    },
+    {
+      "audits": {
+        "00": "reviews",
+        "01": "inspections",
+        "10": "examinations",
+        "11": "assessments"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "identify": {
+        "00": "detect",
+        "01": "distinguish",
+        "10": "recognize",
+        "11": "determine"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "rectify": {
+        "00": "correct",
+        "01": "amend",
+        "10": "resolve",
+        "11": "remedy"
+      }
+    },
+    {
+      "any": {
+        "0": "any",
+        "1": "any"
+      }
+    },
+    {
+      "discrepancies": {
+        "00": "inconsistencies",
+        "01": "differences",
+        "10": "disparities",
+        "11": "divergences"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "wages": {
+        "00": "earnings",
+        "01": "remuneration",
+        "10": "pay",
+        "11": "compensation"
+      }
+    },
+    {
+      "based": {
+        "00": "founded",
+        "01": "grounded",
+        "10": "predicated",
+        "11": "built"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "gender": {
+        "0": "gender",
+        "1": "gender"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "race": {
+        "0": "ethnicity",
+        "1": "racial background"
+      }
+    },
+    {
+      "Another": {
+        "00": "A further",
+        "01": "An additional",
+        "10": "One more",
+        "11": "A different"
+      }
+    },
+    {
+      "important": {
+        "00": "crucial",
+        "01": "vital",
+        "10": "essential",
+        "11": "significant"
+      }
+    },
+    {
+      "aspect": {
+        "00": "facet",
+        "01": "feature",
+        "10": "element",
+        "11": "dimension"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "achieving": {
+        "00": "attaining",
+        "01": "realizing",
+        "10": "securing",
+        "11": "accomplishing"
+      }
+    },
+    {
+      "racial": {
+        "0": "ethnic",
+        "1": "racialized"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "and also"
+      }
+    },
+    {
+      "gender": {
+        "0": "sex",
+        "1": "gender-based"
+      }
+    },
+    {
+      "equality": {
+        "00": "parity",
+        "01": "equivalence",
+        "10": "uniformity",
+        "11": "balance"
+      }
+    },
+    {
+      "in": {
+        "0": "within",
+        "1": "inside"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "workplace": {
+        "00": "office",
+        "01": "work environment",
+        "10": "job site",
+        "11": "place of employment"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "creating": {
+        "00": "forming",
+        "01": "establishing",
+        "10": "developing",
+        "11": "fostering"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "supportive": {
+        "0": "helpful",
+        "1": "encouraging"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "inclusive": {
+        "00": "comprehensive",
+        "01": "embracing",
+        "10": "all-encompassing",
+        "11": "integrative"
+      }
+    },
+    {
+      "work": {
+        "0": "work",
+        "1": "labor"
+      }
+    },
+    {
+      "culture": {
+        "00": "environment",
+        "01": "ambiance",
+        "10": "ethos",
+        "11": "climate"
+      }
+    },
+    {
+      "This": {
+        "0": "This",
+        "1": "This"
+      }
+    },
+    {
+      "includes": {
+        "00": "encompasses",
+        "01": "comprises",
+        "10": "involves",
+        "11": "entails"
+      }
+    },
+    {
+      "fostering": {
+        "00": "encouraging",
+        "01": "nurturing",
+        "10": "cultivating",
+        "11": "promoting"
+      }
+    },
+    {
+      "open": {
+        "00": "transparent",
+        "01": "unrestricted",
+        "10": "accessible",
+        "11": "free"
+      }
+    },
+    {
+      "communication": {
+        "00": "dialogue",
+        "01": "correspondence",
+        "10": "interchange",
+        "11": "discourse"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "providing": {
+        "00": "supplying",
+        "01": "offering",
+        "10": "furnishing",
+        "11": "giving"
+      }
+    },
+    {
+      "support": {
+        "00": "assistance",
+        "01": "backing",
+        "10": "aid",
+        "11": "help"
+      }
+    },
+    {
+      "systems": {
+        "00": "mechanisms",
+        "01": "frameworks",
+        "10": "processes",
+        "11": "structures"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "employees": {
+        "00": "workers",
+        "01": "staff",
+        "10": "personnel",
+        "11": "team members"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "report": {
+        "00": "report",
+        "01": "document",
+        "10": "file",
+        "11": "record"
+      }
+    },
+    {
+      "any": {
+        "0": "any",
+        "1": "any"
+      }
+    },
+    {
+      "instances": {
+        "0": "cases",
+        "1": "occurrences"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "discrimination": {
+        "00": "bias",
+        "01": "prejudice",
+        "10": "inequity",
+        "11": "unfairness"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "bias": {
+        "0": "partiality",
+        "1": "preconception"
+      }
+    },
+    {
+      "Companies": {
+        "00": "Firms",
+        "01": "Corporations",
+        "10": "Businesses",
+        "11": "Enterprises"
+      }
+    },
+    {
+      "should": {
+        "0": "should",
+        "1": "should"
+      }
+    },
+    {
+      "also": {
+        "0": "also",
+        "1": "also"
+      }
+    },
+    {
+      "actively": {
+        "0": "proactively",
+        "1": "diligently"
+      }
+    },
+    {
+      "promote": {
+        "00": "advance",
+        "01": "champion",
+        "10": "support",
+        "11": "advocate"
+      }
+    },
+    {
+      "diversity": {
+        "0": "variety",
+        "1": "multiplicity"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "inclusion": {
+        "0": "integration",
+        "1": "incorporation"
+      }
+    },
+    {
+      "through": {
+        "0": "through",
+        "1": "through"
+      }
+    },
+    {
+      "employee": {
+        "0": "staff",
+        "1": "workforce"
+      }
+    },
+    {
+      "resource": {
+        "0": "asset",
+        "1": "support"
+      }
+    },
+    {
+      "groups": {
+        "0": "groups",
+        "1": "collectives"
+      }
+    },
+    {
+      "mentoring": {
+        "0": "advising",
+        "1": "coaching"
+      }
+    },
+    {
+      "programs": {
+        "0": "initiatives",
+        "1": "schemes"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "diversity": {
+        "0": "diversity",
+        "1": "diversity"
+      }
+    },
+    {
+      "events": {
+        "0": "occasions",
+        "1": "happenings"
+      }
+    },
+    {
+      "In": {
+        "0": "In",
+        "1": "In"
+      }
+    },
+    {
+      "conclusion": {
+        "0": "conclusion",
+        "1": "conclusion"
+      }
+    },
+    {
+      "racial": {
+        "0": "racial",
+        "1": "racial"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "gender": {
+        "0": "gender",
+        "1": "gender"
+      }
+    },
+    {
+      "equality": {
+        "0": "equality",
+        "1": "equality"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "workplace": {
+        "0": "workplace",
+        "1": "workplace"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "crucial": {
+        "00": "vital",
+        "01": "critical",
+        "10": "essential",
+        "11": "imperative"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "creating": {
+        "0": "creating",
+        "1": "creating"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "fair": {
+        "00": "equitable",
+        "01": "just",
+        "10": "impartial",
+        "11": "unbiased"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "productive": {
+        "00": "constructive",
+        "01": "fruitful",
+        "10": "effective",
+        "11": "efficient"
+      }
+    },
+    {
+      "work": {
+        "0": "work",
+        "1": "work"
+      }
+    },
+    {
+      "environment": {
+        "00": "surroundings",
+        "01": "setting",
+        "10": "context",
+        "11": "milieu"
+      }
+    },
+    {
+      "Organizations": {
+        "00": "Institutions",
+        "01": "Associations",
+        "10": "Bodies",
+        "11": "Entities"
+      }
+    },
+    {
+      "must": {
+        "0": "must",
+        "1": "must"
+      }
+    },
+    {
+      "take": {
+        "00": "adopt",
+        "01": "undertake",
+        "10": "embrace",
+        "11": "engage in"
+      }
+    },
+    {
+      "proactive": {
+        "00": "preventative",
+        "01": "anticipatory",
+        "10": "forward-looking",
+        "11": "preemptive"
+      }
+    },
+    {
+      "steps": {
+        "00": "measures",
+        "01": "actions",
+        "10": "initiatives",
+        "11": "procedures"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "eliminate": {
+        "00": "eradicate",
+        "01": "remove",
+        "10": "abolish",
+        "11": "exterminate"
+      }
+    },
+    {
+      "discrimination": {
+        "0": "discrimination",
+        "1": "discrimination"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "promote": {
+        "0": "promote",
+        "1": "promote"
+      }
+    },
+    {
+      "diversity": {
+        "0": "diversity",
+        "1": "diversity"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "inclusion": {
+        "0": "inclusion",
+        "1": "inclusion"
+      }
+    },
+    {
+      "By": {
+        "0": "By",
+        "1": "By"
+      }
+    },
+    {
+      "implementing": {
+        "00": "executing",
+        "01": "applying",
+        "10": "enacting",
+        "11": "putting into effect"
+      }
+    },
+    {
+      "fair": {
+        "00": "equitable",
+        "01": "just",
+        "10": "impartial",
+        "11": "honest"
+      }
+    },
+    {
+      "hiring": {
+        "0": "recruitment",
+        "1": "employment"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "pay": {
+        "00": "compensation",
+        "01": "remuneration",
+        "10": "salary",
+        "11": "wages"
+      }
+    },
+    {
+      "practices": {
+        "0": "practices",
+        "1": "procedures"
+      }
+    },
+    {
+      "addressing": {
+        "00": "tackling",
+        "01": "handling",
+        "10": "confronting",
+        "11": "dealing with"
+      }
+    },
+    {
+      "unconscious": {
+        "00": "subconscious",
+        "01": "latent",
+        "10": "unintentional",
+        "11": "inadvertent"
+      }
+    },
+    {
+      "biases": {
+        "0": "prejudices",
+        "1": "partialities"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "fostering": {
+        "0": "fostering",
+        "1": "fostering"
+      }
+    },
+    {
+      "an": {
+        "0": "an",
+        "1": "an"
+      }
+    },
+    {
+      "inclusive": {
+        "0": "inclusive",
+        "1": "inclusive"
+      }
+    },
+    {
+      "work": {
+        "0": "work",
+        "1": "work"
+      }
+    },
+    {
+      "culture": {
+        "0": "culture",
+        "1": "atmosphere"
+      }
+    },
+    {
+      "companies": {
+        "0": "companies",
+        "1": "companies"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "strive": {
+        "0": "strive",
+        "1": "strive"
+      }
+    },
+    {
+      "towards": {
+        "0": "towards",
+        "1": "towards"
+      }
+    },
+    {
+      "achieving": {
+        "0": "achieving",
+        "1": "achieving"
+      }
+    },
+    {
+      "equality": {
+        "0": "equality",
+        "1": "equality"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "all": {
+        "0": "all",
+        "1": "all"
+      }
+    },
+    {
+      "employees": {
+        "0": "employees",
+        "1": "employees"
+      }
+    },
+    {
+      "It": {
+        "0": "It",
+        "1": "It"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "only": {
+        "0": "only",
+        "1": "only"
+      }
+    },
+    {
+      "through": {
+        "0": "through",
+        "1": "through"
+      }
+    },
+    {
+      "these": {
+        "0": "these",
+        "1": "these"
+      }
+    },
+    {
+      "collective": {
+        "0": "collective",
+        "1": "collective"
+      }
+    },
+    {
+      "efforts": {
+        "0": "efforts",
+        "1": "efforts"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "we": {
+        "0": "we",
+        "1": "we"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "create": {
+        "0": "create",
+        "1": "create"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "truly": {
+        "0": "truly",
+        "1": "truly"
+      }
+    },
+    {
+      "equitable": {
+        "0": "equitable",
+        "1": "equitable"
+      }
+    },
+    {
+      "workplace": {
+        "0": "workplace",
+        "1": "workplace"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "everyone": {
+        "0": "everyone",
+        "1": "everyone"
+      }
+    }
+  ],
+  "container": "Racial and gender equality in the workplace is a crucial issue that needs to be addressed in order to create a fair and inclusive environment for all employees. Discrimination based on race or gender not only violates fundamental human rights, but it also hampers the overall productivity and growth of an organization. In this essay, we will explore the importance of racial and gender equality in the workplace and discuss the steps that can be taken to achieve it. Racial and gender discrimination in the workplace can take many forms, including unequal pay, limited opportunities for advancement, and biased hiring practices. These inequalities not only affect individuals directly, but they also contribute to a negative work culture and low employee morale. It is essential that organizations recognize the value of diversity and work towards creating an inclusive environment where everyone is treated with respect and given equal opportunities to succeed. One of the key steps towards achieving racial and gender equality in the workplace is implementing policies and practices that promote diversity and inclusion. This includes establishing clear guidelines on fair hiring and promotion processes, as well as offering training programs that promote diversity awareness and cultural competence. Companies should also make an effort to address any unconscious biases that may exist within their organization and take steps to mitigate them. Furthermore, it is important to ensure that there is equal pay for equal work. Studies have shown that women and people of color are often paid less for doing the same job as their white male counterparts. This wage gap not only perpetuates inequality, but it also undermines the hard work and skills of these individuals. Organizations should conduct regular pay audits to identify and rectify any discrepancies in wages based on gender or race. Another important aspect of achieving racial and gender equality in the workplace is creating a supportive and inclusive work culture. This includes fostering open communication and providing support systems for employees to report any instances of discrimination or bias. Companies should also actively promote diversity and inclusion through employee resource groups, mentoring programs, and diversity events. In conclusion, racial and gender equality in the workplace is crucial for creating a fair and productive work environment. Organizations must take proactive steps to eliminate discrimination and promote diversity and inclusion. By implementing fair hiring and pay practices, addressing unconscious biases, and fostering an inclusive work culture, companies can strive towards achieving equality for all employees. It is only through these collective efforts that we can create a truly equitable workplace for everyone.",
+  "encoded_message": "Cultural as well as gender impartiality inside the work environment is a pivotal topic that demands to be confronted in order to establish a impartial and comprehensive climate for all personnel. Bias predicated on heritage or gender not only disregards essential human rights, but it also impedes the general performance and development of an company. In this article, we will investigate the relevance of cultural and gender parity inside the office and consider the measures that can be adopted to accomplish it. Cultural and gender unfairness within the office can adopt various forms, including disproportionate wages, restricted possibilities for progress, and partial staffing protocols. Such imbalances not solely change persons immediately, but they also give toward a harmful work culture and low worker morale. It is important that institutions acknowledge the worth of variety and activity in the direction of forging an comprehensive habitat where all is dealt with with respect and provided equivalent prospects to prevail. One of the fundamental actions toward achieving accomplishing race-based and gender-based parity inside the workplace is applying guidelines and practices that encourage diversity and embracement. This comprises forming explicit instructions on just engagement and advancement methods, as well as providing training programs that stimulate diversity awareness and cultural capability. Corporations should moreover construct an try to confront any subconscious prejudices that could prevail in their corporation and implement measures to diminish them. Besides, it is significant to guarantee that there is equivalent compensation for analogous occupation. Investigations have revealed that women and persons of non-white ethnicities are usually compensated inferior for performing the identical occupation as their white male peers. This salary rift not only extends unfairness, but it additionally undercuts the arduous effort and abilities of these people. Associations should undertake systematic salary audits to identify and rectify any discrepancies in wages based on gender or race. Another important aspect of achieving racial and gender equality in the workplace is creating a supportive and inclusive work culture. This includes fostering open communication and providing support systems for employees to report any instances of discrimination or bias. Companies should also actively promote diversity and inclusion through employee resource groups, mentoring programs, and diversity events. In conclusion, racial and gender equality in the workplace is crucial for creating a fair and productive work environment. Organizations must take proactive steps to eliminate discrimination and promote diversity and inclusion. By implementing fair hiring and pay practices, addressing unconscious biases, and fostering an inclusive work culture, companies can strive towards achieving equality for all employees. It is only through these collective efforts that we can create a truly equitable workplace for everyone.",
+  "encoding_time_report": {
+    "container_generation": 13.98,
+    "secret_key_generation": 243.65
+  },
+  "decoding_time": 0.0014300346374511719,
+  "decoded_message": "1111101110101001000110000111100000110000101011011110000110111011000101001011011101011000010001100110000000011110001001010000011110011111000101100010010100000111000100110101011110010000101110110011111100001001100101111101100001001111011010011010001011111100",
+  "error_message": ""
+}

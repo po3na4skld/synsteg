@@ -1,0 +1,24 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 7603.79it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: openai-community/roberta-base-openai-detector
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+D1_roberta_openai luna_missing {'n': 300, 'auc_container': 0.21, 'auc_stego': 0.993, 'tpr5_container': 0.0, 'tpr5_stego': 0.97, 'auc_container_vs_stego': 1.0}
+D1_roberta_openai qwen_missing_b3 {'n': 75, 'auc_container': 0.183, 'auc_stego': 0.835, 'tpr5_container': 0.0, 'tpr5_stego': 0.667, 'auc_container_vs_stego': 0.965}
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 42947.28it/s]
+D2_chatgpt_roberta luna_missing {'n': 300, 'auc_container': 0.937, 'auc_stego': 0.154, 'tpr5_container': 0.777, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.003}
+D2_chatgpt_roberta qwen_missing_b3 {'n': 75, 'auc_container': 0.89, 'auc_stego': 0.048, 'tpr5_container': 0.627, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.0}
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+D3_desklib luna_missing {'n': 300, 'auc_container': 0.999, 'auc_stego': 0.862, 'tpr5_container': 0.993, 'tpr5_stego': 0.44, 'auc_container_vs_stego': 0.022}
+D3_desklib qwen_missing_b3 {'n': 75, 'auc_container': 1.0, 'auc_stego': 0.986, 'tpr5_container': 1.0, 'tpr5_stego': 0.947, 'auc_container_vs_stego': 0.009}
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<01:59,  2.83it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 577.01it/s]Loading weights:  94%|█████████▍| 317/338 [00:00<00:00, 575.04it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 502.23it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<03:41,  1.52it/s]Loading weights:  51%|█████     | 171/338 [00:00<00:00, 264.71it/s]Loading weights:  67%|██████▋   | 225/338 [00:01<00:00, 147.48it/s]Loading weights:  76%|███████▋  | 258/338 [00:01<00:00, 151.79it/s]Loading weights:  84%|████████▍ | 285/338 [00:01<00:00, 165.19it/s]Loading weights:  92%|█████████▏| 312/338 [00:01<00:00, 178.39it/s]Loading weights: 100%|██████████| 338/338 [00:02<00:00, 165.30it/s]
+/Users/po3na4skld/.local/share/uv/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

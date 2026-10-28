@@ -1,0 +1,116 @@
+10/20/2026 22:09:47 - INFO - __main__ -   --------------Main Configs-------------------
+10/20/2026 22:09:47 - INFO - __main__ -   {'use_processor': True, 'out_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt4o_pplopt32_birnn', 'checkpoint': 'best', 'record_file': 'record.txt', 'model': 'birnn', 'class_num': 2, 'tokenizer': False, 'seed': 42, 'gpuid': '0', 'task_name': 'steganalysis', 'use_plm': False, 'repeat_num': 1, 'device': device(type='mps'), 'Dataset': {'name': 'tweet', 'stego_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/stego.txt', 'cover_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/clean.txt', 'csv_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/csv', 'resplit': True, 'split_ratio': 0.8, 'save_cache': False, 'overwrite_cache': True}, 'Tokenizer': {'model_name_or_path': 'bert-base-uncased'}, 'Training_with_Processor': {'num_train_epochs': 3, 'learning_rate': 5e-05, 'model_name_or_path': 'bert-base-uncased', 'do_lower_case': True, 'per_gpu_train_batch_size': 32, 'per_gpu_eval_batch_size': 32, 'n_gpu': 1, 'max_steps': -1, 'gradient_accumulation_steps': 1, 'eval_and_save_steps': 100, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'logging_steps': -1, 'evaluate_during_training': False, 'save_only_best': True, 'use_fixed_seq_length': True, 'eval_all_checkpoints': False, 'skip_evaluate_dev': True}, 'Training': {'batch_size': 100, 'epoch': 10, 'learning_rate': 0.001, 'early_stop': 50, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'evaluate_during_training': False, 'save_only_best': True}, 'Vocabulary': {'word_drop': 0, 'do_lower': True, 'max_length': 60}, 'CNN': {'embed_size': 128, 'filter_num': 128, 'filter_size': [3, 4, 5], 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'RNN': {'cell': 'bi-lstm', 'embed_size': 128, 'hidden_dim': 256, 'num_layers': 1, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'FCN': {'embed_size': 128, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'LSTMATT': {'embed_size': 128, 'hidden_dim': 256, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss', 'bidirectional': True}, 'RBiLSTMC': {'num_layers': 1, 'kernel_sizes': [3, 4, 5], 'kernel_num': 128, 'embed_dim': 128, 'hidden_dim': 256, 'LSTM_dropout': 0.2, 'CNN_dropout': 0.2, 'Ci': 1, 'criteration': 'CrossEntropyLoss'}, 'BiLSTMDENSE': {'num_layers': 1, 'embed_dim': 256, 'hidden_dim': 200, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'SESY': {'clf': 'cnn', 'criteration': 'CrossEntropyLoss', 'strategy': 'cas', 'embed_size': 100, 'hidden_dim': 128, 'readout_size': 64, 'gat_alpha': 0.2, 'gat_heads': 8, 'dropout_rate': 0.2, 'TC_configs': {'cnn': {'filter_num': 128, 'filter_size': [3, 4, 5]}, 'rnn': {'cell': 'bi-lstm', 'hidden_dim': 256, 'num_layers': 1}, 'fc': {}}}, 'state_dict': {'use_processor': True, 'out_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt4o_pplopt32_birnn', 'checkpoint': 'best', 'record_file': 'record.txt', 'model': 'birnn', 'class_num': 2, 'tokenizer': False, 'seed': 42, 'gpuid': '0', 'task_name': 'steganalysis', 'use_plm': False, 'repeat_num': 1, 'device': 'cuda:0', 'Dataset': {'name': 'tweet', 'stego_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/stego.txt', 'cover_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/clean.txt', 'csv_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/csv', 'resplit': True, 'split_ratio': 0.8, 'save_cache': False, 'overwrite_cache': True}, 'Tokenizer': {'model_name_or_path': 'bert-base-uncased'}, 'Training_with_Processor': {'num_train_epochs': 3, 'learning_rate': 5e-05, 'model_name_or_path': 'bert-base-uncased', 'do_lower_case': True, 'per_gpu_train_batch_size': 32, 'per_gpu_eval_batch_size': 32, 'n_gpu': 1, 'max_steps': -1, 'gradient_accumulation_steps': 1, 'eval_and_save_steps': 100, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'logging_steps': -1, 'evaluate_during_training': False, 'save_only_best': True, 'use_fixed_seq_length': True, 'eval_all_checkpoints': False, 'skip_evaluate_dev': True}, 'Training': {'batch_size': 100, 'epoch': 10, 'learning_rate': 0.001, 'early_stop': 50, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'evaluate_during_training': False, 'save_only_best': True}, 'Vocabulary': {'word_drop': 0, 'do_lower': True, 'max_length': 60}, 'CNN': {'embed_size': 128, 'filter_num': 128, 'filter_size': [3, 4, 5], 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'RNN': {'cell': 'bi-lstm', 'embed_size': 128, 'hidden_dim': 256, 'num_layers': 1, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'FCN': {'embed_size': 128, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'LSTMATT': {'embed_size': 128, 'hidden_dim': 256, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss', 'bidirectional': True}, 'RBiLSTMC': {'num_layers': 1, 'kernel_sizes': [3, 4, 5], 'kernel_num': 128, 'embed_dim': 128, 'hidden_dim': 256, 'LSTM_dropout': 0.2, 'CNN_dropout': 0.2, 'Ci': 1, 'criteration': 'CrossEntropyLoss'}, 'BiLSTMDENSE': {'num_layers': 1, 'embed_dim': 256, 'hidden_dim': 200, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'SESY': {'clf': 'cnn', 'criteration': 'CrossEntropyLoss', 'strategy': 'cas', 'embed_size': 100, 'hidden_dim': 128, 'readout_size': 64, 'gat_alpha': 0.2, 'gat_heads': 8, 'dropout_rate': 0.2, 'TC_configs': {'cnn': {'filter_num': 128, 'filter_size': [3, 4, 5]}, 'rnn': {'cell': 'bi-lstm', 'hidden_dim': 256, 'num_layers': 1}, 'fc': {}}}}}
+10/20/2026 22:09:47 - INFO - __main__ -   --------------loading data-------------------
+10/20/2026 22:09:47 - INFO - __main__ -   Dataset Configs
+10/20/2026 22:09:47 - INFO - __main__ -   {"name": "tweet", "stego_file": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/stego.txt", "cover_file": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/clean.txt", "csv_dir": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/csv", "resplit": true, "split_ratio": 0.8, "save_cache": false, "overwrite_cache": true}
+10/20/2026 22:09:47 - INFO - __main__ -   ----------------use plm or not----------------
+10/20/2026 22:09:47 - INFO - __main__ -   --------------------NO-------------------------
+10/20/2026 22:09:47 - INFO - __main__ -   	load plm name or path from Training_with_Processor args
+10/20/2026 22:09:47 - INFO - __main__ -   -------------------------------------------------------------------------------------------------------
+10/20/2026 22:09:47 - INFO - __main__ -   ----------------init model-----------------------
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/steganalysis/.venv_ts/lib/python3.11/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+10/20/2026 22:09:47 - INFO - __main__ -   Model Configs
+10/20/2026 22:09:47 - INFO - __main__ -   {"MODEL_TYPE": "birnn", "cell": "bi-lstm", "embed_size": 128, "hidden_dim": 256, "num_layers": 1, "dropout_rate": 0.2, "criteration": "CrossEntropyLoss", "vocab_size": 30522}
+10/20/2026 22:09:47 - INFO - __main__ -   --------------start training--------------------
+10/20/2026 22:09:47 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/csv
+10/20/2026 22:09:47 - INFO - __main__ -   Finished creating features
+10/20/2026 22:09:47 - INFO - __main__ -   Finished converting features into tensors
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/steganalysis/.venv_ts/lib/python3.11/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+10/20/2026 22:09:47 - INFO - __main__ -   ***** Running training *****
+10/20/2026 22:09:47 - INFO - __main__ -     Num examples = 1476
+10/20/2026 22:09:47 - INFO - __main__ -     Num Epochs = 3
+10/20/2026 22:09:47 - INFO - __main__ -     Instantaneous batch size per GPU = 32
+10/20/2026 22:09:47 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+10/20/2026 22:09:47 - INFO - __main__ -     Gradient Accumulation steps = 1
+10/20/2026 22:09:47 - INFO - __main__ -     Total optimization steps = 141
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Epoch 0:   0%|          | 0/47 [00:00<?, ?it/s]
+Epoch 0:   2%|▏         | 1/47 [00:00<00:11,  3.96it/s]
+Epoch 0:  11%|█         | 5/47 [00:00<00:02, 16.66it/s]
+Epoch 0:  21%|██▏       | 10/47 [00:00<00:01, 26.66it/s]
+Epoch 0:  32%|███▏      | 15/47 [00:00<00:00, 33.00it/s]
+Epoch 0:  43%|████▎     | 20/47 [00:00<00:00, 36.69it/s]
+Epoch 0:  53%|█████▎    | 25/47 [00:00<00:00, 39.15it/s]
+Epoch 0:  64%|██████▍   | 30/47 [00:00<00:00, 40.95it/s]
+Epoch 0:  74%|███████▍  | 35/47 [00:01<00:00, 41.95it/s]
+Epoch 0:  85%|████████▌ | 40/47 [00:01<00:00, 43.09it/s]
+Epoch 0:  96%|█████████▌| 45/47 [00:01<00:00, 43.48it/s]
+Epoch 0: 100%|██████████| 47/47 [00:01<00:00, 35.04it/s]
+
+Epoch 1:   0%|          | 0/47 [00:00<?, ?it/s]
+Epoch 1:  11%|█         | 5/47 [00:00<00:00, 44.79it/s]
+Epoch 1:  21%|██▏       | 10/47 [00:00<00:00, 44.56it/s]
+Epoch 1:  32%|███▏      | 15/47 [00:00<00:00, 44.62it/s]
+Epoch 1:  43%|████▎     | 20/47 [00:00<00:00, 44.86it/s]
+Epoch 1:  53%|█████▎    | 25/47 [00:00<00:00, 44.88it/s]
+Epoch 1:  64%|██████▍   | 30/47 [00:00<00:00, 44.50it/s]
+Epoch 1:  74%|███████▍  | 35/47 [00:00<00:00, 44.43it/s]
+Epoch 1:  85%|████████▌ | 40/47 [00:00<00:00, 44.58it/s]
+Epoch 1:  96%|█████████▌| 45/47 [00:01<00:00, 44.88it/s]
+Epoch 1: 100%|██████████| 47/47 [00:01<00:00, 45.12it/s]
+
+Epoch 2:   0%|          | 0/47 [00:00<?, ?it/s]
+Epoch 2:  11%|█         | 5/47 [00:00<00:00, 45.32it/s]10/20/2026 22:09:50 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/csv
+10/20/2026 22:09:50 - INFO - __main__ -   Finished creating features
+10/20/2026 22:09:50 - INFO - __main__ -   Finished converting features into tensors
+10/20/2026 22:09:50 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/20/2026 22:09:50 - INFO - __main__ -   Num examples = 493
+10/20/2026 22:09:50 - INFO - __main__ -   Batch size = 32
+10/20/2026 22:09:50 - INFO - __main__ -   {"eval_accuracy": 0.5578093306288032, "eval_macro_f1": 0.5263793407368236, "eval_precision": 0.6379310344827587, "eval_recall": 0.296, "eval_f1_score": 0.40437158469945356, "step": 100}
+10/20/2026 22:09:50 - INFO - __main__ -   Congratulations, best model so far!
+10/20/2026 22:09:50 - INFO - __main__ -   Saving model checkpoint to /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt4o_pplopt32_birnn/best
+10/20/2026 22:09:50 - INFO - __main__ -   	Saved model checkpoint to /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt4o_pplopt32_birnn/best
+
+Epoch 2:  21%|██▏       | 10/47 [00:00<00:01, 19.75it/s]
+Epoch 2:  32%|███▏      | 15/47 [00:00<00:01, 26.69it/s]
+Epoch 2:  43%|████▎     | 20/47 [00:00<00:00, 31.87it/s]
+Epoch 2:  53%|█████▎    | 25/47 [00:00<00:00, 35.74it/s]
+Epoch 2:  64%|██████▍   | 30/47 [00:00<00:00, 38.38it/s]
+Epoch 2:  74%|███████▍  | 35/47 [00:01<00:00, 40.04it/s]
+Epoch 2:  85%|████████▌ | 40/47 [00:01<00:00, 41.30it/s]
+Epoch 2:  96%|█████████▌| 45/47 [00:01<00:00, 42.27it/s]
+Epoch 2: 100%|██████████| 47/47 [00:01<00:00, 36.71it/s]
+10/20/2026 22:09:51 - INFO - __main__ -    global_step = 141, average loss = 0.6831637388425515
+10/20/2026 22:09:51 - INFO - __main__ -   Evaluate the following checkpoints: ['/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt4o_pplopt32_birnn/best']
+10/20/2026 22:09:51 - INFO - __main__ -   ----------------init model-----------------------
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/steganalysis/.venv_ts/lib/python3.11/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+10/20/2026 22:09:51 - INFO - __main__ -   ---------------------loading model from /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt4o_pplopt32_birnn/best------------
+
+
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/steganalysis/TextSteganalysis/main.py:90: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model = torch.load(os.path.join(checkpoint, "pytorch_model.bin"))
+10/20/2026 22:09:51 - INFO - __main__ -   Model Configs
+10/20/2026 22:09:51 - INFO - __main__ -   {"MODEL_TYPE": "birnn", "cell": "bi-lstm", "embed_size": 128, "hidden_dim": 256, "num_layers": 1, "dropout_rate": 0.2, "criteration": "CrossEntropyLoss", "vocab_size": 30522}
+10/20/2026 22:09:51 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt4o_pplopt32/csv
+10/20/2026 22:09:51 - INFO - __main__ -   Finished creating features
+10/20/2026 22:09:51 - INFO - __main__ -   Finished converting features into tensors
+10/20/2026 22:09:51 - INFO - __main__ -   ***** Running evaluation: best on steganalysis test *****
+10/20/2026 22:09:51 - INFO - __main__ -   Num examples = 493
+10/20/2026 22:09:51 - INFO - __main__ -   Batch size = 32
+
+Evaluating:   0%|          | 0/16 [00:00<?, ?it/s]
+Evaluating:  81%|████████▏ | 13/16 [00:00<00:00, 128.79it/s]
+Evaluating: 100%|██████████| 16/16 [00:00<00:00, 128.42it/s]
+10/20/2026 22:09:51 - INFO - __main__ -   ***** test results: best *****
+10/20/2026 22:09:51 - INFO - __main__ -     accuracy = 0.5294117647058824
+10/20/2026 22:09:51 - INFO - __main__ -     f1_score = 0.32947976878612717
+10/20/2026 22:09:51 - INFO - __main__ -     macro_f1 = 0.48348988439306356
+10/20/2026 22:09:51 - INFO - __main__ -     precision = 0.6129032258064516
+10/20/2026 22:09:51 - INFO - __main__ -     recall = 0.22529644268774704
+10/20/2026 22:09:51 - INFO - __main__ -   Final results
+(repeat times: 1):
+accuracy	52.94%+0.00%
+precision	61.29%+0.00%
+recall	22.53%+0.00%
+f1_score	32.95%+0.00%

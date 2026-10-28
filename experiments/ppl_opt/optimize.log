@@ -1,0 +1,42 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-20 20:31:28,865 huggingface_hub.utils._http WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 24762.92it/s]
+K=32 0/300 1s rec=True retries=0 t=1.46s
+K=32 25/300 37s rec=True retries=0 t=2.50s
+K=32 50/300 71s rec=True retries=0 t=1.47s
+K=32 75/300 112s rec=True retries=0 t=0.58s
+K=32 100/300 160s rec=True retries=0 t=4.39s
+K=32 125/300 194s rec=True retries=0 t=0.87s
+K=32 150/300 240s rec=True retries=0 t=2.82s
+K=32 175/300 294s rec=True retries=0 t=0.57s
+K=32 200/300 337s rec=True retries=0 t=0.64s
+K=32 225/300 387s rec=True retries=0 t=3.02s
+K=32 250/300 425s rec=True retries=0 t=3.38s
+K=32 275/300 469s rec=True retries=0 t=0.53s
+K=32 done 517s
+K=8 0/300 1s rec=True retries=0 t=0.54s
+K=8 25/300 13s rec=True retries=0 t=0.87s
+K=8 50/300 37s rec=True retries=0 t=2.08s
+K=8 75/300 57s rec=True retries=0 t=0.43s
+K=8 100/300 84s rec=True retries=0 t=2.53s
+K=8 125/300 104s rec=True retries=0 t=0.58s
+K=8 150/300 130s rec=True retries=0 t=1.72s
+K=8 175/300 156s rec=True retries=0 t=0.43s
+K=8 200/300 189s rec=True retries=0 t=0.68s
+K=8 225/300 229s rec=True retries=0 t=2.40s
+K=8 250/300 265s rec=True retries=0 t=2.76s
+K=8 275/300 305s rec=True retries=0 t=0.40s
+K=8 done 351s
+K=4 0/300 1s rec=True retries=0 t=0.99s
+K=4 25/300 24s rec=True retries=0 t=1.55s
+K=4 50/300 45s rec=True retries=0 t=0.90s
+K=4 75/300 73s rec=True retries=0 t=0.54s
+K=4 100/300 105s rec=True retries=0 t=2.84s
+K=4 125/300 130s rec=True retries=0 t=0.75s
+K=4 150/300 154s rec=True retries=0 t=1.90s
+K=4 175/300 189s rec=True retries=0 t=0.34s
+K=4 200/300 216s rec=True retries=0 t=0.54s
+K=4 225/300 248s rec=True retries=0 t=2.08s
+K=4 250/300 274s rec=True retries=0 t=1.94s
+K=4 275/300 302s rec=True retries=0 t=0.33s
+K=4 done 329s

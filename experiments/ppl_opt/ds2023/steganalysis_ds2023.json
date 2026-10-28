@@ -1,0 +1,589 @@
+{
+ "config": {
+  "maxlen": 64,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "n_pairs": {
+   "ds2023_base": 4331,
+   "ds2023_pplopt": 4331
+  },
+  "identical_pairs": {
+   "ds2023_base": 1817,
+   "ds2023_pplopt": 1817
+  },
+  "texts_skipped_sentence_mismatch": {
+   "ds2023_base": 0,
+   "ds2023_pplopt": 0
+  },
+  "runtime_sec": 4455
+ },
+ "runs": [
+  {
+   "series": "ds2023_base",
+   "detector": "TF-IDF+LR",
+   "seed": 0,
+   "test": {
+    "acc": 0.5868436237738026,
+    "prec": 0.5878220140515222,
+    "rec": 0.5796766743648961,
+    "f1": 0.5837209302325581,
+    "n": 1733,
+    "frac_pred_stego": 0.4927870744373918,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TS-CNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 27,
+    "val_acc": 0.6865384615384615,
+    "params": 3237154
+   },
+   "test": {
+    "acc": 0.6907097518753607,
+    "prec": 0.7946428571428571,
+    "rec": 0.5138568129330254,
+    "f1": 0.6241234221598878,
+    "n": 1733,
+    "frac_pred_stego": 0.3231390652048471,
+    "degenerate": false
+   },
+   "sec": 489.6
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TS-RNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6894230769230769,
+    "params": 2422734
+   },
+   "test": {
+    "acc": 0.7045585689555683,
+    "prec": 0.8314606741573034,
+    "rec": 0.5127020785219399,
+    "f1": 0.6342857142857142,
+    "n": 1733,
+    "frac_pred_stego": 0.30813618003462206,
+    "degenerate": false
+   },
+   "sec": 102.7
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 0,
+   "train": {
+    "epochs_run": 16,
+    "val_acc": 0.7115384615384616,
+    "params": 3643202
+   },
+   "test": {
+    "acc": 0.7201384881708021,
+    "prec": 0.9359267734553776,
+    "rec": 0.4722863741339492,
+    "f1": 0.6277820414428242,
+    "n": 1733,
+    "frac_pred_stego": 0.25216387766878245,
+    "degenerate": false
+   },
+   "sec": 230.3
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "BERT-LSTM-Att",
+   "seed": 0,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.75,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7484131563762262,
+    "prec": 0.8909090909090909,
+    "rec": 0.5658198614318707,
+    "f1": 0.692090395480226,
+    "n": 1733,
+    "frac_pred_stego": 0.3173687247547605,
+    "degenerate": false
+   },
+   "sec": 90.4
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TF-IDF+LR",
+   "seed": 1,
+   "test": {
+    "acc": 0.5799192152336988,
+    "prec": 0.5810968494749125,
+    "rec": 0.5743944636678201,
+    "f1": 0.5777262180974478,
+    "n": 1733,
+    "frac_pred_stego": 0.49451817657241776,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TS-CNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 18,
+    "val_acc": 0.6557692307692308,
+    "params": 3279954
+   },
+   "test": {
+    "acc": 0.6589728793998846,
+    "prec": 0.7574626865671642,
+    "rec": 0.4682814302191465,
+    "f1": 0.5787598004276551,
+    "n": 1733,
+    "frac_pred_stego": 0.30929024812463934,
+    "degenerate": false
+   },
+   "sec": 224.9
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TS-RNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 14,
+    "val_acc": 0.6903846153846154,
+    "params": 2450126
+   },
+   "test": {
+    "acc": 0.7109059434506636,
+    "prec": 0.8995633187772926,
+    "rec": 0.47520184544405997,
+    "f1": 0.6218867924528302,
+    "n": 1733,
+    "frac_pred_stego": 0.2642815926139642,
+    "degenerate": false
+   },
+   "sec": 109.4
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 1,
+   "train": {
+    "epochs_run": 19,
+    "val_acc": 0.6730769230769231,
+    "params": 3675302
+   },
+   "test": {
+    "acc": 0.6751298326601269,
+    "prec": 0.8423423423423423,
+    "rec": 0.43137254901960786,
+    "f1": 0.5705568268497331,
+    "n": 1733,
+    "frac_pred_stego": 0.25620311598384304,
+    "degenerate": false
+   },
+   "sec": 267.8
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "BERT-LSTM-Att",
+   "seed": 1,
+   "train": {
+    "epochs_run": 9,
+    "val_acc": 0.7471153846153846,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7259088286208887,
+    "prec": 0.7951807228915663,
+    "rec": 0.6089965397923875,
+    "f1": 0.689745264532985,
+    "n": 1733,
+    "frac_pred_stego": 0.3831506058857473,
+    "degenerate": false
+   },
+   "sec": 56.7
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TF-IDF+LR",
+   "seed": 2,
+   "test": {
+    "acc": 0.5614541257934218,
+    "prec": 0.56575682382134,
+    "rec": 0.5265588914549654,
+    "f1": 0.5454545454545454,
+    "n": 1733,
+    "frac_pred_stego": 0.46508944027697635,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TS-CNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 26,
+    "val_acc": 0.6692307692307692,
+    "params": 3274754
+   },
+   "test": {
+    "acc": 0.641661858049625,
+    "prec": 0.810126582278481,
+    "rec": 0.3695150115473441,
+    "f1": 0.507533703409992,
+    "n": 1733,
+    "frac_pred_stego": 0.22792844777841892,
+    "degenerate": false
+   },
+   "sec": 328.6
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "TS-RNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6971153846153846,
+    "params": 2446798
+   },
+   "test": {
+    "acc": 0.6860934795152914,
+    "prec": 0.8425531914893617,
+    "rec": 0.45727482678983833,
+    "f1": 0.592814371257485,
+    "n": 1733,
+    "frac_pred_stego": 0.27120600115406807,
+    "degenerate": false
+   },
+   "sec": 104.0
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 2,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.6913461538461538,
+    "params": 3671402
+   },
+   "test": {
+    "acc": 0.6693594922100404,
+    "prec": 0.8463356973995272,
+    "rec": 0.4133949191685912,
+    "f1": 0.5554693560899923,
+    "n": 1733,
+    "frac_pred_stego": 0.24408540103866128,
+    "degenerate": false
+   },
+   "sec": 217.6
+  },
+  {
+   "series": "ds2023_base",
+   "detector": "BERT-LSTM-Att",
+   "seed": 2,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.7442307692307693,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7259088286208887,
+    "prec": 0.9240780911062907,
+    "rec": 0.49191685912240185,
+    "f1": 0.6420497362471741,
+    "n": 1733,
+    "frac_pred_stego": 0.2660126947489902,
+    "degenerate": false
+   },
+   "sec": 62.9
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TF-IDF+LR",
+   "seed": 0,
+   "test": {
+    "acc": 0.5816503173687247,
+    "prec": 0.5826494724501758,
+    "rec": 0.5739030023094688,
+    "f1": 0.5782431646305992,
+    "n": 1733,
+    "frac_pred_stego": 0.49221004039238314,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TS-CNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 22,
+    "val_acc": 0.6586538461538461,
+    "params": 2773954
+   },
+   "test": {
+    "acc": 0.6722446624350836,
+    "prec": 0.7769516728624535,
+    "rec": 0.48267898383371827,
+    "f1": 0.5954415954415955,
+    "n": 1733,
+    "frac_pred_stego": 0.3104443162146567,
+    "degenerate": false
+   },
+   "sec": 285.2
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TS-RNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6932692307692307,
+    "params": 2126286
+   },
+   "test": {
+    "acc": 0.6814772071552222,
+    "prec": 0.7875457875457875,
+    "rec": 0.49653579676674364,
+    "f1": 0.6090651558073654,
+    "n": 1733,
+    "frac_pred_stego": 0.3150605885747259,
+    "degenerate": false
+   },
+   "sec": 96.6
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 0,
+   "train": {
+    "epochs_run": 16,
+    "val_acc": 0.6711538461538461,
+    "params": 3295802
+   },
+   "test": {
+    "acc": 0.6918638199653779,
+    "prec": 0.8415637860082305,
+    "rec": 0.4722863741339492,
+    "f1": 0.6050295857988166,
+    "n": 1733,
+    "frac_pred_stego": 0.2804385458742066,
+    "degenerate": false
+   },
+   "sec": 214.3
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "BERT-LSTM-Att",
+   "seed": 0,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.6951923076923077,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.705135603000577,
+    "prec": 0.7709923664122137,
+    "rec": 0.5831408775981525,
+    "f1": 0.6640368178829718,
+    "n": 1733,
+    "frac_pred_stego": 0.37795729948066936,
+    "degenerate": false
+   },
+   "sec": 97.8
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TF-IDF+LR",
+   "seed": 1,
+   "test": {
+    "acc": 0.5758799769186382,
+    "prec": 0.5769230769230769,
+    "rec": 0.5709342560553633,
+    "f1": 0.5739130434782609,
+    "n": 1733,
+    "frac_pred_stego": 0.49509521061742645,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TS-CNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 19,
+    "val_acc": 0.6326923076923077,
+    "params": 2808754
+   },
+   "test": {
+    "acc": 0.6457010963646855,
+    "prec": 0.7456310679611651,
+    "rec": 0.4429065743944637,
+    "f1": 0.5557163531114327,
+    "n": 1733,
+    "frac_pred_stego": 0.2971725331794576,
+    "degenerate": false
+   },
+   "sec": 238.2
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TS-RNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6692307692307692,
+    "params": 2148558
+   },
+   "test": {
+    "acc": 0.6855164454702828,
+    "prec": 0.8546255506607929,
+    "rec": 0.447520184544406,
+    "f1": 0.5874337623012869,
+    "n": 1733,
+    "frac_pred_stego": 0.2619734564339296,
+    "degenerate": false
+   },
+   "sec": 91.3
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 1,
+   "train": {
+    "epochs_run": 12,
+    "val_acc": 0.6586538461538461,
+    "params": 3321902
+   },
+   "test": {
+    "acc": 0.6728216964800924,
+    "prec": 0.8036437246963563,
+    "rec": 0.45790080738177624,
+    "f1": 0.5833945628214549,
+    "n": 1733,
+    "frac_pred_stego": 0.2850548182342758,
+    "degenerate": false
+   },
+   "sec": 160.4
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "BERT-LSTM-Att",
+   "seed": 1,
+   "train": {
+    "epochs_run": 12,
+    "val_acc": 0.7105769230769231,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.6987882285054818,
+    "prec": 0.7751196172248804,
+    "rec": 0.5605536332179931,
+    "f1": 0.6506024096385542,
+    "n": 1733,
+    "frac_pred_stego": 0.361800346220427,
+    "degenerate": false
+   },
+   "sec": 79.1
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TF-IDF+LR",
+   "seed": 2,
+   "test": {
+    "acc": 0.5631852279284478,
+    "prec": 0.5675340768277571,
+    "rec": 0.5288683602771362,
+    "f1": 0.5475194261805141,
+    "n": 1733,
+    "frac_pred_stego": 0.465666474321985,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TS-CNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 41,
+    "val_acc": 0.6644230769230769,
+    "params": 2794754
+   },
+   "test": {
+    "acc": 0.6324293133294865,
+    "prec": 0.7732696897374701,
+    "rec": 0.3741339491916859,
+    "f1": 0.5042801556420233,
+    "n": 1733,
+    "frac_pred_stego": 0.24177726485862666,
+    "degenerate": false
+   },
+   "sec": 533.3
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "TS-RNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6807692307692308,
+    "params": 2139598
+   },
+   "test": {
+    "acc": 0.6653202538949798,
+    "prec": 0.7930327868852459,
+    "rec": 0.4468822170900693,
+    "f1": 0.5716395864106352,
+    "n": 1733,
+    "frac_pred_stego": 0.2815926139642239,
+    "degenerate": false
+   },
+   "sec": 96.1
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 2,
+   "train": {
+    "epochs_run": 14,
+    "val_acc": 0.6865384615384615,
+    "params": 3311402
+   },
+   "test": {
+    "acc": 0.676860934795153,
+    "prec": 0.8558139534883721,
+    "rec": 0.42494226327944573,
+    "f1": 0.5679012345679012,
+    "n": 1733,
+    "frac_pred_stego": 0.24812463935372187,
+    "degenerate": false
+   },
+   "sec": 187.9
+  },
+  {
+   "series": "ds2023_pplopt",
+   "detector": "BERT-LSTM-Att",
+   "seed": 2,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.7048076923076924,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.6855164454702828,
+    "prec": 0.8268839103869654,
+    "rec": 0.46882217090069284,
+    "f1": 0.5983787767133383,
+    "n": 1733,
+    "frac_pred_stego": 0.28332371609924983,
+    "degenerate": false
+   },
+   "sec": 88.8
+  }
+ ]
+}

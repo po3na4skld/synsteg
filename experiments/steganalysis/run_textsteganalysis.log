@@ -1,0 +1,16 @@
+old_8662 rbilstmc {'acc': 0.569532602423543, 'rc': 0, 'sec': 101}
+old_8662 lstmatt {'acc': 0.7316791690709752, 'rc': 0, 'sec': 640}
+old_8662 cnn {'acc': 0.5354875937680323, 'rc': 0, 'sec': 11}
+old_8662 bilstmdense {'acc': 0.502596653202539, 'rc': 0, 'sec': 42}
+old_8662 birnn {'acc': 0.5741488747836122, 'rc': 0, 'sec': 19}
+gpt6_luna_b5 rbilstmc {'acc': 0.6940559440559441, 'rc': 0, 'sec': 60}
+gpt6_luna_b5 lstmatt {'acc': 0.7902097902097902, 'rc': 0, 'sec': 369}
+gpt6_luna_b5 cnn {'acc': 0.6818181818181818, 'rc': 0, 'sec': 10}
+gpt6_luna_b5 bilstmdense {'acc': 0.5122377622377622, 'rc': 0, 'sec': 29}
+gpt6_luna_b5 birnn {'acc': 0.6022727272727273, 'rc': 0, 'sec': 14}
+qwen3_30b_b3 rbilstmc {'acc': 0.49868766404199477, 'rc': 0, 'sec': 23}
+qwen3_30b_b3 lstmatt {'acc': 0.7532808398950132, 'rc': 0, 'sec': 122}
+qwen3_30b_b3 cnn {'acc': 0.5590551181102362, 'rc': 0, 'sec': 7}
+qwen3_30b_b3 bilstmdense {'acc': 0.5013123359580053, 'rc': 0, 'sec': 13}
+qwen3_30b_b3 birnn {'acc': 0.5538057742782152, 'rc': 0, 'sec': 8}
+done

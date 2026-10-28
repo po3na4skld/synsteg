@@ -1,0 +1,28 @@
+diff --git a/main.py b/main.py
+index 7fe09f6..4e7e23a 100644
+--- a/main.py
++++ b/main.py
+@@ -589,7 +589,7 @@ def main(Configs, seed_shift=0):
+             assert Configs.use_processor, "\nWhen using plm, You can only use processor to process dataset!!\n"
+ 
+     Dataset_Configs = Configs.Dataset
+-    Configs.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
++    Configs.device = torch.device("cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu"))  # local: MPS instead of Colab CUDA
+     os.makedirs(Configs.out_dir,exist_ok=True)
+     set_seed(Configs.seed+seed_shift)
+ 
+diff --git a/models/lstmatt.py b/models/lstmatt.py
+index e016d78..9b86662 100644
+--- a/models/lstmatt.py
++++ b/models/lstmatt.py
+@@ -128,8 +128,8 @@ class lstm(nn.Module):
+         return output
+ 
+     def init_hidden(self, bs):
+-        h_0 = torch.zeros(bs, self.hidden_size).cuda()
+-        c_0 = torch.zeros(bs, self.hidden_size).cuda()
++        h_0 = torch.zeros(bs, self.hidden_size, device=next(self.parameters()).device)  # local: was .cuda()
++        c_0 = torch.zeros(bs, self.hidden_size, device=next(self.parameters()).device)  # local: was .cuda()
+         return h_0, c_0
+ 
+ 

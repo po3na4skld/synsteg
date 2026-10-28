@@ -1,0 +1,11 @@
+gpt4o_base rbilstmc {'acc': 0.48884381338742394, 'rc': 0, 'sec': 31}
+gpt4o_base lstmatt {'acc': 0.9432048681541582, 'rc': 0, 'sec': 173}
+gpt4o_base cnn {'acc': 0.6713995943204868, 'rc': 0, 'sec': 8}
+gpt4o_base bilstmdense {'acc': 0.486815415821501, 'rc': 0, 'sec': 17}
+gpt4o_base birnn {'acc': 0.5253549695740365, 'rc': 0, 'sec': 10}
+gpt4o_pplopt32 rbilstmc {'acc': 0.6531440162271805, 'rc': 0, 'sec': 30}
+gpt4o_pplopt32 lstmatt {'acc': 0.8519269776876268, 'rc': 0, 'sec': 170}
+gpt4o_pplopt32 cnn {'acc': 0.6572008113590264, 'rc': 0, 'sec': 8}
+gpt4o_pplopt32 bilstmdense {'acc': 0.486815415821501, 'rc': 0, 'sec': 16}
+gpt4o_pplopt32 birnn {'acc': 0.5294117647058824, 'rc': 0, 'sec': 9}
+done

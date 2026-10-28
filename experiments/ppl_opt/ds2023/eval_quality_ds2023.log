@@ -1,0 +1,24 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 15639.74it/s]
+judge done gpt2
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<01:55,  2.91it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 594.28it/s]Loading weights:  95%|█████████▍| 321/338 [00:00<00:00, 605.41it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 518.82it/s]
+judge done qwen
+base re-encoding identical to stored stego: 300 / 300 | opt re-encode ok: 300 | opt used == base used: 300
+
+| L | n | arm | rec exact embedded bits | rec prefix | full message | BPW | edit rate | R_PPL GPT-2 med/mean | R_PPL Qwen med/mean | dFlesch med/mean |
+|---|---|---|---|---|---|---|---|---|---|---|
+| all | 300 | base | 299 | 300 | 288 | 0.571 | 0.347 | 4.71 / 4.88 | 5.97 / 6.33 | -5.67 / -5.90 |
+| all | 300 | opt | 299 | 300 | 288 | 0.571 | 0.348 | 2.62 / 2.82 | 3.98 / 4.28 | -4.81 / -4.81 |
+| 64 | 100 | base | 100 | 100 | 99 | 0.605 | 0.372 | 4.80 / 4.92 | 7.18 / 7.19 | -6.07 / -6.02 |
+| 64 | 100 | opt | 100 | 100 | 99 | 0.605 | 0.369 | 2.58 / 2.89 | 4.46 / 4.86 | -4.87 / -4.64 |
+| 128 | 100 | base | 99 | 100 | 96 | 0.521 | 0.310 | 4.09 / 4.38 | 5.26 / 5.51 | -4.40 / -5.14 |
+| 128 | 100 | opt | 99 | 100 | 96 | 0.521 | 0.315 | 2.48 / 2.60 | 3.63 / 3.83 | -4.49 / -4.63 |
+| 256 | 100 | base | 100 | 100 | 93 | 0.587 | 0.359 | 5.25 / 5.33 | 6.12 / 6.29 | -6.37 / -6.53 |
+| 256 | 100 | opt | 100 | 100 | 93 | 0.587 | 0.359 | 2.93 / 2.95 | 4.02 / 4.13 | -4.85 / -5.16 |
+abs PPL median: {'container_gpt2': 10.8, 'container_qwen': 3.1, 'base_gpt2': 52.3, 'base_qwen': 19.3, 'opt_gpt2': 30.0, 'opt_qwen': 12.9}
+Wilcoxon opt vs base PPL gpt2: p = 6.08e-51; opt lower in 300/300
+Wilcoxon opt vs base PPL qwen: p = 6.08e-51; opt lower in 300/300
+opt time s med/mean: 0.95 / 1.13 per L: {64: '0.47 / 0.49', 128: '0.97 / 0.99', 256: '1.97 / 1.92'}
+retried runs: 0 retries hist: [300] | kept original at active pos.: 0.0
+key generation time (API, stored) s med/mean: 115.57 / 134.55

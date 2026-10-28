@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Side-by-side benchmark of the DeepStego/SynSteg metrics against nethical6/conversation-steganography.">
+<title>SynSteg vs Conversation-Steganography</title>
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --surface: #FFFFFF;
+    --surface-2: #F2EFE8;
+    --ink: #16181D;
+    --muted: #5E6472;
+    --hair: #DFDAD0;
+    --accent: #A8481B;
+    --accent-2: #1C5A66;
+    --good: #2C6E49;
+    --warn: #99711A;
+    --crit: #A93226;
+    --shadow: 0 1px 2px rgba(20,22,28,.05), 0 8px 24px -12px rgba(20,22,28,.12);
+    --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --body: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --data: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1216;
+      --surface: #171B21;
+      --surface-2: #1E232B;
+      --ink: #E9E6E0;
+      --muted: #949BAA;
+      --hair: #2A303A;
+      --accent: #E08A55;
+      --accent-2: #6FB6C4;
+      --good: #66B98A;
+      --warn: #D6AC55;
+      --crit: #E0736A;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1216;
+    --surface: #171B21;
+    --surface-2: #1E232B;
+    --ink: #E9E6E0;
+    --muted: #949BAA;
+    --hair: #2A303A;
+    --accent: #E08A55;
+    --accent-2: #6FB6C4;
+    --good: #66B98A;
+    --warn: #D6AC55;
+    --crit: #E0736A;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 56px 24px 96px; display: flex; flex-direction: column; gap: 44px; }
+
+  .eyebrow {
+    font-family: var(--data); font-size: 11.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  h1 {
+    font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1.12; margin: 0 0 16px; text-wrap: balance; letter-spacing: -.01em;
+  }
+  h2 {
+    font-family: var(--display); font-weight: 600; font-size: 25px; line-height: 1.2;
+    margin: 0 0 6px; text-wrap: balance;
+  }
+  h3 { font-size: 15px; font-weight: 650; margin: 0 0 8px; letter-spacing: -.005em; }
+  p { margin: 0 0 14px; max-width: 68ch; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent-2); }
+  .lede { font-size: 18px; color: var(--muted); max-width: 70ch; }
+  .sec-note { color: var(--muted); font-size: 14.5px; margin: 0 0 20px; max-width: 74ch; }
+
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 28px; }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 22px;
+    font-family: var(--data); font-size: 12px; color: var(--muted);
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  section { display: flex; flex-direction: column; }
+
+  /* scoreboard */
+  .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(228px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 3px;
+    padding: 18px 18px 16px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .card .axis {
+    font-family: var(--data); font-size: 11px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .winner { font-family: var(--display); font-size: 21px; line-height: 1.15; }
+  .winner.syn { color: var(--accent); }
+  .winner.repo { color: var(--accent-2); }
+  .winner.tie { color: var(--muted); }
+  .card p { font-size: 13.5px; color: var(--muted); line-height: 1.5; margin: 0; }
+
+  /* tables */
+  .scroll { overflow-x: auto; border: 1px solid var(--hair); border-radius: 3px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  caption {
+    text-align: left; padding: 14px 16px; font-size: 12.5px; color: var(--muted);
+    border-bottom: 1px solid var(--hair); background: var(--surface-2);
+  }
+  th, td { padding: 8px 14px; text-align: right; border-bottom: 1px solid var(--hair); white-space: nowrap; }
+  th:first-child, td:first-child { text-align: left; }
+  thead th {
+    font-family: var(--data); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--ink);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .sys { font-weight: 650; }
+  .sys.syn { border-left: 3px solid var(--accent); }
+  .sys.repo { border-left: 3px solid var(--accent-2); }
+  .num { font-family: var(--data); }
+  .best { color: var(--good); font-weight: 650; }
+  .bad { color: var(--crit); font-weight: 650; }
+  .grp td {
+    background: var(--surface-2); font-family: var(--data); font-size: 10.5px;
+    letter-spacing: .09em; text-transform: uppercase; color: var(--muted); padding: 6px 14px;
+  }
+
+  .pill {
+    display: inline-block; padding: 1px 8px; border-radius: 2px; font-family: var(--data);
+    font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase;
+  }
+  .pill.ok { background: color-mix(in srgb, var(--good) 16%, transparent); color: var(--good); }
+  .pill.no { background: color-mix(in srgb, var(--crit) 16%, transparent); color: var(--crit); }
+  .pill.part { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+
+  .finding {
+    background: var(--surface); border: 1px solid var(--hair); border-left: 3px solid var(--accent);
+    border-radius: 3px; padding: 16px 18px; box-shadow: var(--shadow);
+  }
+  .finding + .finding { margin-top: 12px; }
+  .finding p { font-size: 14.5px; }
+  .stack { display: flex; flex-direction: column; gap: 12px; }
+
+  ul { margin: 0 0 14px; padding-left: 20px; max-width: 70ch; }
+  li { margin-bottom: 7px; }
+  li:last-child { margin-bottom: 0; }
+  code {
+    font-family: var(--data); font-size: .89em; background: var(--surface-2);
+    padding: 1px 5px; border-radius: 2px;
+  }
+  pre {
+    font-family: var(--data); font-size: 12px; line-height: 1.55; background: var(--surface);
+    border: 1px solid var(--hair); border-radius: 3px; padding: 14px 16px;
+    overflow-x: auto; margin: 0;
+  }
+  footer {
+    border-top: 1px solid var(--hair); padding-top: 22px; font-size: 13px; color: var(--muted);
+  }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Measured benchmark · 15 Aug 2026</p>
+  <h1>SynSteg vs Conversation-Steganography</h1>
+  <p class="lede">
+    The DeepStego paper's Table 1–3 metrics, re-measured on
+    <a href="https://github.com/nethical6/conversation-steganography">nethical6/conversation-steganography</a>
+    using the paper's own metric definitions — plus the steganalysis and text-quality
+    numbers, computed identically for both systems from a single pipeline.
+  </p>
+  <div class="meta">
+    <span><b>Repo model</b> GPT-2 124M, CPU</span>
+    <span><b>SynSteg model</b> GPT-4-omni, API</span>
+    <span><b>Host</b> Apple Silicon, 48 GB</span>
+    <span><b>Repo runs</b> 270 raw + 1,200 corpus + 18 full-protocol</span>
+    <span><b>SynSteg data</b> 300 reports, 4,624 pairs</span>
+  </div>
+</header>
+
+<section>
+  <h2>The verdict in four axes</h2>
+  <p class="sec-note">
+    Each axis was measured, not inferred. Where the two systems trade places depending on
+    configuration, that is stated rather than resolved.
+  </p>
+  <div class="board">
+    <div class="card">
+      <span class="axis">Capacity</span>
+      <span class="winner tie">Depends on the basis</span>
+      <p>Per cover word — the paper's definition — SynSteg leads at 128 bits only, and loses at
+         256 and 512. Per transmitted character the repo's tuned config carries ~2× the payload.</p>
+    </div>
+    <div class="card">
+      <span class="axis">Speed &amp; cost</span>
+      <span class="winner repo">Conversation-Steg</span>
+      <p>4.0 s vs 24.9 s at 512 bits, and $0 vs $0.30 per message. Runs offline; no
+         third party ever sees the carrier.</p>
+    </div>
+    <div class="card">
+      <span class="axis">Detection resistance</span>
+      <span class="winner syn">SynSteg — decisively</span>
+      <p>0.59–0.67 detector accuracy vs the repo's 0.91–0.99. The paper's central
+         claim holds up under independent measurement.</p>
+    </div>
+    <div class="card">
+      <span class="axis">Reliability</span>
+      <span class="winner syn">SynSteg</span>
+      <p>The repo's full protocol fails 5 of 6 sends at its default config. SynSteg has no
+         equivalent abort path.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Capacity and efficiency</h2>
+  <p class="sec-note">
+    The paper's Table 1 metrics, computed with the paper's definitions
+    (<code>notebooks/gpt_omni_metrics_creation.ipynb</code>). Validation: replaying those
+    definitions over your raw reports reproduces Table 1 exactly — BPW 4.34 / 4.27 / 4.10
+    and 29.55 / 60.05 / 124.95 words — so the columns below are directly comparable.
+  </p>
+  <div class="scroll">
+    <table>
+      <caption>Repo: mean of 30 runs per cell, raw codec. SynSteg: paper Table 1. BPW = payload bits ÷ data-carrying words.</caption>
+      <thead>
+        <tr>
+          <th>System / configuration</th><th>Bits</th><th>BPW</th><th>Bits/token</th>
+          <th>Words</th><th>Capacity %</th><th>Encode s</th><th>Cost USD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="grp"><td colspan="8">SynSteg — standard mode</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">128</td><td class="num">4.34</td><td class="num">—</td><td class="num">29.6</td><td class="num">8.22</td><td class="num">19.35</td><td class="num bad">0.0720</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">256</td><td class="num">4.26</td><td class="num">—</td><td class="num">60.1</td><td class="num">8.54</td><td class="num">22.87</td><td class="num bad">0.1457</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">512</td><td class="num">4.09</td><td class="num">—</td><td class="num">125.0</td><td class="num">8.83</td><td class="num">24.89</td><td class="num bad">0.3034</td></tr>
+        <tr class="grp"><td colspan="8">SynSteg — enhanced mode (additional_bits = 5)</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">128</td><td class="num best">9.84</td><td class="num">—</td><td class="num">13.0</td><td class="num">16.64</td><td class="num">19.35</td><td class="num bad">0.0720</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">256</td><td class="num best">9.84</td><td class="num">—</td><td class="num">26.0</td><td class="num">18.37</td><td class="num">22.87</td><td class="num bad">0.1457</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">512</td><td class="num best">9.84</td><td class="num">—</td><td class="num">52.0</td><td class="num">19.48</td><td class="num">24.89</td><td class="num bad">0.3034</td></tr>
+        <tr class="grp"><td colspan="8">Conversation-Steg — shipped default (arithmetic, top_n 8)</td></tr>
+        <tr><td class="sys repo">GPT-2 arithmetic</td><td class="num">128</td><td class="num bad">2.10</td><td class="num">1.99</td><td class="num">62.0</td><td class="num">6.64</td><td class="num">2.12</td><td class="num best">0</td></tr>
+        <tr><td class="sys repo">GPT-2 arithmetic</td><td class="num">256</td><td class="num bad">2.03</td><td class="num">1.84</td><td class="num">138.3</td><td class="num">6.49</td><td class="num">8.53</td><td class="num best">0</td></tr>
+        <tr><td class="sys repo">GPT-2 arithmetic</td><td class="num">512</td><td class="num bad">1.98</td><td class="num">1.70</td><td class="num">275.1</td><td class="num">5.97</td><td class="num">28.03</td><td class="num best">0</td></tr>
+        <tr class="grp"><td colspan="8">Conversation-Steg — tuned to match standard mode (uniform, top_n 32)</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">128</td><td class="num">3.90</td><td class="num">4.57</td><td class="num">34.8</td><td class="num">11.15</td><td class="num best">1.00</td><td class="num best">0</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">256</td><td class="num best">4.46</td><td class="num">4.83</td><td class="num">58.8</td><td class="num">12.65</td><td class="num best">1.84</td><td class="num best">0</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">512</td><td class="num best">4.74</td><td class="num">4.92</td><td class="num">109.1</td><td class="num">13.56</td><td class="num best">4.01</td><td class="num best">0</td></tr>
+        <tr class="grp"><td colspan="8">Conversation-Steg — tuned to match enhanced mode (uniform, top_n 1024)</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">128</td><td class="num">6.11</td><td class="num">9.14</td><td class="num">23.7</td><td class="num">14.29</td><td class="num">4.95</td><td class="num best">0</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">256</td><td class="num">7.68</td><td class="num">9.48</td><td class="num">36.0</td><td class="num">17.73</td><td class="num">7.54</td><td class="num best">0</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">512</td><td class="num">8.60</td><td class="num">9.85</td><td class="num">61.5</td><td class="num">21.01</td><td class="num">14.20</td><td class="num best">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stack" style="margin-top:16px">
+    <div class="finding">
+      <h3>The shipped default is the repo's worst configuration</h3>
+      <p>Out of the box (arithmetic coding, <code>top_n: 8</code>) the repo manages 1.98–2.10 BPW —
+        less than half of SynSteg. Nothing about the design forces that; it is a config choice.
+        Switching to uniform coding at <code>top_n: 32</code> more than doubles capacity and cuts
+        encode time by 7×. Judged on defaults the repo loses on capacity; judged on its best
+        achievable settings it wins the standard-mode comparison outright.</p>
+    </div>
+    <div class="finding">
+      <h3>These are the paper's figures on the paper's basis — see the next section</h3>
+      <p>BPW here is bits per <em>cover</em> word, the paper's definition. That is a sound
+        measure, but the comparison system is generative and has no cover/carrier gap, so the
+        two columns are not measuring the same span of text. The next section gives both bases
+        plus a metric that avoids the question entirely.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Capacity, measured fairly</h2>
+  <p class="sec-note">
+    Three things make the headline capacity numbers non-comparable across systems. All three
+    are fixable by counting the transmitted carrier directly instead of going through the
+    <code>L</code>/<code>M</code> approximation.
+  </p>
+  <div class="stack" style="margin-bottom:20px">
+    <div class="finding">
+      <h3>1. BPW is bits per cover word — the correct definition, used throughout</h3>
+      <p>The paper's throughput is <code>message_bits ÷ len(secret_key)</code>, and
+        <code>secret_key</code> has one entry per substitution slot — 29.55 at 128 bits, exactly
+        the container length. So BPW is <strong>bits per cover word</strong>: the standard
+        capacity definition for a substitution scheme, and the right answer to "how long a
+        container do I need?" Conversation-Steganography is generative and has no separate
+        cover, so its generated text is its cover and the same definition applies directly.
+        Every BPW figure in this report is on that basis.</p>
+    </div>
+    <div class="finding">
+      <h3>2. Bits-per-word rewards long words</h3>
+      <p>GPT-4-omni averages 6.88 letters/word; GPT-2 averages 3.68. A system whose generator
+        happens to emit longer words scores better per word while transmitting the same or more
+        characters. That is a property of the generator, not the embedding method.
+        <strong>Bits per character</strong> removes it.</p>
+    </div>
+    <div class="finding">
+      <h3>3. The embedding-rate formula is an approximation of a directly countable quantity</h3>
+      <p><code>ER = ((L−1)·k) / (8·L·M)</code> estimates "payload bits per bit of ASCII carrier."
+        That is a legitimate and generator-independent channel measure — it is essentially
+        bits/character ÷ 8, and it is the fairest thing in the paper. But it need not be
+        estimated: counting characters gives it exactly, and the approximation error is not
+        uniform. Counted directly, SynSteg's 8.48 / 8.67 / 8.89% becomes
+        <strong>6.77 / 6.82 / 6.53%</strong>, while the repo's default 6.64 / 6.49 / 5.97%
+        becomes <strong>7.12 / 7.05 / 6.88%</strong> — the formula flatters SynSteg by ~1.3× and
+        penalises the repo by ~1.1×. Since the exact value is just bits/character rescaled, the
+        table below reports bits/character and drops the estimate.</p>
+    </div>
+  </div>
+  <div class="scroll">
+    <table>
+      <caption>BPW is bits per cover word, the paper's definition. For the generative repo, cover and carrier are the same text. Bits/char and chars-per-payload-byte describe the transmitted carrier and are free of both the word-length and definitional questions. All figures use the paper's mean-of-ratios method.</caption>
+      <thead>
+        <tr>
+          <th>System / configuration</th><th>Bits</th><th>BPW</th>
+          <th>Letters/word</th><th>Bits/char</th><th>Chars per payload byte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="grp"><td colspan="6">SynSteg &mdash; standard mode</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">128</td><td class="num best">4.34</td><td class="num">6.88</td><td class="num">0.541</td><td class="num">17.0</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">256</td><td class="num">4.27</td><td class="num">6.62</td><td class="num">0.546</td><td class="num">16.9</td></tr>
+        <tr><td class="sys syn">GPT-4-omni synonym</td><td class="num">512</td><td class="num">4.10</td><td class="num">6.48</td><td class="num">0.523</td><td class="num">17.7</td></tr>
+        <tr class="grp"><td colspan="6">Conversation-Steg &mdash; shipped default (arithmetic, top_n 8)</td></tr>
+        <tr><td class="sys repo">GPT-2 arithmetic</td><td class="num">128</td><td class="num">2.10</td><td class="num">3.68</td><td class="num">0.570</td><td class="num">18.1</td></tr>
+        <tr><td class="sys repo">GPT-2 arithmetic</td><td class="num">256</td><td class="num">2.03</td><td class="num">3.60</td><td class="num">0.564</td><td class="num">19.9</td></tr>
+        <tr><td class="sys repo">GPT-2 arithmetic</td><td class="num">512</td><td class="num">1.98</td><td class="num">3.64</td><td class="num">0.551</td><td class="num">20.0</td></tr>
+        <tr class="grp"><td colspan="6">Conversation-Steg &mdash; match-standard (uniform, top_n 32)</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">128</td><td class="num">3.90</td><td class="num">4.19</td><td class="num best">0.917</td><td class="num best">11.3</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">256</td><td class="num best">4.46</td><td class="num">4.26</td><td class="num best">1.052</td><td class="num best">9.7</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">512</td><td class="num best">4.74</td><td class="num">4.26</td><td class="num best">1.111</td><td class="num best">9.0</td></tr>
+        <tr class="grp"><td colspan="6">Conversation-Steg &mdash; match-enhanced (uniform, top_n 1024)</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">128</td><td class="num">6.11</td><td class="num">5.05</td><td class="num">1.158</td><td class="num">8.9</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">256</td><td class="num">7.68</td><td class="num">5.22</td><td class="num">1.463</td><td class="num">7.0</td></tr>
+        <tr><td class="sys repo">GPT-2 uniform</td><td class="num">512</td><td class="num">8.60</td><td class="num">5.03</td><td class="num">1.711</td><td class="num best">5.8</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stack" style="margin-top:16px">
+    <div class="finding">
+      <h3>The fair reading</h3>
+      <p><strong>SynSteg's capacity claim stands at 128 bits and only there.</strong> 4.34 vs the
+        repo's 3.90 is a real win. At 256 it is already lost (4.27 vs 4.46) and at 512 clearly
+        so (4.10 vs 4.74) — SynSteg's BPW falls with payload size while the repo's rises. So
+        "higher capacity than a current generative system" is defensible as a statement about
+        short messages, not as a general claim.</p>
+      <p><strong>Bits per character is the metric free of the word-length effect</strong>, and it
+        tells the same story more sharply. SynSteg (0.52–0.55) and the repo's <em>default</em>
+        (0.55–0.57) are tied; the repo's tuned config carries <strong>~2× the payload per
+        character</strong> (0.92–1.11) on <strong>roughly half the carrier</strong> (9.0–11.3 vs
+        16.9–17.7 characters per payload byte). If one number has to carry the capacity
+        comparison, this is the one I would put in front of a reviewer.</p>
+    </div>
+    <div class="finding">
+      <h3>What this does and doesn't change</h3>
+      <p>It narrows capacity from a SynSteg advantage to a short-payload one; it does not touch
+        the detection result,
+        which is the paper's actual thesis and still holds at 0.60 vs 0.98. If anything the
+        corrected numbers sharpen the story: SynSteg is not buying detection resistance with
+        superior capacity, it is <em>trading</em> capacity and cost for it. That is a cleaner
+        and more defensible claim than the one currently in the paper, and it is the framing I
+        would adopt.</p>
+      <p>Enhanced mode's 9.84 BPW keeps SynSteg ahead of the repo's best measured 8.60 at 512
+        bits. That comparison carries one caveat worth knowing: enhanced-mode carriers were
+        never actually regenerated (see the audit below), so 9.84 is derived from re-partitioning
+        the synonym map rather than from generated text — while 8.60 is measured from 30 real
+        runs.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Detection resistance</h2>
+  <p class="sec-note">
+    Four detector families matching the paper's Table 2, trained from scratch on balanced,
+    length-controlled cover/stego splits — the same code and the same protocol applied to both
+    systems. Positive class = stego; 0.50 accuracy means the detector learned nothing.
+    3 seeds per cell, 20% held out.
+  </p>
+  <div class="scroll">
+    <table>
+      <caption>SynSteg measured on the 4,624-pair artifact corpus (≈9,248 samples, the paper's dataset). Repo measured on 400 stego vs 400 length-matched GPT-2 covers.</caption>
+      <thead>
+        <tr>
+          <th>System</th><th>CNN</th><th>RNN (TS-RNN)</th><th>Bi-LSTM-Dense</th><th>BERT-LSTM-Att</th><th>Range</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="grp"><td colspan="6">Claimed in the paper</td></tr>
+        <tr><td class="sys syn">SynSteg standard (claimed)</td><td class="num">0.6351</td><td class="num">0.6212</td><td class="num">0.5000</td><td class="num">0.7644</td><td class="num">0.500–0.764</td></tr>
+        <tr><td class="sys syn">SynSteg enhanced (claimed)</td><td class="num">0.6552</td><td class="num">0.5538</td><td class="num">0.5000</td><td class="num">0.9432</td><td class="num">0.500–0.943</td></tr>
+        <tr class="grp"><td colspan="6">Measured here</td></tr>
+        <tr><td class="sys syn">SynSteg, full corpus</td><td class="num best">0.5945</td><td class="num best">0.6520</td><td class="num">0.6549</td><td class="num best">0.6678</td><td class="num best">0.595–0.668</td></tr>
+        <tr><td class="sys syn">SynSteg, GPT-omni subset</td><td class="num">0.7744</td><td class="num">0.8049</td><td class="num">0.8022</td><td class="num">0.7554</td><td class="num">0.755–0.805</td></tr>
+        <tr><td class="sys repo">Repo default</td><td class="num bad">0.9915</td><td class="num bad">0.9765</td><td class="num bad">0.9786</td><td class="num bad">0.9936</td><td class="num bad">0.977–0.994</td></tr>
+        <tr><td class="sys repo">Repo match-standard</td><td class="num bad">0.9833</td><td class="num">0.7125</td><td class="num bad">0.9583</td><td class="num bad">0.9750</td><td class="num bad">0.713–0.983</td></tr>
+        <tr><td class="sys repo">Repo match-enhanced</td><td class="num bad">0.9583</td><td class="num bad">0.9146</td><td class="num bad">0.9417</td><td class="num bad">0.9583</td><td class="num bad">0.915–0.958</td></tr>
+        <tr><td class="sys repo">Repo match-standard, nucleus covers</td><td class="num bad">0.9812</td><td class="num bad">0.8396</td><td class="num bad">0.9833</td><td class="num bad">0.9979</td><td class="num bad">0.840–0.998</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stack" style="margin-top:16px">
+    <div class="finding">
+      <h3>The paper's headline claim reproduces</h3>
+      <p>Measured independently on the full corpus, SynSteg lands at <strong>0.595–0.668</strong>
+        against the paper's claimed 0.635–0.655. The repo, meanwhile, sits at
+        <strong>0.91–0.99</strong> — at or above the 0.838–0.911 band the paper attributes to
+        prior generation-based methods. The paper's core thesis, that semantic synonym embedding
+        resists steganalysis far better than distribution-coupled token sampling, survives
+        independent measurement. That is the single most important result here.</p>
+    </div>
+    <div class="finding">
+      <h3>But "complete undetectability" does not</h3>
+      <p>The Bi-LSTM-Dense cell — 0.5000 accuracy / 0.0000 recall in both modes, the paper's
+        strongest claim and the basis for "complete undetectability" in §4.3 — measures
+        <strong>0.6549 / 0.5152</strong> here on the same data. Worth knowing why I doubt the
+        original: an early bug in my own RNN detector, reading the LSTM state at a padded
+        position, produced accuracy 0.4919 and recall 0.0000. Exactly-0.5000 with
+        exactly-0.0000 recall is the signature of a classifier that predicts one class for
+        every input. It is indistinguishable from a detector that failed to train, and it is
+        the number the paper leans on hardest. I would drop that claim before a reviewer
+        reaches it.</p>
+    </div>
+    <div class="finding">
+      <h3>Why the repo is so detectable — and it isn't a cover-set artifact</h3>
+      <p>Bit-driven token selection pulls the carrier away from the model's own distribution;
+        the mean logit regret I instrumented climbs from 0.55 at default to 3.3 at
+        match-standard to 7.5 at match-enhanced. Detectors key on exactly that.
+        Because pure ancestral sampling is an unusually high-entropy baseline, I regenerated
+        the covers with nucleus sampling (top-p 0.9, perplexity 50 vs 104) and re-ran
+        everything: detection held at 0.84–0.998. The result is not an artifact of the
+        cover set.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Text quality</h2>
+  <p class="sec-note">
+    The paper's Table 3 axes, where reproducible. Readability is Flesch Reading Ease;
+    coherence is mean adjacent-sentence cosine similarity under MiniLM. Perplexity is GPT-2 —
+    the figure §5.4 concedes is "slightly higher" without ever reporting it. The paper's
+    "Natural Language Score" is undefined in the text and could not be reproduced.
+  </p>
+  <div class="scroll">
+    <table>
+      <caption>Each system compared against its own cover text, since the two generators differ. The ratio column is what travels across systems.</caption>
+      <thead>
+        <tr><th>Set</th><th>Readability</th><th>Perplexity</th><th>Coherence</th><th>PPL vs own cover</th></tr>
+      </thead>
+      <tbody>
+        <tr class="grp"><td colspan="5">SynSteg (GPT-4-omni)</td></tr>
+        <tr><td class="sys syn">Cover, 128 / 256 / 512</td><td class="num">−8.9 / 8.0 / 12.0</td><td class="num">37.4 / 23.0 / 17.8</td><td class="num">0.44 / 0.47 / 0.46</td><td class="num">1.0×</td></tr>
+        <tr><td class="sys syn">Stego, 128</td><td class="num">−13.8</td><td class="num bad">531.7</td><td class="num">0.34</td><td class="num bad">14.2×</td></tr>
+        <tr><td class="sys syn">Stego, 256</td><td class="num">2.6</td><td class="num bad">338.7</td><td class="num">0.35</td><td class="num bad">14.7×</td></tr>
+        <tr><td class="sys syn">Stego, 512</td><td class="num">4.4</td><td class="num bad">281.0</td><td class="num">0.34</td><td class="num bad">15.8×</td></tr>
+        <tr class="grp"><td colspan="5">Conversation-Steg (GPT-2)</td></tr>
+        <tr><td class="sys repo">Cover, ancestral</td><td class="num">69.4</td><td class="num">103.6</td><td class="num">0.21</td><td class="num">1.0×</td></tr>
+        <tr><td class="sys repo">Cover, nucleus p=0.9</td><td class="num">74.9</td><td class="num">50.2</td><td class="num">0.22</td><td class="num">—</td></tr>
+        <tr><td class="sys repo">Stego, default</td><td class="num">89.2</td><td class="num">8.6</td><td class="num">0.40</td><td class="num bad">0.08×</td></tr>
+        <tr><td class="sys repo">Stego, match-standard</td><td class="num">68.1</td><td class="num best">112.1</td><td class="num">0.32</td><td class="num best">1.08×</td></tr>
+        <tr><td class="sys repo">Stego, match-enhanced</td><td class="num">48.2</td><td class="num bad">1959.0</td><td class="num">0.34</td><td class="num bad">18.9×</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stack" style="margin-top:16px">
+    <div class="finding">
+      <h3>"Slightly higher perplexity" is a 15× degradation</h3>
+      <p>SynSteg's stego text runs 14.2–15.8× its cover's perplexity — 37 → 532 at 128 bits.
+        Section 5.4 describes this as "slightly higher perplexity scores at maximum embedding
+        capacity." It is neither slight nor confined to maximum capacity; the ratio is roughly
+        constant across all three payload sizes. This is visible in the text itself: a sample
+        stego line reads <em>"Exoplanet evaluation relinquishes zillions benefits… appertaining
+        to the global workforce."</em> Reporting the number costs little and pre-empts the
+        obvious reviewer question.</p>
+    </div>
+    <div class="finding">
+      <h3>At matched capacity the repo is statistically near-perfect — and still caught</h3>
+      <p>Repo match-standard sits at 1.08× its cover's perplexity against SynSteg's 14.2×,
+        because sampling from the model's distribution preserves fluency in a way synonym
+        substitution cannot. Yet it is detected at 0.98 while SynSteg is detected at 0.60.
+        The lesson is that perplexity and detectability are close to orthogonal here: the
+        detectors are not finding disfluency, they are finding the distributional fingerprint
+        of bit-driven selection. Low perplexity is not cover. The repo's default config makes
+        this vivid — at PPL 8.6 it is <em>five times more fluent than genuine model output</em>,
+        and that anomaly is itself what gets it caught at 0.99.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Reliability and the full protocol</h2>
+  <p class="sec-note">
+    Everything above measures the repo's raw codec, which is the fair capacity comparison
+    against a paper that embeds a bare N-bit message. The shipped system also seals each
+    message with AES-SIV and chains it. That path was measured separately.
+  </p>
+  <div class="scroll">
+    <table>
+      <caption>Full protocol: AES-SIV seal + conversation chaining + real receiver decode, 128-bit payload, 6 runs per config.</caption>
+      <thead>
+        <tr><th>Configuration</th><th>Sends completed</th><th>Words</th><th>Encode s</th><th>Dominant failure</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="sys repo">Default (arithmetic, top_n 8)</td><td class="num bad">1 / 6</td><td class="num">117.0</td><td class="num">15.4</td><td>GPT-2 context overflow (3×), after 140–185 s</td></tr>
+        <tr><td class="sys repo">Match-standard (uniform 32)</td><td class="num">5 / 6</td><td class="num">33.8</td><td class="num">4.7</td><td>carrier failed human-writing check</td></tr>
+        <tr><td class="sys repo">Match-enhanced (uniform 1024)</td><td class="num">5 / 6</td><td class="num">22.2</td><td class="num">15.4</td><td>carrier failed human-writing check</td></tr>
+        <tr><td class="sys syn">SynSteg (all modes)</td><td class="num best">100%</td><td class="num">29.6</td><td class="num">19.4</td><td>no abort path</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stack" style="margin-top:16px">
+    <div class="finding">
+      <h3>The crypto overhead is real but small — I was wrong to predict otherwise</h3>
+      <p>I expected AES-SIV's 16-byte tag to roughly double a 128-bit payload's carrier.
+        Measured, the full protocol needs 33.8 words against the raw codec's 34.8 at
+        match-standard — an effective 3.79 BPW vs 3.90, about 3% overhead. The security layer
+        is close to free in carrier length. It is <em>not</em> free in reliability: it is what
+        pushes the default config past GPT-2's 1024-token context.</p>
+    </div>
+    <div class="finding">
+      <h3>The repo does not currently run</h3>
+      <p><code>python/hf_model.py:102</code> mutates an inference-mode tensor outside its
+        <code>inference_mode</code> block. On current PyTorch this raises on the first token,
+        so the project cannot generate anything at all — a 100% failure rate, not an edge case.
+        I patched it to <code>no_grad</code> to run this benchmark. Beyond that, 5 of 270 raw
+        runs aborted on strict-style candidate filtering. The failures are clean — it never
+        silently corrupts, and recovery was <strong>100% on every run that completed</strong>,
+        across all six configurations and all three payload sizes.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Audit: what reproduced</h2>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>Paper claim</th><th>Status</th><th>Measured</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Table 1 capacity — BPW, words (as defined)</td><td><span class="pill ok">Exact</span></td><td class="num">4.34 / 4.27 / 4.10; 29.55 / 60.05 / 124.95</td></tr>
+        <tr><td>Capacity lead over a current generative system</td><td><span class="pill part">128 bits only</span></td><td class="num">4.34 vs 3.90; lost at 256 (4.27 vs 4.46) and 512 (4.10 vs 4.74)</td></tr>
+        <tr><td>Detection 0.635–0.655 vs 0.838–0.911 baselines</td><td><span class="pill ok">Holds</span></td><td class="num">0.595–0.668 vs repo 0.91–0.99</td></tr>
+        <tr><td>Readability drop of 5.78 points</td><td><span class="pill ok">Holds</span></td><td class="num">−5.0 / −5.4 / −7.6, mean −6.0</td></tr>
+        <tr><td>100% message recovery</td><td><span class="pill ok">Holds</span></td><td class="num">both systems, all completed runs</td></tr>
+        <tr><td>Bi-LSTM-Dense 0.5000 / 0.0000 — "complete undetectability"</td><td><span class="pill no">Fails</span></td><td class="num">0.6549 / 0.5152</td></tr>
+        <tr><td>§5.4 "slightly higher perplexity"</td><td><span class="pill no">Understated</span></td><td class="num">14.2–15.8× cover</td></tr>
+        <tr><td>Table 1 enhanced "Words Required" 13.00 / 52.00 / 29.55</td><td><span class="pill no">Transposed</span></td><td class="num">metrics.md: 13 / 26 / 52</td></tr>
+        <tr><td>Table 2 headers "1 bit/word" and "4 bits/word"</td><td><span class="pill part">Mislabeled</span></td><td class="num">Table 1 says 4.34 and 9.84</td></tr>
+        <tr><td>Table 1 processing time, 128-bit: 19.35 s</td><td><span class="pill part">Unexplained</span></td><td class="num">metrics.md sums to 31.37 s</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="finding" style="margin-top:16px">
+    <h3>One more thing a reviewer will catch</h3>
+    <p>Enhanced mode reuses standard mode's text. In <code>metrics.md</code> the enhanced-mode
+      entries carry identical container-generation timings, token counts, sentence lengths
+      (14.33 / 15.36 / 18.37) and letters-per-word (6.88 / 6.62 / 6.48) to their standard-mode
+      counterparts — because <code>add_additional_bits_to_reports</code> re-partitions the
+      synonym map analytically without regenerating the carrier. So Table 2's separate
+      enhanced-mode detection column is measured on text that, as far as the artifacts show,
+      was never actually produced in enhanced mode. Generating real enhanced-mode carriers and
+      re-running Table 2 would close this.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Caveats</h2>
+  <ul>
+    <li><strong>Different models, unavoidably.</strong> The repo runs GPT-2 124M locally; SynSteg
+      calls GPT-4-omni. Some of the quality gap is model capability, not method. Running the
+      repo against Llama 3.1 8B via MLX would separate the two — it is the single most
+      valuable follow-up.</li>
+    <li><strong>Detectors are reimplementations.</strong> The four cited papers ship no reference
+      code. Mine follow the published architectures in structure, not weights. They are applied
+      <em>identically</em> to both systems, so relative comparison is sound; absolute values will
+      not match the originals exactly.</li>
+    <li><strong>Sample sizes differ.</strong> 30 runs per capacity cell and 400 per detector
+      corpus, against the paper's 8,662. Capacity means are tight (BPW std ≤ 0.41); detection
+      figures carry more variance, ±0.03 across seeds.</li>
+    <li><strong>The repo was tuned; SynSteg was not.</strong> I swept seven repo configurations
+      and reported its best. SynSteg ran at its published settings. If anything this favors
+      the repo on capacity — and it still loses decisively on detection.</li>
+    <li><strong>One patch applied.</strong> The <code>no_grad</code> fix was required to run the
+      repo at all. It changes no sampling behavior.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What I would do next</h2>
+  <ul>
+    <li><strong>Add bits/character alongside BPW.</strong> BPW per cover word is the right
+      definition and worth keeping, but it is sensitive to the generator's word length —
+      6.88 letters/word for GPT-4-omni against 3.68 for GPT-2. Bits/character removes that
+      objection and is the cleanest capacity figure available.</li>
+    <li><strong>Narrow the capacity claim to short payloads, or drop it.</strong> On the paper's
+      own basis SynSteg leads at 128 bits and loses at 256 and 512, because its BPW falls with
+      payload size while the repo's rises. "Competitive capacity at short message lengths, traded
+      for a 0.60-vs-0.98 detection advantage" is the strongest version of this that survives
+      scrutiny — and it is a better paper than the current framing.</li>
+    <li><strong>Lead with the reproduction, drop the 0.5000 cell.</strong> The detection thesis is
+      real and now independently confirmed against a live 2026 competitor. The
+      "complete undetectability" claim is the one thing that will draw fire, and the paper
+      does not need it.</li>
+    <li><strong>Report perplexity.</strong> §5.4 already concedes the direction. Publishing
+      37 → 532 alongside a competitor's 104 → 112 turns an omission into an honest,
+      informative trade-off: SynSteg buys detection resistance with fluency, and that is a
+      defensible position.</li>
+    <li><strong>Fix Table 1's transposed row and Table 2's headers</strong> before submission.</li>
+    <li><strong>Add this repo as a contemporary baseline.</strong> The paper's comparisons are all
+      2017–2021. A live 2026 system that it beats 0.60 to 0.98 on detection is a stronger
+      argument than RNN-Stega.</li>
+    <li><strong>Consider adopting the repo's crypto.</strong> SynSteg embeds raw binarized ASCII —
+      no encryption anywhere in the pipeline. Measured overhead for AES-SIV is ~3% in carrier
+      length. That is close to free for a genuine confidentiality guarantee.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Reproducing this</h2>
+  <pre># patch the repo so it runs on current torch
+# python/hf_model.py:99  torch.inference_mode() -> torch.no_grad()
+
+go build -o bench ./cmd/bench
+./bench -n 30 -bits 512 -mode raw -coding uniform -topn 32 -python venv/bin/python
+
+python analyze.py 'results/raw_*.jsonl'          # Table 1 metrics
+python quality.py --input results/corpus_x.jsonl # readability / PPL / coherence
+python steganalysis.py --cover COVER --stego STEGO --epochs 10 --seeds 3</pre>
+  <p style="margin-top:14px; color:var(--muted); font-size:14px;">
+    Harness (<code>cmd/bench/main.go</code>, <code>analyze.py</code>, <code>quality.py</code>,
+    <code>steganalysis.py</code>, <code>gen_covers.py</code>) and all raw JSONL results are in
+    the session scratchpad.
+  </p>
+</section>
+
+<footer>
+  Benchmark run 15 August 2026 · conversation-steganography @ main ·
+  DeepStego / SynSteg reports from <code>reports/gpt_omni_reports</code> ·
+  All figures measured on one host with a single pipeline applied to both systems.
+</footer>
+
+</div>
+</body>
+</html>

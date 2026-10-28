@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 13950.54it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6388.84it/s]
+human {'ppl_mean': 61.143, 'ppl_median': 49.409, 'ppl_ratio_vs_cover': 2.325, 'flesch': 65.71, 'flesch_sd': 14.348, 'cos_to_cover': 0.038, 'edit_rate': 0.994}
+cover {'ppl_mean': 26.119, 'ppl_median': 21.255, 'ppl_ratio_vs_cover': 1.0, 'flesch': 3.745, 'flesch_sd': 18.018, 'cos_to_cover': 1.0, 'edit_rate': 0.0}
+stego_b1 {'ppl_mean': 781.152, 'ppl_median': 648.407, 'ppl_ratio_vs_cover': 30.506, 'flesch': -8.381, 'flesch_sd': 17.043, 'cos_to_cover': 0.644, 'edit_rate': 0.995}
+stego_b2 {'ppl_mean': 909.325, 'ppl_median': 719.715, 'ppl_ratio_vs_cover': 33.861, 'flesch': -6.039, 'flesch_sd': 14.99, 'cos_to_cover': 0.605, 'edit_rate': 0.995}
+stego_b3 {'ppl_mean': 926.165, 'ppl_median': 761.911, 'ppl_ratio_vs_cover': 35.847, 'flesch': -7.715, 'flesch_sd': 15.534, 'cos_to_cover': 0.555, 'edit_rate': 0.991}
+stego_b4 {'ppl_mean': 804.889, 'ppl_median': 646.173, 'ppl_ratio_vs_cover': 30.401, 'flesch': -5.592, 'flesch_sd': 15.075, 'cos_to_cover': 0.585, 'edit_rate': 0.965}
+stego_b5 {'ppl_mean': 276.924, 'ppl_median': 218.656, 'ppl_ratio_vs_cover': 10.287, 'flesch': -0.816, 'flesch_sd': 15.984, 'cos_to_cover': 0.766, 'edit_rate': 0.841}
+stego_rand {'ppl_mean': 278.236, 'ppl_median': 225.382, 'ppl_ratio_vs_cover': 10.604, 'flesch': -0.742, 'flesch_sd': 16.99, 'cos_to_cover': 0.772, 'edit_rate': 0.84}
+stego_sel {'ppl_mean': 315.935, 'ppl_median': 239.054, 'ppl_ratio_vs_cover': 11.247, 'flesch': -3.332, 'flesch_sd': 17.656, 'cos_to_cover': 0.769, 'edit_rate': 0.823}

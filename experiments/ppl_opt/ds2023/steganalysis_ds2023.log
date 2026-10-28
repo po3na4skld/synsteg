@@ -1,0 +1,50 @@
+{'maxlen': 64, 'seeds': (0, 1, 2), 'n_pairs': {'ds2023_base': 4331, 'ds2023_pplopt': 4331}, 'identical_pairs': {'ds2023_base': 1817, 'ds2023_pplopt': 1817}, 'texts_skipped_sentence_mismatch': {'ds2023_base': 0, 'ds2023_pplopt': 0}}
+ds2023_base s0 TS-CNN         acc=0.691 f1=0.624 stego%=0.32 ep=27 490s
+ds2023_base s0 TS-RNN         acc=0.705 f1=0.634 stego%=0.31 ep=13 103s
+ds2023_base s0 Bi-LSTM-Dense  acc=0.720 f1=0.628 stego%=0.25 ep=16 230s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7574.11it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+ds2023_base s0 BERT-LSTM-Att  acc=0.748 f1=0.692 stego%=0.32 ep=10 90s
+ds2023_base s1 TS-CNN         acc=0.659 f1=0.579 stego%=0.31 ep=18 225s
+ds2023_base s1 TS-RNN         acc=0.711 f1=0.622 stego%=0.26 ep=14 109s
+ds2023_base s1 Bi-LSTM-Dense  acc=0.675 f1=0.571 stego%=0.26 ep=19 268s
+ds2023_base s1 BERT-LSTM-Att  acc=0.726 f1=0.690 stego%=0.38 ep=9 57s
+ds2023_base s2 TS-CNN         acc=0.642 f1=0.508 stego%=0.23 ep=26 329s
+ds2023_base s2 TS-RNN         acc=0.686 f1=0.593 stego%=0.27 ep=13 104s
+ds2023_base s2 Bi-LSTM-Dense  acc=0.669 f1=0.555 stego%=0.24 ep=15 218s
+ds2023_base s2 BERT-LSTM-Att  acc=0.726 f1=0.642 stego%=0.27 ep=10 63s
+ds2023_pplopt s0 TS-CNN         acc=0.672 f1=0.595 stego%=0.31 ep=22 285s
+ds2023_pplopt s0 TS-RNN         acc=0.681 f1=0.609 stego%=0.32 ep=13 97s
+ds2023_pplopt s0 Bi-LSTM-Dense  acc=0.692 f1=0.605 stego%=0.28 ep=16 214s
+ds2023_pplopt s0 BERT-LSTM-Att  acc=0.705 f1=0.664 stego%=0.38 ep=15 98s
+ds2023_pplopt s1 TS-CNN         acc=0.646 f1=0.556 stego%=0.30 ep=19 238s
+ds2023_pplopt s1 TS-RNN         acc=0.686 f1=0.587 stego%=0.26 ep=13 91s
+ds2023_pplopt s1 Bi-LSTM-Dense  acc=0.673 f1=0.583 stego%=0.29 ep=12 160s
+ds2023_pplopt s1 BERT-LSTM-Att  acc=0.699 f1=0.651 stego%=0.36 ep=12 79s
+ds2023_pplopt s2 TS-CNN         acc=0.632 f1=0.504 stego%=0.24 ep=41 533s
+ds2023_pplopt s2 TS-RNN         acc=0.665 f1=0.572 stego%=0.28 ep=13 96s
+ds2023_pplopt s2 Bi-LSTM-Dense  acc=0.677 f1=0.568 stego%=0.25 ep=14 188s
+ds2023_pplopt s2 BERT-LSTM-Att  acc=0.686 f1=0.598 stego%=0.28 ep=15 89s
+| ds2023_base | TF-IDF+LR | 0.576 ± 0.013 | 0.569 ± 0.021 |
+| ds2023_base | TS-CNN | 0.664 ± 0.025 | 0.570 ± 0.059 |
+| ds2023_base | TS-RNN | 0.701 ± 0.013 | 0.616 ± 0.021 |
+| ds2023_base | Bi-LSTM-Dense | 0.688 ± 0.028 | 0.585 ± 0.038 |
+| ds2023_base | BERT-LSTM-Att | 0.733 ± 0.013 | 0.675 ± 0.028 |
+| ds2023_pplopt | TF-IDF+LR | 0.574 ± 0.009 | 0.567 ± 0.017 |
+| ds2023_pplopt | TS-CNN | 0.650 ± 0.020 | 0.552 ± 0.046 |
+| ds2023_pplopt | TS-RNN | 0.677 ± 0.011 | 0.589 ± 0.019 |
+| ds2023_pplopt | Bi-LSTM-Dense | 0.681 ± 0.010 | 0.585 ± 0.019 |
+| ds2023_pplopt | BERT-LSTM-Att | 0.696 ± 0.010 | 0.638 ± 0.035 |

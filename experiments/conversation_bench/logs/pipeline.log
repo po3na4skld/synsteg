@@ -1,0 +1,9 @@
+u32 corpus done runs=405 Wed Oct 21 18:28:22 CEST 2026
+u32 covers done Wed Oct 21 18:29:08 CEST 2026
+u32 stegan exit=0 Wed Oct 21 18:42:19 CEST 2026
+default corpus done runs=405 Wed Oct 21 18:42:51 CEST 2026
+default covers done Wed Oct 21 18:44:40 CEST 2026
+u1024 corpus done runs=400 Wed Oct 21 18:53:25 CEST 2026
+u1024 covers done Wed Oct 21 18:54:03 CEST 2026
+default stegan exit=0 Wed Oct 21 19:04:53 CEST 2026
+u1024 stegan exit=0 Wed Oct 21 19:07:08 CEST 2026

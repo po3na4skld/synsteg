@@ -1,0 +1,6 @@
+u32 send=0 completed=false decoded=<nil> err="none of 2 carrier trials passed the human-writing checks (best semantic YES-NO margin +Inf)" %!q(<nil>)
+u32 send=1 completed=true decoded=true err="" ""
+u32 send=2 completed=false decoded=<nil> err="none of 2 carrier trials passed the human-writing checks (best semantic YES-NO margin +Inf)" %!q(<nil>)
+u32 send=3 completed=true decoded=true err="" ""
+u32 send=4 completed=true decoded=true err="" ""
+u32 send=5 completed=true decoded=true err="" ""

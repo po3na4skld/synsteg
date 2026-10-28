@@ -1,0 +1,2521 @@
+{
+  "uuid": "0db5abb5-f087-4fe6-8b86-220d1d6f0355",
+  "message": "0011000000110001110110011001100011110111000001000001101011000011111011011010110000111011110011010001110000000101010111010010010000111101100001001010110010000111001000100111000101110100000010110011110101011011000111111010110110101000011110000111100010011101",
+  "secret_key": [
+    {
+      "Censorship": {
+        "00": "Suppression",
+        "01": "Expurgation",
+        "10": "Bowdlerization",
+        "11": "Sanitization"
+      }
+    },
+    {
+      "in": {
+        "0": "within",
+        "1": "inside"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "arts": {
+        "00": "humanities",
+        "01": "fine arts",
+        "10": "creative arts",
+        "11": "liberal arts"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "media": {
+        "00": "press",
+        "01": "broadcast",
+        "10": "news",
+        "11": "multimedia"
+      }
+    },
+    {
+      "has": {
+        "0": "has",
+        "1": "has"
+      }
+    },
+    {
+      "been": {
+        "0": "been",
+        "1": "been"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "topic": {
+        "00": "subject",
+        "01": "theme",
+        "10": "issue",
+        "11": "matter"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "controversy": {
+        "00": "debate",
+        "01": "dispute",
+        "10": "contention",
+        "11": "discord"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "many": {
+        "00": "several",
+        "01": "numerous",
+        "10": "various",
+        "11": "multiple"
+      }
+    },
+    {
+      "years": {
+        "0": "years",
+        "1": "years"
+      }
+    },
+    {
+      "While": {
+        "00": "While",
+        "01": "Although",
+        "10": "Whilst",
+        "11": "Though"
+      }
+    },
+    {
+      "some": {
+        "0": "some",
+        "1": "some"
+      }
+    },
+    {
+      "argue": {
+        "00": "contend",
+        "01": "assert",
+        "10": "claim",
+        "11": "maintain"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "necessary": {
+        "00": "essential",
+        "01": "required",
+        "10": "compulsory",
+        "11": "mandatory"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "protect": {
+        "00": "safeguard",
+        "01": "shield",
+        "10": "defend",
+        "11": "preserve"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "public",
+        "10": "societal",
+        "11": "social order"
+      }
+    },
+    {
+      "from": {
+        "0": "from",
+        "1": "from"
+      }
+    },
+    {
+      "offensive": {
+        "00": "objectionable",
+        "01": "insulting",
+        "10": "distasteful",
+        "11": "provocative"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "harmful": {
+        "00": "damaging",
+        "01": "detrimental",
+        "10": "injurious",
+        "11": "noxious"
+      }
+    },
+    {
+      "content": {
+        "0": "material",
+        "1": "subject matter"
+      }
+    },
+    {
+      "others": {
+        "0": "others",
+        "1": "others"
+      }
+    },
+    {
+      "believe": {
+        "0": "believe",
+        "1": "believe"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "infringes": {
+        "00": "violates",
+        "01": "breaches",
+        "10": "contravenes",
+        "11": "encroaches"
+      }
+    },
+    {
+      "upon": {
+        "0": "upon",
+        "1": "upon"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "freedom": {
+        "00": "liberty",
+        "01": "autonomy",
+        "10": "independence",
+        "11": "right"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "expression": {
+        "0": "expression",
+        "1": "expression"
+      }
+    },
+    {
+      "This": {
+        "0": "This",
+        "1": "This"
+      }
+    },
+    {
+      "essay": {
+        "00": "paper",
+        "01": "article",
+        "10": "thesis",
+        "11": "composition"
+      }
+    },
+    {
+      "will": {
+        "0": "will",
+        "1": "will"
+      }
+    },
+    {
+      "explore": {
+        "00": "examine",
+        "01": "investigate",
+        "10": "study",
+        "11": "scrutinize"
+      }
+    },
+    {
+      "both": {
+        "0": "both",
+        "1": "both"
+      }
+    },
+    {
+      "sides": {
+        "0": "sides",
+        "1": "sides"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "argument": {
+        "0": "argument",
+        "1": "argument"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "provide": {
+        "0": "provide",
+        "1": "provide"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "balanced": {
+        "0": "balanced",
+        "1": "balanced"
+      }
+    },
+    {
+      "perspective": {
+        "0": "perspective",
+        "1": "perspective"
+      }
+    },
+    {
+      "Proponents": {
+        "00": "Advocates",
+        "01": "Supporters",
+        "10": "Champions",
+        "11": "Backers"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "censorship": {
+        "0": "censorship",
+        "1": "censorship"
+      }
+    },
+    {
+      "argue": {
+        "0": "argue",
+        "1": "argue"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "essential": {
+        "00": "crucial",
+        "01": "vital",
+        "10": "indispensable",
+        "11": "imperative"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "safeguard": {
+        "00": "protect",
+        "01": "secure",
+        "10": "guard",
+        "11": "shield"
+      }
+    },
+    {
+      "society": {
+        "0": "society",
+        "1": "society"
+      }
+    },
+    {
+      "from": {
+        "0": "from",
+        "1": "from"
+      }
+    },
+    {
+      "potentially": {
+        "0": "potentially",
+        "1": "potentially"
+      }
+    },
+    {
+      "harmful": {
+        "0": "harmful",
+        "1": "harmful"
+      }
+    },
+    {
+      "content": {
+        "0": "content",
+        "1": "content"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "arts": {
+        "0": "arts",
+        "1": "arts"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "media": {
+        "0": "media",
+        "1": "media"
+      }
+    },
+    {
+      "They": {
+        "0": "They",
+        "1": "They"
+      }
+    },
+    {
+      "believe": {
+        "0": "believe",
+        "1": "believe"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "certain": {
+        "00": "specific",
+        "01": "particular",
+        "10": "certain",
+        "11": "specific"
+      }
+    },
+    {
+      "forms": {
+        "00": "types",
+        "01": "kinds",
+        "10": "varieties",
+        "11": "categories"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "expression": {
+        "0": "expression",
+        "1": "expression"
+      }
+    },
+    {
+      "such": {
+        "0": "such",
+        "1": "such"
+      }
+    },
+    {
+      "as": {
+        "0": "as",
+        "1": "as"
+      }
+    },
+    {
+      "explicit": {
+        "00": "graphic",
+        "01": "explicit",
+        "10": "overt",
+        "11": "unambiguous"
+      }
+    },
+    {
+      "violence": {
+        "0": "violence",
+        "1": "violence"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "hate": {
+        "0": "hate",
+        "1": "hate"
+      }
+    },
+    {
+      "speech": {
+        "0": "speech",
+        "1": "speech"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "have": {
+        "0": "have",
+        "1": "have"
+      }
+    },
+    {
+      "negative": {
+        "00": "adverse",
+        "01": "detrimental",
+        "10": "unfavorable",
+        "11": "harmful"
+      }
+    },
+    {
+      "effects": {
+        "0": "effects",
+        "1": "effects"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "individuals": {
+        "00": "individuals",
+        "01": "persons",
+        "10": "people",
+        "11": "members"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "communities": {
+        "0": "communities",
+        "1": "communities"
+      }
+    },
+    {
+      "By": {
+        "0": "By",
+        "1": "By"
+      }
+    },
+    {
+      "limiting": {
+        "00": "restricting",
+        "01": "curtailing",
+        "10": "confining",
+        "11": "controlling"
+      }
+    },
+    {
+      "these": {
+        "0": "these",
+        "1": "these"
+      }
+    },
+    {
+      "types": {
+        "0": "types",
+        "1": "types"
+      }
+    },
+    {
+      "of": {
+        "0": "regarding",
+        "1": "pertaining to"
+      }
+    },
+    {
+      "content": {
+        "00": "material",
+        "01": "subject matter",
+        "10": "information",
+        "11": "data"
+      }
+    },
+    {
+      "they": {
+        "00": "individuals",
+        "01": "people",
+        "10": "persons",
+        "11": "those"
+      }
+    },
+    {
+      "argue": {
+        "00": "contend",
+        "01": "assert",
+        "10": "claim",
+        "11": "maintain"
+      }
+    },
+    {
+      "that": {
+        "0": "which",
+        "1": "who"
+      }
+    },
+    {
+      "censorship": {
+        "0": "suppression",
+        "1": "restriction"
+      }
+    },
+    {
+      "can": {
+        "0": "could",
+        "1": "may"
+      }
+    },
+    {
+      "promote": {
+        "00": "encourage",
+        "01": "foster",
+        "10": "advance",
+        "11": "propagate"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "more": {
+        "0": "additional",
+        "1": "extra"
+      }
+    },
+    {
+      "peaceful": {
+        "00": "tranquil",
+        "01": "calm",
+        "10": "serene",
+        "11": "placid"
+      }
+    },
+    {
+      "and": {
+        "0": "as well as",
+        "1": "together with"
+      }
+    },
+    {
+      "harmonious": {
+        "00": "concordant",
+        "01": "coherent",
+        "10": "melodious",
+        "11": "compatible"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "public",
+        "10": "culture",
+        "11": "populace"
+      }
+    },
+    {
+      "Additionally": {
+        "00": "Furthermore",
+        "01": "Moreover",
+        "10": "Also",
+        "11": "Additionally"
+      }
+    },
+    {
+      "supporters": {
+        "00": "advocates",
+        "01": "proponents",
+        "10": "champions",
+        "11": "backers"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "censorship": {
+        "0": "censorship",
+        "1": "censorship"
+      }
+    },
+    {
+      "believe": {
+        "00": "think",
+        "01": "consider",
+        "10": "hold",
+        "11": "deem"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "protect": {
+        "00": "safeguard",
+        "01": "shield",
+        "10": "defend",
+        "11": "preserve"
+      }
+    },
+    {
+      "vulnerable": {
+        "00": "susceptible",
+        "01": "exposed",
+        "10": "defenseless",
+        "11": "at risk"
+      }
+    },
+    {
+      "populations": {
+        "00": "communities",
+        "01": "groups",
+        "10": "cohorts",
+        "11": "segments"
+      }
+    },
+    {
+      "such": {
+        "0": "such",
+        "1": "such"
+      }
+    },
+    {
+      "as": {
+        "0": "as",
+        "1": "as"
+      }
+    },
+    {
+      "children": {
+        "00": "kids",
+        "01": "youngsters",
+        "10": "minors",
+        "11": "youths"
+      }
+    },
+    {
+      "from": {
+        "0": "against",
+        "1": "from"
+      }
+    },
+    {
+      "being": {
+        "0": "being",
+        "1": "being"
+      }
+    },
+    {
+      "exposed": {
+        "00": "subjected",
+        "01": "revealed",
+        "10": "uncovered",
+        "11": "disclosed"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "inappropriate": {
+        "00": "unsuitable",
+        "01": "improper",
+        "10": "unfitting",
+        "11": "incorrect"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "damaging": {
+        "00": "harmful",
+        "01": "detrimental",
+        "10": "injurious",
+        "11": "adverse"
+      }
+    },
+    {
+      "content": {
+        "0": "content",
+        "1": "content"
+      }
+    },
+    {
+      "They": {
+        "0": "These individuals",
+        "1": "Such people"
+      }
+    },
+    {
+      "argue": {
+        "00": "state",
+        "01": "claim",
+        "10": "insist",
+        "11": "declare"
+      }
+    },
+    {
+      "that": {
+        "0": "the premise that",
+        "1": "the argument that"
+      }
+    },
+    {
+      "young": {
+        "0": "youthful",
+        "1": "juvenile"
+      }
+    },
+    {
+      "minds": {
+        "00": "intellects",
+        "01": "psyches",
+        "10": "mentalities",
+        "11": "brains"
+      }
+    },
+    {
+      "are": {
+        "0": "exist",
+        "1": "remain"
+      }
+    },
+    {
+      "impressionable": {
+        "00": "influencable",
+        "01": "susceptible",
+        "10": "malleable",
+        "11": "pliable"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "be": {
+        "0": "be",
+        "1": "be"
+      }
+    },
+    {
+      "influenced": {
+        "00": "affected",
+        "01": "swayed",
+        "10": "altered",
+        "11": "shaped"
+      }
+    },
+    {
+      "by": {
+        "0": "through",
+        "1": "with"
+      }
+    },
+    {
+      "what": {
+        "0": "that which",
+        "1": "the things that"
+      }
+    },
+    {
+      "they": {
+        "0": "they",
+        "1": "they"
+      }
+    },
+    {
+      "see": {
+        "00": "observe",
+        "01": "view",
+        "10": "behold",
+        "11": "witness"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "hear": {
+        "0": "listen to",
+        "1": "take in"
+      }
+    },
+    {
+      "Therefore": {
+        "0": "Thus",
+        "1": "Hence"
+      }
+    },
+    {
+      "placing": {
+        "0": "imposing",
+        "1": "establishing"
+      }
+    },
+    {
+      "restrictions": {
+        "00": "limitations",
+        "01": "constraints",
+        "10": "bans",
+        "11": "controls"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "certain": {
+        "0": "specific",
+        "1": "particular"
+      }
+    },
+    {
+      "forms": {
+        "0": "types",
+        "1": "kinds"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "expression": {
+        "00": "speech",
+        "01": "articulation",
+        "10": "voicing",
+        "11": "utterance"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "help": {
+        "00": "assist",
+        "01": "aid",
+        "10": "support",
+        "11": "facilitate"
+      }
+    },
+    {
+      "ensure": {
+        "0": "guarantee",
+        "1": "secure"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "well-being": {
+        "00": "welfare",
+        "01": "health",
+        "10": "goodness",
+        "11": "prosperity"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "moral": {
+        "0": "ethical",
+        "1": "virtuous"
+      }
+    },
+    {
+      "development": {
+        "0": "growth",
+        "1": "evolution"
+      }
+    },
+    {
+      "On": {
+        "0": "Regarding",
+        "1": "Pertaining to"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "other": {
+        "0": "other",
+        "1": "other"
+      }
+    },
+    {
+      "hand": {
+        "0": "hand",
+        "1": "hand"
+      }
+    },
+    {
+      "opponents": {
+        "00": "critics",
+        "01": "adversaries",
+        "10": "detractors",
+        "11": "objectionists"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "censorship": {
+        "0": "censorship",
+        "1": "censorship"
+      }
+    },
+    {
+      "argue": {
+        "0": "argue",
+        "1": "argue"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "suppresses": {
+        "00": "stifles",
+        "01": "quashes",
+        "10": "represses",
+        "11": "squashes"
+      }
+    },
+    {
+      "freedom": {
+        "0": "liberty",
+        "1": "autonomy"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "expression": {
+        "0": "speech",
+        "1": "articulation"
+      }
+    },
+    {
+      "which": {
+        "0": "which",
+        "1": "which"
+      }
+    },
+    {
+      "is": {
+        "0": "constitutes",
+        "1": "represents"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "fundamental": {
+        "00": "basic",
+        "01": "core",
+        "10": "intrinsic",
+        "11": "essential"
+      }
+    },
+    {
+      "human": {
+        "0": "human",
+        "1": "human"
+      }
+    },
+    {
+      "right": {
+        "0": "entitlement",
+        "1": "privilege"
+      }
+    },
+    {
+      "They": {
+        "0": "They",
+        "1": "They"
+      }
+    },
+    {
+      "believe": {
+        "00": "postulate",
+        "01": "conjecture",
+        "10": "presume",
+        "11": "surmise"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "entities",
+        "10": "characters",
+        "11": "beings"
+      }
+    },
+    {
+      "should": {
+        "0": "ought to",
+        "1": "must"
+      }
+    },
+    {
+      "have": {
+        "0": "possess",
+        "1": "hold"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "right": {
+        "00": "right",
+        "01": "prerogative",
+        "10": "privilege",
+        "11": "liberty"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "express": {
+        "0": "convey",
+        "1": "articulate"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "thoughts": {
+        "00": "reflections",
+        "01": "ideas",
+        "10": "notions",
+        "11": "conceptions"
+      }
+    },
+    {
+      "opinions": {
+        "00": "views",
+        "01": "beliefs",
+        "10": "perspectives",
+        "11": "sentiments"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "creativity": {
+        "00": "inventiveness",
+        "01": "originality",
+        "10": "imagination",
+        "11": "creativity"
+      }
+    },
+    {
+      "without": {
+        "00": "devoid of",
+        "01": "minus",
+        "10": "lacking",
+        "11": "sans"
+      }
+    },
+    {
+      "interference": {
+        "00": "intrusion",
+        "01": "meddling",
+        "10": "intervention",
+        "11": "tampering"
+      }
+    },
+    {
+      "Censorship": {
+        "00": "Suppression",
+        "01": "Expurgation",
+        "10": "Bowdlerization",
+        "11": "Sanitization"
+      }
+    },
+    {
+      "they": {
+        "0": "they",
+        "1": "they"
+      }
+    },
+    {
+      "argue": {
+        "00": "contend",
+        "01": "assert",
+        "10": "claim",
+        "11": "maintain"
+      }
+    },
+    {
+      "inhibits": {
+        "00": "hampers",
+        "01": "suppresses",
+        "10": "restricts",
+        "11": "restrains"
+      }
+    },
+    {
+      "innovation": {
+        "00": "novelty",
+        "01": "invention",
+        "10": "advancement",
+        "11": "modernization"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "stifles": {
+        "00": "smothers",
+        "01": "quashes",
+        "10": "thwarts",
+        "11": "suppresses"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "progress": {
+        "00": "advancement",
+        "01": "development",
+        "10": "evolution",
+        "11": "growth"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "public",
+        "10": "society",
+        "11": "civilization"
+      }
+    },
+    {
+      "Furthermore": {
+        "00": "Moreover",
+        "01": "Additionally",
+        "10": "Besides",
+        "11": "Also"
+      }
+    },
+    {
+      "critics": {
+        "00": "detractors",
+        "01": "opponents",
+        "10": "skeptics",
+        "11": "disputants"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "censorship": {
+        "00": "suppression",
+        "01": "silencing",
+        "10": "restriction",
+        "11": "control"
+      }
+    },
+    {
+      "argue": {
+        "00": "contend",
+        "01": "assert",
+        "10": "claim",
+        "11": "debate"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "often": {
+        "00": "frequently",
+        "01": "commonly",
+        "10": "regularly",
+        "11": "usually"
+      }
+    },
+    {
+      "driven": {
+        "00": "motivated",
+        "01": "propelled",
+        "10": "induced",
+        "11": "prompted"
+      }
+    },
+    {
+      "by": {
+        "0": "by",
+        "1": "by"
+      }
+    },
+    {
+      "political": {
+        "00": "governmental",
+        "01": "state",
+        "10": "civic",
+        "11": "partisan"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "ideological": {
+        "00": "doctrinal",
+        "01": "philosophical",
+        "10": "dogmatic",
+        "11": "theoretical"
+      }
+    },
+    {
+      "agendas": {
+        "00": "programs",
+        "01": "schedules",
+        "10": "plans",
+        "11": "itineraries"
+      }
+    },
+    {
+      "They": {
+        "0": "They",
+        "1": "They"
+      }
+    },
+    {
+      "claim": {
+        "00": "assert",
+        "01": "declare",
+        "10": "protest",
+        "11": "affirm"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "those": {
+        "0": "those",
+        "1": "those"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "power": {
+        "00": "authority",
+        "01": "control",
+        "10": "dominance",
+        "11": "sway"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "manipulate": {
+        "00": "control",
+        "01": "influence",
+        "10": "exploit",
+        "11": "sway"
+      }
+    },
+    {
+      "censorship": {
+        "00": "suppression",
+        "01": "silencing",
+        "10": "restriction",
+        "11": "control"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "control": {
+        "00": "manage",
+        "01": "regulate",
+        "10": "govern",
+        "11": "direct"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "flow": {
+        "00": "stream",
+        "01": "current",
+        "10": "flux",
+        "11": "circulation"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "information": {
+        "00": "data",
+        "01": "knowledge",
+        "10": "intelligence",
+        "11": "news"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "shape": {
+        "00": "form",
+        "01": "mold",
+        "10": "influence",
+        "11": "sculpt"
+      }
+    },
+    {
+      "public": {
+        "00": "popular",
+        "01": "common",
+        "10": "communal",
+        "11": "general"
+      }
+    },
+    {
+      "opinion": {
+        "00": "belief",
+        "01": "viewpoint",
+        "10": "perspective",
+        "11": "sentiment"
+      }
+    },
+    {
+      "This": {
+        "0": "This",
+        "1": "This"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "lead": {
+        "00": "result in",
+        "01": "cause",
+        "10": "bring about",
+        "11": "precipitate"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "lack": {
+        "00": "deficiency",
+        "01": "shortage",
+        "10": "absence",
+        "11": "insufficiency"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "transparency": {
+        "00": "openness",
+        "01": "clarity",
+        "10": "lucidity",
+        "11": "straightforwardness"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "hinder": {
+        "00": "impede",
+        "01": "obstruct",
+        "10": "thwart",
+        "11": "hamper"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "development": {
+        "00": "advancement",
+        "01": "growth",
+        "10": "evolution",
+        "11": "progress"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "democratic": {
+        "00": "representative",
+        "01": "elective",
+        "10": "parliamentary",
+        "11": "egalitarian"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "public",
+        "10": "society",
+        "11": "population"
+      }
+    },
+    {
+      "In": {
+        "0": "In",
+        "1": "In"
+      }
+    },
+    {
+      "conclusion": {
+        "00": "summary",
+        "01": "finale",
+        "10": "close",
+        "11": "end"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "issue": {
+        "00": "matter",
+        "01": "topic",
+        "10": "subject",
+        "11": "question"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "censorship": {
+        "00": "suppression",
+        "01": "silencing",
+        "10": "restriction",
+        "11": "control"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "arts": {
+        "00": "humanities",
+        "01": "fine arts",
+        "10": "culture",
+        "11": "creative arts"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "media": {
+        "00": "press",
+        "01": "news outlets",
+        "10": "broadcasting",
+        "11": "publications"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "complex": {
+        "00": "complicated",
+        "01": "intricate",
+        "10": "involved",
+        "11": "convoluted"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "multifaceted": {
+        "00": "varied",
+        "01": "diverse",
+        "10": "many-sided",
+        "11": "complex"
+      }
+    },
+    {
+      "While": {
+        "0": "While",
+        "1": "While"
+      }
+    },
+    {
+      "supporters": {
+        "00": "advocates",
+        "01": "proponents",
+        "10": "champions",
+        "11": "backers"
+      }
+    },
+    {
+      "argue": {
+        "00": "contend",
+        "01": "assert",
+        "10": "claim",
+        "11": "propose"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "protects": {
+        "00": "safeguards",
+        "01": "defends",
+        "10": "shields",
+        "11": "preserves"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "public",
+        "10": "society",
+        "11": "citizens"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "vulnerable": {
+        "00": "exposed",
+        "01": "unprotected",
+        "10": "defenseless",
+        "11": "susceptible"
+      }
+    },
+    {
+      "populations": {
+        "00": "communities",
+        "01": "groups",
+        "10": "peoples",
+        "11": "demographics"
+      }
+    },
+    {
+      "opponents": {
+        "00": "critics",
+        "01": "detractors",
+        "10": "adversaries",
+        "11": "antagonists"
+      }
+    },
+    {
+      "claim": {
+        "00": "assert",
+        "01": "declare",
+        "10": "state",
+        "11": "argue"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "infringes": {
+        "00": "violates",
+        "01": "encroaches",
+        "10": "invasions",
+        "11": "impinges upon"
+      }
+    },
+    {
+      "upon": {
+        "0": "upon",
+        "1": "upon"
+      }
+    },
+    {
+      "freedom": {
+        "00": "liberty",
+        "01": "independence",
+        "10": "autonomy",
+        "11": "self-determination"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "expression": {
+        "00": "articulation",
+        "01": "utterance",
+        "10": "voicing",
+        "11": "declaration"
+      }
+    },
+    {
+      "and": {
+        "00": "plus",
+        "01": "together with",
+        "10": "along with",
+        "11": "as well as"
+      }
+    },
+    {
+      "can": {
+        "0": "is able to",
+        "1": "has the capability to"
+      }
+    },
+    {
+      "be": {
+        "00": "exist",
+        "01": "become",
+        "10": "remain",
+        "11": "constitute"
+      }
+    },
+    {
+      "manipulated": {
+        "00": "controlled",
+        "01": "influenced",
+        "10": "maneuvered",
+        "11": "shaped"
+      }
+    },
+    {
+      "for": {
+        "0": "for the purpose of",
+        "1": "aiming at"
+      }
+    },
+    {
+      "political": {
+        "00": "governmental",
+        "01": "civic",
+        "10": "public",
+        "11": "partisan"
+      }
+    },
+    {
+      "purposes": {
+        "00": "intentions",
+        "01": "objectives",
+        "10": "goals",
+        "11": "aims"
+      }
+    },
+    {
+      "Striking": {
+        "00": "Remarkable",
+        "01": "Impressive",
+        "10": "Conspicuous",
+        "11": "Noticeable"
+      }
+    },
+    {
+      "a": {
+        "00": "an",
+        "01": "one",
+        "10": "any",
+        "11": "each"
+      }
+    },
+    {
+      "balance": {
+        "00": "equilibrium",
+        "01": "stability",
+        "10": "harmony",
+        "11": "evenness"
+      }
+    },
+    {
+      "between": {
+        "00": "among",
+        "01": "in the middle of",
+        "10": "amid",
+        "11": "intermediate to"
+      }
+    },
+    {
+      "protecting": {
+        "00": "safeguarding",
+        "01": "shielding",
+        "10": "preserving",
+        "11": "securing"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "people",
+        "10": "persons",
+        "11": "human beings"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "allowing": {
+        "00": "permitting",
+        "01": "enabling",
+        "10": "authorizing",
+        "11": "letting"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "free": {
+        "00": "unrestricted",
+        "01": "liberated",
+        "10": "unbound",
+        "11": "unconstrained"
+      }
+    },
+    {
+      "expression": {
+        "0": "expression",
+        "1": "expression"
+      }
+    },
+    {
+      "is": {
+        "00": "represents",
+        "01": "equates to",
+        "10": "constitutes",
+        "11": "stands as"
+      }
+    },
+    {
+      "a": {
+        "00": "an",
+        "01": "one",
+        "10": "any",
+        "11": "each"
+      }
+    },
+    {
+      "challenge": {
+        "00": "difficulty",
+        "01": "obstacle",
+        "10": "test",
+        "11": "trial"
+      }
+    },
+    {
+      "that": {
+        "0": "that which",
+        "1": "which"
+      }
+    },
+    {
+      "requires": {
+        "00": "demands",
+        "01": "needs",
+        "10": "calls for",
+        "11": "entails"
+      }
+    },
+    {
+      "careful": {
+        "00": "cautious",
+        "01": "meticulous",
+        "10": "thorough",
+        "11": "attentive"
+      }
+    },
+    {
+      "consideration": {
+        "00": "deliberation",
+        "01": "thought",
+        "10": "contemplation",
+        "11": "reflection"
+      }
+    },
+    {
+      "Perhaps": {
+        "00": "Possibly",
+        "01": "Maybe",
+        "10": "Potentially",
+        "11": "Perchance"
+      }
+    },
+    {
+      "instead": {
+        "00": "as an alternative",
+        "01": "in lieu",
+        "10": "preferably",
+        "11": "rather"
+      }
+    },
+    {
+      "of": {
+        "00": "pertaining to",
+        "01": "concerning",
+        "10": "regarding",
+        "11": "involving"
+      }
+    },
+    {
+      "outright": {
+        "00": "absolute",
+        "01": "total",
+        "10": "complete",
+        "11": "unqualified"
+      }
+    },
+    {
+      "censorship": {
+        "00": "suppression",
+        "01": "restricting",
+        "10": "prohibition",
+        "11": "control"
+      }
+    },
+    {
+      "a": {
+        "00": "an",
+        "01": "one",
+        "10": "any",
+        "11": "each"
+      }
+    },
+    {
+      "more": {
+        "00": "additional",
+        "01": "extra",
+        "10": "further",
+        "11": "increased"
+      }
+    },
+    {
+      "nuanced": {
+        "00": "subtle",
+        "01": "refined",
+        "10": "detailed",
+        "11": "delicate"
+      }
+    },
+    {
+      "approach": {
+        "00": "method",
+        "01": "strategy",
+        "10": "plan",
+        "11": "technique"
+      }
+    },
+    {
+      "could": {
+        "0": "might",
+        "1": "may possibly"
+      }
+    },
+    {
+      "be": {
+        "00": "exist",
+        "01": "become",
+        "10": "remain",
+        "11": "constitute"
+      }
+    },
+    {
+      "taken": {
+        "00": "adopted",
+        "01": "undertaken",
+        "10": "embraced",
+        "11": "utilized"
+      }
+    },
+    {
+      "such": {
+        "00": "such a",
+        "01": "this kind of",
+        "10": "that kind of",
+        "11": "the like of"
+      }
+    },
+    {
+      "as": {
+        "00": "like",
+        "01": "such as",
+        "10": "including",
+        "11": "namely"
+      }
+    },
+    {
+      "age": {
+        "00": "years",
+        "01": "life-stage",
+        "10": "aging",
+        "11": "maturity"
+      }
+    },
+    {
+      "restrictions": {
+        "00": "limitations",
+        "01": "constraints",
+        "10": "confinements",
+        "11": "regulations"
+      }
+    },
+    {
+      "or": {
+        "00": "or else",
+        "01": "alternatively",
+        "10": "otherwise",
+        "11": "or possibly"
+      }
+    },
+    {
+      "content": {
+        "00": "material",
+        "01": "subject matter",
+        "10": "substance",
+        "11": "matter"
+      }
+    },
+    {
+      "warnings": {
+        "00": "alerts",
+        "01": "advisories",
+        "10": "cautions",
+        "11": "notices"
+      }
+    },
+    {
+      "to": {
+        "00": "towards",
+        "01": "in order to",
+        "10": "for the purpose of",
+        "11": "aimed at"
+      }
+    },
+    {
+      "allow": {
+        "00": "permit",
+        "01": "enable",
+        "10": "authorize",
+        "11": "let"
+      }
+    },
+    {
+      "for": {
+        "0": "for the purpose of",
+        "1": "aiming at"
+      }
+    },
+    {
+      "the": {
+        "00": "the particular",
+        "01": "the said",
+        "10": "the same",
+        "11": "the specific"
+      }
+    },
+    {
+      "diversity": {
+        "00": "variety",
+        "01": "multifariousness",
+        "10": "heterogeneity",
+        "11": "range"
+      }
+    },
+    {
+      "of": {
+        "00": "pertaining to",
+        "01": "concerning",
+        "10": "regarding",
+        "11": "involving"
+      }
+    },
+    {
+      "expression": {
+        "00": "articulation",
+        "01": "utterance",
+        "10": "voicing",
+        "11": "declaration"
+      }
+    },
+    {
+      "while": {
+        "00": "whilst",
+        "01": "whereas",
+        "10": "even as",
+        "11": "at the same time as"
+      }
+    },
+    {
+      "still": {
+        "00": "yet",
+        "01": "even now",
+        "10": "nonetheless",
+        "11": "nevertheless"
+      }
+    },
+    {
+      "ensuring": {
+        "00": "guaranteeing",
+        "01": "securing",
+        "10": "assuring",
+        "11": "safeguarding"
+      }
+    },
+    {
+      "the": {
+        "00": "the particular",
+        "01": "the said",
+        "10": "the same",
+        "11": "the specific"
+      }
+    },
+    {
+      "well-being": {
+        "00": "welfare",
+        "01": "health",
+        "10": "comfort",
+        "11": "prosperity"
+      }
+    },
+    {
+      "of": {
+        "00": "pertaining to",
+        "01": "concerning",
+        "10": "regarding",
+        "11": "involving"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "public",
+        "10": "population",
+        "11": "the masses"
+      }
+    },
+    {
+      "as": {
+        "00": "like",
+        "01": "such as",
+        "10": "including",
+        "11": "namely"
+      }
+    },
+    {
+      "a": {
+        "00": "an",
+        "01": "one",
+        "10": "any",
+        "11": "each"
+      }
+    },
+    {
+      "whole": {
+        "00": "entirety",
+        "01": "aggregate",
+        "10": "totality",
+        "11": "completeness"
+      }
+    }
+  ],
+  "container": "Censorship in the arts and media has been a topic of controversy for many years. While some argue that it is necessary to protect society from offensive or harmful content, others believe that it infringes upon the freedom of expression. This essay will explore both sides of the argument and provide a balanced perspective. Proponents of censorship argue that it is essential to safeguard society from potentially harmful content in the arts and media. They believe that certain forms of expression, such as explicit violence or hate speech, can have negative effects on individuals and communities. By limiting these types of content, they argue that censorship can promote a more peaceful and harmonious society. Additionally, supporters of censorship believe that it can protect vulnerable populations, such as children, from being exposed to inappropriate or damaging content. They argue that young minds are impressionable and can be influenced by what they see and hear. Therefore, placing restrictions on certain forms of expression can help ensure their well-being and moral development. On the other hand, opponents of censorship argue that it suppresses freedom of expression, which is a fundamental human right. They believe that individuals should have the right to express their thoughts, opinions, and creativity without interference. Censorship, they argue, inhibits innovation and stifles the progress of society. Furthermore, critics of censorship argue that it is often driven by political or ideological agendas. They claim that those in power can manipulate censorship to control the flow of information and shape public opinion. This can lead to a lack of transparency and hinder the development of a democratic society. In conclusion, the issue of censorship in the arts and media is complex and multifaceted. While supporters argue that it protects society and vulnerable populations, opponents claim that it infringes upon freedom of expression and can be manipulated for political purposes. Striking a balance between protecting individuals and allowing for free expression is a challenge that requires careful consideration. Perhaps, instead of outright censorship, a more nuanced approach could be taken, such as age restrictions or content warnings, to allow for the diversity of expression while still ensuring the well-being of society as a whole.",
+  "encoded_message": "Suppression inside the creative arts and press has been a subject of dispute for various years. While some contend that it is mandatory to defend social order from objectionable or noxious material, others believe that it breaches upon the independence of expression. This paper will scrutinize both sides of the argument and provide a balanced perspective. Backers of censorship argue that it is vital to shield society from potentially harmful content in the arts and media. They believe that certain types of expression, such as explicit violence or hate speech, can have adverse effects on individuals and communities. By curtailing these types regarding material, individuals maintain which restriction could propagate a additional tranquil as well as compatible populace. Additionally, champions of censorship deem that it can shield defenseless cohorts, such as youths, from being subjected to unsuitable or adverse content. Such people claim the argument that juvenile mentalities exist pliable and can be swayed through that which they view and take in. Hence, imposing limitations on specific types of speech can support secure their health and ethical evolution. Pertaining to the other hand, detractors of censorship argue that it represses liberty of articulation, which constitutes a core human entitlement. They postulate that entities must hold the right to articulate their ideas, perspectives, plus creativity devoid of intervention. Expurgation, they assert, suppresses advancement plus thwarts the advancement of society. Additionally, disputants of suppression claim that it is frequently induced by state or theoretical programs. They declare that those in control can sway silencing to manage the stream of data and influence general belief. This can precipitate to a insufficiency of clarity and obstruct the growth of a parliamentary society. In end, the matter of silencing in the creative arts and publications is involved and many-sided. While backers assert that it shields society and defenseless peoples, critics declare that it impinges upon upon autonomy of articulation together with has the capability to constitute controlled for the purpose of public objectives. Noticeable one balance between protecting individuals and allowing for free expression is a challenge that requires careful consideration. Perhaps, instead of outright censorship, a more nuanced approach could be taken, such as age restrictions or content warnings, to allow for the diversity of expression while still ensuring the well-being of society as a whole.",
+  "encoding_time_report": {
+    "container_generation": 28.71,
+    "secret_key_generation": 120.17
+  },
+  "decoding_time": 0.0012288093566894531,
+  "decoded_message": "0011000000110001110110011001100011110111000001000001101011000011111011011010110000111011110011010001110000000101010111010010010000111101100001001010110010000111001000100111000101110100000010110011110101011011000111111010110110101000011110000111100010011101",
+  "error_message": ""
+}

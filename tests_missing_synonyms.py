@@ -2,7 +2,7 @@
 Offline check of the missing-synonyms rule on stored runs: rebuild each key from the stored raw synonym lists with
 the new binarize_synonyms, embed with core.embed, decode with core.decode_message. No LLM calls."""
 import glob, json, os, sys, random, statistics as st
-REPO = os.path.expanduser("~/PycharmProjects/Personal/SynSteg"); sys.path.insert(0, REPO)
+REPO = os.environ.get('SYNSTEG_ROOT', os.path.expanduser('~/PycharmProjects/Personal/SynSteg')); sys.path.insert(0, REPO)
 os.environ.setdefault("OPENAI_API_KEY", "offline")
 from steganography import core, helper
 from steganography.secret_key import binarize_synonyms

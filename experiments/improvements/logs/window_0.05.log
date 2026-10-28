@@ -1,0 +1,31 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-26 01:39:03,310 huggingface_hub.utils._http WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 10407.18it/s]
+w_d0.05_gmin 0 1s rec=True retries=0
+w_d0.05_gmin 50 78s rec=True retries=0
+w_d0.05_gmin 100 174s rec=True retries=0
+w_d0.05_gmin 150 282s rec=True retries=0
+w_d0.05_gmin 200 402s rec=True retries=0
+w_d0.05_gmin 250 515s rec=True retries=0
+w_d0.05_gmin done 669s
+w_d0.05_g2 0 1s rec=True retries=0
+w_d0.05_g2 50 73s rec=True retries=0
+w_d0.05_g2 100 192s rec=True retries=0
+w_d0.05_g2 150 294s rec=True retries=0
+w_d0.05_g2 200 439s rec=True retries=0
+w_d0.05_g2 250 578s rec=True retries=0
+w_d0.05_g2 done 762s
+w_d0.05_g4 0 1s rec=True retries=0
+w_d0.05_g4 50 80s rec=True retries=0
+w_d0.05_g4 100 185s rec=True retries=0
+w_d0.05_g4 150 280s rec=True retries=0
+w_d0.05_g4 200 411s rec=True retries=0
+w_d0.05_g4 250 541s rec=True retries=0
+w_d0.05_g4 done 690s
+w_d0.05_g8 0 1s rec=True retries=0
+w_d0.05_g8 50 91s rec=True retries=0
+w_d0.05_g8 100 210s rec=True retries=0
+w_d0.05_g8 150 288s rec=True retries=0
+w_d0.05_g8 200 379s rec=True retries=0
+w_d0.05_g8 250 483s rec=True retries=0
+w_d0.05_g8 done 620s

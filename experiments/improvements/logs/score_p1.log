@@ -1,0 +1,24 @@
+D1_roberta_openai: 26 from corpus 3.7, 1175 to score
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-26 03:33:20,31 huggingface_hub.utils._http WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 6883.54it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: openai-community/roberta-base-openai-detector
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  D1_roberta_openai 1175 in 29s
+D2_chatgpt_roberta: 26 from corpus 3.7, 1175 to score
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 55724.44it/s]
+  D2_chatgpt_roberta 1175 in 39s
+D3_desklib: 26 from corpus 3.7, 1175 to score
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+  D3_desklib 1175 in 424s
+D4_binoculars: 26 from corpus 3.7, 1175 to score
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:02<14:23,  2.56s/it]Loading weights:  51%|█████     | 171/338 [00:02<00:01, 87.21it/s]Loading weights:  69%|██████▊   | 232/338 [00:03<00:01, 89.81it/s]Loading weights:  80%|███████▉  | 270/338 [00:03<00:00, 92.12it/s]Loading weights:  88%|████████▊ | 297/338 [00:04<00:00, 89.64it/s]Loading weights:  94%|█████████▍| 317/338 [00:04<00:00, 78.06it/s]Loading weights:  98%|█████████▊| 332/338 [00:04<00:00, 80.00it/s]Loading weights: 100%|██████████| 338/338 [00:04<00:00, 71.42it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:02<15:43,  2.80s/it]Loading weights:  47%|████▋     | 159/338 [00:03<00:02, 72.06it/s]Loading weights:  59%|█████▊    | 198/338 [00:03<00:01, 71.06it/s]Loading weights:  66%|██████▌   | 222/338 [00:03<00:01, 70.19it/s]Loading weights:  71%|███████   | 240/338 [00:04<00:01, 76.42it/s]Loading weights:  76%|███████▌  | 256/338 [00:04<00:01, 77.40it/s]Loading weights:  80%|███████▉  | 270/338 [00:04<00:00, 72.58it/s]Loading weights:  83%|████████▎ | 281/338 [00:04<00:01, 56.80it/s]Loading weights:  86%|████████▌ | 291/338 [00:05<00:00, 59.62it/s]Loading weights:  90%|████████▉ | 303/338 [00:05<00:00, 62.17it/s]Loading weights:  93%|█████████▎| 315/338 [00:05<00:00, 56.88it/s]Loading weights:  95%|█████████▌| 322/338 [00:05<00:00, 50.96it/s]Loading weights:  97%|█████████▋| 328/338 [00:05<00:00, 46.81it/s]Loading weights: 100%|██████████| 338/338 [00:05<00:00, 57.06it/s]

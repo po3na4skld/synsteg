@@ -1,0 +1,3165 @@
+{
+  "uuid": "0d9d063d-3db1-4430-862f-3326750b2555",
+  "message": "1100010000101011110010000010000010111011001100001111011010110011101010000101100111111101010110110100011111100111000110010010000011101101111000000010000000011100010111011101100001001010111111010000101000000001111000011110010001011000111100011110011001101010",
+  "secret_key": [
+    {
+      "Economic": {
+        "0": "Financial",
+        "1": "Monetary"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "discrepancy",
+        "11": "inequity"
+      }
+    },
+    {
+      "refers": {
+        "0": "alludes",
+        "1": "pertains"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "unequal": {
+        "00": "disproportionate",
+        "01": "asymmetrical",
+        "10": "lopsided",
+        "11": "unbalanced"
+      }
+    },
+    {
+      "distribution": {
+        "00": "allocation",
+        "01": "dispersal",
+        "10": "dissemination",
+        "11": "apportionment"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "wealth": {
+        "00": "affluence",
+        "01": "prosperity",
+        "10": "riches",
+        "11": "fortunes"
+      }
+    },
+    {
+      "resources": {
+        "00": "assets",
+        "01": "supplies",
+        "10": "reserves",
+        "11": "materials"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "opportunities": {
+        "00": "chances",
+        "01": "prospects",
+        "10": "possibilities",
+        "11": "openings"
+      }
+    },
+    {
+      "among": {
+        "0": "between",
+        "1": "within"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "people",
+        "10": "individuals",
+        "11": "entities"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "groups": {
+        "00": "clusters",
+        "01": "circles",
+        "10": "assemblies",
+        "11": "gatherings"
+      }
+    },
+    {
+      "within": {
+        "00": "inside",
+        "01": "in",
+        "10": "within",
+        "11": "amid"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "population",
+        "10": "civilization",
+        "11": "public"
+      }
+    },
+    {
+      "It": {
+        "0": "It",
+        "1": "It"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "pervasive": {
+        "00": "widespread",
+        "01": "prevalent",
+        "10": "ubiquitous",
+        "11": "omnipresent"
+      }
+    },
+    {
+      "issue": {
+        "00": "matter",
+        "01": "problem",
+        "10": "concern",
+        "11": "question"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "affects": {
+        "00": "impacts",
+        "01": "influences",
+        "10": "touches",
+        "11": "concerns"
+      }
+    },
+    {
+      "economies": {
+        "0": "markets",
+        "1": "financial systems"
+      }
+    },
+    {
+      "worldwide": {
+        "00": "globally",
+        "01": "internationally",
+        "10": "everywhere",
+        "11": "all over the world"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "has": {
+        "0": "has",
+        "1": "has"
+      }
+    },
+    {
+      "significant": {
+        "00": "considerable",
+        "01": "substantial",
+        "10": "notable",
+        "11": "meaningful"
+      }
+    },
+    {
+      "social": {
+        "00": "societal",
+        "01": "communal",
+        "10": "civic",
+        "11": "public"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "economical"
+      }
+    },
+    {
+      "implications": {
+        "00": "consequences",
+        "01": "ramifications",
+        "10": "repercussions",
+        "11": "outcomes"
+      }
+    },
+    {
+      "One": {
+        "0": "One",
+        "1": "One"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "most": {
+        "00": "extremely",
+        "01": "highly",
+        "10": "particularly",
+        "11": "especially"
+      }
+    },
+    {
+      "significant": {
+        "00": "noteworthy",
+        "01": "important",
+        "10": "major",
+        "11": "momentous"
+      }
+    },
+    {
+      "effects": {
+        "00": "consequences",
+        "01": "outcomes",
+        "10": "results",
+        "11": "impacts"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "economic": {
+        "00": "fiscal",
+        "01": "financial",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "disproportion",
+        "10": "imbalance",
+        "11": "inequity"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "perpetuation": {
+        "00": "continuation",
+        "01": "preservation",
+        "10": "prolongation",
+        "11": "maintenance"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "poverty": {
+        "00": "indigence",
+        "01": "destitution",
+        "10": "impoverishment",
+        "11": "penury"
+      }
+    },
+    {
+      "When": {
+        "0": "When",
+        "1": "When"
+      }
+    },
+    {
+      "wealth": {
+        "00": "riches",
+        "01": "fortune",
+        "10": "prosperity",
+        "11": "capital"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "concentrated": {
+        "00": "centralized",
+        "01": "focused",
+        "10": "accumulated",
+        "11": "clustered"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "hands": {
+        "00": "possession",
+        "01": "control",
+        "10": "grasp",
+        "11": "hold"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "few": {
+        "00": "handful",
+        "01": "select",
+        "10": "limited number",
+        "11": "small number"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "becomes": {
+        "00": "turns",
+        "01": "grows",
+        "10": "evolves",
+        "11": "transforms"
+      }
+    },
+    {
+      "increasingly": {
+        "00": "gradually",
+        "01": "progressively",
+        "10": "steadily",
+        "11": "more and more"
+      }
+    },
+    {
+      "difficult": {
+        "00": "hard",
+        "01": "challenging",
+        "10": "arduous",
+        "11": "tough"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "those": {
+        "0": "those",
+        "1": "those"
+      }
+    },
+    {
+      "at": {
+        "0": "at",
+        "1": "at"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "bottom": {
+        "00": "base",
+        "01": "lower end",
+        "10": "nadir",
+        "11": "depths"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "income": {
+        "00": "earnings",
+        "01": "revenue",
+        "10": "wages",
+        "11": "salary"
+      }
+    },
+    {
+      "distribution": {
+        "00": "allocation",
+        "01": "dispersion",
+        "10": "dissemination",
+        "11": "division"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "escape": {
+        "00": "break free from",
+        "01": "evade",
+        "10": "elude",
+        "11": "flee"
+      }
+    },
+    {
+      "poverty": {
+        "00": "destitution",
+        "01": "penury",
+        "10": "deprivation",
+        "11": "want"
+      }
+    },
+    {
+      "Limited": {
+        "00": "Restricted",
+        "01": "Constrained",
+        "10": "Reduced",
+        "11": "Confined"
+      }
+    },
+    {
+      "access": {
+        "00": "entry",
+        "01": "admittance",
+        "10": "approach",
+        "11": "availability"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "education": {
+        "00": "instruction",
+        "01": "schooling",
+        "10": "learning",
+        "11": "tuition"
+      }
+    },
+    {
+      "healthcare": {
+        "00": "medical care",
+        "01": "health services",
+        "10": "medical services",
+        "11": "medical treatment"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "employment": {
+        "00": "work",
+        "01": "job",
+        "10": "occupation",
+        "11": "position"
+      }
+    },
+    {
+      "opportunities": {
+        "00": "chances",
+        "01": "possibilities",
+        "10": "prospects",
+        "11": "openings"
+      }
+    },
+    {
+      "further": {
+        "00": "additionally",
+        "01": "moreover",
+        "10": "also",
+        "11": "furthermore"
+      }
+    },
+    {
+      "exacerbates": {
+        "00": "worsens",
+        "01": "aggravates",
+        "10": "intensifies",
+        "11": "compounds"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "problem": {
+        "00": "issue",
+        "01": "dilemma",
+        "10": "complication",
+        "11": "challenge"
+      }
+    },
+    {
+      "creating": {
+        "00": "forming",
+        "01": "generating",
+        "10": "causing",
+        "11": "spawning"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "vicious": {
+        "00": "destructive",
+        "01": "malicious",
+        "10": "venomous",
+        "11": "cruel"
+      }
+    },
+    {
+      "cycle": {
+        "00": "circle",
+        "01": "loop",
+        "10": "round",
+        "11": "rotation"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "poverty": {
+        "00": "deprivation",
+        "01": "paucity",
+        "10": "indigence",
+        "11": "destitution"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "disproportion",
+        "10": "imbalance",
+        "11": "unfairness"
+      }
+    },
+    {
+      "Moreover": {
+        "00": "Furthermore",
+        "01": "Additionally",
+        "10": "Also",
+        "11": "Besides"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "economic"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "discrepancy",
+        "10": "imbalance",
+        "11": "inequity"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "lead": {
+        "00": "guide",
+        "01": "result in",
+        "10": "cause",
+        "11": "predispose"
+      }
+    },
+    {
+      "to": {
+        "0": "toward",
+        "1": "towards"
+      }
+    },
+    {
+      "social": {
+        "00": "communal",
+        "01": "societal",
+        "10": "group",
+        "11": "collective"
+      }
+    },
+    {
+      "instability": {
+        "00": "unsteadiness",
+        "01": "volatility",
+        "10": "uncertainty",
+        "11": "disorder"
+      }
+    },
+    {
+      "When": {
+        "0": "As",
+        "1": "At the time when"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "significant": {
+        "00": "notable",
+        "01": "substantial",
+        "10": "considerable",
+        "11": "major"
+      }
+    },
+    {
+      "portion": {
+        "00": "segment",
+        "01": "part",
+        "10": "fraction",
+        "11": "section"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "population": {
+        "00": "inhabitants",
+        "01": "residents",
+        "10": "people",
+        "11": "citizenry"
+      }
+    },
+    {
+      "feels": {
+        "0": "senses",
+        "1": "experiences"
+      }
+    },
+    {
+      "marginalized": {
+        "00": "disenfranchised",
+        "01": "sidelined",
+        "10": "excluded",
+        "11": "ostracized"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "deprived": {
+        "00": "dispossessed",
+        "01": "bereft",
+        "10": "stripped",
+        "11": "robbed"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "basic": {
+        "00": "fundamental",
+        "01": "essential",
+        "10": "primary",
+        "11": "elementary"
+      }
+    },
+    {
+      "needs": {
+        "00": "necessities",
+        "01": "requirements",
+        "10": "demands",
+        "11": "essentials"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "result": {
+        "00": "lead",
+        "01": "culminate",
+        "10": "end",
+        "11": "conclude"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "unrest": {
+        "00": "disturbance",
+        "01": "disorder",
+        "10": "turmoil",
+        "11": "agitation"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "political": {
+        "00": "governmental",
+        "01": "public",
+        "10": "state",
+        "11": "civic"
+      }
+    },
+    {
+      "instability": {
+        "0": "instability",
+        "1": "instability"
+      }
+    },
+    {
+      "High": {
+        "00": "Elevated",
+        "01": "Substantial",
+        "10": "Great",
+        "11": "Considerable"
+      }
+    },
+    {
+      "levels": {
+        "00": "degrees",
+        "01": "stages",
+        "10": "layers",
+        "11": "tiers"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "discrepancy",
+        "11": "unevenness"
+      }
+    },
+    {
+      "have": {
+        "0": "have",
+        "1": "have"
+      }
+    },
+    {
+      "been": {
+        "0": "been",
+        "1": "been"
+      }
+    },
+    {
+      "linked": {
+        "00": "associated",
+        "01": "connected",
+        "10": "related",
+        "11": "tied"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "increased": {
+        "00": "augmented",
+        "01": "enhanced",
+        "10": "amplified",
+        "11": "elevated"
+      }
+    },
+    {
+      "crime": {
+        "00": "criminal",
+        "01": "illegal",
+        "10": "unlawful",
+        "11": "felonious"
+      }
+    },
+    {
+      "rates": {
+        "00": "ratios",
+        "01": "proportions",
+        "10": "levels",
+        "11": "frequencies"
+      }
+    },
+    {
+      "political": {
+        "0": "political",
+        "1": "political"
+      }
+    },
+    {
+      "polarization": {
+        "00": "divisiveness",
+        "01": "separation",
+        "10": "division",
+        "11": "alienation"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "even": {
+        "00": "equally",
+        "01": "uniformly",
+        "10": "alike",
+        "11": "identically"
+      }
+    },
+    {
+      "revolutions": {
+        "00": "uprisings",
+        "01": "insurrections",
+        "10": "rebellions",
+        "11": "overthrows"
+      }
+    },
+    {
+      "Therefore": {
+        "00": "Thus",
+        "01": "Hence",
+        "10": "Consequently",
+        "11": "Accordingly"
+      }
+    },
+    {
+      "addressing": {
+        "00": "tackling",
+        "01": "dealing with",
+        "10": "confronting",
+        "11": "handling"
+      }
+    },
+    {
+      "economic": {
+        "0": "economic",
+        "1": "economic"
+      }
+    },
+    {
+      "inequality": {
+        "0": "inequality",
+        "1": "inequality"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "crucial": {
+        "00": "vital",
+        "01": "essential",
+        "10": "key",
+        "11": "pivotal"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "maintaining": {
+        "00": "preserving",
+        "01": "sustaining",
+        "10": "keeping",
+        "11": "upholding"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "harmony": {
+        "00": "accord",
+        "01": "peace",
+        "10": "concord",
+        "11": "agreement"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "stability": {
+        "00": "steadiness",
+        "01": "firmness",
+        "10": "solidness",
+        "11": "constancy"
+      }
+    },
+    {
+      "Another": {
+        "00": "Additional",
+        "01": "Further",
+        "10": "Other",
+        "11": "Alternate"
+      }
+    },
+    {
+      "consequence": {
+        "00": "result",
+        "01": "outcome",
+        "10": "effect",
+        "11": "ramification"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "economic": {
+        "0": "economic",
+        "1": "economic"
+      }
+    },
+    {
+      "inequality": {
+        "0": "inequality",
+        "1": "inequality"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "limited": {
+        "00": "restricted",
+        "01": "bounded",
+        "10": "confined",
+        "11": "limited"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "mobility": {
+        "00": "movability",
+        "01": "flexibility",
+        "10": "maneuverability",
+        "11": "motion"
+      }
+    },
+    {
+      "In": {
+        "0": "In",
+        "1": "In"
+      }
+    },
+    {
+      "societies": {
+        "00": "communities",
+        "01": "groups",
+        "10": "cultures",
+        "11": "populations"
+      }
+    },
+    {
+      "with": {
+        "0": "with",
+        "1": "with"
+      }
+    },
+    {
+      "high": {
+        "0": "high",
+        "1": "high"
+      }
+    },
+    {
+      "levels": {
+        "0": "levels",
+        "1": "levels"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "inequality": {
+        "0": "inequality",
+        "1": "inequality"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "people",
+        "10": "persons",
+        "11": "subjects"
+      }
+    },
+    {
+      "from": {
+        "0": "from",
+        "1": "from"
+      }
+    },
+    {
+      "disadvantaged": {
+        "00": "underprivileged",
+        "01": "deprived",
+        "10": "impoverished",
+        "11": "handicapped"
+      }
+    },
+    {
+      "backgrounds": {
+        "00": "histories",
+        "01": "upbringings",
+        "10": "pasts",
+        "11": "heritages"
+      }
+    },
+    {
+      "often": {
+        "00": "frequently",
+        "01": "commonly",
+        "10": "regularly",
+        "11": "usually"
+      }
+    },
+    {
+      "struggle": {
+        "00": "battle",
+        "01": "fight",
+        "10": "contend",
+        "11": "grapple"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "move": {
+        "00": "relocate",
+        "01": "shift",
+        "10": "transfer",
+        "11": "migrate"
+      }
+    },
+    {
+      "up": {
+        "0": "up",
+        "1": "up"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "ladder": {
+        "00": "hierarchy",
+        "01": "ranking",
+        "10": "scale",
+        "11": "gradation"
+      }
+    },
+    {
+      "This": {
+        "0": "That",
+        "1": "Such"
+      }
+    },
+    {
+      "lack": {
+        "00": "shortage",
+        "01": "deficiency",
+        "10": "absence",
+        "11": "paucity"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "upward": {
+        "00": "ascending",
+        "01": "rising",
+        "10": "surging",
+        "11": "climbing"
+      }
+    },
+    {
+      "mobility": {
+        "00": "movement",
+        "01": "motility",
+        "10": "flexibility",
+        "11": "maneuverability"
+      }
+    },
+    {
+      "not": {
+        "0": "not",
+        "1": "not"
+      }
+    },
+    {
+      "only": {
+        "00": "solely",
+        "01": "merely",
+        "10": "simply",
+        "11": "just"
+      }
+    },
+    {
+      "affects": {
+        "00": "impacts",
+        "01": "influences",
+        "10": "alter",
+        "11": "modifies"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "people",
+        "10": "subjects",
+        "11": "characters"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "families": {
+        "00": "households",
+        "01": "kin",
+        "10": "relations",
+        "11": "clans"
+      }
+    },
+    {
+      "but": {
+        "0": "but",
+        "1": "but"
+      }
+    },
+    {
+      "also": {
+        "0": "also",
+        "1": "also"
+      }
+    },
+    {
+      "hinders": {
+        "00": "impedes",
+        "01": "obstructs",
+        "10": "inhibits",
+        "11": "thwarts"
+      }
+    },
+    {
+      "overall": {
+        "00": "general",
+        "01": "total",
+        "10": "aggregate",
+        "11": "composite"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "growth": {
+        "00": "expansion",
+        "01": "development",
+        "10": "proliferation",
+        "11": "escalation"
+      }
+    },
+    {
+      "and": {
+        "00": "plus",
+        "01": "along with",
+        "10": "as well as",
+        "11": "together with"
+      }
+    },
+    {
+      "productivity": {
+        "00": "efficiency",
+        "01": "output",
+        "10": "performance",
+        "11": "productiveness"
+      }
+    },
+    {
+      "By": {
+        "00": "Through",
+        "01": "Via",
+        "10": "With",
+        "11": "By means of"
+      }
+    },
+    {
+      "reducing": {
+        "00": "lessening",
+        "01": "decreasing",
+        "10": "diminishing",
+        "11": "cutting back"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "inequity",
+        "11": "unfairness"
+      }
+    },
+    {
+      "societies": {
+        "00": "communities",
+        "01": "groups",
+        "10": "associations",
+        "11": "cultures"
+      }
+    },
+    {
+      "can": {
+        "00": "might",
+        "01": "is able to",
+        "10": "could",
+        "11": "may"
+      }
+    },
+    {
+      "promote": {
+        "00": "encourage",
+        "01": "advance",
+        "10": "foster",
+        "11": "stimulate"
+      }
+    },
+    {
+      "equal": {
+        "00": "equivalent",
+        "01": "uniform",
+        "10": "identical",
+        "11": "alike"
+      }
+    },
+    {
+      "opportunities": {
+        "00": "chances",
+        "01": "possibilities",
+        "10": "prospects",
+        "11": "openings"
+      }
+    },
+    {
+      "for": {
+        "00": "for the purpose of",
+        "01": "toward",
+        "10": "aiming at",
+        "11": "in favor of"
+      }
+    },
+    {
+      "all": {
+        "00": "everyone",
+        "01": "everybody",
+        "10": "each one",
+        "11": "all members"
+      }
+    },
+    {
+      "fostering": {
+        "00": "nurturing",
+        "01": "cultivating",
+        "10": "encouraging",
+        "11": "promoting"
+      }
+    },
+    {
+      "talent": {
+        "00": "gift",
+        "01": "flair",
+        "10": "aptitude",
+        "11": "ability"
+      }
+    },
+    {
+      "and": {
+        "00": "plus",
+        "01": "along with",
+        "10": "as well as",
+        "11": "together with"
+      }
+    },
+    {
+      "innovation": {
+        "00": "creativity",
+        "01": "invention",
+        "10": "novelty",
+        "11": "originality"
+      }
+    },
+    {
+      "Furthermore": {
+        "00": "Moreover",
+        "01": "Additionally",
+        "10": "What's more",
+        "11": "Also"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "inequity",
+        "11": "unfairness"
+      }
+    },
+    {
+      "has": {
+        "00": "possesses",
+        "01": "features",
+        "10": "holds",
+        "11": "contains"
+      }
+    },
+    {
+      "adverse": {
+        "00": "negative",
+        "01": "harmful",
+        "10": "unfavorable",
+        "11": "detrimental"
+      }
+    },
+    {
+      "effects": {
+        "00": "consequences",
+        "01": "repercussions",
+        "10": "outcomes",
+        "11": "impacts"
+      }
+    },
+    {
+      "on": {
+        "00": "upon",
+        "01": "regarding",
+        "10": "pertaining to",
+        "11": "concerning"
+      }
+    },
+    {
+      "health": {
+        "00": "wellness",
+        "01": "healthiness",
+        "10": "medical",
+        "11": "physical"
+      }
+    },
+    {
+      "outcomes": {
+        "00": "results",
+        "01": "conclusions",
+        "10": "consequences",
+        "11": "end results"
+      }
+    },
+    {
+      "Research": {
+        "00": "Studies",
+        "01": "Investigations",
+        "10": "Analysis",
+        "11": "Inquiry"
+      }
+    },
+    {
+      "has": {
+        "00": "possesses",
+        "01": "features",
+        "10": "holds",
+        "11": "contains"
+      }
+    },
+    {
+      "consistently": {
+        "00": "persistently",
+        "01": "regularly",
+        "10": "constantly",
+        "11": "steadily"
+      }
+    },
+    {
+      "shown": {
+        "00": "demonstrated",
+        "01": "exhibited",
+        "10": "revealed",
+        "11": "displayed"
+      }
+    },
+    {
+      "that": {
+        "00": "which",
+        "01": "who",
+        "10": "that specific",
+        "11": "the stated"
+      }
+    },
+    {
+      "individuals": {
+        "00": "persons",
+        "01": "people",
+        "10": "persons",
+        "11": "subjects"
+      }
+    },
+    {
+      "living": {
+        "00": "residing",
+        "01": "dwelling",
+        "10": "inhabiting",
+        "11": "existing in"
+      }
+    },
+    {
+      "in": {
+        "00": "within",
+        "01": "inside",
+        "10": "in the context of",
+        "11": "amid"
+      }
+    },
+    {
+      "poverty": {
+        "00": "destitution",
+        "01": "indigence",
+        "10": "hardship",
+        "11": "penury"
+      }
+    },
+    {
+      "or": {
+        "00": "or alternatively",
+        "01": "or else",
+        "10": "alternatively",
+        "11": "or possibly"
+      }
+    },
+    {
+      "in": {
+        "00": "within",
+        "01": "inside",
+        "10": "in the realm of",
+        "11": "amid"
+      }
+    },
+    {
+      "lower": {
+        "00": "reduced",
+        "01": "lesser",
+        "10": "inferior",
+        "11": "depressed"
+      }
+    },
+    {
+      "socioeconomic": {
+        "00": "social and economic",
+        "01": "societal",
+        "10": "cultural-economical",
+        "11": "financial-social"
+      }
+    },
+    {
+      "positions": {
+        "00": "status",
+        "01": "stations",
+        "10": "standings",
+        "11": "situations"
+      }
+    },
+    {
+      "face": {
+        "00": "confront",
+        "01": "encounter",
+        "10": "meet with",
+        "11": "come across"
+      }
+    },
+    {
+      "greater": {
+        "00": "more significant",
+        "01": "higher",
+        "10": "enhanced",
+        "11": "larger"
+      }
+    },
+    {
+      "health": {
+        "00": "wellness",
+        "01": "healthiness",
+        "10": "medical",
+        "11": "physical"
+      }
+    },
+    {
+      "risks": {
+        "00": "hazards",
+        "01": "dangers",
+        "10": "perils",
+        "11": "threats"
+      }
+    },
+    {
+      "and": {
+        "00": "plus",
+        "01": "along with",
+        "10": "as well as",
+        "11": "together with"
+      }
+    },
+    {
+      "have": {
+        "00": "possess",
+        "01": "hold",
+        "10": "boast",
+        "11": "feature"
+      }
+    },
+    {
+      "shorter": {
+        "00": "briefer",
+        "01": "less extensive",
+        "10": "short-lived",
+        "11": "more concise"
+      }
+    },
+    {
+      "life": {
+        "00": "lifetime",
+        "01": "existence",
+        "10": "living",
+        "11": "lifespan"
+      }
+    },
+    {
+      "expectancies": {
+        "00": "projections",
+        "01": "forecasts",
+        "10": "anticipations",
+        "11": "hopes"
+      }
+    },
+    {
+      "Limited": {
+        "00": "Restricted",
+        "01": "Constrained",
+        "10": "Limited",
+        "11": "Confined"
+      }
+    },
+    {
+      "access": {
+        "00": "entry",
+        "01": "admission",
+        "10": "approach",
+        "11": "accessibility"
+      }
+    },
+    {
+      "to": {
+        "00": "towards",
+        "01": "in order to",
+        "10": "for the purpose of",
+        "11": "directed at"
+      }
+    },
+    {
+      "quality": {
+        "00": "superior",
+        "01": "premium",
+        "10": "high-grade",
+        "11": "fine"
+      }
+    },
+    {
+      "healthcare": {
+        "00": "medical care",
+        "01": "health services",
+        "10": "medical services",
+        "11": "health treatment"
+      }
+    },
+    {
+      "nutritious": {
+        "00": "healthful",
+        "01": "wholesome",
+        "10": "nourishing",
+        "11": "nutrient-rich"
+      }
+    },
+    {
+      "food": {
+        "00": "meals",
+        "01": "cuisine",
+        "10": "fare",
+        "11": "eatables"
+      }
+    },
+    {
+      "and": {
+        "00": "plus",
+        "01": "along with",
+        "10": "as well as",
+        "11": "together with"
+      }
+    },
+    {
+      "safe": {
+        "00": "secure",
+        "01": "protected",
+        "10": "safe and sound",
+        "11": "hazard-free"
+      }
+    },
+    {
+      "living": {
+        "00": "residing",
+        "01": "dwelling",
+        "10": "inhabiting",
+        "11": "existing in"
+      }
+    },
+    {
+      "conditions": {
+        "00": "circumstances",
+        "01": "situations",
+        "10": "states",
+        "11": "environments"
+      }
+    },
+    {
+      "contribute": {
+        "00": "add",
+        "01": "give",
+        "10": "lend",
+        "11": "provide"
+      }
+    },
+    {
+      "to": {
+        "00": "towards",
+        "01": "in order to",
+        "10": "for the purpose of",
+        "11": "directed at"
+      }
+    },
+    {
+      "health": {
+        "00": "well-being",
+        "01": "medical",
+        "10": "physical condition",
+        "11": "wellness"
+      }
+    },
+    {
+      "disparities": {
+        "00": "inequities",
+        "01": "differences",
+        "10": "discrepancies",
+        "11": "gaps"
+      }
+    },
+    {
+      "among": {
+        "00": "between",
+        "01": "amongst",
+        "10": "amid",
+        "11": "within"
+      }
+    },
+    {
+      "different": {
+        "00": "various",
+        "01": "distinct",
+        "10": "diverse",
+        "11": "differing"
+      }
+    },
+    {
+      "socioeconomic": {
+        "00": "social and economic",
+        "01": "societal",
+        "10": "cultural-economical",
+        "11": "financial-social"
+      }
+    },
+    {
+      "groups": {
+        "00": "clusters",
+        "01": "sets",
+        "10": "assemblies",
+        "11": "categories"
+      }
+    },
+    {
+      "Therefore": {
+        "00": "Thus",
+        "01": "Hence",
+        "10": "Consequently",
+        "11": "As a result"
+      }
+    },
+    {
+      "reducing": {
+        "00": "decreasing",
+        "01": "lessening",
+        "10": "diminishing",
+        "11": "minimizing"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "inequity",
+        "11": "unfairness"
+      }
+    },
+    {
+      "is": {
+        "00": "remains",
+        "01": "constitutes",
+        "10": "serves as",
+        "11": "acts as"
+      }
+    },
+    {
+      "crucial": {
+        "00": "vital",
+        "01": "critical",
+        "10": "essential",
+        "11": "imperative"
+      }
+    },
+    {
+      "for": {
+        "00": "for the purpose of",
+        "01": "toward",
+        "10": "aiming at",
+        "11": "in favor of"
+      }
+    },
+    {
+      "improving": {
+        "00": "enhancing",
+        "01": "bettering",
+        "10": "upgrading",
+        "11": "advancing"
+      }
+    },
+    {
+      "overall": {
+        "00": "general",
+        "01": "aggregate",
+        "10": "total",
+        "11": "comprehensive"
+      }
+    },
+    {
+      "public": {
+        "00": "community",
+        "01": "common",
+        "10": "general",
+        "11": "collective"
+      }
+    },
+    {
+      "health": {
+        "00": "well-being",
+        "01": "sanitation",
+        "10": "hygiene",
+        "11": "healthfulness"
+      }
+    },
+    {
+      "and": {
+        "00": "plus",
+        "01": "along with",
+        "10": "as well as",
+        "11": "together with"
+      }
+    },
+    {
+      "well-being": {
+        "00": "welfare",
+        "01": "wellness",
+        "10": "prosperity",
+        "11": "good health"
+      }
+    },
+    {
+      "In": {
+        "00": "Within",
+        "01": "Inside",
+        "10": "In the context of",
+        "11": "Amidst"
+      }
+    },
+    {
+      "addition": {
+        "00": "plus",
+        "01": "supplement",
+        "10": "complement",
+        "11": "as well"
+      }
+    },
+    {
+      "to": {
+        "00": "towards",
+        "01": "in order to",
+        "10": "for the purpose of",
+        "11": "directed at"
+      }
+    },
+    {
+      "its": {
+        "00": "its own",
+        "01": "the",
+        "10": "one's",
+        "11": "this"
+      }
+    },
+    {
+      "social": {
+        "00": "societal",
+        "01": "communal",
+        "10": "public",
+        "11": "community-based"
+      }
+    },
+    {
+      "implications": {
+        "00": "consequences",
+        "01": "repercussions",
+        "10": "ramifications",
+        "11": "meanings"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "inequity",
+        "11": "unfairness"
+      }
+    },
+    {
+      "also": {
+        "00": "too",
+        "01": "as well",
+        "10": "moreover",
+        "11": "furthermore"
+      }
+    },
+    {
+      "has": {
+        "00": "possesses",
+        "01": "features",
+        "10": "holds",
+        "11": "contains"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "implications": {
+        "00": "consequences",
+        "01": "repercussions",
+        "10": "ramifications",
+        "11": "meanings"
+      }
+    },
+    {
+      "Numerous": {
+        "00": "Many",
+        "01": "Countless",
+        "10": "A multitude of",
+        "11": "Scores of"
+      }
+    },
+    {
+      "studies": {
+        "00": "researches",
+        "01": "investigations",
+        "10": "analyses",
+        "11": "examinations"
+      }
+    },
+    {
+      "have": {
+        "00": "possess",
+        "01": "hold",
+        "10": "boast",
+        "11": "feature"
+      }
+    },
+    {
+      "highlighted": {
+        "00": "emphasized",
+        "01": "underscored",
+        "10": "illuminated",
+        "11": "accentuated"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "negative": {
+        "0": "negative",
+        "1": "negative"
+      }
+    },
+    {
+      "impact": {
+        "00": "effect",
+        "01": "influence",
+        "10": "consequence",
+        "11": "implication"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "inequity",
+        "11": "disproportion"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "growth": {
+        "00": "expansion",
+        "01": "development",
+        "10": "increase",
+        "11": "progress"
+      }
+    },
+    {
+      "When": {
+        "0": "As",
+        "1": "Once"
+      }
+    },
+    {
+      "wealth": {
+        "00": "prosperity",
+        "01": "affluence",
+        "10": "riches",
+        "11": "fortune"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "resources": {
+        "00": "assets",
+        "01": "supplies",
+        "10": "materials",
+        "11": "reserves"
+      }
+    },
+    {
+      "are": {
+        "0": "are",
+        "1": "are"
+      }
+    },
+    {
+      "concentrated": {
+        "0": "centralized",
+        "1": "focused"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "hands": {
+        "00": "possession",
+        "01": "control",
+        "10": "grip",
+        "11": "hold"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "few": {
+        "00": "minority",
+        "01": "handful",
+        "10": "some",
+        "11": "limited number"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "limits": {
+        "00": "restricts",
+        "01": "caps",
+        "10": "constrains",
+        "11": "hinders"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "purchasing": {
+        "0": "buying",
+        "1": "acquiring"
+      }
+    },
+    {
+      "power": {
+        "0": "ability",
+        "1": "capacity"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "demand": {
+        "00": "need",
+        "01": "requirement",
+        "10": "request",
+        "11": "call"
+      }
+    },
+    {
+      "from": {
+        "0": "from",
+        "1": "from"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "majority": {
+        "0": "bulk",
+        "1": "larger part"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "population": {
+        "0": "inhabitants",
+        "1": "citizens"
+      }
+    },
+    {
+      "This": {
+        "0": "Such",
+        "1": "The aforementioned"
+      }
+    },
+    {
+      "hampers": {
+        "00": "impedes",
+        "01": "thwarts",
+        "10": "obstructs",
+        "11": "inhibits"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "growth": {
+        "00": "expansion",
+        "01": "development",
+        "10": "increase",
+        "11": "progress"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "leads": {
+        "00": "results",
+        "01": "causes",
+        "10": "provokes",
+        "11": "brings"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "an": {
+        "0": "an",
+        "1": "an"
+      }
+    },
+    {
+      "inefficient": {
+        "00": "ineffective",
+        "01": "unproductive",
+        "10": "wasteful",
+        "11": "deficient"
+      }
+    },
+    {
+      "allocation": {
+        "00": "distribution",
+        "01": "assignment",
+        "10": "allotment",
+        "11": "apportionment"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "resources": {
+        "00": "assets",
+        "01": "supplies",
+        "10": "materials",
+        "11": "reserves"
+      }
+    },
+    {
+      "Addressing": {
+        "00": "Tackling",
+        "01": "Confronting",
+        "10": "Dealing with",
+        "11": "Attending to"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "inequity",
+        "11": "disproportion"
+      }
+    },
+    {
+      "can": {
+        "0": "can",
+        "1": "can"
+      }
+    },
+    {
+      "stimulate": {
+        "00": "encourage",
+        "01": "prompt",
+        "10": "spur",
+        "11": "boost"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "growth": {
+        "00": "expansion",
+        "01": "development",
+        "10": "increase",
+        "11": "progress"
+      }
+    },
+    {
+      "by": {
+        "0": "by",
+        "1": "by"
+      }
+    },
+    {
+      "increasing": {
+        "00": "boosting",
+        "01": "amplifying",
+        "10": "raising",
+        "11": "escalating"
+      }
+    },
+    {
+      "consumer": {
+        "00": "customer",
+        "01": "buyer",
+        "10": "purchaser",
+        "11": "shopper"
+      }
+    },
+    {
+      "demand": {
+        "00": "need",
+        "01": "requirement",
+        "10": "request",
+        "11": "call"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "promoting": {
+        "00": "advancing",
+        "01": "fostering",
+        "10": "encouraging",
+        "11": "supporting"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "more": {
+        "0": "additional",
+        "1": "extra"
+      }
+    },
+    {
+      "equitable": {
+        "00": "fair",
+        "01": "just",
+        "10": "impartial",
+        "11": "even-handed"
+      }
+    },
+    {
+      "distribution": {
+        "00": "dispersion",
+        "01": "allocation",
+        "10": "apportionment",
+        "11": "allotment"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "resources": {
+        "00": "assets",
+        "01": "supplies",
+        "10": "materials",
+        "11": "reserves"
+      }
+    },
+    {
+      "In": {
+        "0": "Upon",
+        "1": "At"
+      }
+    },
+    {
+      "conclusion": {
+        "00": "summing-up",
+        "01": "end",
+        "10": "closure",
+        "11": "wrap-up"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "inequity",
+        "11": "disproportion"
+      }
+    },
+    {
+      "has": {
+        "0": "has",
+        "1": "has"
+      }
+    },
+    {
+      "far-reaching": {
+        "00": "extensive",
+        "01": "wide-ranging",
+        "10": "broad",
+        "11": "comprehensive"
+      }
+    },
+    {
+      "effects": {
+        "00": "consequences",
+        "01": "outcomes",
+        "10": "results",
+        "11": "repercussions"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "societies": {
+        "0": "communities",
+        "1": "populations"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "economies": {
+        "0": "economic systems",
+        "1": "financial systems"
+      }
+    },
+    {
+      "It": {
+        "0": "The phenomenon",
+        "1": "This condition"
+      }
+    },
+    {
+      "perpetuates": {
+        "00": "sustains",
+        "01": "maintains",
+        "10": "continues",
+        "11": "preserves"
+      }
+    },
+    {
+      "poverty": {
+        "00": "deprivation",
+        "01": "indigence",
+        "10": "penury",
+        "11": "want"
+      }
+    },
+    {
+      "destabilizes": {
+        "00": "undermines",
+        "01": "weakens",
+        "10": "disrupts",
+        "11": "destroys"
+      }
+    },
+    {
+      "social": {
+        "0": "societal",
+        "1": "community"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "political": {
+        "0": "governmental",
+        "1": "diplomatic"
+      }
+    },
+    {
+      "systems": {
+        "0": "mechanisms",
+        "1": "structures"
+      }
+    },
+    {
+      "limits": {
+        "00": "restricts",
+        "01": "caps",
+        "10": "constrains",
+        "11": "hinders"
+      }
+    },
+    {
+      "social": {
+        "0": "societal",
+        "1": "community"
+      }
+    },
+    {
+      "mobility": {
+        "0": "movement",
+        "1": "flexibility"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "negatively": {
+        "00": "adversely",
+        "01": "unfavorably",
+        "10": "harmfully",
+        "11": "detrimentally"
+      }
+    },
+    {
+      "impacts": {
+        "00": "affects",
+        "01": "influences",
+        "10": "touches",
+        "11": "sways"
+      }
+    },
+    {
+      "health": {
+        "00": "well-being",
+        "01": "wellness",
+        "10": "sanity",
+        "11": "hygiene"
+      }
+    },
+    {
+      "outcomes": {
+        "0": "results",
+        "1": "consequences"
+      }
+    },
+    {
+      "Additionally": {
+        "00": "Moreover",
+        "01": "Furthermore",
+        "10": "Also",
+        "11": "Besides"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "hampers": {
+        "00": "impedes",
+        "01": "thwarts",
+        "10": "obstructs",
+        "11": "inhibits"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "growth": {
+        "00": "expansion",
+        "01": "development",
+        "10": "increase",
+        "11": "progress"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "efficiency": {
+        "00": "productivity",
+        "01": "effectiveness",
+        "10": "proficiency",
+        "11": "competence"
+      }
+    },
+    {
+      "Therefore": {
+        "00": "Thus",
+        "01": "Consequently",
+        "10": "Hence",
+        "11": "Accordingly"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "essential": {
+        "00": "crucial",
+        "01": "necessary",
+        "10": "vital",
+        "11": "indispensable"
+      }
+    },
+    {
+      "for": {
+        "00": "toward",
+        "01": "aimed at",
+        "10": "intended for",
+        "11": "to benefit"
+      }
+    },
+    {
+      "policymakers": {
+        "00": "legislators",
+        "01": "officials",
+        "10": "regulators",
+        "11": "authorities"
+      }
+    },
+    {
+      "and": {
+        "00": "plus",
+        "01": "as well as",
+        "10": "in addition to",
+        "11": "along with"
+      }
+    },
+    {
+      "societies": {
+        "00": "communities",
+        "01": "populations",
+        "10": "publics",
+        "11": "collectivities"
+      }
+    },
+    {
+      "as": {
+        "0": "in the capacity of",
+        "1": "in the role of"
+      }
+    },
+    {
+      "a": {
+        "00": "one",
+        "01": "a single",
+        "10": "an",
+        "11": "any"
+      }
+    },
+    {
+      "whole": {
+        "00": "entirety",
+        "01": "entire",
+        "10": "complete",
+        "11": "aggregate"
+      }
+    },
+    {
+      "to": {
+        "0": "toward",
+        "1": "in order to"
+      }
+    },
+    {
+      "address": {
+        "00": "tackle",
+        "01": "confront",
+        "10": "deal with",
+        "11": "manage"
+      }
+    },
+    {
+      "economic": {
+        "00": "financial",
+        "01": "fiscal",
+        "10": "monetary",
+        "11": "commercial"
+      }
+    },
+    {
+      "inequality": {
+        "00": "disparity",
+        "01": "imbalance",
+        "10": "discrepancy",
+        "11": "inequity"
+      }
+    },
+    {
+      "through": {
+        "00": "via",
+        "01": "by",
+        "10": "with",
+        "11": "by means of"
+      }
+    },
+    {
+      "inclusive": {
+        "00": "comprehensive",
+        "01": "all-encompassing",
+        "10": "integrative",
+        "11": "all-inclusive"
+      }
+    },
+    {
+      "policies": {
+        "00": "strategies",
+        "01": "regulations",
+        "10": "rules",
+        "11": "guidelines"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "approaches": {
+        "00": "methods",
+        "01": "techniques",
+        "10": "strategies",
+        "11": "tactics"
+      }
+    },
+    {
+      "that": {
+        "00": "which",
+        "01": "who",
+        "10": "those",
+        "11": "the ones that"
+      }
+    },
+    {
+      "promote": {
+        "00": "advance",
+        "01": "foster",
+        "10": "encourage",
+        "11": "nurture"
+      }
+    },
+    {
+      "equal": {
+        "00": "fair",
+        "01": "equivalent",
+        "10": "uniform",
+        "11": "like"
+      }
+    },
+    {
+      "opportunities": {
+        "00": "chances",
+        "01": "prospects",
+        "10": "possibilities",
+        "11": "openings"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "distribution": {
+        "00": "allocation",
+        "01": "dispersion",
+        "10": "dissemination",
+        "11": "apportionment"
+      }
+    },
+    {
+      "of": {
+        "00": "concerning",
+        "01": "pertaining to",
+        "10": "related to",
+        "11": "regarding"
+      }
+    },
+    {
+      "wealth": {
+        "00": "prosperity",
+        "01": "riches",
+        "10": "abundance",
+        "11": "assets"
+      }
+    },
+    {
+      "ultimately": {
+        "00": "finally",
+        "01": "eventually",
+        "10": "in the end",
+        "11": "ultimately"
+      }
+    },
+    {
+      "creating": {
+        "00": "forming",
+        "01": "generating",
+        "10": "crafting",
+        "11": "constructing"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "more": {
+        "00": "additional",
+        "01": "extra",
+        "10": "further",
+        "11": "increased"
+      }
+    },
+    {
+      "prosperous": {
+        "00": "thriving",
+        "01": "flourishing",
+        "10": "successful",
+        "11": "booming"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "equitable": {
+        "00": "just",
+        "01": "fair",
+        "10": "impartial",
+        "11": "even-handed"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "civilization",
+        "10": "culture",
+        "11": "the public"
+      }
+    }
+  ],
+  "container": "Economic inequality refers to the unequal distribution of wealth, resources, and opportunities among individuals or groups within a society. It is a pervasive issue that affects economies worldwide and has significant social and economic implications. One of the most significant effects of economic inequality is the perpetuation of poverty. When wealth is concentrated in the hands of a few, it becomes increasingly difficult for those at the bottom of the income distribution to escape poverty. Limited access to education, healthcare, and employment opportunities further exacerbates the problem, creating a vicious cycle of poverty and inequality. Moreover, economic inequality can lead to social instability. When a significant portion of the population feels marginalized and deprived of basic needs, it can result in social unrest and political instability. High levels of economic inequality have been linked to increased crime rates, political polarization, and even revolutions. Therefore, addressing economic inequality is crucial for maintaining social harmony and stability. Another consequence of economic inequality is limited social mobility. In societies with high levels of inequality, individuals from disadvantaged backgrounds often struggle to move up the social ladder. This lack of upward mobility not only affects individuals and their families but also hinders overall economic growth and productivity. By reducing economic inequality, societies can promote equal opportunities for all, fostering talent and innovation. Furthermore, economic inequality has adverse effects on health outcomes. Research has consistently shown that individuals living in poverty or in lower socioeconomic positions face greater health risks and have shorter life expectancies. Limited access to quality healthcare, nutritious food, and safe living conditions contribute to health disparities among different socioeconomic groups. Therefore, reducing economic inequality is crucial for improving overall public health and well-being. In addition to its social implications, economic inequality also has economic implications. Numerous studies have highlighted the negative impact of inequality on economic growth. When wealth and resources are concentrated in the hands of a few, it limits the purchasing power and demand from the majority of the population. This hampers economic growth and leads to an inefficient allocation of resources. Addressing economic inequality can stimulate economic growth by increasing consumer demand and promoting a more equitable distribution of resources. In conclusion, economic inequality has far-reaching effects on societies and economies. It perpetuates poverty, destabilizes social and political systems, limits social mobility, and negatively impacts health outcomes. Additionally, it hampers economic growth and efficiency. Therefore, it is essential for policymakers and societies as a whole to address economic inequality through inclusive policies and approaches that promote equal opportunities and distribution of wealth, ultimately creating a more prosperous and equitable society.",
+  "encoded_message": "Monetary discrepancy alludes to the asymmetrical allocation of affluence, reserves, and possibilities within individuals or gatherings within a civilization. It is a prevalent matter that impacts markets everywhere and has considerable societal and monetary outcomes. One of the particularly momentous consequences of commercial disparity is the continuation of penury. When capital is focused in the grasp of a limited number, it transforms gradually tough for those at the nadir of the wages dissemination to break free from penury. Constrained approach to schooling, medical treatment, and position openings moreover aggravates the dilemma, causing a cruel loop of deprivation and disproportion. Besides, economic inequity can cause toward collective uncertainty. As a substantial fraction of the residents senses sidelined and dispossessed of fundamental requirements, it can conclude in social disorder and state instability. Considerable tiers of financial disparity have been associated to enhanced criminal ratios, political divisiveness, and equally overthrows. Consequently, tackling economic inequality is key for upholding social concord and constancy. Other ramification of economic inequality is limited social movability. In communities with high levels of inequality, individuals from impoverished upbringings commonly fight to migrate up the social gradation. Such deficiency of ascending movement not simply alter persons and their households but also impedes total commercial proliferation plus output. By means of diminishing fiscal disparity, groups is able to foster equivalent openings in favor of everyone, cultivating ability as well as invention. What's more, fiscal inequity holds unfavorable effects on health outcomes. Research has consistently shown that individuals living in poverty or in lower socioeconomic positions face greater health risks and have shorter life expectancies. Limited access to quality healthcare, nutritious food, and safe living conditions contribute to health disparities among different socioeconomic groups. Therefore, reducing economic inequality is crucial for improving overall public health and well-being. In addition to its social implications, economic inequality also has economic implications. Numerous studies have highlighted the negative impact of inequality on economic growth. When wealth and resources are concentrated in the hands of a few, it limits the purchasing power and demand from the majority of the population. This hampers economic growth and leads to an inefficient allocation of resources. Addressing economic inequality can stimulate economic growth by increasing consumer demand and promoting a more equitable distribution of resources. In conclusion, economic inequality has far-reaching effects on societies and economies. It perpetuates poverty, destabilizes social and political systems, limits social mobility, and negatively impacts health outcomes. Additionally, it hampers economic growth and efficiency. Therefore, it is essential for policymakers and societies as a whole to address economic inequality through inclusive policies and approaches that promote equal opportunities and distribution of wealth, ultimately creating a more prosperous and equitable society.",
+  "encoding_time_report": {
+    "container_generation": 15.31,
+    "secret_key_generation": 190.55
+  },
+  "decoding_time": 0.0012087821960449219,
+  "decoded_message": "1100010000101011110010000010000010111011001100001111011010110011101010000101100111111101010110110100011111100111000110010010000011101101111000000010000000011100010111011101100001001010111111010000101000000001111000011110010001011000111100011110011001101010",
+  "error_message": ""
+}

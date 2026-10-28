@@ -1,0 +1,43 @@
+D3_desklib: 6877 to score
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+  D3_desklib 64/6877 2s
+  D3_desklib 704/6877 23s
+  D3_desklib 1344/6877 42s
+  D3_desklib 1984/6877 67s
+  D3_desklib 2624/6877 90s
+  D3_desklib 3264/6877 109s
+  D3_desklib 3904/6877 134s
+  D3_desklib 4544/6877 160s
+  D3_desklib 5184/6877 187s
+  D3_desklib 5824/6877 210s
+  D3_desklib 6464/6877 233s
+D5_fast_detectgpt: 6877 to score
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:01<07:20,  1.31s/it]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 257.87it/s]
+  D5_fast_detectgpt 64/6877 6s
+  D5_fast_detectgpt 704/6877 65s
+  D5_fast_detectgpt 1344/6877 123s
+  D5_fast_detectgpt 1984/6877 188s
+  D5_fast_detectgpt 2624/6877 260s
+  D5_fast_detectgpt 3264/6877 324s
+  D5_fast_detectgpt 3904/6877 403s
+  D5_fast_detectgpt 4544/6877 475s
+  D5_fast_detectgpt 5184/6877 553s
+  D5_fast_detectgpt 5824/6877 637s
+  D5_fast_detectgpt 6464/6877 718s
+D4_binoculars: 6877 to score
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<02:06,  2.66it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 559.77it/s]Loading weights:  95%|█████████▌| 322/338 [00:00<00:00, 565.88it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 483.01it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:  33%|███▎      | 113/338 [00:00<00:00, 1126.46it/s]Loading weights:  74%|███████▍  | 251/338 [00:00<00:00, 1268.16it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1307.86it/s]
+  D4_binoculars 64/6877 14s
+  D4_binoculars 704/6877 234s
+  D4_binoculars 1344/6877 333s
+  D4_binoculars 1984/6877 444s
+  D4_binoculars 2624/6877 557s
+  D4_binoculars 3264/6877 653s
+  D4_binoculars 3904/6877 770s
+  D4_binoculars 4544/6877 885s
+  D4_binoculars 5184/6877 1017s
+  D4_binoculars 5824/6877 1366s
+  D4_binoculars 6464/6877 1687s

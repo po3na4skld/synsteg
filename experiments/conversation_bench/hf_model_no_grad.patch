@@ -1,0 +1,13 @@
+diff --git a/python/hf_model.py b/python/hf_model.py
+index 8d96a10..af2b729 100644
+--- a/python/hf_model.py
++++ b/python/hf_model.py
+@@ -96,7 +96,7 @@ def main():
+                 if not ids:
+                     raise ValueError("model context cannot be empty")
+                 input_ids = torch.tensor([ids], device=args.device)
+-                with torch.inference_mode():
++                with torch.no_grad():
+                     logits = model(input_ids=input_ids).logits[0, -1].float()
+                 if special:
+                     logits[list(special)] = -torch.inf

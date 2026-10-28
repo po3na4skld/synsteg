@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 from multiprocessing import Pool
 import math
 from itertools import product
@@ -5,13 +6,31 @@ from typing import Any
 
 import numpy as np
 
-from steganography.gpt import get_openai_json_output
+from steganography.gpt import get_openai_json_output, words_schema
 from steganography.helper import clean_container, remove_brackets, generate_random_sequences
 from models.pool_arguments import PoolArguments, SecretKeyGenerationBody
 from utils import prompts
 
 
 MIN_DISTINCT_SHARE = 0.9  # a word is used only if at least 90 % of its 2^b synonyms are distinct
+
+
+def distinct_synonyms(base_token: str, synonyms: list[str]) -> list[str]:
+    """Synonyms the decoder can tell apart, in the model's order: repeats, the word itself, phrases that start with it
+    and phrases that start with another synonym are dropped (compared as the decoder sees the text)."""
+    norm = lambda word: clean_container(word).strip().lower()
+    base = norm(base_token)
+    distinct, seen = [], {base}
+    for synonym in synonyms:
+        # "think critically" for "think" would let the decoder read the kept word plus the next one as a synonym
+        if norm(synonym).startswith((base + " ", base + "-")):
+            continue
+        if norm(synonym) not in seen:
+            seen.add(norm(synonym))
+            distinct.append(synonym)
+    # prefix-free by words: with "by means of" and "by means of economic exchange" in one list the decoder cannot
+    # tell the short synonym followed by the next word's synonym from the long one, so the longer phrase is dropped
+    return [s for s in distinct if not any(t is not s and norm(s).startswith(norm(t) + " ") for t in distinct)]
 
 
 def binarize_synonyms(base_token: str, synonyms: list[str], bits_per_word: int) -> dict[str, str]:
@@ -25,20 +44,7 @@ def binarize_synonyms(base_token: str, synonyms: list[str], bits_per_word: int) 
     Otherwise the word is not used ({"0": word, "1": word}, the existing marker of an unusable position).
     """
     n_codes = 2 ** bits_per_word
-    norm = lambda word: clean_container(word).strip().lower()  # compare as the decoder sees the text
-    base = norm(base_token)
-    distinct, seen = [], {base}
-    for synonym in synonyms:
-        # "think critically" for "think" would let the decoder read the kept word plus the next one as a synonym
-        if norm(synonym).startswith((base + " ", base + "-")):
-            continue
-        if norm(synonym) not in seen:
-            seen.add(norm(synonym))
-            distinct.append(synonym)
-    # prefix-free by words: with "by means of" and "by means of economic exchange" in one list the decoder cannot
-    # tell the short synonym followed by the next word's synonym from the long one, so the longer phrase is dropped
-    distinct = [s for s in distinct if not any(t is not s and norm(s).startswith(norm(t) + " ") for t in distinct)]
-    distinct = distinct[:n_codes]
+    distinct = distinct_synonyms(base_token, synonyms)[:n_codes]
     if len(distinct) < max(2, MIN_DISTINCT_SHARE * n_codes):
         return {"0": base_token, "1": base_token}
     return {"".join(code): synonym for code, synonym in zip(product("01", repeat=bits_per_word), distinct)}
@@ -100,7 +106,10 @@ def generate_synonyms(pool_arguments: PoolArguments) -> dict[str, list[str]]:
     prompt = prompts.ALL_SYNONYMS_GENERATION_PROMPT.replace("N_SYNONYMS", str(2**pool_arguments.bits_per_word))
     for attempt in range(3):  # the model sometimes returns JSON without "words" or a flat list of strings
         try:
-            synonyms, usage = get_openai_json_output(prompt, input_message, "words", 0.7)
+            synonyms, usage = get_openai_json_output(
+                prompt, input_message, "words", 0.7, llm=pool_arguments.llm,
+                json_schema=words_schema(2 ** pool_arguments.bits_per_word),
+            )
         except (KeyError, ValueError):
             continue
         if synonyms and isinstance(synonyms[0], dict):
@@ -111,7 +120,10 @@ def generate_synonyms(pool_arguments: PoolArguments) -> dict[str, list[str]]:
     return synonyms, usage
 
 
-def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody):
+PARALLEL_PROVIDERS = {"openai"}  # a local model answers one request at a time anyway
+
+
+def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody, raw: bool = False):
     """
     Generate a secret key using multiprocessing.
 
@@ -124,6 +136,8 @@ def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody):
 
     Returns:
         list: A list of secret key chunks generated using multiprocessing.
+        raw=True returns, per word, all distinct synonyms ({word: {"0": s0, "1": s1, ...}}, see distinct_synonyms)
+        instead of the b-bit table; the improvements of subsection 4.3 build their own tables from it.
     """
 
     secret_key, synonyms_chunks, is_filled = [], [], False
@@ -133,12 +147,18 @@ def generate_secret_key_mp(secret_key_generation_body: SecretKeyGenerationBody):
         "total_tokens": 345,
     }
 
-    with Pool() as pool:
-        for (result, usage) in pool.imap(generate_synonyms, secret_key_generation_body.pool_arguments):
+    args = secret_key_generation_body.pool_arguments
+    parallel = bool(args) and args[0].llm.provider in PARALLEL_PROVIDERS
+    with (Pool() if parallel else nullcontext()) as pool:
+        for (result, usage) in (pool.imap if parallel else map)(generate_synonyms, args):
             synonyms_chunks += result
             usage_report["completion_tokens"] += usage["completion_tokens"]
             usage_report["prompt_tokens"] += usage["prompt_tokens"]
             usage_report["total_tokens"] += usage["total_tokens"]
+
+    if raw:
+        return [{key: {str(j): s for j, s in enumerate(distinct_synonyms(key, value))}}
+                for synonym in synonyms_chunks for key, value in synonym.items()], usage_report
 
     for idx, synonym in enumerate(synonyms_chunks):
         if is_filled:

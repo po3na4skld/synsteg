@@ -1,0 +1,294 @@
+{
+ "config": {
+  "maxlen": 256,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "epochs_max": 60,
+  "patience": 8,
+  "batch": 32,
+  "val_frac_of_train": 0.15,
+  "test_frac": 0.2,
+  "runtime_sec": 788
+ },
+ "runs": [
+  {
+   "config": "u32",
+   "detector": "TS-CNN",
+   "seed": 0,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 14,
+    "val_acc": 0.9895833333333334,
+    "params": 1583954
+   },
+   "test": {
+    "acc": 0.975,
+    "prec": 0.975,
+    "rec": 0.975,
+    "f1": 0.975,
+    "n": 160,
+    "frac_pred_stego": 0.5,
+    "degenerate": false
+   },
+   "sec": 89.7
+  },
+  {
+   "config": "u32",
+   "detector": "TS-RNN",
+   "seed": 0,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 1.0,
+    "params": 1364686
+   },
+   "test": {
+    "acc": 0.98125,
+    "prec": 1.0,
+    "rec": 0.9625,
+    "f1": 0.9808917197452229,
+    "n": 160,
+    "frac_pred_stego": 0.48125,
+    "degenerate": false
+   },
+   "sec": 18.4
+  },
+  {
+   "config": "u32",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 0,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 29,
+    "val_acc": 1.0,
+    "params": 2403302
+   },
+   "test": {
+    "acc": 0.9875,
+    "prec": 0.9875,
+    "rec": 0.9875,
+    "f1": 0.9875,
+    "n": 160,
+    "frac_pred_stego": 0.5,
+    "degenerate": false
+   },
+   "sec": 85.8
+  },
+  {
+   "config": "u32",
+   "detector": "BERT-LSTM-Att",
+   "seed": 0,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 16,
+    "val_acc": 1.0,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.98125,
+    "prec": 0.9753086419753086,
+    "rec": 0.9875,
+    "f1": 0.9813664596273292,
+    "n": 160,
+    "frac_pred_stego": 0.50625,
+    "degenerate": false
+   },
+   "sec": 35.9
+  },
+  {
+   "config": "u32",
+   "detector": "TS-CNN",
+   "seed": 1,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 34,
+    "val_acc": 1.0,
+    "params": 1587954
+   },
+   "test": {
+    "acc": 0.98125,
+    "prec": 0.9753086419753086,
+    "rec": 0.9875,
+    "f1": 0.9813664596273292,
+    "n": 160,
+    "frac_pred_stego": 0.50625,
+    "degenerate": false
+   },
+   "sec": 201.4
+  },
+  {
+   "config": "u32",
+   "detector": "TS-RNN",
+   "seed": 1,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 25,
+    "val_acc": 1.0,
+    "params": 1367246
+   },
+   "test": {
+    "acc": 0.99375,
+    "prec": 0.9876543209876543,
+    "rec": 1.0,
+    "f1": 0.9937888198757764,
+    "n": 160,
+    "frac_pred_stego": 0.50625,
+    "degenerate": false
+   },
+   "sec": 40.5
+  },
+  {
+   "config": "u32",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 1,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 16,
+    "val_acc": 0.9895833333333334,
+    "params": 2406302
+   },
+   "test": {
+    "acc": 0.975,
+    "prec": 0.9634146341463414,
+    "rec": 0.9875,
+    "f1": 0.9753086419753086,
+    "n": 160,
+    "frac_pred_stego": 0.5125,
+    "degenerate": false
+   },
+   "sec": 47.1
+  },
+  {
+   "config": "u32",
+   "detector": "BERT-LSTM-Att",
+   "seed": 1,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.9895833333333334,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.99375,
+    "prec": 0.9876543209876543,
+    "rec": 1.0,
+    "f1": 0.9937888198757764,
+    "n": 160,
+    "frac_pred_stego": 0.50625,
+    "degenerate": false
+   },
+   "sec": 23.1
+  },
+  {
+   "config": "u32",
+   "detector": "TS-CNN",
+   "seed": 2,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 19,
+    "val_acc": 0.9791666666666666,
+    "params": 1595154
+   },
+   "test": {
+    "acc": 0.975,
+    "prec": 0.975,
+    "rec": 0.975,
+    "f1": 0.975,
+    "n": 160,
+    "frac_pred_stego": 0.5,
+    "degenerate": false
+   },
+   "sec": 112.4
+  },
+  {
+   "config": "u32",
+   "detector": "TS-RNN",
+   "seed": 2,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 25,
+    "val_acc": 1.0,
+    "params": 1371854
+   },
+   "test": {
+    "acc": 1.0,
+    "prec": 1.0,
+    "rec": 1.0,
+    "f1": 1.0,
+    "n": 160,
+    "frac_pred_stego": 0.5,
+    "degenerate": false
+   },
+   "sec": 41.2
+  },
+  {
+   "config": "u32",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 2,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 20,
+    "val_acc": 0.9895833333333334,
+    "params": 2411702
+   },
+   "test": {
+    "acc": 0.98125,
+    "prec": 0.963855421686747,
+    "rec": 1.0,
+    "f1": 0.9815950920245399,
+    "n": 160,
+    "frac_pred_stego": 0.51875,
+    "degenerate": false
+   },
+   "sec": 59.2
+  },
+  {
+   "config": "u32",
+   "detector": "BERT-LSTM-Att",
+   "seed": 2,
+   "n_train": 544,
+   "n_val": 96,
+   "n_test": 160,
+   "train": {
+    "epochs_run": 21,
+    "val_acc": 0.9895833333333334,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.98125,
+    "prec": 1.0,
+    "rec": 0.9625,
+    "f1": 0.9808917197452229,
+    "n": 160,
+    "frac_pred_stego": 0.48125,
+    "degenerate": false
+   },
+   "sec": 32.9
+  }
+ ]
+}

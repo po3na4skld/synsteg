@@ -1,0 +1,474 @@
+{
+ "default": {
+  "label": "default arithmetic top-n 8",
+  "capacity": {
+   "128": {
+    "runs": 30,
+    "encode_errors": 0,
+    "encode_error_msgs": [],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 30,
+    "bpw": 2.027916125733222,
+    "words": 64.3,
+    "gpt2_tokens": 77.06666666666666,
+    "data_tokens": 67.26666666666667,
+    "finish_tokens": 9.8,
+    "encode_s": 2.3942395389333337,
+    "decode_s": 2.3824907,
+    "mean_logit_regret": 0.5883332929596228
+   },
+   "256": {
+    "runs": 30,
+    "encode_errors": 0,
+    "encode_error_msgs": [],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 30,
+    "bpw": 2.1141331605455824,
+    "words": 122.73333333333333,
+    "gpt2_tokens": 143.76666666666668,
+    "data_tokens": 135.76666666666668,
+    "finish_tokens": 8.0,
+    "encode_s": 5.241478794333333,
+    "decode_s": 5.319011405666666,
+    "mean_logit_regret": 0.6078793492331139
+   },
+   "512": {
+    "runs": 30,
+    "encode_errors": 4,
+    "encode_error_msgs": [
+     "only 2 of 64 model candidates passed strict visible-text filtering; need 8",
+     "only 4 of 64 model candidates passed strict visible-text filtering; need 8",
+     "predict next token: model process: index out of range in self"
+    ],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 26,
+    "bpw": 2.0999644456575592,
+    "words": 251.1153846153846,
+    "gpt2_tokens": 302.15384615384613,
+    "data_tokens": 293.2692307692308,
+    "finish_tokens": 8.884615384615385,
+    "encode_s": 13.496811344538465,
+    "decode_s": 13.777651972769231,
+    "mean_logit_regret": 0.5735949952221998
+   }
+  },
+  "bpw_range": [
+   2.027916125733222,
+   2.1141331605455824
+  ],
+  "encode_s_range": [
+   2.3942395389333337,
+   13.496811344538465
+  ],
+  "decode_s_range": [
+   2.3824907,
+   13.777651972769231
+  ],
+  "logit_regret_range": [
+   0.5735949952221998,
+   0.6078793492331139
+  ],
+  "corpus": {
+   "L": 128,
+   "used": 400,
+   "attempted": 405,
+   "encoded": 400
+  },
+  "steganalysis": {
+   "detectors": {
+    "TS-CNN": {
+     "mean": 0.9562499999999999,
+     "sd": 0.024999999999999967,
+     "seeds": [
+      0.95625,
+      0.98125,
+      0.93125
+     ]
+    },
+    "TS-RNN": {
+     "mean": 0.99375,
+     "sd": 0.006249999999999978,
+     "seeds": [
+      0.99375,
+      1.0,
+      0.9875
+     ]
+    },
+    "Bi-LSTM-Dense": {
+     "mean": 0.9854166666666666,
+     "sd": 0.013010412496663345,
+     "seeds": [
+      0.98125,
+      1.0,
+      0.975
+     ]
+    },
+    "BERT-LSTM-Att": {
+     "mean": 0.9958333333333332,
+     "sd": 0.007216878364870297,
+     "seeds": [
+      0.9875,
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "range": [
+    0.9562499999999999,
+    0.9958333333333332
+   ]
+  },
+  "perplexity": {
+   "median_ppl_stego": 8.413882732391357,
+   "median_ppl_cover": 62.22822570800781,
+   "ratio": 0.13521006965346627,
+   "n_stego": 400,
+   "n_cover": 400
+  },
+  "full_protocol": {
+   "sends": 6,
+   "completed": 4,
+   "decoded": 4,
+   "failures": [
+    {
+     "send": 3,
+     "stage": "send",
+     "error": "none of 2 carrier trials passed the human-writing checks (best semantic YES-NO margin +Inf)"
+    },
+    {
+     "send": 4,
+     "stage": "send",
+     "error": "predict next token: model process: index out of range in self"
+    }
+   ],
+   "hidden_bytes": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    32
+   ],
+   "encode_s": [
+    39.2,
+    53.2,
+    41.7,
+    41.8,
+    159.4,
+    53.0
+   ]
+  }
+ },
+ "u32": {
+  "label": "uniform top-n 32",
+  "capacity": {
+   "128": {
+    "runs": 30,
+    "encode_errors": 0,
+    "encode_error_msgs": [],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 30,
+    "bpw": 3.8426999460029596,
+    "words": 34.733333333333334,
+    "gpt2_tokens": 38.166666666666664,
+    "data_tokens": 28.0,
+    "finish_tokens": 10.166666666666666,
+    "encode_s": 1.1196126888,
+    "decode_s": 1.1226970236333331,
+    "mean_logit_regret": 3.360542069162641
+   },
+   "256": {
+    "runs": 30,
+    "encode_errors": 0,
+    "encode_error_msgs": [],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 30,
+    "bpw": 4.525595631477281,
+    "words": 57.266666666666666,
+    "gpt2_tokens": 62.0,
+    "data_tokens": 53.0,
+    "finish_tokens": 9.0,
+    "encode_s": 1.9656431985333331,
+    "decode_s": 1.9821558068333336,
+    "mean_logit_regret": 3.418882884619371
+   },
+   "512": {
+    "runs": 30,
+    "encode_errors": 1,
+    "encode_error_msgs": [
+     "only 9 of 256 model candidates passed strict visible-text filtering; need 32"
+    ],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 29,
+    "bpw": 4.803130943704797,
+    "words": 107.34482758620689,
+    "gpt2_tokens": 115.0,
+    "data_tokens": 104.0,
+    "finish_tokens": 11.0,
+    "encode_s": 3.7479455302068962,
+    "decode_s": 3.7364520717931025,
+    "mean_logit_regret": 3.3018727073697893
+   }
+  },
+  "bpw_range": [
+   3.8426999460029596,
+   4.803130943704797
+  ],
+  "encode_s_range": [
+   1.1196126888,
+   3.7479455302068962
+  ],
+  "decode_s_range": [
+   1.1226970236333331,
+   3.7364520717931025
+  ],
+  "logit_regret_range": [
+   3.3018727073697893,
+   3.418882884619371
+  ],
+  "corpus": {
+   "L": 128,
+   "used": 400,
+   "attempted": 405,
+   "encoded": 400
+  },
+  "steganalysis": {
+   "detectors": {
+    "TS-CNN": {
+     "mean": 0.9770833333333333,
+     "sd": 0.0036084391824351483,
+     "seeds": [
+      0.975,
+      0.98125,
+      0.975
+     ]
+    },
+    "TS-RNN": {
+     "mean": 0.9916666666666667,
+     "sd": 0.009547032697824693,
+     "seeds": [
+      0.98125,
+      0.99375,
+      1.0
+     ]
+    },
+    "Bi-LSTM-Dense": {
+     "mean": 0.9812499999999998,
+     "sd": 0.006250000000000033,
+     "seeds": [
+      0.9875,
+      0.975,
+      0.98125
+     ]
+    },
+    "BERT-LSTM-Att": {
+     "mean": 0.9854166666666666,
+     "sd": 0.007216878364870361,
+     "seeds": [
+      0.98125,
+      0.99375,
+      0.98125
+     ]
+    }
+   },
+   "range": [
+    0.9770833333333333,
+    0.9916666666666667
+   ]
+  },
+  "perplexity": {
+   "median_ppl_stego": 96.92853164672852,
+   "median_ppl_cover": 74.00500869750977,
+   "ratio": 1.309756371260181,
+   "n_stego": 400,
+   "n_cover": 400
+  },
+  "full_protocol": {
+   "sends": 6,
+   "completed": 4,
+   "decoded": 4,
+   "failures": [
+    {
+     "send": 0,
+     "stage": "send",
+     "error": "none of 2 carrier trials passed the human-writing checks (best semantic YES-NO margin +Inf)"
+    },
+    {
+     "send": 2,
+     "stage": "send",
+     "error": "none of 2 carrier trials passed the human-writing checks (best semantic YES-NO margin +Inf)"
+    }
+   ],
+   "hidden_bytes": [
+    33,
+    33,
+    33,
+    33,
+    33,
+    33
+   ],
+   "encode_s": [
+    9.9,
+    7.2,
+    12.8,
+    11.9,
+    12.7,
+    17.6
+   ]
+  }
+ },
+ "u1024": {
+  "label": "uniform top-n 1024",
+  "capacity": {
+   "128": {
+    "runs": 30,
+    "encode_errors": 0,
+    "encode_error_msgs": [],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 30,
+    "bpw": 6.733664466723652,
+    "words": 21.9,
+    "gpt2_tokens": 27.533333333333335,
+    "data_tokens": 14.0,
+    "finish_tokens": 13.533333333333333,
+    "encode_s": 4.880016422300001,
+    "decode_s": 4.9257880055,
+    "mean_logit_regret": 7.338323370615641
+   },
+   "256": {
+    "runs": 30,
+    "encode_errors": 0,
+    "encode_error_msgs": [],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 30,
+    "bpw": 7.681329202406402,
+    "words": 37.13333333333333,
+    "gpt2_tokens": 45.46666666666667,
+    "data_tokens": 27.0,
+    "finish_tokens": 18.466666666666665,
+    "encode_s": 8.537819147266667,
+    "decode_s": 8.780369118066666,
+    "mean_logit_regret": 6.8616244080625926
+   },
+   "512": {
+    "runs": 30,
+    "encode_errors": 0,
+    "encode_error_msgs": [],
+    "decode_errors": 0,
+    "decode_error_msgs": [],
+    "exact": 30,
+    "bpw": 8.838963342926798,
+    "words": 62.833333333333336,
+    "gpt2_tokens": 76.53333333333333,
+    "data_tokens": 52.0,
+    "finish_tokens": 24.533333333333335,
+    "encode_s": 14.382803277833329,
+    "decode_s": 14.286289265233334,
+    "mean_logit_regret": 5.970048271081386
+   }
+  },
+  "bpw_range": [
+   6.733664466723652,
+   8.838963342926798
+  ],
+  "encode_s_range": [
+   4.880016422300001,
+   14.382803277833329
+  ],
+  "decode_s_range": [
+   4.9257880055,
+   14.286289265233334
+  ],
+  "logit_regret_range": [
+   5.970048271081386,
+   7.338323370615641
+  ],
+  "corpus": {
+   "L": 128,
+   "used": 400,
+   "attempted": 400,
+   "encoded": 400
+  },
+  "steganalysis": {
+   "detectors": {
+    "TS-CNN": {
+     "mean": 0.9729166666666668,
+     "sd": 0.021949278651776573,
+     "seeds": [
+      0.99375,
+      0.975,
+      0.95
+     ]
+    },
+    "TS-RNN": {
+     "mean": 0.99375,
+     "sd": 0.006249999999999978,
+     "seeds": [
+      0.99375,
+      1.0,
+      0.9875
+     ]
+    },
+    "Bi-LSTM-Dense": {
+     "mean": 0.9833333333333334,
+     "sd": 0.013010412496663345,
+     "seeds": [
+      0.9875,
+      0.96875,
+      0.99375
+     ]
+    },
+    "BERT-LSTM-Att": {
+     "mean": 0.9895833333333334,
+     "sd": 0.0036084391824351483,
+     "seeds": [
+      0.99375,
+      0.9875,
+      0.9875
+     ]
+    }
+   },
+   "range": [
+    0.9729166666666668,
+    0.99375
+   ]
+  },
+  "perplexity": {
+   "median_ppl_stego": 889.2064208984375,
+   "median_ppl_cover": 80.9384651184082,
+   "ratio": 10.986203155663762,
+   "n_stego": 400,
+   "n_cover": 400
+  },
+  "full_protocol": {
+   "sends": 6,
+   "completed": 6,
+   "decoded": 6,
+   "failures": [],
+   "hidden_bytes": [
+    33,
+    33,
+    33,
+    33,
+    33,
+    33
+   ],
+   "encode_s": [
+    17.0,
+    24.8,
+    22.4,
+    20.2,
+    16.5,
+    22.7
+   ]
+  }
+ }
+}

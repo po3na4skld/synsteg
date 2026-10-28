@@ -3,74 +3,72 @@ import random
 
 import openai
 import backoff
+import httpx
 
+from models.pool_arguments import LLMConfig
 from utils import prompts, constants
 
-
-@backoff.on_exception(backoff.expo, (openai.RateLimitError, openai.APIStatusError))
-def get_openai_json_output(prompt: str, input_message: str, output_key: str = None, temperature: float = 1.0):
-    """
-    Retrieves JSON output from the OpenAI GPT-3 model based on given prompt and input message.
-
-    Args:
-        prompt (str): The system-level instruction or prompt for the conversation.
-        input_message (str): The user's input message in the conversation.
-        output_key (str, optional): The key for extracting a specific value from the JSON output.
-        temperature (float, optional): Controls the randomness of the model's output (default is 1.0).
-
-    Returns:
-        dict or specified data type: The JSON output from the OpenAI GPT-3 model. If output_key is provided,
-        the value associated with that key will be returned.
-
-    Raises:
-        openai.RateLimitError: If the OpenAI API rate limit is exceeded.
-        openai.APIStatusError: If there is an issue with the OpenAI API status.
-
-    Note:
-        This function uses exponential backoff for retries in case of RateLimitError or APIStatusError.
-    """
-
-    client = openai.OpenAI()
-
-    response = client.chat.completions.create(
-        model=constants.OPENAI_MODEL_SYNONYMS,
-        temperature=temperature,
-        messages=[{"role": "system", "content": prompt}, {'role': 'user', 'content': input_message}],
-        response_format={"type": "json_object"}
-    )
-
-    if output_key:
-        return json.loads(response.choices[0].message.content)[output_key], response.usage.model_dump()
-    else:
-        return json.loads(response.choices[0].message.content), response.usage.model_dump()
+OPENAI = LLMConfig()
 
 
-@backoff.on_exception(backoff.expo, (openai.RateLimitError, openai.APIStatusError))
-def get_openai_output(prompt: str, input_message: str, temperature: float = 1.0):
-    """
-    Retrieves OpenAI model output based on a given prompt and input message.
+def _ollama_chat(llm: LLMConfig, messages: list[dict], temperature: float | None, json_schema: dict | None):
+    # ollama's format="json" does not constrain qwen3; a JSON schema does (experiments/model_series/run_series.py)
+    body = dict(model=llm.model or "qwen3:30b-a3b-instruct-2507-q4_K_M", messages=messages, stream=False, think=False,
+                options=dict(num_predict=4096, **({} if temperature is None else dict(temperature=temperature))))
+    if json_schema:
+        body["format"] = json_schema
+    r = httpx.post(llm.url.rstrip("/") + "/api/chat", json=body, timeout=1200)
+    r.raise_for_status()
+    r = r.json()
+    pi, ci = r.get("prompt_eval_count", 0), r.get("eval_count", 0)
+    return r["message"]["content"], dict(prompt_tokens=pi, completion_tokens=ci, total_tokens=pi + ci)
 
-    Args:
-        prompt (str): The system-level prompt to guide the model's behavior.
-        input_message (str): The user's input message that influences the model's response.
-        temperature (float, optional): A parameter controlling the randomness of the output.
-            Higher values (e.g., 1.0) make the output more random, while lower values (e.g., 0.2) make it more deterministic.
 
-    Returns:
-        str or None: The generated model output as a string. Returns None if no choices are available in the response.
-    """
-    client = openai.OpenAI()
-
-    response = client.chat.completions.create(
-        model=constants.OPENAI_MODEL_CONTAINER,
-        temperature=temperature,
-        messages=[{"role": "system", "content": prompt}, {'role': 'user', 'content': input_message}]
-    )
-
+@backoff.on_exception(backoff.expo, (openai.RateLimitError, openai.APIStatusError),
+                      giveup=lambda e: isinstance(e, openai.BadRequestError))
+def _openai_chat(model: str, messages: list[dict], temperature: float | None, json_mode: bool, api_key: str | None = None):
+    kwargs = dict(model=model, messages=messages)
+    if temperature is not None and not model.startswith("gpt-6"):  # gpt-6 models accept only the default temperature
+        kwargs["temperature"] = temperature
+    if json_mode:
+        kwargs["response_format"] = {"type": "json_object"}
+    response = (openai.OpenAI(api_key=api_key) if api_key else openai.OpenAI()).chat.completions.create(**kwargs)
     return response.choices[0].message.content if response.choices else None, response.usage.model_dump()
 
 
-def generate_container(words_number: int) -> str:
+def chat(llm: LLMConfig, prompt: str, input_message: str, temperature: float | None = None,
+         json_schema: dict | None = None, default_model: str | None = None):
+    """The one LLM call of the method: (content, usage). json_schema != None asks for JSON output
+    (OpenAI: JSON mode, ollama: the schema itself)."""
+    messages = [{"role": "system", "content": prompt}, {"role": "user", "content": input_message}]
+    if llm.provider == "ollama":
+        return _ollama_chat(llm, messages, temperature, json_schema)
+    if llm.provider != "openai":
+        raise ValueError(f"unknown LLM provider {llm.provider!r}")
+    return _openai_chat(llm.model or default_model or constants.OPENAI_MODEL_SYNONYMS, messages, temperature, json_schema is not None,
+                        llm.api_key)
+
+
+def words_schema(n_synonyms: int) -> dict:
+    """Shape of the synonym-table answer; maxItems keeps a local model from listing synonyms until the token limit."""
+    return {"type": "object", "required": ["words"], "properties": {"words": {"type": "array", "items": {
+        "type": "object", "additionalProperties": {"type": "array", "maxItems": n_synonyms, "items": {"type": "string"}}}}}}
+
+
+def get_openai_json_output(prompt: str, input_message: str, output_key: str = None, temperature: float = 1.0,
+                           llm: LLMConfig = OPENAI, json_schema: dict | None = None):
+    """JSON answer of the configured model (OpenAI by default); output_key selects one field. Returns (value, usage)."""
+    content, usage = chat(llm, prompt, input_message, temperature, json_schema or {"type": "object"})
+    data = json.loads(content)
+    return (data[output_key] if output_key else data), usage
+
+
+def get_openai_output(prompt: str, input_message: str, temperature: float = 1.0, llm: LLMConfig = OPENAI):
+    """Plain-text answer of the configured model (OpenAI by default). Returns (text or None, usage)."""
+    return chat(llm, prompt, input_message, temperature, default_model=constants.OPENAI_MODEL_CONTAINER)
+
+
+def generate_container(words_number: int, llm: LLMConfig = OPENAI) -> str:
     """
     Generate a container with a specified number of words using OpenAI language model.
 
@@ -99,10 +97,11 @@ def generate_container(words_number: int) -> str:
     container, usage = get_openai_output(
         prompt=prompts.CONTAINER_GENERATION_PROMPT,
         input_message=input_message,
-        temperature=constants.CONTAINER_TEMPERATURE
+        temperature=constants.CONTAINER_TEMPERATURE,
+        llm=llm,
     )
 
     container = container.replace('.\n\n', '. ').replace('\n\n', '. ').replace('\n', '').replace(' . ', ' ')
     if len(container.split()) < words_number:
-        return generate_container(words_number)
+        return generate_container(words_number, llm)
     return container, usage

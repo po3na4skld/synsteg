@@ -1,0 +1,185 @@
+{
+ "fixb1": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 0.9853075665931327,
+  "cap_bpw": 0.9853075665931327,
+  "replaced": 0.9832321911619567,
+  "full_msg": 0,
+  "changed_per_active": 0.9975255769688318,
+  "active_per_word": 0.9853075665931327,
+  "equal_to_corpus37": 299
+ },
+ "fixb2": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 1.9664842366163655,
+  "cap_bpw": 1.9664842366163655,
+  "replaced": 0.9817764983840284,
+  "full_msg": 0,
+  "changed_per_active": 0.9985691801402203,
+  "active_per_word": 0.9832421183081828,
+  "equal_to_corpus37": 299
+ },
+ "fixb3": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 2.8928915645033704,
+  "cap_bpw": 2.8928915645033704,
+  "replaced": 0.9629775982480006,
+  "full_msg": 0,
+  "changed_per_active": 0.9985884643465563,
+  "active_per_word": 0.9642971881677903,
+  "equal_to_corpus37": 299
+ },
+ "fixb4": {
+  "n": 299,
+  "recovered": 296,
+  "bpw": 3.309410148216217,
+  "cap_bpw": 3.309410148216217,
+  "replaced": 0.8261776656845744,
+  "full_msg": 0,
+  "changed_per_active": 0.9985317370679919,
+  "active_per_word": 0.8273525370540542,
+  "equal_to_corpus37": 299
+ },
+ "fixb5": {
+  "n": 299,
+  "recovered": 294,
+  "bpw": 1.934227995489191,
+  "cap_bpw": 1.934227995489191,
+  "replaced": 0.38650549330460676,
+  "full_msg": 0,
+  "changed_per_active": 0.9992719330178377,
+  "active_per_word": 0.38684559909783817,
+  "equal_to_corpus37": 299
+ },
+ "varb": {
+  "n": 299,
+  "recovered": 298,
+  "bpw": 4.150778071677356,
+  "cap_bpw": 4.273088070971549,
+  "replaced": 0.9614067704332495,
+  "full_msg": 194,
+  "changed_per_active": 1.0,
+  "active_per_word": 0.9614067704332495
+ },
+ "id_b1": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 0.9855834377655833,
+  "cap_bpw": 0.9855834377655833,
+  "replaced": 0.497336123056216,
+  "full_msg": 0,
+  "changed_per_active": 0.5053993625422197,
+  "active_per_word": 0.9855834377655833
+ },
+ "rand_id_b1": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 0.9855834377655833,
+  "cap_bpw": 0.9855834377655833,
+  "replaced": 0.49565252830322704,
+  "full_msg": 0,
+  "changed_per_active": 0.5023072165929309,
+  "active_per_word": 0.9855834377655833
+ },
+ "id_b2": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 1.970627708336182,
+  "cap_bpw": 1.970627708336182,
+  "replaced": 0.7379709685596403,
+  "full_msg": 0,
+  "changed_per_active": 0.7501189683068431,
+  "active_per_word": 0.985313854168091
+ },
+ "rand_id_b2": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 1.970627708336182,
+  "cap_bpw": 1.970627708336182,
+  "replaced": 0.737196694042835,
+  "full_msg": 0,
+  "changed_per_active": 0.7489768725611498,
+  "active_per_word": 0.985313854168091
+ },
+ "id_b3": {
+  "n": 299,
+  "recovered": 298,
+  "bpw": 2.950946724785934,
+  "cap_bpw": 2.950946724785934,
+  "replaced": 0.8597702211193736,
+  "full_msg": 0,
+  "changed_per_active": 0.8731112064445398,
+  "active_per_word": 0.9836489082619778
+ },
+ "rand_id_b3": {
+  "n": 299,
+  "recovered": 298,
+  "bpw": 2.950946724785934,
+  "cap_bpw": 2.950946724785934,
+  "replaced": 0.8599322968408999,
+  "full_msg": 0,
+  "changed_per_active": 0.8731588731588732,
+  "active_per_word": 0.9836489082619778
+ },
+ "id_b4": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 3.8505002930692886,
+  "cap_bpw": 3.8511084155353252,
+  "replaced": 0.9005311739484112,
+  "full_msg": 11,
+  "changed_per_active": 0.9372686538086888,
+  "active_per_word": 0.9626250732673222
+ },
+ "rand_id_b4": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 3.8505002930692886,
+  "cap_bpw": 3.8511084155353252,
+  "replaced": 0.9008800505818544,
+  "full_msg": 11,
+  "changed_per_active": 0.9355639976621859,
+  "active_per_word": 0.9626250732673222
+ },
+ "id_b5": {
+  "n": 299,
+  "recovered": 297,
+  "bpw": 2.8187228533018436,
+  "cap_bpw": 2.8195729090432042,
+  "replaced": 0.545160124690148,
+  "full_msg": 4,
+  "changed_per_active": 0.9668329177057357,
+  "active_per_word": 0.5639145818086408
+ },
+ "rand_id_b5": {
+  "n": 299,
+  "recovered": 296,
+  "bpw": 2.8187228533018436,
+  "cap_bpw": 2.8195729090432042,
+  "replaced": 0.5463117164646546,
+  "full_msg": 4,
+  "changed_per_active": 0.9688279301745636,
+  "active_per_word": 0.5639145818086408
+ },
+ "ham73": {
+  "n": 299,
+  "recovered": 298,
+  "bpw": 0.40190325542424193,
+  "cap_bpw": 0.40190325542424193,
+  "replaced": 0.11668155606145389,
+  "full_msg": 0,
+  "changed_per_active": 0.1241956241956242
+ },
+ "rand_ham73": {
+  "n": 299,
+  "recovered": 299,
+  "bpw": 0.40190325542424193,
+  "cap_bpw": 0.40190325542424193,
+  "replaced": 0.11598038526351641,
+  "full_msg": 0,
+  "changed_per_active": 0.12483912483912483
+ }
+}

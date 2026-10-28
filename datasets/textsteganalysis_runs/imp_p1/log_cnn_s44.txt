@@ -1,0 +1,139 @@
+10/26/2026 17:16:48 - INFO - __main__ -   --------------Main Configs-------------------
+10/26/2026 17:16:48 - INFO - __main__ -   {'use_processor': True, 'out_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/imp_p1_cnn_s44', 'checkpoint': 'best', 'record_file': 'record.txt', 'model': 'cnn', 'class_num': 2, 'tokenizer': False, 'seed': 44, 'gpuid': '0', 'task_name': 'steganalysis', 'use_plm': False, 'repeat_num': 1, 'device': device(type='mps'), 'Dataset': {'name': 'tweet', 'stego_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/stego.txt', 'cover_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/clean.txt', 'csv_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44', 'resplit': True, 'split_ratio': 0.8, 'save_cache': False, 'overwrite_cache': True}, 'Tokenizer': {'model_name_or_path': 'bert-base-uncased'}, 'Training_with_Processor': {'num_train_epochs': 3, 'learning_rate': 5e-05, 'model_name_or_path': 'bert-base-uncased', 'do_lower_case': True, 'per_gpu_train_batch_size': 32, 'per_gpu_eval_batch_size': 32, 'n_gpu': 1, 'max_steps': -1, 'gradient_accumulation_steps': 1, 'eval_and_save_steps': 100, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'logging_steps': -1, 'evaluate_during_training': False, 'save_only_best': True, 'use_fixed_seq_length': True, 'eval_all_checkpoints': False, 'skip_evaluate_dev': True}, 'Training': {'batch_size': 100, 'epoch': 10, 'learning_rate': 0.001, 'early_stop': 50, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'evaluate_during_training': False, 'save_only_best': True}, 'Vocabulary': {'word_drop': 0, 'do_lower': True, 'max_length': 60}, 'CNN': {'embed_size': 128, 'filter_num': 128, 'filter_size': [3, 4, 5], 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'RNN': {'cell': 'bi-lstm', 'embed_size': 128, 'hidden_dim': 256, 'num_layers': 1, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'FCN': {'embed_size': 128, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'LSTMATT': {'embed_size': 128, 'hidden_dim': 256, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss', 'bidirectional': True}, 'RBiLSTMC': {'num_layers': 1, 'kernel_sizes': [3, 4, 5], 'kernel_num': 128, 'embed_dim': 128, 'hidden_dim': 256, 'LSTM_dropout': 0.2, 'CNN_dropout': 0.2, 'Ci': 1, 'criteration': 'CrossEntropyLoss'}, 'BiLSTMDENSE': {'num_layers': 1, 'embed_dim': 256, 'hidden_dim': 200, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'SESY': {'clf': 'cnn', 'criteration': 'CrossEntropyLoss', 'strategy': 'cas', 'embed_size': 100, 'hidden_dim': 128, 'readout_size': 64, 'gat_alpha': 0.2, 'gat_heads': 8, 'dropout_rate': 0.2, 'TC_configs': {'cnn': {'filter_num': 128, 'filter_size': [3, 4, 5]}, 'rnn': {'cell': 'bi-lstm', 'hidden_dim': 256, 'num_layers': 1}, 'fc': {}}}, 'state_dict': {'use_processor': True, 'out_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/imp_p1_cnn_s44', 'checkpoint': 'best', 'record_file': 'record.txt', 'model': 'cnn', 'class_num': 2, 'tokenizer': False, 'seed': 44, 'gpuid': '0', 'task_name': 'steganalysis', 'use_plm': False, 'repeat_num': 1, 'device': 'cuda:0', 'Dataset': {'name': 'tweet', 'stego_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/stego.txt', 'cover_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/clean.txt', 'csv_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44', 'resplit': True, 'split_ratio': 0.8, 'save_cache': False, 'overwrite_cache': True}, 'Tokenizer': {'model_name_or_path': 'bert-base-uncased'}, 'Training_with_Processor': {'num_train_epochs': 3, 'learning_rate': 5e-05, 'model_name_or_path': 'bert-base-uncased', 'do_lower_case': True, 'per_gpu_train_batch_size': 32, 'per_gpu_eval_batch_size': 32, 'n_gpu': 1, 'max_steps': -1, 'gradient_accumulation_steps': 1, 'eval_and_save_steps': 100, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'logging_steps': -1, 'evaluate_during_training': False, 'save_only_best': True, 'use_fixed_seq_length': True, 'eval_all_checkpoints': False, 'skip_evaluate_dev': True}, 'Training': {'batch_size': 100, 'epoch': 10, 'learning_rate': 0.001, 'early_stop': 50, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'evaluate_during_training': False, 'save_only_best': True}, 'Vocabulary': {'word_drop': 0, 'do_lower': True, 'max_length': 60}, 'CNN': {'embed_size': 128, 'filter_num': 128, 'filter_size': [3, 4, 5], 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'RNN': {'cell': 'bi-lstm', 'embed_size': 128, 'hidden_dim': 256, 'num_layers': 1, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'FCN': {'embed_size': 128, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'LSTMATT': {'embed_size': 128, 'hidden_dim': 256, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss', 'bidirectional': True}, 'RBiLSTMC': {'num_layers': 1, 'kernel_sizes': [3, 4, 5], 'kernel_num': 128, 'embed_dim': 128, 'hidden_dim': 256, 'LSTM_dropout': 0.2, 'CNN_dropout': 0.2, 'Ci': 1, 'criteration': 'CrossEntropyLoss'}, 'BiLSTMDENSE': {'num_layers': 1, 'embed_dim': 256, 'hidden_dim': 200, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'SESY': {'clf': 'cnn', 'criteration': 'CrossEntropyLoss', 'strategy': 'cas', 'embed_size': 100, 'hidden_dim': 128, 'readout_size': 64, 'gat_alpha': 0.2, 'gat_heads': 8, 'dropout_rate': 0.2, 'TC_configs': {'cnn': {'filter_num': 128, 'filter_size': [3, 4, 5]}, 'rnn': {'cell': 'bi-lstm', 'hidden_dim': 256, 'num_layers': 1}, 'fc': {}}}}}
+10/26/2026 17:16:48 - INFO - __main__ -   --------------loading data-------------------
+10/26/2026 17:16:48 - INFO - __main__ -   Dataset Configs
+10/26/2026 17:16:48 - INFO - __main__ -   {"name": "tweet", "stego_file": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/stego.txt", "cover_file": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/clean.txt", "csv_dir": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44", "resplit": true, "split_ratio": 0.8, "save_cache": false, "overwrite_cache": true}
+10/26/2026 17:16:48 - INFO - __main__ -   ----------------use plm or not----------------
+10/26/2026 17:16:48 - INFO - __main__ -   --------------------NO-------------------------
+10/26/2026 17:16:48 - INFO - __main__ -   	load plm name or path from Training_with_Processor args
+10/26/2026 17:16:48 - INFO - __main__ -   -------------------------------------------------------------------------------------------------------
+10/26/2026 17:16:48 - INFO - __main__ -   ----------------init model-----------------------
+10/26/2026 17:16:48 - INFO - __main__ -   Model Configs
+10/26/2026 17:16:48 - INFO - __main__ -   {"MODEL_TYPE": "cnn", "embed_size": 128, "filter_num": 128, "filter_size": [3, 4, 5], "dropout_rate": 0.2, "criteration": "CrossEntropyLoss", "vocab_size": 30522}
+10/26/2026 17:16:49 - INFO - __main__ -   --------------start training--------------------
+10/26/2026 17:16:49 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44
+10/26/2026 17:16:49 - INFO - __main__ -   Finished creating features
+10/26/2026 17:16:49 - INFO - __main__ -   Finished converting features into tensors
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/steganalysis/.venv_ts/lib/python3.11/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+10/26/2026 17:16:49 - INFO - __main__ -   ***** Running training *****
+10/26/2026 17:16:49 - INFO - __main__ -     Num examples = 5196
+10/26/2026 17:16:49 - INFO - __main__ -     Num Epochs = 3
+10/26/2026 17:16:49 - INFO - __main__ -     Instantaneous batch size per GPU = 32
+10/26/2026 17:16:49 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+10/26/2026 17:16:49 - INFO - __main__ -     Gradient Accumulation steps = 1
+10/26/2026 17:16:49 - INFO - __main__ -     Total optimization steps = 489
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Epoch 0:   0%|          | 0/163 [00:00<?, ?it/s]
+Epoch 0:   1%|          | 1/163 [00:00<00:41,  3.92it/s]
+Epoch 0:   7%|▋         | 11/163 [00:00<00:04, 37.83it/s]
+Epoch 0:  15%|█▌        | 25/163 [00:00<00:01, 70.84it/s]
+Epoch 0:  24%|██▍       | 39/163 [00:00<00:01, 91.28it/s]
+Epoch 0:  33%|███▎      | 53/163 [00:00<00:01, 105.01it/s]
+Epoch 0:  41%|████      | 67/163 [00:00<00:00, 114.54it/s]
+Epoch 0:  50%|████▉     | 81/163 [00:00<00:00, 120.76it/s]
+Epoch 0:  58%|█████▊    | 95/163 [00:00<00:00, 125.20it/s]10/26/2026 17:16:51 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44
+10/26/2026 17:16:51 - INFO - __main__ -   Finished creating features
+10/26/2026 17:16:51 - INFO - __main__ -   Finished converting features into tensors
+10/26/2026 17:16:51 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/26/2026 17:16:51 - INFO - __main__ -   Num examples = 1733
+10/26/2026 17:16:51 - INFO - __main__ -   Batch size = 32
+10/26/2026 17:16:51 - INFO - __main__ -   {"eval_accuracy": 0.4835545297172533, "eval_macro_f1": 0.4436732803848503, "eval_precision": 0.484375, "eval_recall": 0.7631887456037515, "eval_f1_score": 0.59262630860264, "step": 100}
+10/26/2026 17:16:51 - INFO - __main__ -   Congratulations, best model so far!
+10/26/2026 17:16:51 - INFO - __main__ -   Saving model checkpoint to /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/imp_p1_cnn_s44/best
+10/26/2026 17:16:51 - INFO - __main__ -   	Saved model checkpoint to /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/imp_p1_cnn_s44/best
+
+Epoch 0:  66%|██████▋   | 108/163 [00:01<00:00, 63.01it/s]
+Epoch 0:  75%|███████▍  | 122/163 [00:01<00:00, 75.57it/s]
+Epoch 0:  83%|████████▎ | 136/163 [00:01<00:00, 87.10it/s]
+Epoch 0:  93%|█████████▎| 151/163 [00:01<00:00, 100.40it/s]
+Epoch 0: 100%|██████████| 163/163 [00:01<00:00, 85.82it/s] 
+
+Epoch 1:   0%|          | 0/163 [00:00<?, ?it/s]
+Epoch 1:  10%|▉         | 16/163 [00:00<00:00, 155.65it/s]
+Epoch 1:  20%|█▉        | 32/163 [00:00<00:00, 155.67it/s]10/26/2026 17:16:52 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44
+10/26/2026 17:16:52 - INFO - __main__ -   Finished creating features
+10/26/2026 17:16:52 - INFO - __main__ -   Finished converting features into tensors
+10/26/2026 17:16:52 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/26/2026 17:16:52 - INFO - __main__ -   Num examples = 1733
+10/26/2026 17:16:52 - INFO - __main__ -   Batch size = 32
+10/26/2026 17:16:52 - INFO - __main__ -   {"eval_accuracy": 0.4697057126370456, "eval_macro_f1": 0.4684568923711874, "eval_precision": 0.4585427135678392, "eval_recall": 0.42790152403282533, "eval_f1_score": 0.4426925409338993, "step": 200}
+
+Epoch 1:  29%|██▉       | 48/163 [00:00<00:01, 70.79it/s] 
+Epoch 1:  39%|███▊      | 63/163 [00:00<00:01, 87.76it/s]
+Epoch 1:  47%|████▋     | 77/163 [00:00<00:00, 98.78it/s]
+Epoch 1:  56%|█████▋    | 92/163 [00:00<00:00, 110.44it/s]
+Epoch 1:  65%|██████▌   | 106/163 [00:00<00:00, 116.93it/s]
+Epoch 1:  74%|███████▎  | 120/163 [00:01<00:00, 121.02it/s]
+Epoch 1:  82%|████████▏ | 134/163 [00:01<00:00, 124.99it/s]10/26/2026 17:16:53 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44
+10/26/2026 17:16:53 - INFO - __main__ -   Finished creating features
+10/26/2026 17:16:53 - INFO - __main__ -   Finished converting features into tensors
+10/26/2026 17:16:53 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/26/2026 17:16:53 - INFO - __main__ -   Num examples = 1733
+10/26/2026 17:16:53 - INFO - __main__ -   Batch size = 32
+10/26/2026 17:16:53 - INFO - __main__ -   {"eval_accuracy": 0.46220427005193304, "eval_macro_f1": 0.44334295584946964, "eval_precision": 0.4670558798999166, "eval_recall": 0.6565064478311841, "eval_f1_score": 0.5458089668615984, "step": 300}
+
+Epoch 1:  91%|█████████ | 148/163 [00:01<00:00, 75.21it/s] 
+Epoch 1:  99%|█████████▉| 162/163 [00:01<00:00, 86.81it/s]
+Epoch 1: 100%|██████████| 163/163 [00:01<00:00, 97.31it/s]
+
+Epoch 2:   0%|          | 0/163 [00:00<?, ?it/s]
+Epoch 2:   9%|▊         | 14/163 [00:00<00:01, 134.08it/s]
+Epoch 2:  17%|█▋        | 28/163 [00:00<00:00, 135.32it/s]
+Epoch 2:  26%|██▌       | 42/163 [00:00<00:00, 134.13it/s]
+Epoch 2:  34%|███▍      | 56/163 [00:00<00:00, 135.54it/s]
+Epoch 2:  43%|████▎     | 70/163 [00:00<00:00, 135.91it/s]10/26/2026 17:16:54 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44
+10/26/2026 17:16:54 - INFO - __main__ -   Finished creating features
+10/26/2026 17:16:54 - INFO - __main__ -   Finished converting features into tensors
+10/26/2026 17:16:54 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/26/2026 17:16:54 - INFO - __main__ -   Num examples = 1733
+10/26/2026 17:16:54 - INFO - __main__ -   Batch size = 32
+10/26/2026 17:16:54 - INFO - __main__ -   {"eval_accuracy": 0.45816503173687245, "eval_macro_f1": 0.45238785100980783, "eval_precision": 0.43874643874643876, "eval_recall": 0.36107854630715125, "eval_f1_score": 0.39614147909967845, "step": 400}
+
+Epoch 2:  52%|█████▏    | 84/163 [00:00<00:01, 74.64it/s] 
+Epoch 2:  60%|█████▉    | 97/163 [00:00<00:00, 85.38it/s]
+Epoch 2:  68%|██████▊   | 111/163 [00:01<00:00, 96.61it/s]
+Epoch 2:  77%|███████▋  | 125/163 [00:01<00:00, 106.30it/s]
+Epoch 2:  85%|████████▌ | 139/163 [00:01<00:00, 114.35it/s]
+Epoch 2:  94%|█████████▍| 153/163 [00:01<00:00, 119.51it/s]
+Epoch 2: 100%|██████████| 163/163 [00:01<00:00, 111.48it/s]
+10/26/2026 17:16:55 - INFO - __main__ -    global_step = 489, average loss = 0.7191533003848023
+10/26/2026 17:16:55 - INFO - __main__ -   Evaluate the following checkpoints: ['/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/imp_p1_cnn_s44/best']
+10/26/2026 17:16:55 - INFO - __main__ -   ----------------init model-----------------------
+10/26/2026 17:16:55 - INFO - __main__ -   ---------------------loading model from /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/imp_p1_cnn_s44/best------------
+
+
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/steganalysis/TextSteganalysis/main.py:90: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model = torch.load(os.path.join(checkpoint, "pytorch_model.bin"))
+10/26/2026 17:16:55 - INFO - __main__ -   Model Configs
+10/26/2026 17:16:55 - INFO - __main__ -   {"MODEL_TYPE": "cnn", "embed_size": 128, "filter_num": 128, "filter_size": [3, 4, 5], "dropout_rate": 0.2, "criteration": "CrossEntropyLoss", "vocab_size": 30522}
+10/26/2026 17:16:55 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/imp_p1/csv_s44
+10/26/2026 17:16:55 - INFO - __main__ -   Finished creating features
+10/26/2026 17:16:55 - INFO - __main__ -   Finished converting features into tensors
+10/26/2026 17:16:55 - INFO - __main__ -   ***** Running evaluation: best on steganalysis test *****
+10/26/2026 17:16:55 - INFO - __main__ -   Num examples = 1733
+10/26/2026 17:16:55 - INFO - __main__ -   Batch size = 32
+
+Evaluating:   0%|          | 0/55 [00:00<?, ?it/s]
+Evaluating:  80%|████████  | 44/55 [00:00<00:00, 431.53it/s]
+Evaluating: 100%|██████████| 55/55 [00:00<00:00, 429.53it/s]
+10/26/2026 17:16:55 - INFO - __main__ -   ***** test results: best *****
+10/26/2026 17:16:55 - INFO - __main__ -     accuracy = 0.5002885170225043
+10/26/2026 17:16:55 - INFO - __main__ -     f1_score = 0.6081447963800904
+10/26/2026 17:16:55 - INFO - __main__ -     macro_f1 = 0.4593271752601089
+10/26/2026 17:16:55 - INFO - __main__ -     precision = 0.5048835462058603
+10/26/2026 17:16:55 - INFO - __main__ -     recall = 0.764505119453925
+10/26/2026 17:16:55 - INFO - __main__ -   Final results
+(repeat times: 1):
+accuracy	50.03%+0.00%
+precision	50.49%+0.00%
+recall	76.45%+0.00%
+f1_score	60.81%+0.00%

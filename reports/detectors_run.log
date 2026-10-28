@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 8269.46it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: openai-community/roberta-base-openai-detector
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+D1_roberta_openai gpt4o {'n': 300, 'auc_container': 0.56, 'auc_stego': 0.935, 'tpr5_container': 0.127, 'tpr5_stego': 0.78, 'auc_container_vs_stego': 0.905}
+D1_roberta_openai qwen {'n': 78, 'auc_container': 0.318, 'auc_stego': 0.781, 'tpr5_container': 0.0, 'tpr5_stego': 0.526, 'auc_container_vs_stego': 0.882}
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 46898.93it/s]
+D2_chatgpt_roberta gpt4o {'n': 300, 'auc_container': 0.963, 'auc_stego': 0.16, 'tpr5_container': 0.88, 'tpr5_stego': 0.003, 'auc_container_vs_stego': 0.005}
+D2_chatgpt_roberta qwen {'n': 78, 'auc_container': 0.883, 'auc_stego': 0.353, 'tpr5_container': 0.654, 'tpr5_stego': 0.09, 'auc_container_vs_stego': 0.088}
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+D3_desklib gpt4o {'n': 300, 'auc_container': 0.999, 'auc_stego': 0.901, 'tpr5_container': 0.997, 'tpr5_stego': 0.38, 'auc_container_vs_stego': 0.012}
+D3_desklib qwen {'n': 78, 'auc_container': 0.999, 'auc_stego': 0.952, 'tpr5_container': 0.987, 'tpr5_stego': 0.731, 'auc_container_vs_stego': 0.125}
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<02:00,  2.79it/s]Loading weights:  58%|█████▊    | 195/338 [00:00<00:00, 546.94it/s]Loading weights:  90%|█████████ | 305/338 [00:00<00:00, 447.60it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 413.03it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<05:07,  1.10it/s]Loading weights:  51%|█████     | 171/338 [00:01<00:00, 226.47it/s]Loading weights:  77%|███████▋  | 259/338 [00:01<00:00, 152.57it/s]Loading weights:  92%|█████████▏| 312/338 [00:02<00:00, 128.66it/s]Loading weights: 100%|██████████| 338/338 [00:02<00:00, 123.08it/s]
+D4_binoculars gpt4o {'n': 300, 'auc_container': 0.747, 'auc_stego': 0.059, 'tpr5_container': 0.207, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.013}
+D4_binoculars qwen {'n': 78, 'auc_container': 0.615, 'auc_stego': 0.116, 'tpr5_container': 0.051, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.068}
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<02:17,  2.45it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 520.15it/s]Loading weights:  94%|█████████▍| 317/338 [00:00<00:00, 526.97it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 453.00it/s]
+D5_fast_detectgpt gpt4o {'n': 300, 'auc_container': 0.768, 'auc_stego': 0.057, 'tpr5_container': 0.177, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.005}
+D5_fast_detectgpt qwen {'n': 78, 'auc_container': 0.654, 'auc_stego': 0.147, 'tpr5_container': 0.064, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.057}
+saved /Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/model_series/../../reports/detectors_gpt4o_qwen.json

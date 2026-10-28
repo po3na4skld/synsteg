@@ -1,0 +1,556 @@
+<title>Can SynSteg Remove a Watermark?</title>
+<meta name="description" content="Measuring SynSteg's synonym substitution against a SynthID-Text watermark: removal, cost, and matched controls.">
+<style>
+  :root {
+    --bg: #FAF8F4;
+    --surface: #FFFFFF;
+    --surface-2: #F2EFE8;
+    --ink: #16181D;
+    --muted: #5E6472;
+    --hair: #DFDAD0;
+    --accent: #A8481B;
+    --accent-2: #1C5A66;
+    --good: #2C6E49;
+    --warn: #99711A;
+    --crit: #A93226;
+    --shadow: 0 1px 2px rgba(20,22,28,.05), 0 8px 24px -12px rgba(20,22,28,.12);
+    --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --body: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --data: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1216;
+      --surface: #171B21;
+      --surface-2: #1E232B;
+      --ink: #E9E6E0;
+      --muted: #949BAA;
+      --hair: #2A303A;
+      --accent: #E08A55;
+      --accent-2: #6FB6C4;
+      --good: #66B98A;
+      --warn: #D6AC55;
+      --crit: #E0736A;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1216;
+    --surface: #171B21;
+    --surface-2: #1E232B;
+    --ink: #E9E6E0;
+    --muted: #949BAA;
+    --hair: #2A303A;
+    --accent: #E08A55;
+    --accent-2: #6FB6C4;
+    --good: #66B98A;
+    --warn: #D6AC55;
+    --crit: #E0736A;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--body); font-size: 16px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 56px 24px 96px; display: flex; flex-direction: column; gap: 44px; }
+
+  .eyebrow {
+    font-family: var(--data); font-size: 11.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+  }
+  h1 {
+    font-family: var(--display); font-weight: 600; font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1.12; margin: 0 0 16px; text-wrap: balance; letter-spacing: -.01em;
+  }
+  h2 {
+    font-family: var(--display); font-weight: 600; font-size: 25px; line-height: 1.2;
+    margin: 0 0 6px; text-wrap: balance;
+  }
+  h3 { font-size: 15px; font-weight: 650; margin: 0 0 8px; letter-spacing: -.005em; }
+  p { margin: 0 0 14px; max-width: 68ch; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent-2); }
+  .lede { font-size: 18px; color: var(--muted); max-width: 70ch; }
+  .sec-note { color: var(--muted); font-size: 14.5px; margin: 0 0 20px; max-width: 74ch; }
+
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 28px; }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 22px;
+    font-family: var(--data); font-size: 12px; color: var(--muted);
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  section { display: flex; flex-direction: column; }
+
+  .verdict {
+    background: var(--surface); border: 1px solid var(--hair);
+    border-left: 4px solid var(--crit); border-radius: 3px;
+    padding: 24px 26px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .verdict h2 { margin: 0; }
+  .verdict .kicker {
+    font-family: var(--data); font-size: 11.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--crit); margin: 0;
+  }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 3px;
+    padding: 18px 18px 16px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .card .label {
+    font-family: var(--data); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .card .stat {
+    font-family: var(--display); font-size: 30px; line-height: 1.05;
+    font-variant-numeric: tabular-nums; letter-spacing: -.015em;
+  }
+  .card .sub { font-size: 13px; color: var(--muted); line-height: 1.45; }
+  .stat.crit { color: var(--crit); }
+  .stat.good { color: var(--good); }
+  .stat.warn { color: var(--warn); }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--hair); border-radius: 3px; background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; min-width: 720px; }
+  caption { text-align: left; padding: 14px 16px 0; font-size: 13px; color: var(--muted); }
+  th, td { padding: 9px 14px; text-align: right; border-bottom: 1px solid var(--hair); }
+  th:first-child, td:first-child { text-align: left; }
+  thead th {
+    font-family: var(--data); font-size: 10.5px; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--muted); font-weight: 600;
+    border-bottom: 1px solid var(--ink); white-space: nowrap;
+  }
+  tbody td { font-variant-numeric: tabular-nums; font-family: var(--data); font-size: 12.5px; }
+  tbody td:first-child { font-family: var(--body); font-size: 13.5px; }
+  tbody tr:last-child td { border-bottom: none; }
+  tr.base td { background: var(--surface-2); font-weight: 600; }
+  tr.ctrl td:first-child { color: var(--muted); padding-left: 28px; }
+  .n { color: var(--crit); }
+  .y { color: var(--good); }
+
+  figure { margin: 0; }
+  .chart { background: var(--surface); border: 1px solid var(--hair); border-radius: 3px; padding: 18px; box-shadow: var(--shadow); overflow-x: auto; }
+  .chart svg { display: block; width: 100%; height: auto; min-width: 560px; }
+  .chart svg text { font-family: var(--body); }
+  .chart svg text.mono { font-family: var(--data); font-variant-numeric: tabular-nums; }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 12px; max-width: 74ch; }
+
+  .samples { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .sample {
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 3px;
+    padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px;
+  }
+  .sample .tag {
+    font-family: var(--data); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .sample p { font-size: 14px; margin: 0; max-width: none; }
+  .sample mark { background: transparent; color: var(--crit); font-weight: 600; }
+
+  ul, ol { margin: 0 0 14px; padding-left: 20px; max-width: 68ch; }
+  li { margin-bottom: 8px; }
+  li:last-child { margin-bottom: 0; }
+
+  code { font-family: var(--data); font-size: .88em; background: var(--surface-2); padding: 1.5px 5px; border-radius: 2px; }
+  pre {
+    font-family: var(--data); font-size: 12.5px; line-height: 1.6;
+    background: var(--surface-2); border: 1px solid var(--hair); border-radius: 3px;
+    padding: 16px; overflow-x: auto; margin: 0;
+  }
+  pre code { background: none; padding: 0; }
+
+  .caveats { background: var(--surface-2); border: 1px solid var(--hair); border-radius: 3px; padding: 22px 24px; }
+  .caveats h2 { margin-bottom: 10px; }
+
+  footer { border-top: 1px solid var(--hair); padding-top: 22px; font-size: 13px; color: var(--muted); }
+  a:focus-visible, :focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+</style>
+
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Measurement report &middot; revised</p>
+    <h1>Can SynSteg remove a watermark?</h1>
+    <p class="lede">Anthropic began watermarking Claude's text output in August 2026 using a variant of
+      SynthID&#8209;Text. Because SynSteg rewrites words in place, it is fair to ask whether embedding a
+      payload also strips the watermark. It does — but only by damaging the text past the point of
+      usefulness, and its advantage over swapping words at random is real yet negligible.</p>
+    <div class="meta">
+      <span><b>Date</b> 2026-08-15</span>
+      <span><b>Watermark</b> SynthID-Text, ngram_len 5</span>
+      <span><b>Detector</b> mean g-value</span>
+      <span><b>Positives</b> 56 Qwen2.5-0.5B generations</span>
+      <span><b>Negatives</b> 56 IMDB reviews</span>
+    </div>
+  </header>
+
+  <section class="verdict">
+    <p class="kicker">Verdict</p>
+    <h2>SynSteg is not a watermark-removal method.</h2>
+    <p>Watermark destruction is driven overwhelmingly by <em>how many words change</em>, not by SynSteg's
+      payload-driven choice of which synonym to use. A random-substitution control at a matched edit rate
+      removes nearly as much signal while carrying no payload at all. Every configuration that
+      meaningfully suppresses the detector also multiplies perplexity by ten to fourteen, and every
+      configuration that preserves readability leaves the watermark perfectly detectable.</p>
+  </section>
+
+  <section>
+    <div class="cards">
+      <div class="card">
+        <span class="label">Baseline detection</span>
+        <span class="stat">1.000</span>
+        <span class="sub">AUC on unattacked text. Mean g-value 0.5803 against a null of 0.5000.</span>
+      </div>
+      <div class="card">
+        <span class="label">Best removal (SynSteg b=1)</span>
+        <span class="stat crit">4.7%</span>
+        <span class="sub">of watermark signal left — at 10.5&times; perplexity and a 28.9% edit rate.</span>
+      </div>
+      <div class="card">
+        <span class="label">SynSteg's edge over random</span>
+        <span class="stat warn">8.8%</span>
+        <span class="sub">of baseline signal at b=1. Statistically real, practically irrelevant.</span>
+      </div>
+      <div class="card">
+        <span class="label">Readable attack (1.5&times; ppl)</span>
+        <span class="stat good">AUC 1.000</span>
+        <span class="sub">Watermark survives intact, TPR at 1% FPR still 1.000.</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How this was measured</h2>
+    <p class="sec-note">Anthropic keeps its watermark key and detector private, so real Claude output
+      cannot be scored. This study substitutes an open SynthID-Text instance — the same algorithm family
+      Anthropic names — which makes the question measurable end to end.</p>
+    <ol>
+      <li><b>Score.</b> The training-free <em>mean g-value</em> detector from the SynthID-Text paper.
+        Watermarked text sits above the 0.5 null; an attack that works drags it back down. N-grams whose
+        context already appeared are masked out, mirroring the reference detector, because the watermark
+        deliberately does not re-bias repeated contexts.</li>
+      <li><b>Attack.</b> SynSteg's substitution mechanism — walk the text, and where a word has at least
+        2<sup>b</sup> synonyms, spend <em>b</em> payload bits selecting among them.</li>
+      <li><b>Control.</b> The same lexicon and the same eligibility rule, but random words and random
+        choices at a matched edit rate. This is what isolates the mechanism from the mere act of editing.</li>
+      <li><b>Cost.</b> GPT-2 perplexity, a judge independent of the generator, so no arm gets
+        home-field advantage.</li>
+    </ol>
+    <p>Both the watermarked and the unwatermarked corpus go through every attack. Scoring attacked
+      positives against unattacked negatives would let the attack shift both distributions and
+      masquerade as watermark destruction.</p>
+  </section>
+
+  <section>
+    <h2>The corpus is frozen, not regenerated</h2>
+    <p class="sec-note">Every run scores one fixed corpus on disk. This is not only a speed
+      matter — it is what makes the arms comparable, since regenerating between runs would let sampling
+      noise masquerade as an attack effect.</p>
+    <p><b>Positives cannot be reused from any existing dataset.</b> SynthID biases sampling <em>as text is
+      generated</em>, so watermarked text exists only if it was generated under the key; there is no way
+      to stamp a watermark onto prose after the fact. The 56 watermarked texts were generated once and
+      are now reused verbatim.</p>
+    <p><b>Negatives have no such constraint.</b> Any text not generated under the key is a valid negative,
+      so these are drawn from the IMDB reviews already in <code>datasets/</code> rather than generated.
+      Human prose is the more honest negative anyway: there is no question of it secretly carrying a
+      watermark.</p>
+    <p>Swapping the negatives is only legitimate if unwatermarked text scores at the null regardless of
+      domain, so that was verified rather than assumed. The negatives are also truncated to match the
+      positives' length distribution, because longer texts concentrate more tightly around the null and
+      would otherwise tighten the 1%-FPR threshold in the detector's favour.</p>
+    <div class="tablewrap">
+      <table>
+        <caption>Table 1 &mdash; Null validation. IMDB negatives are statistically indistinguishable from the 0.5 null.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Arm</th>
+            <th scope="col">Mean g</th>
+            <th scope="col">Std</th>
+            <th scope="col">SEM</th>
+            <th scope="col">Distance from null</th>
+            <th scope="col">Mean words</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Watermarked (Qwen + SynthID)</td><td>0.58027</td><td>0.01298</td><td>0.00173</td><td class="y">+46.3 SEM</td><td>185.6</td></tr>
+          <tr><td>Clean (IMDB reviews)</td><td>0.49757</td><td>0.01249</td><td>0.00167</td><td>&minus;1.5 SEM</td><td>181.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px">The negatives land 1.5 standard errors from 0.5, which is ordinary noise,
+      while the positives land 46 standard errors above it. Separation is AUC 1.000 — identical to the
+      generated-negative baseline this replaced. Reusing IMDB costs nothing in rigour and removes text
+      generation from the loop entirely: a full sweep now takes about four minutes instead of
+      twenty-five.</p>
+  </section>
+
+  <section>
+    <h2>Removal versus cost</h2>
+    <p class="sec-note">Each SynSteg row is followed by its matched-edit-rate control. <em>Signal left</em>
+      is the fraction of the baseline's lift above the 0.5 null that survives the attack.</p>
+    <div class="tablewrap">
+      <table>
+        <caption>Table 2 &mdash; SynSteg substitution against SynthID-Text, with random-substitution controls. n = 56.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Arm</th>
+            <th scope="col">AUC</th>
+            <th scope="col">TPR @1% FPR</th>
+            <th scope="col">Mean g</th>
+            <th scope="col">Signal left</th>
+            <th scope="col">Edit rate</th>
+            <th scope="col">Bits/text</th>
+            <th scope="col">Perplexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="base"><td>No attack</td><td>1.000</td><td>1.000</td><td>0.5803</td><td>100.0%</td><td>0.000</td><td>0</td><td>15.1</td></tr>
+          <tr><td>SynSteg b=1</td><td class="y">0.656</td><td>0.179</td><td>0.5038</td><td class="y">4.7%</td><td>0.289</td><td>106</td><td class="n">158.7 10.5&times;</td></tr>
+          <tr class="ctrl"><td>Random control @0.289</td><td>0.845</td><td>0.250</td><td>0.5109</td><td>13.6%</td><td>0.289</td><td>0</td><td class="n">154.1 10.2&times;</td></tr>
+          <tr><td>SynSteg b=2</td><td>0.790</td><td>0.179</td><td>0.5061</td><td class="y">7.6%</td><td>0.325</td><td>160</td><td class="n">217.8 14.4&times;</td></tr>
+          <tr class="ctrl"><td>Random control @0.325</td><td class="y">0.751</td><td>0.161</td><td>0.5080</td><td>10.0%</td><td>0.325</td><td>0</td><td class="n">183.6 12.1&times;</td></tr>
+          <tr><td>SynSteg b=3</td><td>0.946</td><td>0.554</td><td>0.5185</td><td>23.0%</td><td>0.238</td><td>132</td><td class="n">146.1 &nbsp;9.6&times;</td></tr>
+          <tr class="ctrl"><td>Random control @0.238</td><td>0.953</td><td>0.625</td><td>0.5176</td><td>21.9%</td><td>0.237</td><td>0</td><td class="n">116.7 &nbsp;7.7&times;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px">Note b=3 removes the <em>least</em>, despite being the highest-capacity
+      setting. Demanding eight synonyms per word disqualifies most of the vocabulary and drops the edit
+      rate to 0.238. Capacity and removal are not independent knobs; both are downstream of how many
+      words get touched.</p>
+  </section>
+
+  <section>
+    <h2>Does payload-driven selection actually help?</h2>
+    <p class="sec-note">SynSteg leaves less signal than its control at b=1 and b=2, which invites the
+      claim that choosing synonyms by payload is somehow better at scrubbing the watermark. Both attacks
+      run on the same texts, so the question can be settled with a paired test rather than an eyeball.</p>
+    <div class="tablewrap">
+      <table>
+        <caption>Table 3 &mdash; Paired per-text difference in mean g-value, SynSteg minus control. Negative favours SynSteg. 20,000-sample bootstrap.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Setting</th>
+            <th scope="col">Mean difference</th>
+            <th scope="col">95% CI</th>
+            <th scope="col">Significant</th>
+            <th scope="col">SynSteg wins</th>
+            <th scope="col">Share of baseline signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>b=1</td><td>&minus;0.00707</td><td>[&minus;0.01113, &minus;0.00295]</td><td class="y">yes</td><td>41 / 56</td><td>8.8%</td></tr>
+          <tr><td>b=2</td><td>&minus;0.00366</td><td>[&minus;0.00660, &minus;0.00059]</td><td class="y">yes</td><td>37 / 56</td><td>4.6%</td></tr>
+          <tr><td>b=3</td><td>&minus;0.00008</td><td>[&minus;0.00374, +0.00359]</td><td>no</td><td>30 / 56</td><td>0.1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px">The effect is real at b=1 and b=2 and vanishes at b=3. But size matters
+      more than significance here: the largest advantage is 0.007 mean g-value against a baseline lift of
+      0.080, so payload-driven selection accounts for under a tenth of the removal. The other nine tenths
+      come from the edit rate, which the control matches exactly. An attacker gains essentially nothing
+      from SynSteg's machinery that they could not get by picking words out of a hat — and pays the same
+      tenfold perplexity penalty either way.</p>
+  </section>
+
+  <section>
+    <h2>The readable attack leaves the watermark intact</h2>
+    <p class="sec-note">Raw WordNet substitution overstates the damage a real attacker would accept, since
+      it ignores context. Restricting substitutions to those a masked language model finds plausible
+      in place gives a fair picture of what removal costs when the text still has to read well.</p>
+    <div class="tablewrap">
+      <table>
+        <caption>Table 4 &mdash; Fluency-filtered substitution at b=2. A wider margin admits more aggressive swaps.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Arm</th>
+            <th scope="col">AUC</th>
+            <th scope="col">TPR @1% FPR</th>
+            <th scope="col">Mean g</th>
+            <th scope="col">Signal left</th>
+            <th scope="col">Edit rate</th>
+            <th scope="col">Bits/text</th>
+            <th scope="col">Perplexity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="base"><td>No attack</td><td>1.000</td><td>1.000</td><td>0.5803</td><td>100.0%</td><td>0.000</td><td>0</td><td>15.1</td></tr>
+          <tr><td>Fluency margin 1.0</td><td class="n">1.000</td><td class="n">1.000</td><td>0.5719</td><td>89.5%</td><td>0.006</td><td>2</td><td class="y">16.5 1.1&times;</td></tr>
+          <tr><td>Fluency margin 3.0</td><td class="n">1.000</td><td class="n">1.000</td><td>0.5670</td><td>83.4%</td><td>0.022</td><td>10</td><td class="y">17.6 1.2&times;</td></tr>
+          <tr><td>Fluency margin 6.0</td><td class="n">1.000</td><td class="n">1.000</td><td>0.5531</td><td>66.1%</td><td>0.068</td><td>33</td><td class="y">22.7 1.5&times;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px">At every quality-preserving operating point the detector is still perfect —
+      not merely good, but catching every watermarked text at a 1% false positive rate. Even the loosest
+      filter, which already costs 50% more perplexity and rewrites one word in fifteen, leaves two-thirds
+      of the watermark signal. Payload capacity collapses in step: 33 bits per text, against 160 for the
+      unrestricted attack.</p>
+  </section>
+
+  <section>
+    <h2>The corner that matters is empty</h2>
+    <figure>
+      <div class="chart">
+        <svg viewBox="0 0 640 400" role="img" aria-label="Scatter plot of watermark signal remaining against perplexity cost. Fluency-preserving attacks cluster at low cost and high remaining signal; aggressive attacks cluster at high cost and low remaining signal. No point occupies the low-cost, low-signal region.">
+          <defs>
+            <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="7" stroke="var(--crit)" stroke-width="1" opacity=".22"/>
+            </pattern>
+          </defs>
+
+          <rect x="60" y="218" width="79" height="102" fill="url(#hatch)" stroke="var(--crit)" stroke-width="1" stroke-dasharray="4 3" opacity=".85"/>
+          <text x="152" y="252" font-size="12" font-weight="600" fill="var(--crit)">No attack lands here</text>
+          <text x="152" y="269" font-size="11.5" fill="var(--muted)">cheap to run, watermark gone</text>
+
+          <line x1="60" y1="320" x2="612" y2="320" stroke="var(--ink)" stroke-width="1.2"/>
+          <line x1="60" y1="30" x2="60" y2="320" stroke="var(--ink)" stroke-width="1.2"/>
+
+          <g stroke="var(--hair)" stroke-width="1">
+            <line x1="60" y1="30" x2="612" y2="30"/>
+            <line x1="60" y1="102.5" x2="612" y2="102.5"/>
+            <line x1="60" y1="175" x2="612" y2="175"/>
+            <line x1="60" y1="247.5" x2="612" y2="247.5"/>
+          </g>
+          <g class="mono" font-size="10.5" fill="var(--muted)" text-anchor="end">
+            <text x="52" y="34">100%</text>
+            <text x="52" y="106.5">75%</text>
+            <text x="52" y="179">50%</text>
+            <text x="52" y="251.5">25%</text>
+            <text x="52" y="324">0%</text>
+          </g>
+          <g class="mono" font-size="10.5" fill="var(--muted)" text-anchor="middle">
+            <text x="60" y="338">1&#215;</text>
+            <text x="197" y="338">4.5&#215;</text>
+            <text x="335" y="338">8&#215;</text>
+            <text x="472" y="338">11.5&#215;</text>
+            <text x="610" y="338">15&#215;</text>
+          </g>
+          <text x="336" y="364" font-size="12.5" fill="var(--ink)" text-anchor="middle">Perplexity cost of the attack (multiple of unattacked text)</text>
+          <text x="-175" y="16" transform="rotate(-90)" font-size="12.5" fill="var(--ink)" text-anchor="middle">Watermark signal remaining</text>
+
+          <g fill="var(--accent-2)">
+            <circle cx="60" cy="30" r="5.5"/>
+            <circle cx="63.9" cy="60.4" r="5.5"/>
+            <circle cx="67.9" cy="78.1" r="5.5"/>
+            <circle cx="79.6" cy="128.3" r="5.5"/>
+          </g>
+          <text x="96" y="100" font-size="12" font-weight="600" fill="var(--accent-2)">Readable attacks</text>
+          <text x="96" y="116" font-size="11.5" fill="var(--muted)">detector still perfect</text>
+
+          <g fill="var(--accent)">
+            <circle cx="397.9" cy="253.3" r="5.5"/>
+            <circle cx="433.2" cy="306.4" r="5.5"/>
+            <circle cx="586.4" cy="298.0" r="5.5"/>
+          </g>
+          <g fill="none" stroke="var(--muted)" stroke-width="1.6">
+            <circle cx="323.2" cy="256.5" r="5.5"/>
+            <circle cx="421.4" cy="280.6" r="5.5"/>
+            <circle cx="496.1" cy="291.0" r="5.5"/>
+          </g>
+          <text x="310" y="200" font-size="12" font-weight="600" fill="var(--accent)">Aggressive attacks</text>
+          <text x="310" y="216" font-size="11.5" fill="var(--muted)">watermark suppressed, text destroyed</text>
+
+          <g transform="translate(430,44)">
+            <circle cx="0" cy="0" r="5.5" fill="var(--accent)"/>
+            <text x="12" y="4" font-size="11.5" fill="var(--ink)">SynSteg</text>
+            <circle cx="0" cy="20" r="5.5" fill="none" stroke="var(--muted)" stroke-width="1.6"/>
+            <text x="12" y="24" font-size="11.5" fill="var(--ink)">Random control</text>
+            <circle cx="0" cy="40" r="5.5" fill="var(--accent-2)"/>
+            <text x="12" y="44" font-size="11.5" fill="var(--ink)">Fluency-filtered</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Every measured configuration sits either high-left (readable, watermarked) or
+        low-right (unwatermarked, unreadable). A usable removal attack would occupy the hatched region,
+        and nothing does. The hollow control markers sit among the filled SynSteg markers rather than
+        well above them — that proximity, not any single point, is the finding.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>What the aggressive attack does to the text</h2>
+    <p class="sec-note">The perplexity multiplier is abstract; the output is not. Both passages are the
+      opening of the same generated paragraph.</p>
+    <div class="samples">
+      <div class="sample">
+        <span class="tag">Watermarked, unattacked &mdash; perplexity 15.1</span>
+        <p>Technology has profoundly transformed every aspect of human life, both positively and
+          negatively, shaping societies in profound ways. On one hand, technology offers unprecedented
+          opportunities for communication, commerce, entertainment, and education. It facilitates the
+          exchange of vast amounts of information across borders&hellip;</p>
+      </div>
+      <div class="sample">
+        <span class="tag">SynSteg b=2 &mdash; perplexity 217.8</span>
+        <p>Technology has profoundly transform every facet of human <mark>aliveness</mark>, both
+          positively and negatively, shaping <mark>companionship</mark> in <mark>sound agency</mark>. On
+          one <mark>give</mark>, technology extend unprecedented opportunities for communication,
+          <mark>commercialism</mark>, entertainment, and education. It <mark>ease</mark> the
+          <mark>commutation</mark> of <mark>brobdingnagian</mark> amounts of <mark>entropy</mark> across
+          <mark>border</mark>&hellip;</p>
+      </div>
+    </div>
+    <p style="margin-top:18px">This is what a 14&times; perplexity increase looks like. Any classifier
+      that flags machine-mangled prose — or any human reader — identifies this instantly, so suppressing
+      the watermark here has not bought the attacker anonymity. It has traded one detectable signature
+      for a louder one.</p>
+  </section>
+
+  <section class="caveats">
+    <h2>What this does not show</h2>
+    <ul>
+      <li><b>This is a proxy, not real Claude output.</b> Anthropic's watermark key and detector are
+        private. The measurement uses an open SynthID-Text instance, which is the same algorithm family
+        by Anthropic's own description, but their parameters, tournament depth, and detector are
+        unknown. Absolute numbers would shift; the shape of the trade-off should not.</li>
+      <li><b>The generator is small.</b> Qwen2.5-0.5B-Instruct at roughly 185 words per text. Longer
+        texts carry more n-grams and are <em>harder</em> to scrub, so this setting favours the attacker.</li>
+      <li><b>Four degenerate generations were dropped.</b> The original 60 included texts as short as
+        three words, which carry too few n-grams to score in either direction. Excluding them is why
+        n = 56.</li>
+      <li><b>The synonym source is WordNet, not GPT-4o.</b> The repository's encoder queries GPT-4o per
+        five-word chunk. WordNet is context-blind, which is exactly why the raw arm reads so badly; the
+        fluency-filtered arm is the closer analogue of GPT-4o quality. Running the real encoder on these
+        containers would tighten the quality estimate and is the natural next step.</li>
+      <li><b>Only the mean g-value detector was used.</b> The Bayesian detector in the SynthID paper is
+        strictly stronger, so these AUCs are a lower bound on detectability — the real watermark is
+        harder to remove than shown here, not easier.</li>
+      <li><b>C2PA metadata is out of scope.</b> The file-level provenance signature Anthropic attaches
+        is separate from the text watermark and is stripped by any format change or copy-paste.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Reproducing this</h2>
+    <p class="sec-note">The corpus is built once from texts already on disk; every run after that is
+      pure scoring. A full sweep takes about four minutes on an M-series laptop using the MPS backend.</p>
+    <pre><code>synthid_lib.py        SynthID generation + mean g-value detector, AUC, TPR@FPR
+attacks.py            SynSteg substitution, random control, shared lexicon
+fluent_attack.py      masked-LM fluency filter over candidate synonyms
+build_corpus.py       freezes positives + IMDB negatives to wm_corpus.jsonl
+check_null.py         verifies the negatives sit at the 0.5 null
+run_from_corpus.py    all arms, scored from the frozen corpus, no generation
+paired_test.py        bootstrap CI on the SynSteg-minus-control difference
+summarize_watermark.py  flattens results into the tables above
+
+python build_corpus.py                     # once
+python check_null.py                       # validate before trusting any AUC
+python run_from_corpus.py --bits 1,2,3 --margins 1.0,3.0,6.0
+python paired_test.py
+python summarize_watermark.py results/watermark_corpus.json</code></pre>
+  </section>
+
+  <footer>
+    <p>Companion to the SynSteg vs. Conversation-Steganography benchmark. Detector null for the mean
+      g-value statistic is 0.5000; the IMDB negative corpus measured 0.49757, within 1.5 standard errors
+      of the null, confirming the detector is unbiased on unwatermarked human text.</p>
+  </footer>
+
+</div>

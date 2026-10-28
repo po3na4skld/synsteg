@@ -1,0 +1,1141 @@
+{
+  "uuid": "546d5ef7-3720-493a-ba37-3a1826d45214",
+  "message": "01111111011111110111110111100010010111101110011000111101010011010111001011011010001111000010001011101001000001001011000001111010",
+  "secret_key": [
+    {
+      "Average": {
+        "0000": "Mean",
+        "0001": "Median",
+        "0010": "Mode",
+        "0011": "Typical",
+        "0100": "Standard",
+        "0101": "Normal",
+        "0110": "Usual",
+        "0111": "Regular",
+        "1000": "Ordinary",
+        "1001": "Common",
+        "1010": "General",
+        "1011": "Intermediate",
+        "1100": "Midpoint",
+        "1101": "Central",
+        "1110": "Middle",
+        "1111": "Centralized"
+      }
+    },
+    {
+      "can": {
+        "0000": "may",
+        "0001": "might",
+        "0010": "could",
+        "0011": "is able to",
+        "0100": "is capable of",
+        "0101": "has the ability to",
+        "0110": "has the capacity to",
+        "0111": "is allowed to",
+        "1000": "is permitted to",
+        "1001": "is possible to",
+        "1010": "is feasible to",
+        "1011": "is authorized to",
+        "1100": "is empowered to",
+        "1101": "is equipped to",
+        "1110": "is enabled to",
+        "1111": "is competent to"
+      }
+    },
+    {
+      "be": {
+        "0000": "exist",
+        "0001": "occur",
+        "0010": "happen",
+        "0011": "take place",
+        "0100": "remain",
+        "0101": "stay",
+        "0110": "continue",
+        "0111": "last",
+        "1000": "endure",
+        "1001": "survive",
+        "1010": "persist",
+        "1011": "prevail",
+        "1100": "linger",
+        "1101": "reside",
+        "1110": "dwell",
+        "1111": "inhabit"
+      }
+    },
+    {
+      "defined": {
+        "0000": "explained",
+        "0001": "described",
+        "0010": "outlined",
+        "0011": "characterized",
+        "0100": "specified",
+        "0101": "represented",
+        "0110": "expressed",
+        "0111": "clarified",
+        "1000": "delineated",
+        "1001": "determined",
+        "1010": "labeled",
+        "1011": "identified",
+        "1100": "set forth",
+        "1101": "detailed",
+        "1110": "expounded",
+        "1111": "interpreted"
+      }
+    },
+    {
+      "as": {
+        "0000": "like",
+        "0001": "similar to",
+        "0010": "in the manner of",
+        "0011": "in the form of",
+        "0100": "such as",
+        "0101": "in the guise of",
+        "0110": "in the style of",
+        "0111": "akin to",
+        "1000": "corresponding to",
+        "1001": "in accordance with",
+        "1010": "in keeping with",
+        "1011": "in line with",
+        "1100": "congruent with",
+        "1101": "resembling",
+        "1110": "tantamount to",
+        "1111": "equivalent to"
+      }
+    },
+    {
+      "the": {
+        "0000": "this",
+        "0001": "that",
+        "0010": "these",
+        "0011": "those",
+        "0100": "such",
+        "0101": "said",
+        "0110": "aforementioned",
+        "0111": "aforestated",
+        "1000": "particular",
+        "1001": "specific",
+        "1010": "certain",
+        "1011": "noted",
+        "1100": "named",
+        "1101": "indicated",
+        "1110": "mentioned",
+        "1111": "designated"
+      }
+    },
+    {
+      "sum": {
+        "0000": "total",
+        "0001": "aggregate",
+        "0010": "amount",
+        "0011": "entirety",
+        "0100": "whole",
+        "0101": "cumulative",
+        "0110": "summation",
+        "0111": "addition",
+        "1000": "count",
+        "1001": "tally",
+        "1010": "grand",
+        "1011": "accumulation",
+        "1100": "result",
+        "1101": "figure",
+        "1110": "quantity",
+        "1111": "synopsis"
+      }
+    },
+    {
+      "of": {
+        "0000": "regarding",
+        "0001": "concerning",
+        "0010": "pertaining",
+        "0011": "relating",
+        "0100": "involving",
+        "0101": "about",
+        "0110": "with",
+        "0111": "containing",
+        "1000": "including",
+        "1001": "comprising",
+        "1010": "encompassing",
+        "1011": "covering",
+        "1100": "touching",
+        "1101": "featuring",
+        "1110": "in",
+        "1111": "from"
+      }
+    },
+    {
+      "all": {
+        "0000": "every",
+        "0001": "each",
+        "0010": "entire",
+        "0011": "whole",
+        "0100": "total",
+        "0101": "complete",
+        "0110": "full",
+        "0111": "utter",
+        "1000": "everybody",
+        "1001": "everyone",
+        "1010": "everything",
+        "1011": "the",
+        "1100": "any",
+        "1101": "one",
+        "1110": "everywhere",
+        "1111": "altogether"
+      }
+    },
+    {
+      "the": {
+        "0000": "this",
+        "0001": "that",
+        "0010": "these",
+        "0011": "those",
+        "0100": "such",
+        "0101": "said",
+        "0110": "aforementioned",
+        "0111": "aforestated",
+        "1000": "particular",
+        "1001": "specific",
+        "1010": "certain",
+        "1011": "noted",
+        "1100": "named",
+        "1101": "indicated",
+        "1110": "mentioned",
+        "1111": "designated"
+      }
+    },
+    {
+      "numbers": {
+        "0000": "figures",
+        "0001": "digits",
+        "0010": "values",
+        "0011": "numerals",
+        "0100": "quantities",
+        "0101": "amounts",
+        "0110": "counts",
+        "0111": "sums",
+        "1000": "totals",
+        "1001": "enumerations",
+        "1010": "tallies",
+        "1011": "statistics",
+        "1100": "metrics",
+        "1101": "data",
+        "1110": "units",
+        "1111": "elements"
+      }
+    },
+    {
+      "divided": {
+        "0000": "split",
+        "0001": "separated",
+        "0010": "partitioned",
+        "0011": "distributed",
+        "0100": "allocated",
+        "0101": "apportioned",
+        "0110": "segmented",
+        "0111": "fractioned",
+        "1000": "dissected",
+        "1001": "cleaved",
+        "1010": "bisected",
+        "1011": "halved",
+        "1100": "severed",
+        "1101": "disjoined",
+        "1110": "detached",
+        "1111": "parted"
+      }
+    },
+    {
+      "by": {
+        "0000": "through",
+        "0001": "via",
+        "0010": "using",
+        "0011": "with",
+        "0100": "along",
+        "0101": "over",
+        "0110": "across",
+        "0111": "near",
+        "1000": "beside",
+        "1001": "past",
+        "1010": "in",
+        "1011": "at",
+        "1100": "on",
+        "1101": "next to",
+        "1110": "around",
+        "1111": "adjacent to"
+      }
+    },
+    {
+      "the": {
+        "0000": "a",
+        "0001": "this",
+        "0010": "that",
+        "0011": "these",
+        "0100": "those",
+        "0101": "such",
+        "0110": "every",
+        "0111": "certain",
+        "1000": "any",
+        "1001": "each",
+        "1010": "its",
+        "1011": "our",
+        "1100": "his",
+        "1101": "her",
+        "1110": "their",
+        "1111": "one"
+      }
+    },
+    {
+      "total": {
+        "0000": "sum",
+        "0001": "aggregate",
+        "0010": "whole",
+        "0011": "entirety",
+        "0100": "amount",
+        "0101": "quantity",
+        "0110": "full",
+        "0111": "complete",
+        "1000": "overall",
+        "1001": "gross",
+        "1010": "cumulative",
+        "1011": "combined",
+        "1100": "entire",
+        "1101": "integral",
+        "1110": "net",
+        "1111": "all"
+      }
+    },
+    {
+      "number": {
+        "0000": "quantity",
+        "0001": "total",
+        "0010": "count",
+        "0011": "sum",
+        "0100": "amount",
+        "0101": "figure",
+        "0110": "digit",
+        "0111": "integer",
+        "1000": "numeral",
+        "1001": "tally",
+        "1010": "aggregate",
+        "1011": "enumeration",
+        "1100": "whole",
+        "1101": "entirety",
+        "1110": "volume",
+        "1111": "bulk"
+      }
+    },
+    {
+      "of": {
+        "0000": "concerning",
+        "0001": "regarding",
+        "0010": "about",
+        "0011": "pertaining to",
+        "0100": "relating to",
+        "0101": "involving",
+        "0110": "with respect to",
+        "0111": "in connection with",
+        "1000": "on",
+        "1001": "regarding",
+        "1010": "touching",
+        "1011": "dealing with",
+        "1100": "as to",
+        "1101": "as regards",
+        "1110": "apropos",
+        "1111": "with reference to"
+      }
+    },
+    {
+      "values": {
+        "0000": "figures",
+        "0001": "numbers",
+        "0010": "amounts",
+        "0011": "totals",
+        "0100": "sums",
+        "0101": "quantities",
+        "0110": "statistics",
+        "0111": "calculations",
+        "1000": "data",
+        "1001": "enumerations",
+        "1010": "measures",
+        "1011": "metrics",
+        "1100": "scores",
+        "1101": "counts",
+        "1110": "tallies",
+        "1111": "indices"
+      }
+    },
+    {
+      "A": {
+        "0000": "One",
+        "0001": "Single",
+        "0010": "Sole",
+        "0011": "Lone",
+        "0100": "Unique",
+        "0101": "Solitary",
+        "0110": "Individual",
+        "0111": "Particular",
+        "1000": "Specific",
+        "1001": "Certain",
+        "1010": "Definite",
+        "1011": "Distinct",
+        "1100": "Exclusive",
+        "1101": "Singular",
+        "1110": "Isolated",
+        "1111": "Special"
+      }
+    },
+    {
+      "mean": {
+        "0000": "average",
+        "0001": "median",
+        "0010": "norm",
+        "0011": "midpoint",
+        "0100": "center",
+        "0101": "middle",
+        "0110": "standard",
+        "0111": "mid-range",
+        "1000": "typical value",
+        "1001": "central value",
+        "1010": "mean value",
+        "1011": "arithmetic mean",
+        "1100": "central tendency",
+        "1101": "expected value",
+        "1110": "statistical average",
+        "1111": "middle point"
+      }
+    },
+    {
+      "is": {
+        "0000": "exists",
+        "0001": "remains",
+        "0010": "stands",
+        "0011": "lies",
+        "0100": "sits",
+        "0101": "resides",
+        "0110": "dwells",
+        "0111": "persists",
+        "1000": "endures",
+        "1001": "subsists",
+        "1010": "prevails",
+        "1011": "occurs",
+        "1100": "appears",
+        "1101": "materializes",
+        "1110": "manifests",
+        "1111": "unfolds"
+      }
+    },
+    {
+      "defined": {
+        "0000": "characterized",
+        "0001": "delineated",
+        "0010": "specified",
+        "0011": "described",
+        "0100": "explained",
+        "0101": "outlined",
+        "0110": "clarified",
+        "0111": "interpreted",
+        "1000": "expounded",
+        "1001": "elucidated",
+        "1010": "detailed",
+        "1011": "portrayed",
+        "1100": "depicted",
+        "1101": "identified",
+        "1110": "labeled",
+        "1111": "denoted"
+      }
+    },
+    {
+      "as": {
+        "0000": "like",
+        "0001": "in the role of",
+        "0010": "in the capacity of",
+        "0011": "in the form of",
+        "0100": "in the guise of",
+        "0101": "in the shape of",
+        "0110": "in the character of",
+        "0111": "similar to",
+        "1000": "in the likeness of",
+        "1001": "in the manner of",
+        "1010": "such as",
+        "1011": "in the style of",
+        "1100": "in the fashion of",
+        "1101": "akin to",
+        "1110": "resembling",
+        "1111": "along the lines of"
+      }
+    },
+    {
+      "the": {
+        "0000": "this",
+        "0001": "that",
+        "0010": "a",
+        "0011": "an",
+        "0100": "every",
+        "0101": "each",
+        "0110": "those",
+        "0111": "these",
+        "1000": "such",
+        "1001": "one",
+        "1010": "some",
+        "1011": "certain",
+        "1100": "any",
+        "1101": "its",
+        "1110": "his",
+        "1111": "her"
+      }
+    },
+    {
+      "mathematical": {
+        "0000": "arithmetical",
+        "0001": "algebraic",
+        "0010": "geometrical",
+        "0011": "statistical",
+        "0100": "trigonometric",
+        "0101": "numerical",
+        "0110": "quantitative",
+        "0111": "computational",
+        "1000": "analytical",
+        "1001": "calculus-based",
+        "1010": "formulaic",
+        "1011": "equational",
+        "1100": "theoretical",
+        "1101": "probabilistic",
+        "1110": "logical",
+        "1111": "structural"
+      }
+    },
+    {
+      "average": {
+        "0000": "mean",
+        "0001": "median",
+        "0010": "mode",
+        "0011": "norm",
+        "0100": "middle",
+        "0101": "standard",
+        "0110": "typical",
+        "0111": "usual",
+        "1000": "common",
+        "1001": "ordinary",
+        "1010": "regular",
+        "1011": "standardized",
+        "1100": "par",
+        "1101": "customary",
+        "1110": "conventional",
+        "1111": "general"
+      }
+    },
+    {
+      "of": {
+        "0000": "from",
+        "0001": "belonging to",
+        "0010": "pertaining to",
+        "0011": "associated with",
+        "0100": "connected to",
+        "0101": "relating to",
+        "0110": "involving",
+        "0111": "linked to",
+        "1000": "concerning",
+        "1001": "regarding",
+        "1010": "derived from",
+        "1011": "as part of",
+        "1100": "composed of",
+        "1101": "characteristic of",
+        "1110": "constituting",
+        "1111": "indicative of"
+      }
+    },
+    {
+      "the": {
+        "0000": "a",
+        "0001": "this",
+        "0010": "that",
+        "0011": "these",
+        "0100": "those",
+        "0101": "such",
+        "0110": "my",
+        "0111": "your",
+        "1000": "his",
+        "1001": "her",
+        "1010": "its",
+        "1011": "our",
+        "1100": "their",
+        "1101": "one",
+        "1110": "any",
+        "1111": "each"
+      }
+    },
+    {
+      "set": {
+        "0000": "collection",
+        "0001": "group",
+        "0010": "series",
+        "0011": "batch",
+        "0100": "array",
+        "0101": "assortment",
+        "0110": "cluster",
+        "0111": "bunch",
+        "1000": "lot",
+        "1001": "pack",
+        "1010": "suite",
+        "1011": "range",
+        "1100": "selection",
+        "1101": "assemblage",
+        "1110": "aggregate",
+        "1111": "conglomeration"
+      }
+    },
+    {
+      "of": {
+        "0000": "from",
+        "0001": "belonging to",
+        "0010": "pertaining to",
+        "0011": "associated with",
+        "0100": "connected to",
+        "0101": "relating to",
+        "0110": "involving",
+        "0111": "linked to",
+        "1000": "concerning",
+        "1001": "regarding",
+        "1010": "derived from",
+        "1011": "as part of",
+        "1100": "composed of",
+        "1101": "characteristic of",
+        "1110": "constituting",
+        "1111": "indicative of"
+      }
+    },
+    {
+      "two": {
+        "0000": "pair",
+        "0001": "couple",
+        "0010": "duo",
+        "0011": "dyad",
+        "0100": "twin",
+        "0101": "brace",
+        "0110": "twain",
+        "0111": "double",
+        "1000": "tandem",
+        "1001": "binary",
+        "1010": "dual",
+        "1011": "twosome",
+        "1100": "yoke",
+        "1101": "duplet",
+        "1110": "gemini",
+        "1111": "doppel"
+      }
+    },
+    {
+      "or": {
+        "0000": "or else",
+        "0001": "alternatively",
+        "0010": "otherwise",
+        "0011": "in other words",
+        "0100": "on the other hand",
+        "0101": "as an alternative",
+        "0110": "rather",
+        "0111": "in place of",
+        "1000": "as another choice",
+        "1001": "in lieu of",
+        "1010": "instead of",
+        "1011": "on the flip side",
+        "1100": "by contrast",
+        "1101": "to the contrary",
+        "1110": "then again",
+        "1111": "conversely"
+      }
+    },
+    {
+      "more": {
+        "0000": "additional",
+        "0001": "extra",
+        "0010": "further",
+        "0011": "added",
+        "0100": "incremental",
+        "0101": "increased",
+        "0110": "supplementary",
+        "0111": "greater",
+        "1000": "surplus",
+        "1001": "excess",
+        "1010": "greater number",
+        "1011": "greater amount",
+        "1100": "increased quantity",
+        "1101": "further quantity",
+        "1110": "enhanced",
+        "1111": "expanded"
+      }
+    },
+    {
+      "data": {
+        "0000": "information",
+        "0001": "figures",
+        "0010": "statistics",
+        "0011": "facts",
+        "0100": "details",
+        "0101": "records",
+        "0110": "inputs",
+        "0111": "outputs",
+        "1000": "evidence",
+        "1001": "intelligence",
+        "1010": "numbers",
+        "1011": "results",
+        "1100": "findings",
+        "1101": "knowledge",
+        "1110": "numbers",
+        "1111": "metrics"
+      }
+    },
+    {
+      "values": {
+        "0000": "numbers",
+        "0001": "amounts",
+        "0010": "quantities",
+        "0011": "figures",
+        "0100": "totals",
+        "0101": "units",
+        "0110": "magnitudes",
+        "0111": "measures",
+        "1000": "scores",
+        "1001": "worths",
+        "1010": "prices",
+        "1011": "rates",
+        "1100": "levels",
+        "1101": "degrees",
+        "1110": "increments",
+        "1111": "estimates"
+      }
+    },
+    {
+      "Average": {
+        "0000": "Mean",
+        "0001": "Median",
+        "0010": "Mode",
+        "0011": "Normal",
+        "0100": "Standard",
+        "0101": "Typical",
+        "0110": "Ordinary",
+        "0111": "Common",
+        "1000": "Usual",
+        "1001": "Regular",
+        "1010": "Central",
+        "1011": "Moderate",
+        "1100": "Medium",
+        "1101": "Fair",
+        "1110": "Balanced",
+        "1111": "General"
+      }
+    },
+    {
+      "is": {
+        "0000": "exists",
+        "0001": "remains",
+        "0010": "stands",
+        "0011": "lies",
+        "0100": "sits",
+        "0101": "stays",
+        "0110": "persists",
+        "0111": "subsists",
+        "1000": "occupies",
+        "1001": "resides",
+        "1010": "prevails",
+        "1011": "occurs",
+        "1100": "happens",
+        "1101": "takes place",
+        "1110": "appears",
+        "1111": "emerges"
+      }
+    },
+    {
+      "usually": {
+        "0000": "generally",
+        "0001": "normally",
+        "0010": "typically",
+        "0011": "ordinarily",
+        "0100": "commonly",
+        "0101": "habitually",
+        "0110": "frequently",
+        "0111": "often",
+        "1000": "routinely",
+        "1001": "customarily",
+        "1010": "regularly",
+        "1011": "repeatedly",
+        "1100": "traditionally",
+        "1101": "fundamentally",
+        "1110": "mostly",
+        "1111": "predominantly"
+      }
+    },
+    {
+      "defined": {
+        "0000": "described",
+        "0001": "characterized",
+        "0010": "denoted",
+        "0011": "depicted",
+        "0100": "specified",
+        "0101": "outlined",
+        "0110": "delineated",
+        "0111": "explained",
+        "1000": "clarified",
+        "1001": "interpreted",
+        "1010": "illustrated",
+        "1011": "expressed",
+        "1100": "elucidated",
+        "1101": "established",
+        "1110": "designated",
+        "1111": "identified"
+      }
+    },
+    {
+      "as": {
+        "0000": "like",
+        "0001": "similar to",
+        "0010": "in the manner of",
+        "0011": "in the form of",
+        "0100": "such as",
+        "0101": "equivalent to",
+        "0110": "in the capacity of",
+        "0111": "acting as",
+        "1000": "in the role of",
+        "1001": "in the guise of",
+        "1010": "functioning as",
+        "1011": "serving as",
+        "1100": "seen as",
+        "1101": "considered as",
+        "1110": "regarded as",
+        "1111": "thought of as"
+      }
+    },
+    {
+      "mean": {
+        "0000": "average",
+        "0001": "median",
+        "0010": "norm",
+        "0011": "standard",
+        "0100": "typical",
+        "0101": "central",
+        "0110": "middle",
+        "0111": "midpoint",
+        "1000": "intermediate",
+        "1001": "mean value",
+        "1010": "mean level",
+        "1011": "mean rate",
+        "1100": "mean quantity",
+        "1101": "mean amount",
+        "1110": "mean proportion",
+        "1111": "mean figure"
+      }
+    },
+    {
+      "or": {
+        "0000": "or else",
+        "0001": "alternatively",
+        "0010": "otherwise",
+        "0011": "on the other hand",
+        "0100": "as an alternative",
+        "0101": "in other words",
+        "0110": "or rather",
+        "0111": "or instead",
+        "1000": "or even",
+        "1001": "or possibly",
+        "1010": "or maybe",
+        "1011": "or perhaps",
+        "1100": "or likewise",
+        "1101": "or conversely",
+        "1110": "or optionally",
+        "1111": "or additionally"
+      }
+    },
+    {
+      "arithmetic": {
+        "0000": "mathematical",
+        "0001": "numeric",
+        "0010": "algebraic",
+        "0011": "calculative",
+        "0100": "computational",
+        "0101": "analytical",
+        "0110": "arithmetical",
+        "0111": "quantitative",
+        "1000": "figural",
+        "1001": "statistical",
+        "1010": "metric",
+        "1011": "number-based",
+        "1100": "mathematic",
+        "1101": "number-crunching",
+        "1110": "math",
+        "1111": "ciphering"
+      }
+    },
+    {
+      "mean": {
+        "0000": "average",
+        "0001": "median",
+        "0010": "norm",
+        "0011": "standard",
+        "0100": "typical",
+        "0101": "central",
+        "0110": "middle",
+        "0111": "midpoint",
+        "1000": "intermediate",
+        "1001": "mean value",
+        "1010": "mean level",
+        "1011": "mean rate",
+        "1100": "mean quantity",
+        "1101": "mean amount",
+        "1110": "mean proportion",
+        "1111": "mean figure"
+      }
+    },
+    {
+      "Mean": {
+        "0000": "Average",
+        "0001": "Median",
+        "0010": "Norm",
+        "0011": "Standard",
+        "0100": "Typical",
+        "0101": "Central",
+        "0110": "Middle",
+        "0111": "Midpoint",
+        "1000": "Intermediate",
+        "1001": "Mean value",
+        "1010": "Mean level",
+        "1011": "Mean rate",
+        "1100": "Mean quantity",
+        "1101": "Mean amount",
+        "1110": "Mean proportion",
+        "1111": "Mean figure"
+      }
+    },
+    {
+      "is": {
+        "0000": "becomes",
+        "0001": "remains",
+        "0010": "stands",
+        "0011": "exists",
+        "0100": "serves",
+        "0101": "functions",
+        "0110": "acts",
+        "0111": "operates",
+        "1000": "lies",
+        "1001": "sits",
+        "1010": "rests",
+        "1011": "dwells",
+        "1100": "resides",
+        "1101": "persists",
+        "1110": "abides",
+        "1111": "continues"
+      }
+    },
+    {
+      "simply": {
+        "0000": "merely",
+        "0001": "just",
+        "0010": "only",
+        "0011": "plainly",
+        "0100": "straightforwardly",
+        "0101": "uncomplicatedly",
+        "0110": "easily",
+        "0111": "purely",
+        "1000": "solely",
+        "1001": "modestly",
+        "1010": "humbly",
+        "1011": "unpretentiously",
+        "1100": "artlessly",
+        "1101": "effortlessly",
+        "1110": "directly",
+        "1111": "smoothly"
+      }
+    },
+    {
+      "a": {
+        "0000": "one",
+        "0001": "any",
+        "0010": "an",
+        "0011": "each",
+        "0100": "every",
+        "0101": "per",
+        "0110": "some",
+        "0111": "single",
+        "1000": "particular",
+        "1001": "certain",
+        "1010": "individual",
+        "1011": "specific",
+        "1100": "definite",
+        "1101": "distinct",
+        "1110": "separate",
+        "1111": "unique"
+      }
+    },
+    {
+      "method": {
+        "0000": "technique",
+        "0001": "process",
+        "0010": "procedure",
+        "0011": "approach",
+        "0100": "system",
+        "0101": "strategy",
+        "0110": "way",
+        "0111": "manner",
+        "1000": "mode",
+        "1001": "means",
+        "1010": "style",
+        "1011": "plan",
+        "1100": "practice",
+        "1101": "formula",
+        "1110": "mechanism",
+        "1111": "tactic"
+      }
+    },
+    {
+      "of": {
+        "0000": "related to",
+        "0001": "concerning",
+        "0010": "regarding",
+        "0011": "pertaining to",
+        "0100": "associated with",
+        "0101": "linked to",
+        "0110": "involving",
+        "0111": "about",
+        "1000": "connected with",
+        "1001": "belonging to",
+        "1010": "characteristic of",
+        "1011": "typical of",
+        "1100": "indicative of",
+        "1101": "symbolizing",
+        "1110": "representing",
+        "1111": "denoting"
+      }
+    },
+    {
+      "describing": {
+        "0000": "depicting",
+        "0001": "portraying",
+        "0010": "explaining",
+        "0011": "illustrating",
+        "0100": "detailing",
+        "0101": "outlining",
+        "0110": "characterizing",
+        "0111": "representing",
+        "1000": "expressing",
+        "1001": "narrating",
+        "1010": "delivering",
+        "1011": "relating",
+        "1100": "interpreting",
+        "1101": "presenting",
+        "1110": "rendering",
+        "1111": "reciting"
+      }
+    },
+    {
+      "the": {
+        "0000": "a",
+        "0001": "this",
+        "0010": "that",
+        "0011": "these",
+        "0100": "those",
+        "0101": "such",
+        "0110": "their",
+        "0111": "our",
+        "1000": "one",
+        "1001": "any",
+        "1010": "each",
+        "1011": "every",
+        "1100": "his",
+        "1101": "her",
+        "1110": "its",
+        "1111": "some"
+      }
+    },
+    {
+      "average": {
+        "0000": "mean",
+        "0001": "median",
+        "0010": "norm",
+        "0011": "standard",
+        "0100": "typical",
+        "0101": "usual",
+        "0110": "ordinary",
+        "0111": "common",
+        "1000": "regular",
+        "1001": "conventional",
+        "1010": "customary",
+        "1011": "normal",
+        "1100": "standardized",
+        "1101": "middle",
+        "1110": "midpoint",
+        "1111": "intermediate"
+      }
+    },
+    {
+      "of": {
+        "0000": "from",
+        "0001": "in",
+        "0010": "within",
+        "0011": "among",
+        "0100": "between",
+        "0101": "by",
+        "0110": "through",
+        "0111": "amid",
+        "1000": "about",
+        "1001": "regarding",
+        "1010": "concerning",
+        "1011": "pertaining",
+        "1100": "relating",
+        "1101": "linked",
+        "1110": "connected",
+        "1111": "associated"
+      }
+    },
+    {
+      "the": {
+        "0000": "a",
+        "0001": "this",
+        "0010": "that",
+        "0011": "these",
+        "0100": "those",
+        "0101": "such",
+        "0110": "their",
+        "0111": "our",
+        "1000": "one",
+        "1001": "any",
+        "1010": "each",
+        "1011": "every",
+        "1100": "his",
+        "1101": "her",
+        "1110": "its",
+        "1111": "some"
+      }
+    },
+    {
+      "sample": {
+        "0000": "example",
+        "0001": "specimen",
+        "0010": "instance",
+        "0011": "illustration",
+        "0100": "demonstration",
+        "0101": "case",
+        "0110": "prototype",
+        "0111": "model",
+        "1000": "exemplar",
+        "1001": "pattern",
+        "1010": "template",
+        "1011": "representation",
+        "1100": "prototype",
+        "1101": "archetype",
+        "1110": "paradigm",
+        "1111": "exhibit"
+      }
+    }
+  ],
+  "container": "Average can be defined as the sum of all the numbers divided by the total number of values. A mean is defined as the mathematical average of the set of two or more data values. Average is usually defined as mean or arithmetic mean. Mean is simply a method of describing the average of the sample.",
+  "encoded_message": "Regular is competent to last interpreted akin to indicated quantity pertaining complete mentioned units segmented with her amount entirety of calculations. Sole expected value prevails described in the fashion of a geometrical conventional regarding a array as part of pair in place of greater number data values. Average is usually defined as mean or arithmetic mean. Mean is simply a method of describing the average of the sample.",
+  "encoding_time_report": {
+    "secret_key_generation": 8.08
+  },
+  "encoding_usage_report": {
+    "secret_key_generation": {
+      "completion_tokens": 3988,
+      "prompt_tokens": 3612,
+      "total_tokens": 7600
+    }
+  },
+  "decoding_time": 0.0008540153503417969,
+  "decoded_message": "01111111011111110111110111100010010111101110011000111101010011010111001011011010001111000010001011101001000001001011000001111010",
+  "error_message": ""
+}

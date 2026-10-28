@@ -1,0 +1,4 @@
+# Optional: perplexity window / choice (4.7, 4.8, GPT-2 judge) and detector-guided key selection (4.3, RoBERTa D1)
+-r requirements.txt
+torch==2.14.0
+transformers==5.17.0

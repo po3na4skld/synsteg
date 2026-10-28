@@ -1,0 +1,2771 @@
+{
+  "uuid": "789dea82-e88b-4965-ac3b-7137df75b056",
+  "message": "1111101000010001101001010110101101101111000001101011100001110000001111001100001110110111111010000101111000100111110111011110101010101001000100010010001010100101001011110111110001001000011000110000001111110110010100001110010110100001100010100000110000011100",
+  "secret_key": [
+    {
+      "Pop": {
+        "0": "Popular",
+        "1": "Mainstream"
+      }
+    },
+    {
+      "culture": {
+        "00": "subculture",
+        "01": "civilization",
+        "10": "lifestyle",
+        "11": "society"
+      }
+    },
+    {
+      "has": {
+        "00": "possesses",
+        "01": "features",
+        "10": "holds",
+        "11": "contains"
+      }
+    },
+    {
+      "become": {
+        "00": "turned",
+        "01": "transformed",
+        "10": "evolved",
+        "11": "matured"
+      }
+    },
+    {
+      "an": {
+        "0": "an",
+        "1": "an"
+      }
+    },
+    {
+      "integral": {
+        "00": "essential",
+        "01": "fundamental",
+        "10": "crucial",
+        "11": "central"
+      }
+    },
+    {
+      "part": {
+        "00": "component",
+        "01": "element",
+        "10": "segment",
+        "11": "piece"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "our": {
+        "0": "our",
+        "1": "our"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "public",
+        "10": "nation",
+        "11": "populace"
+      }
+    },
+    {
+      "shaping": {
+        "00": "molding",
+        "01": "forming",
+        "10": "influencing",
+        "11": "crafting"
+      }
+    },
+    {
+      "our": {
+        "0": "our",
+        "1": "our"
+      }
+    },
+    {
+      "thoughts": {
+        "00": "ideas",
+        "01": "notions",
+        "10": "beliefs",
+        "11": "conceptions"
+      }
+    },
+    {
+      "beliefs": {
+        "00": "convictions",
+        "01": "creeds",
+        "10": "dogmas",
+        "11": "views"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "values": {
+        "00": "principles",
+        "01": "standards",
+        "10": "ethics",
+        "11": "morals"
+      }
+    },
+    {
+      "With": {
+        "0": "Amid",
+        "1": "Alongside"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "rise": {
+        "00": "emergence",
+        "01": "growth",
+        "10": "surge",
+        "11": "ascension"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "mass": {
+        "0": "widespread",
+        "1": "extensive"
+      }
+    },
+    {
+      "media": {
+        "00": "outlets",
+        "01": "channels",
+        "10": "platforms",
+        "11": "networks"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "internet": {
+        "00": "web",
+        "01": "net",
+        "10": "cyberspace",
+        "11": "global network"
+      }
+    },
+    {
+      "pop": {
+        "0": "pop",
+        "1": "pop"
+      }
+    },
+    {
+      "culture": {
+        "0": "culture",
+        "1": "culture"
+      }
+    },
+    {
+      "has": {
+        "0": "has",
+        "1": "has"
+      }
+    },
+    {
+      "become": {
+        "0": "become",
+        "1": "become"
+      }
+    },
+    {
+      "more": {
+        "00": "further",
+        "01": "additionally",
+        "10": "increasingly",
+        "11": "additionally"
+      }
+    },
+    {
+      "accessible": {
+        "00": "available",
+        "01": "attainable",
+        "10": "reachable",
+        "11": "obtainable"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "influential": {
+        "00": "powerful",
+        "01": "effective",
+        "10": "persuasive",
+        "11": "commanding"
+      }
+    },
+    {
+      "than": {
+        "0": "compared to",
+        "1": "over"
+      }
+    },
+    {
+      "ever": {
+        "00": "before",
+        "01": "previously",
+        "10": "formerly",
+        "11": "once"
+      }
+    },
+    {
+      "before": {
+        "00": "prior",
+        "01": "previously",
+        "10": "earlier",
+        "11": "ahead of"
+      }
+    },
+    {
+      "From": {
+        "0": "Ranging from",
+        "1": "Extending from"
+      }
+    },
+    {
+      "music": {
+        "00": "melodies",
+        "01": "tunes",
+        "10": "songs",
+        "11": "harmonies"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "movies": {
+        "00": "films",
+        "01": "cinema",
+        "10": "flicks",
+        "11": "pictures"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "fashion": {
+        "00": "style",
+        "01": "trend",
+        "10": "vogue",
+        "11": "couture"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "social": {
+        "00": "communal",
+        "01": "societal",
+        "10": "collective",
+        "11": "public"
+      }
+    },
+    {
+      "media": {
+        "0": "media",
+        "1": "media"
+      }
+    },
+    {
+      "pop": {
+        "0": "pop",
+        "1": "pop"
+      }
+    },
+    {
+      "culture": {
+        "0": "culture",
+        "1": "culture"
+      }
+    },
+    {
+      "has": {
+        "0": "has",
+        "1": "has"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "significant": {
+        "00": "notable",
+        "01": "considerable",
+        "10": "substantial",
+        "11": "meaningful"
+      }
+    },
+    {
+      "impact": {
+        "00": "effect",
+        "01": "influence",
+        "10": "imprint",
+        "11": "mark"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "society": {
+        "0": "society",
+        "1": "society"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "numerous": {
+        "00": "many",
+        "01": "countless",
+        "10": "myriad",
+        "11": "various"
+      }
+    },
+    {
+      "ways": {
+        "00": "methods",
+        "01": "approaches",
+        "10": "means",
+        "11": "modes"
+      }
+    },
+    {
+      "One": {
+        "0": "A single",
+        "1": "One particular"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "most": {
+        "00": "utmost",
+        "01": "greatest",
+        "10": "extremely",
+        "11": "highly"
+      }
+    },
+    {
+      "prominent": {
+        "00": "leading",
+        "01": "distinguished",
+        "10": "preeminent",
+        "11": "noteworthy"
+      }
+    },
+    {
+      "ways": {
+        "0": "ways",
+        "1": "ways"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "which": {
+        "0": "which",
+        "1": "which"
+      }
+    },
+    {
+      "pop": {
+        "0": "pop",
+        "1": "pop"
+      }
+    },
+    {
+      "culture": {
+        "0": "culture",
+        "1": "culture"
+      }
+    },
+    {
+      "influences": {
+        "00": "affects",
+        "01": "sways",
+        "10": "modifies",
+        "11": "alters"
+      }
+    },
+    {
+      "society": {
+        "0": "society",
+        "1": "society"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "through": {
+        "0": "via",
+        "1": "by way of"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "media": {
+        "0": "media",
+        "1": "media"
+      }
+    },
+    {
+      "Television": {
+        "00": "TV",
+        "01": "Broadcast",
+        "10": "Cable",
+        "11": "Satellite"
+      }
+    },
+    {
+      "shows": {
+        "00": "programs",
+        "01": "series",
+        "10": "broadcasts",
+        "11": "episodes"
+      }
+    },
+    {
+      "movies": {
+        "0": "movies",
+        "1": "movies"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "music": {
+        "0": "music",
+        "1": "music"
+      }
+    },
+    {
+      "are": {
+        "0": "are",
+        "1": "are"
+      }
+    },
+    {
+      "powerful": {
+        "00": "potent",
+        "01": "strong",
+        "10": "dominant",
+        "11": "forceful"
+      }
+    },
+    {
+      "tools": {
+        "00": "instruments",
+        "01": "devices",
+        "10": "mechanisms",
+        "11": "means"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "can": {
+        "00": "may",
+        "01": "might",
+        "10": "could",
+        "11": "is able to"
+      }
+    },
+    {
+      "shape": {
+        "00": "form",
+        "01": "define",
+        "10": "sculpt",
+        "11": "influence"
+      }
+    },
+    {
+      "public": {
+        "00": "community",
+        "01": "civil",
+        "10": "general",
+        "11": "societal"
+      }
+    },
+    {
+      "opinion": {
+        "00": "viewpoint",
+        "01": "perspective",
+        "10": "stance",
+        "11": "belief"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "influence": {
+        "0": "influence",
+        "1": "influence"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "behavior": {
+        "00": "conduct",
+        "01": "actions",
+        "10": "manners",
+        "11": "deportment"
+      }
+    },
+    {
+      "For": {
+        "0": "For",
+        "1": "For"
+      }
+    },
+    {
+      "example": {
+        "00": "instance",
+        "01": "illustration",
+        "10": "case",
+        "11": "sample"
+      }
+    },
+    {
+      "popular": {
+        "00": "well-liked",
+        "01": "favored",
+        "10": "in vogue",
+        "11": "trendy"
+      }
+    },
+    {
+      "TV": {
+        "00": "television",
+        "01": "broadcast",
+        "10": "cable",
+        "11": "satellite"
+      }
+    },
+    {
+      "shows": {
+        "0": "shows",
+        "1": "shows"
+      }
+    },
+    {
+      "often": {
+        "00": "frequently",
+        "01": "commonly",
+        "10": "regularly",
+        "11": "habitually"
+      }
+    },
+    {
+      "depict": {
+        "00": "portray",
+        "01": "represent",
+        "10": "illustrate",
+        "11": "describe"
+      }
+    },
+    {
+      "certain": {
+        "00": "specific",
+        "01": "particular",
+        "10": "some",
+        "11": "given"
+      }
+    },
+    {
+      "lifestyles": {
+        "00": "ways of life",
+        "01": "modes of living",
+        "10": "habits",
+        "11": "customs"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "beliefs": {
+        "0": "beliefs",
+        "1": "beliefs"
+      }
+    },
+    {
+      "as": {
+        "0": "equally",
+        "1": "inasmuch"
+      }
+    },
+    {
+      "desirable": {
+        "00": "coveted",
+        "01": "appealing",
+        "10": "attractive",
+        "11": "sought-after"
+      }
+    },
+    {
+      "leading": {
+        "00": "foremost",
+        "01": "primary",
+        "10": "principal",
+        "11": "premier"
+      }
+    },
+    {
+      "people": {
+        "00": "individuals",
+        "01": "persons",
+        "10": "folks",
+        "11": "citizens"
+      }
+    },
+    {
+      "to": {
+        "0": "toward",
+        "1": "towards"
+      }
+    },
+    {
+      "adopt": {
+        "00": "embrace",
+        "01": "espouse",
+        "10": "accept",
+        "11": "assume"
+      }
+    },
+    {
+      "these": {
+        "0": "the",
+        "1": "such"
+      }
+    },
+    {
+      "norms": {
+        "00": "standards",
+        "01": "conventions",
+        "10": "customs",
+        "11": "practices"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "along with"
+      }
+    },
+    {
+      "values": {
+        "00": "principles",
+        "01": "ethics",
+        "10": "morals",
+        "11": "standards"
+      }
+    },
+    {
+      "Similarly": {
+        "00": "Likewise",
+        "01": "In a similar fashion",
+        "10": "Correspondingly",
+        "11": "In the same way"
+      }
+    },
+    {
+      "music": {
+        "00": "melody",
+        "01": "tunes",
+        "10": "songs",
+        "11": "harmony"
+      }
+    },
+    {
+      "can": {
+        "0": "is able to",
+        "1": "may"
+      }
+    },
+    {
+      "inspire": {
+        "00": "motivate",
+        "01": "encourage",
+        "10": "stimulate",
+        "11": "spur"
+      }
+    },
+    {
+      "social": {
+        "0": "societal",
+        "1": "communal"
+      }
+    },
+    {
+      "change": {
+        "00": "transformation",
+        "01": "alteration",
+        "10": "shift",
+        "11": "transition"
+      }
+    },
+    {
+      "by": {
+        "0": "through",
+        "1": "with"
+      }
+    },
+    {
+      "reflecting": {
+        "00": "mirroring",
+        "01": "exhibiting",
+        "10": "demonstrating",
+        "11": "displaying"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "thoughts": {
+        "00": "ideas",
+        "01": "views",
+        "10": "opinions",
+        "11": "beliefs"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "concerns": {
+        "00": "worries",
+        "01": "issues",
+        "10": "anxieties",
+        "11": "preoccupations"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "particular": {
+        "0": "specific",
+        "1": "certain"
+      }
+    },
+    {
+      "generation": {
+        "0": "cohort",
+        "1": "age group"
+      }
+    },
+    {
+      "Moreover": {
+        "00": "Furthermore",
+        "01": "Additionally",
+        "10": "Besides",
+        "11": "Also"
+      }
+    },
+    {
+      "pop": {
+        "0": "popular",
+        "1": "mainstream"
+      }
+    },
+    {
+      "culture": {
+        "00": "civilization",
+        "01": "lifestyle",
+        "10": "society",
+        "11": "customs"
+      }
+    },
+    {
+      "plays": {
+        "00": "performs",
+        "01": "fulfills",
+        "10": "acts out",
+        "11": "executes"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "crucial": {
+        "00": "critical",
+        "01": "vital",
+        "10": "essential",
+        "11": "pivotal"
+      }
+    },
+    {
+      "role": {
+        "00": "part",
+        "01": "function",
+        "10": "position",
+        "11": "contribution"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "shaping": {
+        "00": "molding",
+        "01": "forming",
+        "10": "influencing",
+        "11": "determining"
+      }
+    },
+    {
+      "our": {
+        "0": "our",
+        "1": "our"
+      }
+    },
+    {
+      "identities": {
+        "00": "individualities",
+        "01": "personalities",
+        "10": "characters",
+        "11": "selfhoods"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "self-expression": {
+        "0": "self-disclosure",
+        "1": "personal expression"
+      }
+    },
+    {
+      "Fashion": {
+        "00": "Style",
+        "01": "Couture",
+        "10": "Dress",
+        "11": "Garb"
+      }
+    },
+    {
+      "trends": {
+        "00": "fashions",
+        "01": "vogues",
+        "10": "waves",
+        "11": "currents"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "instance": {
+        "0": "example",
+        "1": "case"
+      }
+    },
+    {
+      "are": {
+        "0": "are",
+        "1": "are"
+      }
+    },
+    {
+      "heavily": {
+        "00": "greatly",
+        "01": "intensely",
+        "10": "substantially",
+        "11": "significantly"
+      }
+    },
+    {
+      "influenced": {
+        "00": "affected",
+        "01": "swayed",
+        "10": "guided",
+        "11": "impacted"
+      }
+    },
+    {
+      "by": {
+        "0": "by",
+        "1": "by"
+      }
+    },
+    {
+      "pop": {
+        "0": "popular",
+        "1": "mainstream"
+      }
+    },
+    {
+      "culture": {
+        "00": "civilization",
+        "01": "lifestyle",
+        "10": "society",
+        "11": "customs"
+      }
+    },
+    {
+      "icons": {
+        "00": "symbols",
+        "01": "idols",
+        "10": "heroes",
+        "11": "representatives"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "celebrities": {
+        "00": "stars",
+        "01": "luminaries",
+        "10": "notables",
+        "11": "famous people"
+      }
+    },
+    {
+      "People": {
+        "00": "Individuals",
+        "01": "Folks",
+        "10": "Persons",
+        "11": "Humans"
+      }
+    },
+    {
+      "often": {
+        "00": "frequently",
+        "01": "regularly",
+        "10": "commonly",
+        "11": "habitually"
+      }
+    },
+    {
+      "emulate": {
+        "00": "imitate",
+        "01": "copy",
+        "10": "mimic",
+        "11": "replicate"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "favorite": {
+        "00": "favored",
+        "01": "preferred",
+        "10": "beloved",
+        "11": "cherished"
+      }
+    },
+    {
+      "celebrities'": {
+        "00": "idols'",
+        "01": "heroes'",
+        "10": "stars'",
+        "11": "icons'"
+      }
+    },
+    {
+      "style": {
+        "00": "fashion",
+        "01": "manner",
+        "10": "approach",
+        "11": "method"
+      }
+    },
+    {
+      "to": {
+        "0": "toward",
+        "1": "towards"
+      }
+    },
+    {
+      "feel": {
+        "0": "sense",
+        "1": "experience"
+      }
+    },
+    {
+      "more": {
+        "0": "further",
+        "1": "additionally"
+      }
+    },
+    {
+      "connected": {
+        "00": "linked",
+        "01": "associated",
+        "10": "related",
+        "11": "attached"
+      }
+    },
+    {
+      "to": {
+        "0": "toward",
+        "1": "towards"
+      }
+    },
+    {
+      "them": {
+        "0": "them",
+        "1": "them"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "to": {
+        "0": "toward",
+        "1": "towards"
+      }
+    },
+    {
+      "express": {
+        "00": "convey",
+        "01": "manifest",
+        "10": "demonstrate",
+        "11": "articulate"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "individuality": {
+        "00": "uniqueness",
+        "01": "singularity",
+        "10": "distinctness",
+        "11": "selfhood"
+      }
+    },
+    {
+      "Furthermore": {
+        "00": "Moreover",
+        "01": "Additionally",
+        "10": "Also",
+        "11": "What's more"
+      }
+    },
+    {
+      "pop": {
+        "00": "popular",
+        "01": "mainstream",
+        "10": "familiar",
+        "11": "well-liked"
+      }
+    },
+    {
+      "culture": {
+        "00": "civilization",
+        "01": "lifestyle",
+        "10": "society",
+        "11": "customs"
+      }
+    },
+    {
+      "also": {
+        "0": "too",
+        "1": "as well"
+      }
+    },
+    {
+      "influences": {
+        "00": "shapes",
+        "01": "modifies",
+        "10": "alters",
+        "11": "affects"
+      }
+    },
+    {
+      "our": {
+        "0": "our",
+        "1": "our"
+      }
+    },
+    {
+      "language": {
+        "00": "tongue",
+        "01": "speech",
+        "10": "lingo",
+        "11": "dialect"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "communication": {
+        "00": "interaction",
+        "01": "dialogue",
+        "10": "correspondence",
+        "11": "discourse"
+      }
+    },
+    {
+      "style": {
+        "00": "manner",
+        "01": "way",
+        "10": "method",
+        "11": "fashion"
+      }
+    },
+    {
+      "with": {
+        "0": "with",
+        "1": "with"
+      }
+    },
+    {
+      "words": {
+        "00": "terms",
+        "01": "lexicon",
+        "10": "vocabulary",
+        "11": "phrases"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "as well as"
+      }
+    },
+    {
+      "phrases": {
+        "00": "expressions",
+        "01": "idioms",
+        "10": "sayings",
+        "11": "constructions"
+      }
+    },
+    {
+      "from": {
+        "0": "from",
+        "1": "from"
+      }
+    },
+    {
+      "popular": {
+        "00": "well-liked",
+        "01": "famous",
+        "10": "trendy",
+        "11": "in vogue"
+      }
+    },
+    {
+      "movies": {
+        "00": "films",
+        "01": "cinema",
+        "10": "pictures",
+        "11": "flicks"
+      }
+    },
+    {
+      "or": {
+        "0": "or",
+        "1": "or"
+      }
+    },
+    {
+      "TV": {
+        "00": "television",
+        "01": "broadcast",
+        "10": "cable",
+        "11": "small screen"
+      }
+    },
+    {
+      "shows": {
+        "00": "programmes",
+        "01": "series",
+        "10": "productions",
+        "11": "broadcasts"
+      }
+    },
+    {
+      "becoming": {
+        "00": "turning into",
+        "01": "developing into",
+        "10": "evolving into",
+        "11": "transforming into"
+      }
+    },
+    {
+      "part": {
+        "00": "portion",
+        "01": "segment",
+        "10": "component",
+        "11": "element"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "everyday": {
+        "00": "daily",
+        "01": "day-to-day",
+        "10": "quotidian",
+        "11": "routine"
+      }
+    },
+    {
+      "conversations": {
+        "00": "discussions",
+        "01": "dialogues",
+        "10": "talks",
+        "11": "chats"
+      }
+    },
+    {
+      "Another": {
+        "00": "An additional",
+        "01": "A further",
+        "10": "One more",
+        "11": "Yet another"
+      }
+    },
+    {
+      "way": {
+        "00": "method",
+        "01": "approach",
+        "10": "manner",
+        "11": "means"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "which": {
+        "0": "which",
+        "1": "which"
+      }
+    },
+    {
+      "pop": {
+        "00": "popular",
+        "01": "mainstream",
+        "10": "famous",
+        "11": "trendy"
+      }
+    },
+    {
+      "culture": {
+        "00": "civilization",
+        "01": "lifestyle",
+        "10": "expanse",
+        "11": "customs"
+      }
+    },
+    {
+      "influences": {
+        "00": "affects",
+        "01": "shapes",
+        "10": "molds",
+        "11": "sways"
+      }
+    },
+    {
+      "society": {
+        "00": "community",
+        "01": "humanity",
+        "10": "population",
+        "11": "public"
+      }
+    },
+    {
+      "is": {
+        "00": "exists",
+        "01": "remains",
+        "10": "stands",
+        "11": "constitutes"
+      }
+    },
+    {
+      "through": {
+        "00": "via",
+        "01": "by",
+        "10": "by means of",
+        "11": "across"
+      }
+    },
+    {
+      "social": {
+        "0": "communal",
+        "1": "societal"
+      }
+    },
+    {
+      "media": {
+        "0": "channels",
+        "1": "outlets"
+      }
+    },
+    {
+      "platforms": {
+        "00": "sites",
+        "01": "applications",
+        "10": "services",
+        "11": "networks"
+      }
+    },
+    {
+      "Platforms": {
+        "00": "Sites",
+        "01": "Applications",
+        "10": "Services",
+        "11": "Networks"
+      }
+    },
+    {
+      "like": {
+        "00": "such as",
+        "01": "including",
+        "10": "as",
+        "11": "resembling"
+      }
+    },
+    {
+      "Instagram": {
+        "0": "Insta",
+        "1": "IG"
+      }
+    },
+    {
+      "Facebook": {
+        "0": "Facebook",
+        "1": "Facebook"
+      }
+    },
+    {
+      "and": {
+        "0": "plus",
+        "1": "together with"
+      }
+    },
+    {
+      "Twitter": {
+        "0": "Tweetspace",
+        "1": "Twittersphere"
+      }
+    },
+    {
+      "are": {
+        "00": "exist",
+        "01": "remain",
+        "10": "stand",
+        "11": "constitute"
+      }
+    },
+    {
+      "filled": {
+        "0": "packed",
+        "1": "laden"
+      }
+    },
+    {
+      "with": {
+        "00": "possessing",
+        "01": "featuring",
+        "10": "including",
+        "11": "containing"
+      }
+    },
+    {
+      "content": {
+        "00": "material",
+        "01": "substance",
+        "10": "matter",
+        "11": "essence"
+      }
+    },
+    {
+      "that": {
+        "0": "that",
+        "1": "that"
+      }
+    },
+    {
+      "reflects": {
+        "00": "mirrors",
+        "01": "shows",
+        "10": "exemplifies",
+        "11": "represents"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "shapes": {
+        "00": "forms",
+        "01": "molds",
+        "10": "influences",
+        "11": "sculpts"
+      }
+    },
+    {
+      "popular": {
+        "00": "widespread",
+        "01": "common",
+        "10": "mainstream",
+        "11": "favored"
+      }
+    },
+    {
+      "trends": {
+        "00": "movements",
+        "01": "fashions",
+        "10": "currents",
+        "11": "waves"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "opinions": {
+        "00": "viewpoints",
+        "01": "perspectives",
+        "10": "beliefs",
+        "11": "thoughts"
+      }
+    },
+    {
+      "Influencers": {
+        "00": "Promoters",
+        "01": "Mavens",
+        "10": "Trendsetters",
+        "11": "Pacesetters"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "celebrities": {
+        "00": "stars",
+        "01": "personalities",
+        "10": "luminaries",
+        "11": "notables"
+      }
+    },
+    {
+      "use": {
+        "00": "utilize",
+        "01": "employ",
+        "10": "leverage",
+        "11": "exploit"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "media": {
+        "0": "media",
+        "1": "media"
+      }
+    },
+    {
+      "to": {
+        "0": "toward",
+        "1": "for the purpose of"
+      }
+    },
+    {
+      "connect": {
+        "00": "engage",
+        "01": "link",
+        "10": "bond",
+        "11": "relate"
+      }
+    },
+    {
+      "with": {
+        "0": "with",
+        "1": "with"
+      }
+    },
+    {
+      "their": {
+        "0": "his",
+        "1": "her"
+      }
+    },
+    {
+      "audience": {
+        "00": "followers",
+        "01": "viewers",
+        "10": "spectators",
+        "11": "public"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "promote": {
+        "00": "advance",
+        "01": "boost",
+        "10": "support",
+        "11": "market"
+      }
+    },
+    {
+      "various": {
+        "00": "several",
+        "01": "diverse",
+        "10": "multiple",
+        "11": "assorted"
+      }
+    },
+    {
+      "products": {
+        "00": "goods",
+        "01": "items",
+        "10": "merchandise",
+        "11": "wares"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "lifestyles": {
+        "00": "ways of life",
+        "01": "life choices",
+        "10": "living patterns",
+        "11": "habits"
+      }
+    },
+    {
+      "This": {
+        "0": "Such",
+        "1": "The following"
+      }
+    },
+    {
+      "constant": {
+        "00": "incessant",
+        "01": "unending",
+        "10": "continual",
+        "11": "perpetual"
+      }
+    },
+    {
+      "exposure": {
+        "00": "presentation",
+        "01": "disclosure",
+        "10": "revelation",
+        "11": "unveiling"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "carefully": {
+        "00": "meticulously",
+        "01": "thoughtfully",
+        "10": "cautiously",
+        "11": "attentively"
+      }
+    },
+    {
+      "curated": {
+        "00": "selected",
+        "01": "chosen",
+        "10": "handpicked",
+        "11": "organized"
+      }
+    },
+    {
+      "content": {
+        "0": "content",
+        "1": "content"
+      }
+    },
+    {
+      "leads": {
+        "00": "guides",
+        "01": "directs",
+        "10": "steers",
+        "11": "influences"
+      }
+    },
+    {
+      "people": {
+        "00": "individuals",
+        "01": "persons",
+        "10": "folk",
+        "11": "beings"
+      }
+    },
+    {
+      "to": {
+        "0": "towards",
+        "1": "in order to"
+      }
+    },
+    {
+      "strive": {
+        "00": "endeavor",
+        "01": "aim",
+        "10": "struggle",
+        "11": "aspire"
+      }
+    },
+    {
+      "for": {
+        "00": "seeking",
+        "01": "aiming at",
+        "10": "chasing",
+        "11": "pursuing"
+      }
+    },
+    {
+      "an": {
+        "0": "an",
+        "1": "an"
+      }
+    },
+    {
+      "idealized": {
+        "00": "idyllic",
+        "01": "romanticized",
+        "10": "unrealistic",
+        "11": "utopian"
+      }
+    },
+    {
+      "version": {
+        "00": "edition",
+        "01": "variant",
+        "10": "form",
+        "11": "rendition"
+      }
+    },
+    {
+      "of": {
+        "0": "concerning",
+        "1": "pertaining to"
+      }
+    },
+    {
+      "life": {
+        "00": "existence",
+        "01": "living",
+        "10": "lifestyle",
+        "11": "being"
+      }
+    },
+    {
+      "and": {
+        "0": "as well as",
+        "1": "together with"
+      }
+    },
+    {
+      "may": {
+        "00": "might",
+        "01": "could",
+        "10": "can possibly",
+        "11": "is able to"
+      }
+    },
+    {
+      "even": {
+        "00": "potentially",
+        "01": "perhaps",
+        "10": "possibly",
+        "11": "maybe"
+      }
+    },
+    {
+      "impact": {
+        "00": "affect",
+        "01": "influence",
+        "10": "alter",
+        "11": "change"
+      }
+    },
+    {
+      "their": {
+        "0": "one's",
+        "1": "his/her"
+      }
+    },
+    {
+      "mental": {
+        "00": "psychological",
+        "01": "cognitive",
+        "10": "intellectual",
+        "11": "emotional"
+      }
+    },
+    {
+      "well-being": {
+        "00": "welfare",
+        "01": "health",
+        "10": "comfort",
+        "11": "prosperity"
+      }
+    },
+    {
+      "Furthermore": {
+        "00": "Moreover",
+        "01": "Additionally",
+        "10": "Besides",
+        "11": "Also"
+      }
+    },
+    {
+      "pop": {
+        "0": "popular",
+        "1": "mainstream"
+      }
+    },
+    {
+      "culture": {
+        "00": "music",
+        "01": "lifestyle",
+        "10": "zeitgeist",
+        "11": "art"
+      }
+    },
+    {
+      "often": {
+        "00": "frequently",
+        "01": "commonly",
+        "10": "regularly",
+        "11": "routinely"
+      }
+    },
+    {
+      "serves": {
+        "0": "functions as",
+        "1": "acts as"
+      }
+    },
+    {
+      "as": {
+        "0": "like",
+        "1": "in the capacity of"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "platform": {
+        "00": "stage",
+        "01": "venue",
+        "10": "forum",
+        "11": "medium"
+      }
+    },
+    {
+      "for": {
+        "0": "for the purpose of",
+        "1": "with the aim of"
+      }
+    },
+    {
+      "important": {
+        "00": "significant",
+        "01": "crucial",
+        "10": "vital",
+        "11": "essential"
+      }
+    },
+    {
+      "social": {
+        "00": "societal",
+        "01": "communal",
+        "10": "public",
+        "11": "collective"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "political": {
+        "00": "governmental",
+        "01": "civic",
+        "10": "partisan",
+        "11": "diplomatic"
+      }
+    },
+    {
+      "discussions": {
+        "00": "debates",
+        "01": "dialogues",
+        "10": "deliberations",
+        "11": "talks"
+      }
+    },
+    {
+      "Through": {
+        "0": "Via",
+        "1": "By means of"
+      }
+    },
+    {
+      "music": {
+        "00": "melodies",
+        "01": "tunes",
+        "10": "songs",
+        "11": "harmonies"
+      }
+    },
+    {
+      "movies": {
+        "00": "films",
+        "01": "cinema",
+        "10": "pictures",
+        "11": "motion pictures"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "celebrity": {
+        "00": "star",
+        "01": "famous",
+        "10": "notable",
+        "11": "luminary"
+      }
+    },
+    {
+      "activism": {
+        "00": "advocacy",
+        "01": "campaigning",
+        "10": "activist work",
+        "11": "engagement"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "issues": {
+        "0": "issues",
+        "1": "issues"
+      }
+    },
+    {
+      "are": {
+        "0": "are",
+        "1": "are"
+      }
+    },
+    {
+      "brought": {
+        "0": "brought",
+        "1": "brought"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "forefront": {
+        "0": "forefront",
+        "1": "forefront"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "public": {
+        "0": "public",
+        "1": "public"
+      }
+    },
+    {
+      "consciousness": {
+        "0": "consciousness",
+        "1": "consciousness"
+      }
+    },
+    {
+      "For": {
+        "0": "For",
+        "1": "For"
+      }
+    },
+    {
+      "example": {
+        "0": "example",
+        "1": "example"
+      }
+    },
+    {
+      "artists": {
+        "0": "artists",
+        "1": "artists"
+      }
+    },
+    {
+      "like": {
+        "0": "like",
+        "1": "like"
+      }
+    },
+    {
+      "Beyonc\u00e9": {
+        "0": "Beyonc\u00e9",
+        "1": "Beyonc\u00e9"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "Kendrick": {
+        "0": "Kendrick",
+        "1": "Kendrick"
+      }
+    },
+    {
+      "Lamar": {
+        "0": "Lamar",
+        "1": "Lamar"
+      }
+    },
+    {
+      "have": {
+        "0": "have",
+        "1": "have"
+      }
+    },
+    {
+      "used": {
+        "0": "used",
+        "1": "used"
+      }
+    },
+    {
+      "their": {
+        "0": "their",
+        "1": "their"
+      }
+    },
+    {
+      "music": {
+        "0": "music",
+        "1": "music"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "shed": {
+        "0": "shed",
+        "1": "shed"
+      }
+    },
+    {
+      "light": {
+        "0": "light",
+        "1": "light"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "racial": {
+        "0": "racial",
+        "1": "racial"
+      }
+    },
+    {
+      "inequality": {
+        "0": "inequality",
+        "1": "inequality"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "fight": {
+        "0": "fight",
+        "1": "fight"
+      }
+    },
+    {
+      "for": {
+        "0": "for",
+        "1": "for"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "justice": {
+        "0": "justice",
+        "1": "justice"
+      }
+    },
+    {
+      "Similarly": {
+        "0": "Similarly",
+        "1": "Similarly"
+      }
+    },
+    {
+      "movies": {
+        "0": "movies",
+        "1": "movies"
+      }
+    },
+    {
+      "like": {
+        "0": "like",
+        "1": "like"
+      }
+    },
+    {
+      "\"Black": {
+        "0": "\"Black",
+        "1": "\"Black"
+      }
+    },
+    {
+      "Panther\"": {
+        "0": "Panther\"",
+        "1": "Panther\""
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "\"Crazy": {
+        "0": "\"Crazy",
+        "1": "\"Crazy"
+      }
+    },
+    {
+      "Rich": {
+        "0": "Rich",
+        "1": "Rich"
+      }
+    },
+    {
+      "Asians\"": {
+        "0": "Asians\"",
+        "1": "Asians\""
+      }
+    },
+    {
+      "have": {
+        "0": "have",
+        "1": "have"
+      }
+    },
+    {
+      "challenged": {
+        "0": "challenged",
+        "1": "challenged"
+      }
+    },
+    {
+      "traditional": {
+        "0": "traditional",
+        "1": "traditional"
+      }
+    },
+    {
+      "stereotypes": {
+        "0": "stereotypes",
+        "1": "stereotypes"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "provided": {
+        "0": "provided",
+        "1": "provided"
+      }
+    },
+    {
+      "much-needed": {
+        "0": "much-needed",
+        "1": "much-needed"
+      }
+    },
+    {
+      "representation": {
+        "0": "representation",
+        "1": "representation"
+      }
+    },
+    {
+      "In": {
+        "0": "In",
+        "1": "In"
+      }
+    },
+    {
+      "conclusion": {
+        "0": "conclusion",
+        "1": "conclusion"
+      }
+    },
+    {
+      "pop": {
+        "0": "pop",
+        "1": "pop"
+      }
+    },
+    {
+      "culture": {
+        "0": "culture",
+        "1": "culture"
+      }
+    },
+    {
+      "has": {
+        "0": "has",
+        "1": "has"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "profound": {
+        "0": "profound",
+        "1": "profound"
+      }
+    },
+    {
+      "influence": {
+        "0": "influence",
+        "1": "influence"
+      }
+    },
+    {
+      "on": {
+        "0": "on",
+        "1": "on"
+      }
+    },
+    {
+      "society": {
+        "0": "society",
+        "1": "society"
+      }
+    },
+    {
+      "It": {
+        "0": "It",
+        "1": "It"
+      }
+    },
+    {
+      "shapes": {
+        "0": "shapes",
+        "1": "shapes"
+      }
+    },
+    {
+      "our": {
+        "0": "our",
+        "1": "our"
+      }
+    },
+    {
+      "thoughts": {
+        "0": "thoughts",
+        "1": "thoughts"
+      }
+    },
+    {
+      "beliefs": {
+        "0": "beliefs",
+        "1": "beliefs"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "values": {
+        "0": "values",
+        "1": "values"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "plays": {
+        "0": "plays",
+        "1": "plays"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "crucial": {
+        "0": "crucial",
+        "1": "crucial"
+      }
+    },
+    {
+      "role": {
+        "0": "role",
+        "1": "role"
+      }
+    },
+    {
+      "in": {
+        "0": "in",
+        "1": "in"
+      }
+    },
+    {
+      "shaping": {
+        "0": "shaping",
+        "1": "shaping"
+      }
+    },
+    {
+      "our": {
+        "0": "our",
+        "1": "our"
+      }
+    },
+    {
+      "identities": {
+        "0": "identities",
+        "1": "identities"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "self-expression": {
+        "0": "self-expression",
+        "1": "self-expression"
+      }
+    },
+    {
+      "From": {
+        "0": "From",
+        "1": "From"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "media": {
+        "0": "media",
+        "1": "media"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "social": {
+        "0": "social",
+        "1": "social"
+      }
+    },
+    {
+      "media": {
+        "0": "media",
+        "1": "media"
+      }
+    },
+    {
+      "platforms": {
+        "0": "platforms",
+        "1": "platforms"
+      }
+    },
+    {
+      "pop": {
+        "0": "pop",
+        "1": "pop"
+      }
+    },
+    {
+      "culture": {
+        "0": "culture",
+        "1": "culture"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "everywhere": {
+        "0": "everywhere",
+        "1": "everywhere"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "its": {
+        "0": "its",
+        "1": "its"
+      }
+    },
+    {
+      "impact": {
+        "0": "impact",
+        "1": "impact"
+      }
+    },
+    {
+      "cannot": {
+        "0": "cannot",
+        "1": "cannot"
+      }
+    },
+    {
+      "be": {
+        "0": "be",
+        "1": "be"
+      }
+    },
+    {
+      "underestimated": {
+        "0": "underestimated",
+        "1": "underestimated"
+      }
+    },
+    {
+      "As": {
+        "0": "As",
+        "1": "As"
+      }
+    },
+    {
+      "our": {
+        "0": "our",
+        "1": "our"
+      }
+    },
+    {
+      "society": {
+        "0": "society",
+        "1": "society"
+      }
+    },
+    {
+      "continues": {
+        "0": "continues",
+        "1": "continues"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "evolve": {
+        "0": "evolve",
+        "1": "evolve"
+      }
+    },
+    {
+      "it": {
+        "0": "it",
+        "1": "it"
+      }
+    },
+    {
+      "is": {
+        "0": "is",
+        "1": "is"
+      }
+    },
+    {
+      "important": {
+        "0": "important",
+        "1": "important"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "critically": {
+        "0": "critically",
+        "1": "critically"
+      }
+    },
+    {
+      "analyze": {
+        "0": "analyze",
+        "1": "analyze"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "understand": {
+        "0": "understand",
+        "1": "understand"
+      }
+    },
+    {
+      "the": {
+        "0": "the",
+        "1": "the"
+      }
+    },
+    {
+      "influence": {
+        "0": "influence",
+        "1": "influence"
+      }
+    },
+    {
+      "of": {
+        "0": "of",
+        "1": "of"
+      }
+    },
+    {
+      "pop": {
+        "0": "pop",
+        "1": "pop"
+      }
+    },
+    {
+      "culture": {
+        "0": "culture",
+        "1": "culture"
+      }
+    },
+    {
+      "to": {
+        "0": "to",
+        "1": "to"
+      }
+    },
+    {
+      "ensure": {
+        "0": "ensure",
+        "1": "ensure"
+      }
+    },
+    {
+      "a": {
+        "0": "a",
+        "1": "a"
+      }
+    },
+    {
+      "balanced": {
+        "0": "balanced",
+        "1": "balanced"
+      }
+    },
+    {
+      "and": {
+        "0": "and",
+        "1": "and"
+      }
+    },
+    {
+      "informed": {
+        "0": "informed",
+        "1": "informed"
+      }
+    },
+    {
+      "perspective": {
+        "0": "perspective",
+        "1": "perspective"
+      }
+    }
+  ],
+  "container": "Pop culture has become an integral part of our society, shaping our thoughts, beliefs, and values. With the rise of mass media and the internet, pop culture has become more accessible and influential than ever before. From music and movies to fashion and social media, pop culture has a significant impact on society in numerous ways. One of the most prominent ways in which pop culture influences society is through the media. Television shows, movies, and music are powerful tools that can shape public opinion and influence social behavior. For example, popular TV shows often depict certain lifestyles or beliefs as desirable, leading people to adopt these norms and values. Similarly, music can inspire social change by reflecting the thoughts and concerns of a particular generation. Moreover, pop culture plays a crucial role in shaping our identities and self-expression. Fashion trends, for instance, are heavily influenced by pop culture icons and celebrities. People often emulate their favorite celebrities' style to feel more connected to them and to express their individuality. Furthermore, pop culture also influences our language and communication style, with words and phrases from popular movies or TV shows becoming part of everyday conversations. Another way in which pop culture influences society is through social media platforms. Platforms like Instagram, Facebook, and Twitter are filled with content that reflects and shapes popular trends and opinions. Influencers and celebrities use social media to connect with their audience and promote various products and lifestyles. This constant exposure to carefully curated content leads people to strive for an idealized version of life and may even impact their mental well-being. Furthermore, pop culture often serves as a platform for important social and political discussions. Through music, movies, and celebrity activism, social issues are brought to the forefront of public consciousness. For example, artists like Beyonc\u00e9 and Kendrick Lamar have used their music to shed light on racial inequality and fight for social justice. Similarly, movies like \"Black Panther\" and \"Crazy Rich Asians\" have challenged traditional stereotypes and provided much-needed representation. In conclusion, pop culture has a profound influence on society. It shapes our thoughts, beliefs, and values, and plays a crucial role in shaping our identities and self-expression. From the media to social media platforms, pop culture is everywhere, and its impact cannot be underestimated. As our society continues to evolve, it is important to critically analyze and understand the influence of pop culture to ensure a balanced and informed perspective.",
+  "encoded_message": "Mainstream society contains transformed an essential component of our nation, molding our conceptions, creeds, and principles. Alongside the growth of widespread networks and the net, pop culture has become more attainable and persuasive over formerly ahead of. Extending from songs and films to style and public media, pop culture has a considerable influence on society in various methods. A single of the greatest noteworthy ways in which pop culture affects society is via the media. Tv series, movies, and music are forceful mechanisms that might sculpt community perspective and influence social deportment. For illustration, in vogue satellite shows habitually describe particular ways of life or beliefs equally appealing, primary citizens towards embrace the customs plus standards. In the same way, songs may spur societal transition with demonstrating the opinions as well as issues of a specific age group. Additionally, popular lifestyle performs a vital part in forming our individualities as well as self-disclosure. Style waves, for case, are intensely affected by mainstream lifestyle symbols as well as luminaries. Humans commonly replicate their cherished stars' fashion towards sense further related toward them plus toward articulate their uniqueness. Additionally, familiar civilization too shapes our dialect as well as discourse method, with phrases plus idioms from famous films or television broadcasts evolving into segment of day-to-day talks. One more method in which mainstream expanse affects population stands via communal channels networks. Sites such as Insta, Facebook, together with Twittersphere stand packed with content that reflects and shapes popular trends and opinions. Influencers and celebrities use social media to connect with their audience and promote various products and lifestyles. This constant exposure to carefully curated content leads people to strive for an idealized version of life and may even impact their mental well-being. Furthermore, pop culture often serves as a platform for important social and political discussions. Through music, movies, and celebrity activism, social issues are brought to the forefront of public consciousness. For example, artists like Beyonc\u00e9 and Kendrick Lamar have used their music to shed light on racial inequality and fight for social justice. Similarly, movies like \"Black Panther\" and \"Crazy Rich Asians\" have challenged traditional stereotypes and provided much-needed representation. In conclusion, pop culture has a profound influence on society. It shapes our thoughts, beliefs, and values, and plays a crucial role in shaping our identities and self-expression. From the media to social media platforms, pop culture is everywhere, and its impact cannot be underestimated. As our society continues to evolve, it is important to critically analyze and understand the influence of pop culture to ensure a balanced and informed perspective.",
+  "encoding_time_report": {
+    "container_generation": 13.17,
+    "secret_key_generation": 121.25
+  },
+  "decoding_time": 0.0015811920166015625,
+  "decoded_message": "1111101000010001101001010110101101101111000001101011100001110000001111001100001110110111111010000101111000100111110111011110101010101001000100010010001010100101001011110111110001001000011000110000001111110110010100001110010110100001100010100000110000011100",
+  "error_message": ""
+}

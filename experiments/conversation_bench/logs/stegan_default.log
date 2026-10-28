@@ -1,0 +1,28 @@
+default s0 TS-CNN         acc=0.956 ep=23 122s
+default s0 TS-RNN         acc=0.994 ep=60 159s
+default s0 Bi-LSTM-Dense  acc=0.981 ep=20 94s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 12957.44it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+default s0 BERT-LSTM-Att  acc=0.988 ep=35 81s
+default s1 TS-CNN         acc=0.981 ep=46 300s
+default s1 TS-RNN         acc=1.000 ep=11 54s
+default s1 Bi-LSTM-Dense  acc=1.000 ep=20 104s
+default s1 BERT-LSTM-Att  acc=1.000 ep=13 30s
+default s2 TS-CNN         acc=0.931 ep=10 67s
+default s2 TS-RNN         acc=0.988 ep=13 55s
+default s2 Bi-LSTM-Dense  acc=0.975 ep=17 99s
+default s2 BERT-LSTM-Att  acc=1.000 ep=13 45s
+wrote /Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/conversation_bench/results/steganalysis_default.json 1209 s

@@ -1,0 +1,6 @@
+default send=0 completed=true decoded=true err="" ""
+default send=1 completed=true decoded=true err="" ""
+default send=2 completed=true decoded=true err="" ""
+default send=3 completed=false decoded=<nil> err="none of 2 carrier trials passed the human-writing checks (best semantic YES-NO margin +Inf)" %!q(<nil>)
+default send=4 completed=false decoded=<nil> err="predict next token: model process: index out of range in self" %!q(<nil>)
+default send=5 completed=true decoded=true err="" ""

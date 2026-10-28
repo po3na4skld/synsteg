@@ -1,0 +1,35 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+g done
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<01:42,  3.27it/s]Loading weights:  54%|█████▍    | 183/338 [00:00<00:00, 535.01it/s]Loading weights:  79%|███████▉  | 268/338 [00:00<00:00, 304.66it/s]Loading weights:  96%|█████████▌| 323/338 [00:01<00:00, 287.33it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 294.60it/s]
+no attack 1.0
+synsteg b=1 27.08
+pplopt b=1 18.46
+synsteg b=2 34.45
+pplopt b=2 17.23
+synsteg b=3 44.44
+pplopt b=3 16.54
+synsteg b=4 49.62
+pplopt b=4 15.44
+synsteg b=5 37.26
+pplopt b=5 10.76
+window b=1 d=0.0 1.98
+window+opt b=1 d=0.0 1.75
+window b=1 d=0.25 2.88
+window+opt b=1 d=0.25 2.5
+window b=1 d=0.5 4.35
+window+opt b=1 d=0.5 3.79
+window b=1 d=1.0 8.98
+window+opt b=1 d=1.0 7.44
+window b=1 d=2.0 19.98
+window+opt b=1 d=2.0 14.9
+window b=2 d=0.0 1.63
+window+opt b=2 d=0.0 1.39
+window b=2 d=0.25 2.41
+window+opt b=2 d=0.25 1.86
+window b=2 d=0.5 3.7
+window+opt b=2 d=0.5 2.75
+window b=2 d=1.0 8.52
+window+opt b=2 d=1.0 5.88
+window b=2 d=2.0 22.54
+window+opt b=2 d=2.0 13.22

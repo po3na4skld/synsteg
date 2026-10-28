@@ -1,0 +1,350 @@
+{
+ "n_stego": 299,
+ "n_human_eval": [
+  150,
+  149
+ ],
+ "K": 16,
+ "bpw_all_candidates": 1.934227995489191,
+ "same_bits_all_candidates": 299,
+ "candidates_recovered": "4747/4784",
+ "prp": {
+  "n": 4784,
+  "recovered": 4754,
+  "distinct_texts_per_container": 16.0
+ },
+ "rows": {
+  "rank-mean (4.2), D1-D5": {
+   "D1_roberta_openai": {
+    "auc": 0.8376,
+    "dev": 0.3376,
+    "tpr5": 0.4816
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.1836,
+    "dev": 0.3164,
+    "tpr5": 0.0117
+   },
+   "D3_desklib": {
+    "auc": 0.8826,
+    "dev": 0.3826,
+    "tpr5": 0.3746
+   },
+   "D4_binoculars": {
+    "auc": 0.0287,
+    "dev": 0.4713,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.0313,
+    "dev": 0.4687,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 11.167,
+   "recovered": 293,
+   "mean_dev": 0.3953
+  },
+  "two-sided (4.3), D1-D5": {
+   "D1_roberta_openai": {
+    "auc": 0.8237,
+    "dev": 0.3237,
+    "tpr5": 0.4548
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.3097,
+    "dev": 0.1903,
+    "tpr5": 0.005
+   },
+   "D3_desklib": {
+    "auc": 0.8771,
+    "dev": 0.3771,
+    "tpr5": 0.4214
+   },
+   "D4_binoculars": {
+    "auc": 0.1195,
+    "dev": 0.3805,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.1316,
+    "dev": 0.3684,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 9.281,
+   "recovered": 296,
+   "mean_dev": 0.328
+  },
+  "two-sided (4.3), D1 only": {
+   "D1_roberta_openai": {
+    "auc": 0.7477,
+    "dev": 0.2477,
+    "tpr5": 0.2542
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2536,
+    "dev": 0.2464,
+    "tpr5": 0.0217
+   },
+   "D3_desklib": {
+    "auc": 0.907,
+    "dev": 0.407,
+    "tpr5": 0.4849
+   },
+   "D4_binoculars": {
+    "auc": 0.0637,
+    "dev": 0.4363,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.0699,
+    "dev": 0.4301,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 9.836,
+   "recovered": 296,
+   "mean_dev": 0.3535
+  },
+  "two-sided (4.3), D2 only": {
+   "D1_roberta_openai": {
+    "auc": 0.944,
+    "dev": 0.444,
+    "tpr5": 0.811
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.3426,
+    "dev": 0.1574,
+    "tpr5": 0.0033
+   },
+   "D3_desklib": {
+    "auc": 0.9176,
+    "dev": 0.4176,
+    "tpr5": 0.5
+   },
+   "D4_binoculars": {
+    "auc": 0.0718,
+    "dev": 0.4282,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.0769,
+    "dev": 0.4231,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 9.154,
+   "recovered": 295,
+   "mean_dev": 0.3741
+  },
+  "two-sided (4.3), D3 only": {
+   "D1_roberta_openai": {
+    "auc": 0.9266,
+    "dev": 0.4266,
+    "tpr5": 0.7408
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2592,
+    "dev": 0.2408,
+    "tpr5": 0.0234
+   },
+   "D3_desklib": {
+    "auc": 0.8149,
+    "dev": 0.3149,
+    "tpr5": 0.2124
+   },
+   "D4_binoculars": {
+    "auc": 0.064,
+    "dev": 0.436,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.071,
+    "dev": 0.429,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 10.222,
+   "recovered": 296,
+   "mean_dev": 0.3695
+  },
+  "two-sided (4.3), D4 only": {
+   "D1_roberta_openai": {
+    "auc": 0.9357,
+    "dev": 0.4357,
+    "tpr5": 0.7625
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2849,
+    "dev": 0.2151,
+    "tpr5": 0.0184
+   },
+   "D3_desklib": {
+    "auc": 0.9123,
+    "dev": 0.4123,
+    "tpr5": 0.5151
+   },
+   "D4_binoculars": {
+    "auc": 0.1525,
+    "dev": 0.3475,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.1596,
+    "dev": 0.3404,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 9.521,
+   "recovered": 298,
+   "mean_dev": 0.3502
+  },
+  "two-sided (4.3), D5 only": {
+   "D1_roberta_openai": {
+    "auc": 0.9277,
+    "dev": 0.4277,
+    "tpr5": 0.7575
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2861,
+    "dev": 0.2139,
+    "tpr5": 0.0201
+   },
+   "D3_desklib": {
+    "auc": 0.9111,
+    "dev": 0.4111,
+    "tpr5": 0.5251
+   },
+   "D4_binoculars": {
+    "auc": 0.1462,
+    "dev": 0.3538,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.1658,
+    "dev": 0.3342,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 9.451,
+   "recovered": 298,
+   "mean_dev": 0.3481
+  },
+  "published key (stego_b5)": {
+   "D1_roberta_openai": {
+    "auc": 0.9393,
+    "dev": 0.4393,
+    "tpr5": 0.7793
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2744,
+    "dev": 0.2256,
+    "tpr5": 0.0201
+   },
+   "D3_desklib": {
+    "auc": 0.9202,
+    "dev": 0.4202,
+    "tpr5": 0.5284
+   },
+   "D4_binoculars": {
+    "auc": 0.0661,
+    "dev": 0.4339,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.0717,
+    "dev": 0.4283,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 10.049,
+   "mean_dev": 0.3895
+  },
+  "random permutation (mean of k = 0..15)": {
+   "D1_roberta_openai": {
+    "auc": 0.9321,
+    "dev": 0.4321,
+    "tpr5": 0.7629
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2604,
+    "dev": 0.2396,
+    "tpr5": 0.0182
+   },
+   "D3_desklib": {
+    "auc": 0.9144,
+    "dev": 0.4144,
+    "tpr5": 0.5148
+   },
+   "D4_binoculars": {
+    "auc": 0.0658,
+    "dev": 0.4342,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.0704,
+    "dev": 0.4296,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": 10.204,
+   "recovered": 296.7,
+   "mean_dev": 0.39
+  },
+  "two-sided (4.3), LODO: 4 guides, held-out row": {
+   "D1_roberta_openai": {
+    "auc": 0.9313,
+    "dev": 0.4313,
+    "tpr5": 0.7592
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2747,
+    "dev": 0.2253,
+    "tpr5": 0.0251
+   },
+   "D3_desklib": {
+    "auc": 0.9087,
+    "dev": 0.4087,
+    "tpr5": 0.5033
+   },
+   "D4_binoculars": {
+    "auc": 0.0978,
+    "dev": 0.4022,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.1051,
+    "dev": 0.3949,
+    "tpr5": 0.0
+   },
+   "ppl_ratio": {
+    "D1": 9.004,
+    "D2": 9.539,
+    "D3": 9.129,
+    "D4": 9.3,
+    "D5": 9.332
+   },
+   "mean_dev": 0.3725
+  },
+  "rank-mean (4.2), LODO": {
+   "D1_roberta_openai": {
+    "auc": 0.9259,
+    "dev": 0.4259,
+    "tpr5": 0.7559
+   },
+   "D2_chatgpt_roberta": {
+    "auc": 0.2304,
+    "dev": 0.2696,
+    "tpr5": 0.0117
+   },
+   "D3_desklib": {
+    "auc": 0.9108,
+    "dev": 0.4108,
+    "tpr5": 0.495
+   },
+   "D4_binoculars": {
+    "auc": 0.0382,
+    "dev": 0.4618,
+    "tpr5": 0.0
+   },
+   "D5_fast_detectgpt": {
+    "auc": 0.0398,
+    "dev": 0.4602,
+    "tpr5": 0.0
+   },
+   "mean_dev": 0.4057
+  }
+ }
+}

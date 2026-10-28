@@ -1,0 +1,1158 @@
+{
+ "config": {
+  "maxlen": 64,
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "split": "random shuffle of sentences 80/20, val 15% of train",
+  "n_pairs": {
+   "old_8662": 4331,
+   "gpt4o_1231": 1231,
+   "gpt6_luna_b5": 2859,
+   "qwen3_30b_b3": 952
+  },
+  "identical_pairs": {
+   "old_8662": 1817,
+   "gpt4o_1231": 9,
+   "gpt6_luna_b5": 951,
+   "qwen3_30b_b3": 394
+  },
+  "texts_skipped_sentence_mismatch": {
+   "gpt6_luna_b5": 0,
+   "qwen3_30b_b3": 0
+  },
+  "runtime_sec": 4022
+ },
+ "runs": [
+  {
+   "series": "old_8662",
+   "detector": "TF-IDF+LR",
+   "seed": 0,
+   "test": {
+    "acc": 0.5868436237738026,
+    "prec": 0.5878220140515222,
+    "rec": 0.5796766743648961,
+    "f1": 0.5837209302325581,
+    "n": 1733,
+    "frac_pred_stego": 0.4927870744373918,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "old_8662",
+   "detector": "TS-CNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 27,
+    "val_acc": 0.6865384615384615,
+    "params": 3237154
+   },
+   "test": {
+    "acc": 0.6907097518753607,
+    "prec": 0.7946428571428571,
+    "rec": 0.5138568129330254,
+    "f1": 0.6241234221598878,
+    "n": 1733,
+    "frac_pred_stego": 0.3231390652048471,
+    "degenerate": false
+   },
+   "sec": 317.9
+  },
+  {
+   "series": "old_8662",
+   "detector": "TS-RNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6894230769230769,
+    "params": 2422734
+   },
+   "test": {
+    "acc": 0.7045585689555683,
+    "prec": 0.8314606741573034,
+    "rec": 0.5127020785219399,
+    "f1": 0.6342857142857142,
+    "n": 1733,
+    "frac_pred_stego": 0.30813618003462206,
+    "degenerate": false
+   },
+   "sec": 96.9
+  },
+  {
+   "series": "old_8662",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 0,
+   "train": {
+    "epochs_run": 16,
+    "val_acc": 0.7115384615384616,
+    "params": 3643202
+   },
+   "test": {
+    "acc": 0.7201384881708021,
+    "prec": 0.9359267734553776,
+    "rec": 0.4722863741339492,
+    "f1": 0.6277820414428242,
+    "n": 1733,
+    "frac_pred_stego": 0.25216387766878245,
+    "degenerate": false
+   },
+   "sec": 215.2
+  },
+  {
+   "series": "old_8662",
+   "detector": "BERT-LSTM-Att",
+   "seed": 0,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.75,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7484131563762262,
+    "prec": 0.8909090909090909,
+    "rec": 0.5658198614318707,
+    "f1": 0.692090395480226,
+    "n": 1733,
+    "frac_pred_stego": 0.3173687247547605,
+    "degenerate": false
+   },
+   "sec": 77.9
+  },
+  {
+   "series": "old_8662",
+   "detector": "TF-IDF+LR",
+   "seed": 1,
+   "test": {
+    "acc": 0.5799192152336988,
+    "prec": 0.5810968494749125,
+    "rec": 0.5743944636678201,
+    "f1": 0.5777262180974478,
+    "n": 1733,
+    "frac_pred_stego": 0.49451817657241776,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "old_8662",
+   "detector": "TS-CNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 18,
+    "val_acc": 0.6557692307692308,
+    "params": 3279954
+   },
+   "test": {
+    "acc": 0.6589728793998846,
+    "prec": 0.7574626865671642,
+    "rec": 0.4682814302191465,
+    "f1": 0.5787598004276551,
+    "n": 1733,
+    "frac_pred_stego": 0.30929024812463934,
+    "degenerate": false
+   },
+   "sec": 203.8
+  },
+  {
+   "series": "old_8662",
+   "detector": "TS-RNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 14,
+    "val_acc": 0.6903846153846154,
+    "params": 2450126
+   },
+   "test": {
+    "acc": 0.7109059434506636,
+    "prec": 0.8995633187772926,
+    "rec": 0.47520184544405997,
+    "f1": 0.6218867924528302,
+    "n": 1733,
+    "frac_pred_stego": 0.2642815926139642,
+    "degenerate": false
+   },
+   "sec": 102.5
+  },
+  {
+   "series": "old_8662",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 1,
+   "train": {
+    "epochs_run": 19,
+    "val_acc": 0.6730769230769231,
+    "params": 3675302
+   },
+   "test": {
+    "acc": 0.6751298326601269,
+    "prec": 0.8423423423423423,
+    "rec": 0.43137254901960786,
+    "f1": 0.5705568268497331,
+    "n": 1733,
+    "frac_pred_stego": 0.25620311598384304,
+    "degenerate": false
+   },
+   "sec": 251.0
+  },
+  {
+   "series": "old_8662",
+   "detector": "BERT-LSTM-Att",
+   "seed": 1,
+   "train": {
+    "epochs_run": 9,
+    "val_acc": 0.7471153846153846,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7259088286208887,
+    "prec": 0.7951807228915663,
+    "rec": 0.6089965397923875,
+    "f1": 0.689745264532985,
+    "n": 1733,
+    "frac_pred_stego": 0.3831506058857473,
+    "degenerate": false
+   },
+   "sec": 52.4
+  },
+  {
+   "series": "old_8662",
+   "detector": "TF-IDF+LR",
+   "seed": 2,
+   "test": {
+    "acc": 0.5614541257934218,
+    "prec": 0.56575682382134,
+    "rec": 0.5265588914549654,
+    "f1": 0.5454545454545454,
+    "n": 1733,
+    "frac_pred_stego": 0.46508944027697635,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "old_8662",
+   "detector": "TS-CNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 26,
+    "val_acc": 0.6692307692307692,
+    "params": 3274754
+   },
+   "test": {
+    "acc": 0.641661858049625,
+    "prec": 0.810126582278481,
+    "rec": 0.3695150115473441,
+    "f1": 0.507533703409992,
+    "n": 1733,
+    "frac_pred_stego": 0.22792844777841892,
+    "degenerate": false
+   },
+   "sec": 295.0
+  },
+  {
+   "series": "old_8662",
+   "detector": "TS-RNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6971153846153846,
+    "params": 2446798
+   },
+   "test": {
+    "acc": 0.6860934795152914,
+    "prec": 0.8425531914893617,
+    "rec": 0.45727482678983833,
+    "f1": 0.592814371257485,
+    "n": 1733,
+    "frac_pred_stego": 0.27120600115406807,
+    "degenerate": false
+   },
+   "sec": 95.0
+  },
+  {
+   "series": "old_8662",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 2,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.6913461538461538,
+    "params": 3671402
+   },
+   "test": {
+    "acc": 0.6693594922100404,
+    "prec": 0.8463356973995272,
+    "rec": 0.4133949191685912,
+    "f1": 0.5554693560899923,
+    "n": 1733,
+    "frac_pred_stego": 0.24408540103866128,
+    "degenerate": false
+   },
+   "sec": 197.5
+  },
+  {
+   "series": "old_8662",
+   "detector": "BERT-LSTM-Att",
+   "seed": 2,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.7442307692307693,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7259088286208887,
+    "prec": 0.9240780911062907,
+    "rec": 0.49191685912240185,
+    "f1": 0.6420497362471741,
+    "n": 1733,
+    "frac_pred_stego": 0.2660126947489902,
+    "degenerate": false
+   },
+   "sec": 57.5
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TF-IDF+LR",
+   "seed": 0,
+   "test": {
+    "acc": 0.8194726166328601,
+    "prec": 0.8755980861244019,
+    "rec": 0.7439024390243902,
+    "f1": 0.8043956043956044,
+    "n": 493,
+    "frac_pred_stego": 0.4239350912778905,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TS-CNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.8141891891891891,
+    "params": 2415954
+   },
+   "test": {
+    "acc": 0.7849898580121704,
+    "prec": 0.8070175438596491,
+    "rec": 0.7479674796747967,
+    "f1": 0.7763713080168776,
+    "n": 493,
+    "frac_pred_stego": 0.46247464503042596,
+    "degenerate": false
+   },
+   "sec": 32.6
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TS-RNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 22,
+    "val_acc": 0.8108108108108109,
+    "params": 1897166
+   },
+   "test": {
+    "acc": 0.8012170385395537,
+    "prec": 0.9252873563218391,
+    "rec": 0.6544715447154471,
+    "f1": 0.7666666666666667,
+    "n": 493,
+    "frac_pred_stego": 0.35294117647058826,
+    "degenerate": false
+   },
+   "sec": 50.2
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 0,
+   "train": {
+    "epochs_run": 30,
+    "val_acc": 0.8243243243243243,
+    "params": 3027302
+   },
+   "test": {
+    "acc": 0.8174442190669371,
+    "prec": 0.9333333333333333,
+    "rec": 0.6829268292682927,
+    "f1": 0.7887323943661971,
+    "n": 493,
+    "frac_pred_stego": 0.36511156186612576,
+    "degenerate": false
+   },
+   "sec": 123.0
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "BERT-LSTM-Att",
+   "seed": 0,
+   "train": {
+    "epochs_run": 18,
+    "val_acc": 0.9628378378378378,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.9350912778904665,
+    "prec": 0.9734513274336283,
+    "rec": 0.8943089430894309,
+    "f1": 0.9322033898305084,
+    "n": 493,
+    "frac_pred_stego": 0.45841784989858014,
+    "degenerate": false
+   },
+   "sec": 39.9
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TF-IDF+LR",
+   "seed": 1,
+   "test": {
+    "acc": 0.8194726166328601,
+    "prec": 0.8495575221238938,
+    "rec": 0.7773279352226721,
+    "f1": 0.8118393234672304,
+    "n": 493,
+    "frac_pred_stego": 0.45841784989858014,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TS-CNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 20,
+    "val_acc": 0.8040540540540541,
+    "params": 2422754
+   },
+   "test": {
+    "acc": 0.7991886409736308,
+    "prec": 0.8189655172413793,
+    "rec": 0.7692307692307693,
+    "f1": 0.7933194154488518,
+    "n": 493,
+    "frac_pred_stego": 0.47058823529411764,
+    "degenerate": false
+   },
+   "sec": 63.2
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TS-RNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 26,
+    "val_acc": 0.8040540540540541,
+    "params": 1901518
+   },
+   "test": {
+    "acc": 0.7647058823529411,
+    "prec": 0.9225806451612903,
+    "rec": 0.5789473684210527,
+    "f1": 0.7114427860696517,
+    "n": 493,
+    "frac_pred_stego": 0.3144016227180527,
+    "degenerate": false
+   },
+   "sec": 59.3
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 1,
+   "train": {
+    "epochs_run": 20,
+    "val_acc": 0.8209459459459459,
+    "params": 3032402
+   },
+   "test": {
+    "acc": 0.77079107505071,
+    "prec": 0.935064935064935,
+    "rec": 0.582995951417004,
+    "f1": 0.7182044887780549,
+    "n": 493,
+    "frac_pred_stego": 0.31237322515212984,
+    "degenerate": false
+   },
+   "sec": 82.9
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "BERT-LSTM-Att",
+   "seed": 1,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.9695945945945946,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.9594320486815415,
+    "prec": 0.970954356846473,
+    "rec": 0.9473684210526315,
+    "f1": 0.9590163934426229,
+    "n": 493,
+    "frac_pred_stego": 0.48884381338742394,
+    "degenerate": false
+   },
+   "sec": 24.4
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TF-IDF+LR",
+   "seed": 2,
+   "test": {
+    "acc": 0.8012170385395537,
+    "prec": 0.8490566037735849,
+    "rec": 0.7317073170731707,
+    "f1": 0.7860262008733624,
+    "n": 493,
+    "frac_pred_stego": 0.4300202839756592,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TS-CNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.847972972972973,
+    "params": 2424354
+   },
+   "test": {
+    "acc": 0.8174442190669371,
+    "prec": 0.7910447761194029,
+    "rec": 0.8617886178861789,
+    "f1": 0.8249027237354085,
+    "n": 493,
+    "frac_pred_stego": 0.5436105476673428,
+    "degenerate": false
+   },
+   "sec": 47.3
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "TS-RNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 0.8209459459459459,
+    "params": 1902542
+   },
+   "test": {
+    "acc": 0.8012170385395537,
+    "prec": 0.8217391304347826,
+    "rec": 0.7682926829268293,
+    "f1": 0.7941176470588235,
+    "n": 493,
+    "frac_pred_stego": 0.4665314401622718,
+    "degenerate": false
+   },
+   "sec": 25.2
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 2,
+   "train": {
+    "epochs_run": 21,
+    "val_acc": 0.7905405405405406,
+    "params": 3033602
+   },
+   "test": {
+    "acc": 0.7890466531440162,
+    "prec": 0.9329268292682927,
+    "rec": 0.6219512195121951,
+    "f1": 0.7463414634146341,
+    "n": 493,
+    "frac_pred_stego": 0.332657200811359,
+    "degenerate": false
+   },
+   "sec": 86.9
+  },
+  {
+   "series": "gpt4o_1231",
+   "detector": "BERT-LSTM-Att",
+   "seed": 2,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 0.972972972972973,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.9533468559837728,
+    "prec": 0.9868995633187773,
+    "rec": 0.9186991869918699,
+    "f1": 0.9515789473684211,
+    "n": 493,
+    "frac_pred_stego": 0.4645030425963489,
+    "degenerate": false
+   },
+   "sec": 20.8
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TF-IDF+LR",
+   "seed": 0,
+   "test": {
+    "acc": 0.6197552447552448,
+    "prec": 0.6304761904761905,
+    "rec": 0.5786713286713286,
+    "f1": 0.6034639927073838,
+    "n": 1144,
+    "frac_pred_stego": 0.4589160839160839,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TS-CNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 18,
+    "val_acc": 0.7147016011644832,
+    "params": 3555954
+   },
+   "test": {
+    "acc": 0.6853146853146853,
+    "prec": 0.7128514056224899,
+    "rec": 0.6206293706293706,
+    "f1": 0.6635514018691588,
+    "n": 1144,
+    "frac_pred_stego": 0.4353146853146853,
+    "degenerate": false
+   },
+   "sec": 133.5
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TS-RNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 12,
+    "val_acc": 0.75254730713246,
+    "params": 2626766
+   },
+   "test": {
+    "acc": 0.7132867132867133,
+    "prec": 0.8652694610778443,
+    "rec": 0.5052447552447552,
+    "f1": 0.6379690949227373,
+    "n": 1144,
+    "frac_pred_stego": 0.291958041958042,
+    "degenerate": false
+   },
+   "sec": 57.7
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 0,
+   "train": {
+    "epochs_run": 19,
+    "val_acc": 0.6739446870451238,
+    "params": 3882302
+   },
+   "test": {
+    "acc": 0.6346153846153846,
+    "prec": 0.7730496453900709,
+    "rec": 0.3811188811188811,
+    "f1": 0.5105386416861827,
+    "n": 1144,
+    "frac_pred_stego": 0.2465034965034965,
+    "degenerate": false
+   },
+   "sec": 165.0
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "BERT-LSTM-Att",
+   "seed": 0,
+   "train": {
+    "epochs_run": 12,
+    "val_acc": 0.8209606986899564,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7718531468531469,
+    "prec": 0.9214092140921409,
+    "rec": 0.5944055944055944,
+    "f1": 0.722635494155154,
+    "n": 1144,
+    "frac_pred_stego": 0.32255244755244755,
+    "degenerate": false
+   },
+   "sec": 58.0
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TF-IDF+LR",
+   "seed": 1,
+   "test": {
+    "acc": 0.6162587412587412,
+    "prec": 0.6215722120658135,
+    "rec": 0.5944055944055944,
+    "f1": 0.6076854334226989,
+    "n": 1144,
+    "frac_pred_stego": 0.4781468531468531,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TS-CNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 16,
+    "val_acc": 0.6928675400291121,
+    "params": 3551154
+   },
+   "test": {
+    "acc": 0.6765734265734266,
+    "prec": 0.730593607305936,
+    "rec": 0.5594405594405595,
+    "f1": 0.6336633663366337,
+    "n": 1144,
+    "frac_pred_stego": 0.38286713286713286,
+    "degenerate": false
+   },
+   "sec": 118.1
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TS-RNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 16,
+    "val_acc": 0.7016011644832606,
+    "params": 2623694
+   },
+   "test": {
+    "acc": 0.6722027972027972,
+    "prec": 0.7993920972644377,
+    "rec": 0.4597902097902098,
+    "f1": 0.5837957824639289,
+    "n": 1144,
+    "frac_pred_stego": 0.2875874125874126,
+    "degenerate": false
+   },
+   "sec": 76.5
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 1,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 0.6754002911208151,
+    "params": 3878702
+   },
+   "test": {
+    "acc": 0.6625874125874126,
+    "prec": 0.8875,
+    "rec": 0.3723776223776224,
+    "f1": 0.5246305418719212,
+    "n": 1144,
+    "frac_pred_stego": 0.2097902097902098,
+    "degenerate": false
+   },
+   "sec": 96.1
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "BERT-LSTM-Att",
+   "seed": 1,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.7962154294032023,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7788461538461539,
+    "prec": 0.9544159544159544,
+    "rec": 0.5856643356643356,
+    "f1": 0.7258938244853738,
+    "n": 1144,
+    "frac_pred_stego": 0.3068181818181818,
+    "degenerate": false
+   },
+   "sec": 38.8
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TF-IDF+LR",
+   "seed": 2,
+   "test": {
+    "acc": 0.6494755244755245,
+    "prec": 0.6586270871985158,
+    "rec": 0.6206293706293706,
+    "f1": 0.639063906390639,
+    "n": 1144,
+    "frac_pred_stego": 0.47115384615384615,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TS-CNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.6506550218340611,
+    "params": 3555154
+   },
+   "test": {
+    "acc": 0.6538461538461539,
+    "prec": 0.7458100558659218,
+    "rec": 0.46678321678321677,
+    "f1": 0.5741935483870968,
+    "n": 1144,
+    "frac_pred_stego": 0.3129370629370629,
+    "degenerate": false
+   },
+   "sec": 118.1
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "TS-RNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 0.6914119359534207,
+    "params": 2626254
+   },
+   "test": {
+    "acc": 0.6826923076923077,
+    "prec": 0.7672634271099744,
+    "rec": 0.5244755244755245,
+    "f1": 0.6230529595015576,
+    "n": 1144,
+    "frac_pred_stego": 0.34178321678321677,
+    "degenerate": false
+   },
+   "sec": 53.5
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 2,
+   "train": {
+    "epochs_run": 15,
+    "val_acc": 0.7117903930131004,
+    "params": 3881702
+   },
+   "test": {
+    "acc": 0.7019230769230769,
+    "prec": 0.8666666666666667,
+    "rec": 0.4772727272727273,
+    "f1": 0.6155580608793687,
+    "n": 1144,
+    "frac_pred_stego": 0.27534965034965037,
+    "degenerate": false
+   },
+   "sec": 131.2
+  },
+  {
+   "series": "gpt6_luna_b5",
+   "detector": "BERT-LSTM-Att",
+   "seed": 2,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.8122270742358079,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.8006993006993007,
+    "prec": 0.9257425742574258,
+    "rec": 0.6538461538461539,
+    "f1": 0.7663934426229508,
+    "n": 1144,
+    "frac_pred_stego": 0.3531468531468531,
+    "degenerate": false
+   },
+   "sec": 39.9
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TF-IDF+LR",
+   "seed": 0,
+   "test": {
+    "acc": 0.5485564304461942,
+    "prec": 0.5463917525773195,
+    "rec": 0.5578947368421052,
+    "f1": 0.5520833333333334,
+    "n": 381,
+    "frac_pred_stego": 0.5091863517060368,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TS-CNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 12,
+    "val_acc": 0.7074235807860262,
+    "params": 2131154
+   },
+   "test": {
+    "acc": 0.7217847769028871,
+    "prec": 0.8888888888888888,
+    "rec": 0.5052631578947369,
+    "f1": 0.6442953020134228,
+    "n": 381,
+    "frac_pred_stego": 0.28346456692913385,
+    "degenerate": false
+   },
+   "sec": 29.8
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TS-RNN",
+   "seed": 0,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 0.7030567685589519,
+    "params": 1714894
+   },
+   "test": {
+    "acc": 0.7060367454068242,
+    "prec": 0.8482142857142857,
+    "rec": 0.5,
+    "f1": 0.6291390728476821,
+    "n": 381,
+    "frac_pred_stego": 0.29396325459317585,
+    "degenerate": false
+   },
+   "sec": 19.1
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 0,
+   "train": {
+    "epochs_run": 14,
+    "val_acc": 0.6768558951965066,
+    "params": 2813702
+   },
+   "test": {
+    "acc": 0.6509186351706037,
+    "prec": 0.9130434782608695,
+    "rec": 0.33157894736842103,
+    "f1": 0.4864864864864865,
+    "n": 381,
+    "frac_pred_stego": 0.18110236220472442,
+    "degenerate": false
+   },
+   "sec": 44.2
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "BERT-LSTM-Att",
+   "seed": 0,
+   "train": {
+    "epochs_run": 14,
+    "val_acc": 0.759825327510917,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7716535433070866,
+    "prec": 0.9478260869565217,
+    "rec": 0.5736842105263158,
+    "f1": 0.7147540983606557,
+    "n": 381,
+    "frac_pred_stego": 0.30183727034120733,
+    "degenerate": false
+   },
+   "sec": 23.3
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TF-IDF+LR",
+   "seed": 1,
+   "test": {
+    "acc": 0.5931758530183727,
+    "prec": 0.6,
+    "rec": 0.5654450261780105,
+    "f1": 0.5822102425876011,
+    "n": 381,
+    "frac_pred_stego": 0.47244094488188976,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TS-CNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6637554585152838,
+    "params": 2139154
+   },
+   "test": {
+    "acc": 0.6062992125984252,
+    "prec": 0.7252747252747253,
+    "rec": 0.34554973821989526,
+    "f1": 0.46808510638297873,
+    "n": 381,
+    "frac_pred_stego": 0.2388451443569554,
+    "degenerate": false
+   },
+   "sec": 32.1
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TS-RNN",
+   "seed": 1,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 0.7161572052401747,
+    "params": 1720014
+   },
+   "test": {
+    "acc": 0.6876640419947506,
+    "prec": 0.7686567164179104,
+    "rec": 0.5392670157068062,
+    "f1": 0.6338461538461538,
+    "n": 381,
+    "frac_pred_stego": 0.35170603674540685,
+    "degenerate": false
+   },
+   "sec": 19.1
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 1,
+   "train": {
+    "epochs_run": 11,
+    "val_acc": 0.6419213973799127,
+    "params": 2819702
+   },
+   "test": {
+    "acc": 0.6377952755905512,
+    "prec": 0.8732394366197183,
+    "rec": 0.32460732984293195,
+    "f1": 0.4732824427480916,
+    "n": 381,
+    "frac_pred_stego": 0.18635170603674542,
+    "degenerate": false
+   },
+   "sec": 34.6
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "BERT-LSTM-Att",
+   "seed": 1,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.7947598253275109,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7690288713910761,
+    "prec": 0.9256198347107438,
+    "rec": 0.5863874345549738,
+    "f1": 0.717948717948718,
+    "n": 381,
+    "frac_pred_stego": 0.31758530183727035,
+    "degenerate": false
+   },
+   "sec": 14.2
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TF-IDF+LR",
+   "seed": 2,
+   "test": {
+    "acc": 0.5721784776902887,
+    "prec": 0.5780346820809249,
+    "rec": 0.5263157894736842,
+    "f1": 0.5509641873278237,
+    "n": 381,
+    "frac_pred_stego": 0.4540682414698163,
+    "degenerate": false
+   }
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TS-CNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 9,
+    "val_acc": 0.6069868995633187,
+    "params": 2127954
+   },
+   "test": {
+    "acc": 0.6299212598425197,
+    "prec": 0.7333333333333333,
+    "rec": 0.4052631578947368,
+    "f1": 0.5220338983050847,
+    "n": 381,
+    "frac_pred_stego": 0.2755905511811024,
+    "degenerate": false
+   },
+   "sec": 22.3
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "TS-RNN",
+   "seed": 2,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6462882096069869,
+    "params": 1712846
+   },
+   "test": {
+    "acc": 0.6719160104986877,
+    "prec": 0.8421052631578947,
+    "rec": 0.42105263157894735,
+    "f1": 0.5614035087719298,
+    "n": 381,
+    "frac_pred_stego": 0.24934383202099739,
+    "degenerate": false
+   },
+   "sec": 22.6
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "Bi-LSTM-Dense",
+   "seed": 2,
+   "train": {
+    "epochs_run": 13,
+    "val_acc": 0.6637554585152838,
+    "params": 2811302
+   },
+   "test": {
+    "acc": 0.7060367454068242,
+    "prec": 0.8095238095238095,
+    "rec": 0.5368421052631579,
+    "f1": 0.6455696202531646,
+    "n": 381,
+    "frac_pred_stego": 0.33070866141732286,
+    "degenerate": false
+   },
+   "sec": 41.0
+  },
+  {
+   "series": "qwen3_30b_b3",
+   "detector": "BERT-LSTM-Att",
+   "seed": 2,
+   "train": {
+    "epochs_run": 10,
+    "val_acc": 0.7205240174672489,
+    "params": 986114
+   },
+   "test": {
+    "acc": 0.7664041994750657,
+    "prec": 0.9809523809523809,
+    "rec": 0.5421052631578948,
+    "f1": 0.6983050847457627,
+    "n": 381,
+    "frac_pred_stego": 0.2755905511811024,
+    "degenerate": false
+   },
+   "sec": 14.1
+  }
+ ]
+}

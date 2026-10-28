@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-reports/
 # C extensions
 *.so
 
@@ -26,7 +25,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-artifacts
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -137,3 +135,31 @@ volumes
 config.json
 loki
 alerting
+
+# --- research data layout (dissertation) ---
+# run reports and corpora are tracked; model weights, venvs and third-party clones are not
+.venv*/
+experiments/**/.venv*/
+reports/textsteganalysis/
+reports/superseded/
+experiments/steganalysis/TextSteganalysis/
+experiments/conversation_bench/conversation-steganography/
+experiments/conversation_bench/bin/
+experiments/**/synsteg_e87605e/
+experiments/**/synsteg_683e8cb/
+datasets/IMDB*
+datasets/steganalysis_datasets/cover.txt
+datasets/steganalysis_datasets/stego.txt
+datasets/steganalysis_datasets/steganalysis_dataset_2.csv
+datasets/textsteganalysis_runs/**/checkpoints/
+container.txt
+# experiment logs are part of the evidence
+!experiments/**/*.log
+!reports/*.log
+!datasets/textsteganalysis_runs/**/*.log
+# pilot runs on the superseded capacity-fix branch (not used in the dissertation)
+reports/gpt6_luna_reports/
+reports/pilot_gpt6_luna/
+reports/gpt6_luna_series/
+series_run.py
+series_launch.sh

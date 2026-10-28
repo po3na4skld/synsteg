@@ -1,0 +1,65 @@
+{'maxlen': 64, 'seeds': (0, 1, 2), 'split': 'random shuffle of sentences 80/20, val 15% of train', 'n_pairs': {'old_8662': 4331, 'gpt4o_1231': 1231, 'gpt6_luna_b5': 2859, 'qwen3_30b_b3': 952}, 'identical_pairs': {'old_8662': 1817, 'gpt4o_1231': 9, 'gpt6_luna_b5': 951, 'qwen3_30b_b3': 394}, 'texts_skipped_sentence_mismatch': {'gpt6_luna_b5': 0, 'qwen3_30b_b3': 0}}
+old_8662 s0 TS-CNN         acc=0.691 f1=0.624 stego%=0.32 ep=27 318s
+old_8662 s0 TS-RNN         acc=0.705 f1=0.634 stego%=0.31 ep=13 97s
+old_8662 s0 Bi-LSTM-Dense  acc=0.720 f1=0.628 stego%=0.25 ep=16 215s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 7293.36it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+old_8662 s0 BERT-LSTM-Att  acc=0.748 f1=0.692 stego%=0.32 ep=10 78s
+old_8662 s1 TS-CNN         acc=0.659 f1=0.579 stego%=0.31 ep=18 204s
+old_8662 s1 TS-RNN         acc=0.711 f1=0.622 stego%=0.26 ep=14 103s
+old_8662 s1 Bi-LSTM-Dense  acc=0.675 f1=0.571 stego%=0.26 ep=19 251s
+old_8662 s1 BERT-LSTM-Att  acc=0.726 f1=0.690 stego%=0.38 ep=9 52s
+old_8662 s2 TS-CNN         acc=0.642 f1=0.508 stego%=0.23 ep=26 295s
+old_8662 s2 TS-RNN         acc=0.686 f1=0.593 stego%=0.27 ep=13 95s
+old_8662 s2 Bi-LSTM-Dense  acc=0.669 f1=0.555 stego%=0.24 ep=15 198s
+old_8662 s2 BERT-LSTM-Att  acc=0.726 f1=0.642 stego%=0.27 ep=10 58s
+gpt4o_1231 s0 TS-CNN         acc=0.785 f1=0.776 stego%=0.46 ep=10 33s
+gpt4o_1231 s0 TS-RNN         acc=0.801 f1=0.767 stego%=0.35 ep=22 50s
+gpt4o_1231 s0 Bi-LSTM-Dense  acc=0.817 f1=0.789 stego%=0.37 ep=30 123s
+gpt4o_1231 s0 BERT-LSTM-Att  acc=0.935 f1=0.932 stego%=0.46 ep=18 40s
+gpt4o_1231 s1 TS-CNN         acc=0.799 f1=0.793 stego%=0.47 ep=20 63s
+gpt4o_1231 s1 TS-RNN         acc=0.765 f1=0.711 stego%=0.31 ep=26 59s
+gpt4o_1231 s1 Bi-LSTM-Dense  acc=0.771 f1=0.718 stego%=0.31 ep=20 83s
+gpt4o_1231 s1 BERT-LSTM-Att  acc=0.959 f1=0.959 stego%=0.49 ep=13 24s
+gpt4o_1231 s2 TS-CNN         acc=0.817 f1=0.825 stego%=0.54 ep=15 47s
+gpt4o_1231 s2 TS-RNN         acc=0.801 f1=0.794 stego%=0.47 ep=11 25s
+gpt4o_1231 s2 Bi-LSTM-Dense  acc=0.789 f1=0.746 stego%=0.33 ep=21 87s
+gpt4o_1231 s2 BERT-LSTM-Att  acc=0.953 f1=0.952 stego%=0.46 ep=11 21s
+gpt6_luna_b5 s0 TS-CNN         acc=0.685 f1=0.664 stego%=0.44 ep=18 134s
+gpt6_luna_b5 s0 TS-RNN         acc=0.713 f1=0.638 stego%=0.29 ep=12 58s
+gpt6_luna_b5 s0 Bi-LSTM-Dense  acc=0.635 f1=0.511 stego%=0.25 ep=19 165s
+gpt6_luna_b5 s0 BERT-LSTM-Att  acc=0.772 f1=0.723 stego%=0.32 ep=12 58s
+gpt6_luna_b5 s1 TS-CNN         acc=0.677 f1=0.634 stego%=0.38 ep=16 118s
+gpt6_luna_b5 s1 TS-RNN         acc=0.672 f1=0.584 stego%=0.29 ep=16 76s
+gpt6_luna_b5 s1 Bi-LSTM-Dense  acc=0.663 f1=0.525 stego%=0.21 ep=11 96s
+gpt6_luna_b5 s1 BERT-LSTM-Att  acc=0.779 f1=0.726 stego%=0.31 ep=10 39s
+gpt6_luna_b5 s2 TS-CNN         acc=0.654 f1=0.574 stego%=0.31 ep=15 118s
+gpt6_luna_b5 s2 TS-RNN         acc=0.683 f1=0.623 stego%=0.34 ep=11 54s
+gpt6_luna_b5 s2 Bi-LSTM-Dense  acc=0.702 f1=0.616 stego%=0.28 ep=15 131s
+gpt6_luna_b5 s2 BERT-LSTM-Att  acc=0.801 f1=0.766 stego%=0.35 ep=10 40s
+qwen3_30b_b3 s0 TS-CNN         acc=0.722 f1=0.644 stego%=0.28 ep=12 30s
+qwen3_30b_b3 s0 TS-RNN         acc=0.706 f1=0.629 stego%=0.29 ep=11 19s
+qwen3_30b_b3 s0 Bi-LSTM-Dense  acc=0.651 f1=0.486 stego%=0.18 ep=14 44s
+qwen3_30b_b3 s0 BERT-LSTM-Att  acc=0.772 f1=0.715 stego%=0.30 ep=14 23s
+qwen3_30b_b3 s1 TS-CNN         acc=0.606 f1=0.468 stego%=0.24 ep=13 32s
+qwen3_30b_b3 s1 TS-RNN         acc=0.688 f1=0.634 stego%=0.35 ep=11 19s
+qwen3_30b_b3 s1 Bi-LSTM-Dense  acc=0.638 f1=0.473 stego%=0.19 ep=11 35s
+qwen3_30b_b3 s1 BERT-LSTM-Att  acc=0.769 f1=0.718 stego%=0.32 ep=10 14s
+qwen3_30b_b3 s2 TS-CNN         acc=0.630 f1=0.522 stego%=0.28 ep=9 22s
+qwen3_30b_b3 s2 TS-RNN         acc=0.672 f1=0.561 stego%=0.25 ep=13 23s
+qwen3_30b_b3 s2 Bi-LSTM-Dense  acc=0.706 f1=0.646 stego%=0.33 ep=13 41s
+qwen3_30b_b3 s2 BERT-LSTM-Att  acc=0.766 f1=0.698 stego%=0.28 ep=10 14s
+wrote /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/steganalysis_sentences.json 4022 s

@@ -1,0 +1,59 @@
+D1_roberta_openai: 6877 to score
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 12202.63it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: openai-community/roberta-base-openai-detector
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  D1_roberta_openai 64/6877 2s
+  D1_roberta_openai 704/6877 5s
+  D1_roberta_openai 1344/6877 8s
+  D1_roberta_openai 1984/6877 11s
+  D1_roberta_openai 2624/6877 14s
+  D1_roberta_openai 3264/6877 17s
+  D1_roberta_openai 3904/6877 21s
+  D1_roberta_openai 4544/6877 24s
+  D1_roberta_openai 5184/6877 28s
+  D1_roberta_openai 5824/6877 31s
+  D1_roberta_openai 6464/6877 34s
+D2_chatgpt_roberta: 6877 to score
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 44705.44it/s]
+  D2_chatgpt_roberta 64/6877 0s
+  D2_chatgpt_roberta 704/6877 3s
+  D2_chatgpt_roberta 1344/6877 6s
+  D2_chatgpt_roberta 1984/6877 10s
+  D2_chatgpt_roberta 2624/6877 14s
+  D2_chatgpt_roberta 3264/6877 17s
+  D2_chatgpt_roberta 3904/6877 22s
+  D2_chatgpt_roberta 4544/6877 26s
+  D2_chatgpt_roberta 5184/6877 31s
+  D2_chatgpt_roberta 5824/6877 35s
+  D2_chatgpt_roberta 6464/6877 39s
+D3_desklib: 6877 to score
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/392 [00:00<?, ?it/s]Loading weights: 100%|██████████| 392/392 [00:00<00:00, 13613.92it/s]
+Traceback (most recent call last):
+  File "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/run_detectors.py", line 40, in <module>
+    main(sys.argv[1:] or list(DETECTORS))
+  File "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/run_detectors.py", line 24, in main
+    det = DETECTORS[name]()
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/detectors.py", line 61, in __init__
+    self.m = _Desklib.from_pretrained(name).to(DEV).eval()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4314, in from_pretrained
+    loading_info = cls._finalize_model_loading(model, load_config, loading_info)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4482, in _finalize_model_loading
+    model._move_missing_keys_from_meta_to_device(
+  File "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4730, in _move_missing_keys_from_meta_to_device
+    for key in missing_keys - self.all_tied_weights_keys.keys():
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1972, in __getattr__
+    raise AttributeError(
+AttributeError: '_Desklib' object has no attribute 'all_tied_weights_keys'. Did you mean: '_tied_weights_keys'?

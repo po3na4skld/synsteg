@@ -1,0 +1,28 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 8821.24it/s]
+[transformers] [1mRobertaForSequenceClassification LOAD REPORT[0m from: openai-community/roberta-base-openai-detector
+Key                         | Status     |  | 
+----------------------------+------------+--+-
+roberta.pooler.dense.bias   | UNEXPECTED |  | 
+roberta.pooler.dense.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+D1_roberta_openai gpt4o_base {'n': 300, 'auc_container': 0.56, 'auc_stego': 0.935, 'tpr5_container': 0.127, 'tpr5_stego': 0.78, 'auc_container_vs_stego': 0.905}
+D1_roberta_openai gpt4o_pplopt {'n': 300, 'auc_container': 0.56, 'auc_stego': 0.608, 'tpr5_container': 0.127, 'tpr5_stego': 0.177, 'auc_container_vs_stego': 0.549}
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 58448.08it/s]
+D2_chatgpt_roberta gpt4o_base {'n': 300, 'auc_container': 0.963, 'auc_stego': 0.16, 'tpr5_container': 0.88, 'tpr5_stego': 0.003, 'auc_container_vs_stego': 0.005}
+D2_chatgpt_roberta gpt4o_pplopt {'n': 300, 'auc_container': 0.963, 'auc_stego': 0.716, 'tpr5_container': 0.88, 'tpr5_stego': 0.257, 'auc_container_vs_stego': 0.115}
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/ai_detectors/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+D3_desklib gpt4o_base {'n': 300, 'auc_container': 0.999, 'auc_stego': 0.901, 'tpr5_container': 0.997, 'tpr5_stego': 0.383, 'auc_container_vs_stego': 0.012}
+D3_desklib gpt4o_pplopt {'n': 300, 'auc_container': 0.999, 'auc_stego': 0.948, 'tpr5_container': 0.997, 'tpr5_stego': 0.707, 'auc_container_vs_stego': 0.066}
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<04:02,  1.39it/s]Loading weights:  51%|█████     | 171/338 [00:00<00:00, 260.11it/s]Loading weights:  70%|███████   | 237/338 [00:01<00:00, 174.06it/s]Loading weights:  82%|████████▏ | 278/338 [00:01<00:00, 158.19it/s]Loading weights:  91%|█████████ | 308/338 [00:02<00:00, 150.80it/s]Loading weights:  98%|█████████▊| 332/338 [00:02<00:00, 147.16it/s]Loading weights: 100%|██████████| 338/338 [00:02<00:00, 151.63it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:01<06:40,  1.19s/it]Loading weights:  54%|█████▍    | 183/338 [00:01<00:00, 177.39it/s]Loading weights:  70%|███████   | 238/338 [00:01<00:00, 156.46it/s]Loading weights:  81%|████████  | 274/338 [00:02<00:00, 135.89it/s]Loading weights:  88%|████████▊ | 299/338 [00:02<00:00, 137.51it/s]Loading weights:  95%|█████████▍| 321/338 [00:02<00:00, 135.99it/s]Loading weights: 100%|██████████| 338/338 [00:02<00:00, 128.74it/s]
+D4_binoculars gpt4o_base {'n': 300, 'auc_container': 0.747, 'auc_stego': 0.059, 'tpr5_container': 0.207, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.013}
+D4_binoculars gpt4o_pplopt {'n': 300, 'auc_container': 0.747, 'auc_stego': 0.106, 'tpr5_container': 0.207, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.026}
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<04:00,  1.40it/s]Loading weights:  54%|█████▍    | 183/338 [00:00<00:00, 299.38it/s]Loading weights:  83%|████████▎ | 281/338 [00:01<00:00, 322.35it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 276.68it/s]
+D5_fast_detectgpt gpt4o_base {'n': 300, 'auc_container': 0.768, 'auc_stego': 0.057, 'tpr5_container': 0.177, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.005}
+D5_fast_detectgpt gpt4o_pplopt {'n': 300, 'auc_container': 0.768, 'auc_stego': 0.139, 'tpr5_container': 0.177, 'tpr5_stego': 0.0, 'auc_container_vs_stego': 0.021}
+saved /Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/model_series/../../reports/detectors_gpt4o_base_gpt4o_pplopt.json

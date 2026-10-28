@@ -1,0 +1,11 @@
+imp_base/rbilstmc/s42 {'acc': 0.5753029428736296, 'precision': 0.5918367346938775, 'recall': 0.4709976798143852, 'rc': 0, 'sec': 295}
+imp_base/lstmatt/s42 {'acc': 0.7322562031159838, 'precision': 0.888671875, 'recall': 0.5278422273781903, 'rc': 0, 'sec': 1776}
+imp_base/cnn/s42 {'acc': 0.5354875937680323, 'precision': 0.5283582089552239, 'recall': 0.6160092807424594, 'rc': 0, 'sec': 30}
+imp_base/bilstmdense/s42 {'acc': 0.502596653202539, 'precision': 0.0, 'recall': 0.0, 'rc': 0, 'sec': 278}
+imp_base/birnn/s42 {'acc': 0.5741488747836122, 'precision': 0.5669546436285097, 'recall': 0.6090487238979119, 'rc': 0, 'sec': 67}
+imp_base/rbilstmc/s43 {'acc': 0.586266589728794, 'precision': 0.7347670250896058, 'recall': 0.2417452830188679, 'rc': 0, 'sec': 208}
+imp_base/lstmatt/s43 {'acc': 0.7553375649163301, 'precision': 0.951063829787234, 'recall': 0.527122641509434, 'rc': 0, 'sec': 1084}
+imp_base/cnn/s43 {'acc': 0.5631852279284478, 'precision': 0.5739837398373984, 'recall': 0.41627358490566035, 'rc': 0, 'sec': 45}
+imp_base/bilstmdense/s43 {'acc': 0.4893248701673399, 'precision': 0.4893248701673399, 'recall': 1.0, 'rc': 0, 'sec': 146}
+imp_base/birnn/s43 {'acc': 0.5649163300634737, 'precision': 0.6163366336633663, 'recall': 0.2936320754716981, 'rc': 0, 'sec': 44}
+imp_base/rbilstmc/s44 {'acc': 0.5591459896133872, 'precision': 0.6747720364741642, 'recall': 0.2525597269624573, 'rc': 0, 'sec': 151}

@@ -1,0 +1,50 @@
+{'maxlen': 64, 'seeds': (0, 1, 2), 'n_pairs': {'gpt4o_base': 1231, 'gpt4o_pplopt': 1231}, 'identical_pairs': {'gpt4o_base': 9, 'gpt4o_pplopt': 9}, 'texts_skipped_sentence_mismatch': {'gpt4o_base': 0, 'gpt4o_pplopt': 0}}
+gpt4o_base s0 TS-CNN         acc=0.840 f1=0.840 stego%=0.51 ep=20 72s
+gpt4o_base s0 TS-RNN         acc=0.801 f1=0.768 stego%=0.36 ep=19 45s
+gpt4o_base s0 Bi-LSTM-Dense  acc=0.753 f1=0.682 stego%=0.28 ep=22 96s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8507.20it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-uncased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+gpt4o_base s0 BERT-LSTM-Att  acc=0.959 f1=0.958 stego%=0.47 ep=20 56s
+gpt4o_base s1 TS-CNN         acc=0.811 f1=0.825 stego%=0.58 ep=14 53s
+gpt4o_base s1 TS-RNN         acc=0.753 f1=0.712 stego%=0.36 ep=10 24s
+gpt4o_base s1 Bi-LSTM-Dense  acc=0.736 f1=0.686 stego%=0.34 ep=10 47s
+gpt4o_base s1 BERT-LSTM-Att  acc=0.976 f1=0.976 stego%=0.49 ep=13 36s
+gpt4o_base s2 TS-CNN         acc=0.779 f1=0.752 stego%=0.39 ep=14 126s
+gpt4o_base s2 TS-RNN         acc=0.826 f1=0.795 stego%=0.35 ep=18 54s
+gpt4o_base s2 Bi-LSTM-Dense  acc=0.787 f1=0.736 stego%=0.31 ep=22 106s
+gpt4o_base s2 BERT-LSTM-Att  acc=0.961 f1=0.961 stego%=0.50 ep=19 36s
+gpt4o_pplopt s0 TS-CNN         acc=0.793 f1=0.774 stego%=0.42 ep=38 133s
+gpt4o_pplopt s0 TS-RNN         acc=0.801 f1=0.788 stego%=0.44 ep=19 42s
+gpt4o_pplopt s0 Bi-LSTM-Dense  acc=0.801 f1=0.784 stego%=0.42 ep=15 60s
+gpt4o_pplopt s0 BERT-LSTM-Att  acc=0.838 f1=0.821 stego%=0.41 ep=16 30s
+gpt4o_pplopt s1 TS-CNN         acc=0.824 f1=0.808 stego%=0.42 ep=29 94s
+gpt4o_pplopt s1 TS-RNN         acc=0.803 f1=0.775 stego%=0.37 ep=15 32s
+gpt4o_pplopt s1 Bi-LSTM-Dense  acc=0.836 f1=0.820 stego%=0.41 ep=28 109s
+gpt4o_pplopt s1 BERT-LSTM-Att  acc=0.846 f1=0.829 stego%=0.40 ep=15 26s
+gpt4o_pplopt s2 TS-CNN         acc=0.803 f1=0.773 stego%=0.37 ep=14 45s
+gpt4o_pplopt s2 TS-RNN         acc=0.803 f1=0.771 stego%=0.36 ep=13 28s
+gpt4o_pplopt s2 Bi-LSTM-Dense  acc=0.811 f1=0.786 stego%=0.38 ep=18 71s
+gpt4o_pplopt s2 BERT-LSTM-Att  acc=0.836 f1=0.818 stego%=0.40 ep=15 26s
+| gpt4o_base | TF-IDF+LR | 0.815 ± 0.019 | 0.805 ± 0.021 |
+| gpt4o_base | TS-CNN | 0.810 ± 0.030 | 0.806 ± 0.047 |
+| gpt4o_base | TS-RNN | 0.793 ± 0.037 | 0.758 ± 0.042 |
+| gpt4o_base | Bi-LSTM-Dense | 0.759 ± 0.026 | 0.701 ± 0.030 |
+| gpt4o_base | BERT-LSTM-Att | 0.966 ± 0.009 | 0.965 ± 0.009 |
+| gpt4o_pplopt | TF-IDF+LR | 0.814 ± 0.022 | 0.799 ± 0.023 |
+| gpt4o_pplopt | TS-CNN | 0.807 ± 0.015 | 0.785 ± 0.020 |
+| gpt4o_pplopt | TS-RNN | 0.803 ± 0.001 | 0.778 ± 0.009 |
+| gpt4o_pplopt | Bi-LSTM-Dense | 0.816 ± 0.018 | 0.797 ± 0.020 |
+| gpt4o_pplopt | BERT-LSTM-Att | 0.840 ± 0.005 | 0.823 ± 0.006 |

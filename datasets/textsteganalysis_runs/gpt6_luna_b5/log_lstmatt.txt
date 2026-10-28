@@ -1,0 +1,460 @@
+10/20/2026 21:47:19 - INFO - __main__ -   --------------Main Configs-------------------
+10/20/2026 21:47:19 - INFO - __main__ -   {'use_processor': True, 'out_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt6_luna_b5_lstmatt', 'checkpoint': 'best', 'record_file': 'record.txt', 'model': 'lstmatt', 'class_num': 2, 'tokenizer': False, 'seed': 42, 'gpuid': '0', 'task_name': 'steganalysis', 'use_plm': True, 'repeat_num': 1, 'device': device(type='mps'), 'Dataset': {'name': 'tweet', 'stego_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/stego.txt', 'cover_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/clean.txt', 'csv_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv', 'resplit': True, 'split_ratio': 0.8, 'save_cache': False, 'overwrite_cache': True}, 'Tokenizer': {'model_name_or_path': 'bert-base-uncased'}, 'Training_with_Processor': {'num_train_epochs': 3, 'learning_rate': 5e-05, 'model_name_or_path': 'bert-base-uncased', 'do_lower_case': True, 'per_gpu_train_batch_size': 32, 'per_gpu_eval_batch_size': 32, 'n_gpu': 1, 'max_steps': -1, 'gradient_accumulation_steps': 1, 'eval_and_save_steps': 100, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'logging_steps': -1, 'evaluate_during_training': False, 'save_only_best': True, 'use_fixed_seq_length': True, 'eval_all_checkpoints': False, 'skip_evaluate_dev': True}, 'Training': {'batch_size': 100, 'epoch': 10, 'learning_rate': 0.001, 'early_stop': 50, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'evaluate_during_training': False, 'save_only_best': True}, 'Vocabulary': {'word_drop': 0, 'do_lower': True, 'max_length': 60}, 'CNN': {'embed_size': 128, 'filter_num': 128, 'filter_size': [3, 4, 5], 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'RNN': {'cell': 'bi-lstm', 'embed_size': 128, 'hidden_dim': 256, 'num_layers': 1, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'FCN': {'embed_size': 128, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'LSTMATT': {'embed_size': 128, 'hidden_dim': 256, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss', 'bidirectional': True}, 'RBiLSTMC': {'num_layers': 1, 'kernel_sizes': [3, 4, 5], 'kernel_num': 128, 'embed_dim': 128, 'hidden_dim': 256, 'LSTM_dropout': 0.2, 'CNN_dropout': 0.2, 'Ci': 1, 'criteration': 'CrossEntropyLoss'}, 'BiLSTMDENSE': {'num_layers': 1, 'embed_dim': 256, 'hidden_dim': 200, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'SESY': {'clf': 'cnn', 'criteration': 'CrossEntropyLoss', 'strategy': 'cas', 'embed_size': 100, 'hidden_dim': 128, 'readout_size': 64, 'gat_alpha': 0.2, 'gat_heads': 8, 'dropout_rate': 0.2, 'TC_configs': {'cnn': {'filter_num': 128, 'filter_size': [3, 4, 5]}, 'rnn': {'cell': 'bi-lstm', 'hidden_dim': 256, 'num_layers': 1}, 'fc': {}}}, 'state_dict': {'use_processor': True, 'out_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt6_luna_b5_lstmatt', 'checkpoint': 'best', 'record_file': 'record.txt', 'model': 'lstmatt', 'class_num': 2, 'tokenizer': False, 'seed': 42, 'gpuid': '0', 'task_name': 'steganalysis', 'use_plm': True, 'repeat_num': 1, 'device': 'cuda:0', 'Dataset': {'name': 'tweet', 'stego_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/stego.txt', 'cover_file': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/clean.txt', 'csv_dir': '/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv', 'resplit': True, 'split_ratio': 0.8, 'save_cache': False, 'overwrite_cache': True}, 'Tokenizer': {'model_name_or_path': 'bert-base-uncased'}, 'Training_with_Processor': {'num_train_epochs': 3, 'learning_rate': 5e-05, 'model_name_or_path': 'bert-base-uncased', 'do_lower_case': True, 'per_gpu_train_batch_size': 32, 'per_gpu_eval_batch_size': 32, 'n_gpu': 1, 'max_steps': -1, 'gradient_accumulation_steps': 1, 'eval_and_save_steps': 100, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'logging_steps': -1, 'evaluate_during_training': False, 'save_only_best': True, 'use_fixed_seq_length': True, 'eval_all_checkpoints': False, 'skip_evaluate_dev': True}, 'Training': {'batch_size': 100, 'epoch': 10, 'learning_rate': 0.001, 'early_stop': 50, 'warmup_ratio': 0.06, 'weight_decay': 0.01, 'adam_epsilon': 1e-08, 'evaluate_during_training': False, 'save_only_best': True}, 'Vocabulary': {'word_drop': 0, 'do_lower': True, 'max_length': 60}, 'CNN': {'embed_size': 128, 'filter_num': 128, 'filter_size': [3, 4, 5], 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'RNN': {'cell': 'bi-lstm', 'embed_size': 128, 'hidden_dim': 256, 'num_layers': 1, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'FCN': {'embed_size': 128, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'LSTMATT': {'embed_size': 128, 'hidden_dim': 256, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss', 'bidirectional': True}, 'RBiLSTMC': {'num_layers': 1, 'kernel_sizes': [3, 4, 5], 'kernel_num': 128, 'embed_dim': 128, 'hidden_dim': 256, 'LSTM_dropout': 0.2, 'CNN_dropout': 0.2, 'Ci': 1, 'criteration': 'CrossEntropyLoss'}, 'BiLSTMDENSE': {'num_layers': 1, 'embed_dim': 256, 'hidden_dim': 200, 'dropout_rate': 0.2, 'criteration': 'CrossEntropyLoss'}, 'SESY': {'clf': 'cnn', 'criteration': 'CrossEntropyLoss', 'strategy': 'cas', 'embed_size': 100, 'hidden_dim': 128, 'readout_size': 64, 'gat_alpha': 0.2, 'gat_heads': 8, 'dropout_rate': 0.2, 'TC_configs': {'cnn': {'filter_num': 128, 'filter_size': [3, 4, 5]}, 'rnn': {'cell': 'bi-lstm', 'hidden_dim': 256, 'num_layers': 1}, 'fc': {}}}}}
+10/20/2026 21:47:19 - INFO - __main__ -   --------------loading data-------------------
+10/20/2026 21:47:19 - INFO - __main__ -   Dataset Configs
+10/20/2026 21:47:19 - INFO - __main__ -   {"name": "tweet", "stego_file": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/stego.txt", "cover_file": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/clean.txt", "csv_dir": "/Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv", "resplit": true, "split_ratio": 0.8, "save_cache": false, "overwrite_cache": true}
+10/20/2026 21:47:19 - INFO - __main__ -   ----------------use plm or not----------------
+10/20/2026 21:47:19 - INFO - __main__ -   ------------------YES-----------------------------
+10/20/2026 21:47:19 - INFO - __main__ -   	load plm name or path from Training_with_Processor args
+10/20/2026 21:47:19 - INFO - __main__ -   -------------------------------------------------------------------------------------------------------
+10/20/2026 21:47:19 - INFO - __main__ -   ----------------init model-----------------------
+10/20/2026 21:47:19 - INFO - __main__ -   -------------loading pretrained language model from huggingface--------------
+
+
+Some weights of BERT_TC were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.attn.proj.bias', 'classifier.attn.proj.weight', 'classifier.attn.w_k.bias', 'classifier.attn.w_k.weight', 'classifier.attn.w_q.bias', 'classifier.attn.w_q.weight', 'classifier.attn.weight', 'classifier.classifier.bias', 'classifier.classifier.weight', 'classifier.lstm.LNc.bias', 'classifier.lstm.LNc.weight', 'classifier.lstm.LNh.bias', 'classifier.lstm.LNh.weight', 'classifier.lstm.LNx.bias', 'classifier.lstm.LNx.weight', 'classifier.lstm.Wh.bias', 'classifier.lstm.Wh.weight', 'classifier.lstm.Wx.bias', 'classifier.lstm.Wx.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+10/20/2026 21:47:19 - INFO - __main__ -   Model Configs
+10/20/2026 21:47:19 - INFO - __main__ -   {"MODEL_TYPE": "lstmatt", "embed_size": 128, "hidden_dim": 256, "dropout_rate": 0.2, "criteration": "CrossEntropyLoss", "bidirectional": true}
+10/20/2026 21:47:20 - INFO - __main__ -   --------------start training--------------------
+10/20/2026 21:47:20 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv
+10/20/2026 21:47:20 - INFO - __main__ -   Finished creating features
+10/20/2026 21:47:20 - INFO - __main__ -   Finished converting features into tensors
+/Users/po3na4skld/PycharmProjects/Personal/SynSteg/experiments/steganalysis/.venv_ts/lib/python3.11/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+10/20/2026 21:47:20 - INFO - __main__ -   ***** Running training *****
+10/20/2026 21:47:20 - INFO - __main__ -     Num examples = 3430
+10/20/2026 21:47:20 - INFO - __main__ -     Num Epochs = 3
+10/20/2026 21:47:20 - INFO - __main__ -     Instantaneous batch size per GPU = 32
+10/20/2026 21:47:20 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+10/20/2026 21:47:20 - INFO - __main__ -     Gradient Accumulation steps = 1
+10/20/2026 21:47:20 - INFO - __main__ -     Total optimization steps = 324
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Epoch 0:   0%|          | 0/108 [00:00<?, ?it/s]
+Epoch 0:   1%|          | 1/108 [00:01<02:41,  1.51s/it]
+Epoch 0:   2%|▏         | 2/108 [00:02<02:11,  1.24s/it]
+Epoch 0:   3%|▎         | 3/108 [00:03<01:57,  1.12s/it]
+Epoch 0:   4%|▎         | 4/108 [00:04<01:49,  1.06s/it]
+Epoch 0:   5%|▍         | 5/108 [00:05<01:45,  1.02s/it]
+Epoch 0:   6%|▌         | 6/108 [00:06<01:42,  1.00s/it]
+Epoch 0:   6%|▋         | 7/108 [00:07<01:40,  1.01it/s]
+Epoch 0:   7%|▋         | 8/108 [00:08<01:38,  1.02it/s]
+Epoch 0:   8%|▊         | 9/108 [00:09<01:37,  1.02it/s]
+Epoch 0:   9%|▉         | 10/108 [00:10<01:35,  1.03it/s]
+Epoch 0:  10%|█         | 11/108 [00:11<01:34,  1.03it/s]
+Epoch 0:  11%|█         | 12/108 [00:12<01:33,  1.03it/s]
+Epoch 0:  12%|█▏        | 13/108 [00:13<01:32,  1.03it/s]
+Epoch 0:  13%|█▎        | 14/108 [00:14<01:31,  1.03it/s]
+Epoch 0:  14%|█▍        | 15/108 [00:15<01:30,  1.02it/s]
+Epoch 0:  15%|█▍        | 16/108 [00:16<01:29,  1.03it/s]
+Epoch 0:  16%|█▌        | 17/108 [00:17<01:28,  1.03it/s]
+Epoch 0:  17%|█▋        | 18/108 [00:18<01:27,  1.03it/s]
+Epoch 0:  18%|█▊        | 19/108 [00:19<01:26,  1.03it/s]
+Epoch 0:  19%|█▊        | 20/108 [00:19<01:25,  1.03it/s]
+Epoch 0:  19%|█▉        | 21/108 [00:20<01:24,  1.03it/s]
+Epoch 0:  20%|██        | 22/108 [00:21<01:23,  1.03it/s]
+Epoch 0:  21%|██▏       | 23/108 [00:22<01:22,  1.03it/s]
+Epoch 0:  22%|██▏       | 24/108 [00:23<01:21,  1.03it/s]
+Epoch 0:  23%|██▎       | 25/108 [00:24<01:20,  1.03it/s]
+Epoch 0:  24%|██▍       | 26/108 [00:25<01:19,  1.03it/s]
+Epoch 0:  25%|██▌       | 27/108 [00:26<01:18,  1.03it/s]
+Epoch 0:  26%|██▌       | 28/108 [00:27<01:17,  1.03it/s]
+Epoch 0:  27%|██▋       | 29/108 [00:28<01:16,  1.03it/s]
+Epoch 0:  28%|██▊       | 30/108 [00:29<01:15,  1.03it/s]
+Epoch 0:  29%|██▊       | 31/108 [00:30<01:14,  1.03it/s]
+Epoch 0:  30%|██▉       | 32/108 [00:31<01:13,  1.04it/s]
+Epoch 0:  31%|███       | 33/108 [00:32<01:12,  1.04it/s]
+Epoch 0:  31%|███▏      | 34/108 [00:33<01:11,  1.04it/s]
+Epoch 0:  32%|███▏      | 35/108 [00:34<01:10,  1.04it/s]
+Epoch 0:  33%|███▎      | 36/108 [00:35<01:09,  1.04it/s]
+Epoch 0:  34%|███▍      | 37/108 [00:36<01:08,  1.04it/s]
+Epoch 0:  35%|███▌      | 38/108 [00:37<01:07,  1.04it/s]
+Epoch 0:  36%|███▌      | 39/108 [00:38<01:06,  1.04it/s]
+Epoch 0:  37%|███▋      | 40/108 [00:39<01:05,  1.03it/s]
+Epoch 0:  38%|███▊      | 41/108 [00:40<01:04,  1.03it/s]
+Epoch 0:  39%|███▉      | 42/108 [00:41<01:04,  1.02it/s]
+Epoch 0:  40%|███▉      | 43/108 [00:42<01:03,  1.02it/s]
+Epoch 0:  41%|████      | 44/108 [00:43<01:02,  1.02it/s]
+Epoch 0:  42%|████▏     | 45/108 [00:44<01:01,  1.02it/s]
+Epoch 0:  43%|████▎     | 46/108 [00:45<01:00,  1.02it/s]
+Epoch 0:  44%|████▎     | 47/108 [00:46<00:59,  1.02it/s]
+Epoch 0:  44%|████▍     | 48/108 [00:47<00:58,  1.03it/s]
+Epoch 0:  45%|████▌     | 49/108 [00:48<00:57,  1.03it/s]
+Epoch 0:  46%|████▋     | 50/108 [00:49<00:56,  1.03it/s]
+Epoch 0:  47%|████▋     | 51/108 [00:50<00:55,  1.03it/s]
+Epoch 0:  48%|████▊     | 52/108 [00:51<00:54,  1.03it/s]
+Epoch 0:  49%|████▉     | 53/108 [00:51<00:53,  1.04it/s]
+Epoch 0:  50%|█████     | 54/108 [00:52<00:52,  1.04it/s]
+Epoch 0:  51%|█████     | 55/108 [00:53<00:51,  1.03it/s]
+Epoch 0:  52%|█████▏    | 56/108 [00:54<00:50,  1.03it/s]
+Epoch 0:  53%|█████▎    | 57/108 [00:55<00:49,  1.03it/s]
+Epoch 0:  54%|█████▎    | 58/108 [00:56<00:48,  1.03it/s]
+Epoch 0:  55%|█████▍    | 59/108 [00:57<00:47,  1.04it/s]
+Epoch 0:  56%|█████▌    | 60/108 [00:58<00:46,  1.04it/s]
+Epoch 0:  56%|█████▋    | 61/108 [00:59<00:45,  1.04it/s]
+Epoch 0:  57%|█████▋    | 62/108 [01:00<00:44,  1.04it/s]
+Epoch 0:  58%|█████▊    | 63/108 [01:01<00:43,  1.04it/s]
+Epoch 0:  59%|█████▉    | 64/108 [01:02<00:42,  1.04it/s]
+Epoch 0:  60%|██████    | 65/108 [01:03<00:41,  1.03it/s]
+Epoch 0:  61%|██████    | 66/108 [01:04<00:41,  1.01it/s]
+Epoch 0:  62%|██████▏   | 67/108 [01:05<00:40,  1.01it/s]
+Epoch 0:  63%|██████▎   | 68/108 [01:06<00:39,  1.01it/s]
+Epoch 0:  64%|██████▍   | 69/108 [01:07<00:38,  1.02it/s]
+Epoch 0:  65%|██████▍   | 70/108 [01:08<00:37,  1.02it/s]
+Epoch 0:  66%|██████▌   | 71/108 [01:09<00:36,  1.02it/s]
+Epoch 0:  67%|██████▋   | 72/108 [01:10<00:35,  1.03it/s]
+Epoch 0:  68%|██████▊   | 73/108 [01:11<00:34,  1.02it/s]
+Epoch 0:  69%|██████▊   | 74/108 [01:12<00:33,  1.01it/s]
+Epoch 0:  69%|██████▉   | 75/108 [01:13<00:32,  1.02it/s]
+Epoch 0:  70%|███████   | 76/108 [01:14<00:31,  1.02it/s]
+Epoch 0:  71%|███████▏  | 77/108 [01:15<00:30,  1.01it/s]
+Epoch 0:  72%|███████▏  | 78/108 [01:16<00:29,  1.01it/s]
+Epoch 0:  73%|███████▎  | 79/108 [01:17<00:28,  1.02it/s]
+Epoch 0:  74%|███████▍  | 80/108 [01:18<00:27,  1.02it/s]
+Epoch 0:  75%|███████▌  | 81/108 [01:19<00:26,  1.02it/s]
+Epoch 0:  76%|███████▌  | 82/108 [01:20<00:25,  1.02it/s]
+Epoch 0:  77%|███████▋  | 83/108 [01:21<00:24,  1.02it/s]
+Epoch 0:  78%|███████▊  | 84/108 [01:22<00:23,  1.03it/s]
+Epoch 0:  79%|███████▊  | 85/108 [01:23<00:22,  1.03it/s]
+Epoch 0:  80%|███████▉  | 86/108 [01:24<00:21,  1.03it/s]
+Epoch 0:  81%|████████  | 87/108 [01:25<00:20,  1.03it/s]
+Epoch 0:  81%|████████▏ | 88/108 [01:26<00:19,  1.03it/s]
+Epoch 0:  82%|████████▏ | 89/108 [01:27<00:18,  1.03it/s]
+Epoch 0:  83%|████████▎ | 90/108 [01:28<00:17,  1.03it/s]
+Epoch 0:  84%|████████▍ | 91/108 [01:29<00:16,  1.03it/s]
+Epoch 0:  85%|████████▌ | 92/108 [01:30<00:15,  1.03it/s]
+Epoch 0:  86%|████████▌ | 93/108 [01:31<00:14,  1.03it/s]
+Epoch 0:  87%|████████▋ | 94/108 [01:32<00:13,  1.02it/s]
+Epoch 0:  88%|████████▊ | 95/108 [01:32<00:12,  1.02it/s]
+Epoch 0:  89%|████████▉ | 96/108 [01:33<00:11,  1.02it/s]
+Epoch 0:  90%|████████▉ | 97/108 [01:34<00:10,  1.03it/s]
+Epoch 0:  91%|█████████ | 98/108 [01:35<00:09,  1.03it/s]
+Epoch 0:  92%|█████████▏| 99/108 [01:36<00:08,  1.03it/s]10/20/2026 21:48:58 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv
+10/20/2026 21:48:58 - INFO - __main__ -   Finished creating features
+10/20/2026 21:48:58 - INFO - __main__ -   Finished converting features into tensors
+10/20/2026 21:48:58 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/20/2026 21:48:58 - INFO - __main__ -   Num examples = 1144
+10/20/2026 21:48:58 - INFO - __main__ -   Batch size = 32
+10/20/2026 21:49:10 - INFO - __main__ -   {"eval_accuracy": 0.7683566433566433, "eval_macro_f1": 0.7606715343910331, "eval_precision": 0.9492957746478873, "eval_recall": 0.577054794520548, "eval_f1_score": 0.7177848775292864, "step": 100}
+10/20/2026 21:49:10 - INFO - __main__ -   Congratulations, best model so far!
+10/20/2026 21:49:10 - INFO - __main__ -   Saving model checkpoint to /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt6_luna_b5_lstmatt/best
+10/20/2026 21:49:11 - INFO - __main__ -   	Saved model checkpoint to /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt6_luna_b5_lstmatt/best
+
+Epoch 0:  93%|█████████▎| 100/108 [01:50<00:39,  4.88s/it]
+Epoch 0:  94%|█████████▎| 101/108 [01:51<00:26,  3.75s/it]
+Epoch 0:  94%|█████████▍| 102/108 [01:52<00:17,  2.92s/it]
+Epoch 0:  95%|█████████▌| 103/108 [01:53<00:11,  2.34s/it]
+Epoch 0:  96%|█████████▋| 104/108 [01:54<00:07,  1.93s/it]
+Epoch 0:  97%|█████████▋| 105/108 [01:55<00:04,  1.64s/it]
+Epoch 0:  98%|█████████▊| 106/108 [01:56<00:02,  1.44s/it]
+Epoch 0:  99%|█████████▉| 107/108 [01:57<00:01,  1.30s/it]
+Epoch 0: 100%|██████████| 108/108 [01:59<00:00,  1.30s/it]
+Epoch 0: 100%|██████████| 108/108 [01:59<00:00,  1.10s/it]
+
+Epoch 1:   0%|          | 0/108 [00:00<?, ?it/s]
+Epoch 1:   1%|          | 1/108 [00:00<01:44,  1.02it/s]
+Epoch 1:   2%|▏         | 2/108 [00:01<01:43,  1.03it/s]
+Epoch 1:   3%|▎         | 3/108 [00:02<01:42,  1.03it/s]
+Epoch 1:   4%|▎         | 4/108 [00:03<01:40,  1.04it/s]
+Epoch 1:   5%|▍         | 5/108 [00:04<01:39,  1.04it/s]
+Epoch 1:   6%|▌         | 6/108 [00:05<01:38,  1.04it/s]
+Epoch 1:   6%|▋         | 7/108 [00:06<01:37,  1.04it/s]
+Epoch 1:   7%|▋         | 8/108 [00:07<01:36,  1.04it/s]
+Epoch 1:   8%|▊         | 9/108 [00:08<01:35,  1.04it/s]
+Epoch 1:   9%|▉         | 10/108 [00:09<01:34,  1.04it/s]
+Epoch 1:  10%|█         | 11/108 [00:10<01:33,  1.04it/s]
+Epoch 1:  11%|█         | 12/108 [00:11<01:32,  1.04it/s]
+Epoch 1:  12%|█▏        | 13/108 [00:12<01:31,  1.04it/s]
+Epoch 1:  13%|█▎        | 14/108 [00:13<01:30,  1.03it/s]
+Epoch 1:  14%|█▍        | 15/108 [00:14<01:29,  1.04it/s]
+Epoch 1:  15%|█▍        | 16/108 [00:15<01:29,  1.03it/s]
+Epoch 1:  16%|█▌        | 17/108 [00:16<01:28,  1.03it/s]
+Epoch 1:  17%|█▋        | 18/108 [00:17<01:27,  1.03it/s]
+Epoch 1:  18%|█▊        | 19/108 [00:18<01:26,  1.03it/s]
+Epoch 1:  19%|█▊        | 20/108 [00:19<01:25,  1.03it/s]
+Epoch 1:  19%|█▉        | 21/108 [00:20<01:24,  1.04it/s]
+Epoch 1:  20%|██        | 22/108 [00:21<01:22,  1.04it/s]
+Epoch 1:  21%|██▏       | 23/108 [00:22<01:21,  1.04it/s]
+Epoch 1:  22%|██▏       | 24/108 [00:23<01:21,  1.04it/s]
+Epoch 1:  23%|██▎       | 25/108 [00:24<01:19,  1.04it/s]
+Epoch 1:  24%|██▍       | 26/108 [00:25<01:18,  1.04it/s]
+Epoch 1:  25%|██▌       | 27/108 [00:26<01:17,  1.04it/s]
+Epoch 1:  26%|██▌       | 28/108 [00:26<01:16,  1.05it/s]
+Epoch 1:  27%|██▋       | 29/108 [00:27<01:15,  1.04it/s]
+Epoch 1:  28%|██▊       | 30/108 [00:28<01:14,  1.04it/s]
+Epoch 1:  29%|██▊       | 31/108 [00:29<01:13,  1.04it/s]
+Epoch 1:  30%|██▉       | 32/108 [00:30<01:12,  1.04it/s]
+Epoch 1:  31%|███       | 33/108 [00:31<01:11,  1.04it/s]
+Epoch 1:  31%|███▏      | 34/108 [00:32<01:11,  1.04it/s]
+Epoch 1:  32%|███▏      | 35/108 [00:33<01:10,  1.04it/s]
+Epoch 1:  33%|███▎      | 36/108 [00:34<01:09,  1.04it/s]
+Epoch 1:  34%|███▍      | 37/108 [00:35<01:07,  1.04it/s]
+Epoch 1:  35%|███▌      | 38/108 [00:36<01:06,  1.05it/s]
+Epoch 1:  36%|███▌      | 39/108 [00:37<01:05,  1.05it/s]
+Epoch 1:  37%|███▋      | 40/108 [00:38<01:05,  1.04it/s]
+Epoch 1:  38%|███▊      | 41/108 [00:39<01:04,  1.04it/s]
+Epoch 1:  39%|███▉      | 42/108 [00:40<01:03,  1.04it/s]
+Epoch 1:  40%|███▉      | 43/108 [00:41<01:02,  1.04it/s]
+Epoch 1:  41%|████      | 44/108 [00:42<01:01,  1.03it/s]
+Epoch 1:  42%|████▏     | 45/108 [00:43<01:01,  1.03it/s]
+Epoch 1:  43%|████▎     | 46/108 [00:44<00:59,  1.03it/s]
+Epoch 1:  44%|████▎     | 47/108 [00:45<00:59,  1.03it/s]
+Epoch 1:  44%|████▍     | 48/108 [00:46<00:58,  1.03it/s]
+Epoch 1:  45%|████▌     | 49/108 [00:47<00:57,  1.03it/s]
+Epoch 1:  46%|████▋     | 50/108 [00:48<00:55,  1.04it/s]
+Epoch 1:  47%|████▋     | 51/108 [00:49<00:55,  1.04it/s]
+Epoch 1:  48%|████▊     | 52/108 [00:50<00:54,  1.04it/s]
+Epoch 1:  49%|████▉     | 53/108 [00:51<00:53,  1.03it/s]
+Epoch 1:  50%|█████     | 54/108 [00:52<00:52,  1.04it/s]
+Epoch 1:  51%|█████     | 55/108 [00:52<00:51,  1.04it/s]
+Epoch 1:  52%|█████▏    | 56/108 [00:53<00:50,  1.04it/s]
+Epoch 1:  53%|█████▎    | 57/108 [00:54<00:49,  1.04it/s]
+Epoch 1:  54%|█████▎    | 58/108 [00:55<00:48,  1.04it/s]
+Epoch 1:  55%|█████▍    | 59/108 [00:56<00:47,  1.04it/s]
+Epoch 1:  56%|█████▌    | 60/108 [00:57<00:46,  1.04it/s]
+Epoch 1:  56%|█████▋    | 61/108 [00:58<00:45,  1.04it/s]
+Epoch 1:  57%|█████▋    | 62/108 [00:59<00:44,  1.04it/s]
+Epoch 1:  58%|█████▊    | 63/108 [01:00<00:43,  1.03it/s]
+Epoch 1:  59%|█████▉    | 64/108 [01:01<00:42,  1.03it/s]
+Epoch 1:  60%|██████    | 65/108 [01:02<00:41,  1.03it/s]
+Epoch 1:  61%|██████    | 66/108 [01:03<00:40,  1.03it/s]
+Epoch 1:  62%|██████▏   | 67/108 [01:04<00:39,  1.03it/s]
+Epoch 1:  63%|██████▎   | 68/108 [01:05<00:39,  1.02it/s]
+Epoch 1:  64%|██████▍   | 69/108 [01:06<00:38,  1.02it/s]
+Epoch 1:  65%|██████▍   | 70/108 [01:07<00:37,  1.02it/s]
+Epoch 1:  66%|██████▌   | 71/108 [01:08<00:36,  1.02it/s]
+Epoch 1:  67%|██████▋   | 72/108 [01:09<00:35,  1.02it/s]
+Epoch 1:  68%|██████▊   | 73/108 [01:10<00:34,  1.02it/s]
+Epoch 1:  69%|██████▊   | 74/108 [01:11<00:33,  1.03it/s]
+Epoch 1:  69%|██████▉   | 75/108 [01:12<00:32,  1.02it/s]
+Epoch 1:  70%|███████   | 76/108 [01:13<00:31,  1.02it/s]
+Epoch 1:  71%|███████▏  | 77/108 [01:14<00:30,  1.03it/s]
+Epoch 1:  72%|███████▏  | 78/108 [01:15<00:29,  1.03it/s]
+Epoch 1:  73%|███████▎  | 79/108 [01:16<00:28,  1.03it/s]
+Epoch 1:  74%|███████▍  | 80/108 [01:17<00:27,  1.04it/s]
+Epoch 1:  75%|███████▌  | 81/108 [01:18<00:26,  1.04it/s]
+Epoch 1:  76%|███████▌  | 82/108 [01:19<00:25,  1.03it/s]
+Epoch 1:  77%|███████▋  | 83/108 [01:20<00:24,  1.03it/s]
+Epoch 1:  78%|███████▊  | 84/108 [01:21<00:23,  1.03it/s]
+Epoch 1:  79%|███████▊  | 85/108 [01:22<00:22,  1.04it/s]
+Epoch 1:  80%|███████▉  | 86/108 [01:23<00:21,  1.04it/s]
+Epoch 1:  81%|████████  | 87/108 [01:24<00:20,  1.04it/s]
+Epoch 1:  81%|████████▏ | 88/108 [01:25<00:19,  1.04it/s]
+Epoch 1:  82%|████████▏ | 89/108 [01:25<00:18,  1.04it/s]
+Epoch 1:  83%|████████▎ | 90/108 [01:26<00:17,  1.04it/s]
+Epoch 1:  84%|████████▍ | 91/108 [01:27<00:16,  1.04it/s]10/20/2026 21:50:48 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv
+10/20/2026 21:50:48 - INFO - __main__ -   Finished creating features
+10/20/2026 21:50:48 - INFO - __main__ -   Finished converting features into tensors
+10/20/2026 21:50:48 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/20/2026 21:50:48 - INFO - __main__ -   Num examples = 1144
+10/20/2026 21:50:48 - INFO - __main__ -   Batch size = 32
+10/20/2026 21:51:00 - INFO - __main__ -   {"eval_accuracy": 0.7578671328671329, "eval_macro_f1": 0.7516503066282647, "eval_precision": 0.9050131926121372, "eval_recall": 0.5873287671232876, "eval_f1_score": 0.7123572170301142, "step": 200}
+
+Epoch 1:  85%|████████▌ | 92/108 [01:40<01:10,  4.43s/it]
+Epoch 1:  86%|████████▌ | 93/108 [01:41<00:50,  3.40s/it]
+Epoch 1:  87%|████████▋ | 94/108 [01:42<00:37,  2.68s/it]
+Epoch 1:  88%|████████▊ | 95/108 [01:43<00:28,  2.17s/it]
+Epoch 1:  89%|████████▉ | 96/108 [01:44<00:21,  1.81s/it]
+Epoch 1:  90%|████████▉ | 97/108 [01:45<00:17,  1.56s/it]
+Epoch 1:  91%|█████████ | 98/108 [01:46<00:13,  1.39s/it]
+Epoch 1:  92%|█████████▏| 99/108 [01:47<00:11,  1.26s/it]
+Epoch 1:  93%|█████████▎| 100/108 [01:48<00:09,  1.18s/it]
+Epoch 1:  94%|█████████▎| 101/108 [01:49<00:07,  1.11s/it]
+Epoch 1:  94%|█████████▍| 102/108 [01:50<00:06,  1.07s/it]
+Epoch 1:  95%|█████████▌| 103/108 [01:51<00:05,  1.04s/it]
+Epoch 1:  96%|█████████▋| 104/108 [01:52<00:04,  1.02s/it]
+Epoch 1:  97%|█████████▋| 105/108 [01:53<00:03,  1.01s/it]
+Epoch 1:  98%|█████████▊| 106/108 [01:54<00:02,  1.00s/it]
+Epoch 1:  99%|█████████▉| 107/108 [01:55<00:00,  1.01it/s]
+Epoch 1: 100%|██████████| 108/108 [01:55<00:00,  1.18it/s]
+Epoch 1: 100%|██████████| 108/108 [01:55<00:00,  1.07s/it]
+
+Epoch 2:   0%|          | 0/108 [00:00<?, ?it/s]
+Epoch 2:   1%|          | 1/108 [00:01<01:47,  1.00s/it]
+Epoch 2:   2%|▏         | 2/108 [00:01<01:43,  1.02it/s]
+Epoch 2:   3%|▎         | 3/108 [00:02<01:42,  1.03it/s]
+Epoch 2:   4%|▎         | 4/108 [00:03<01:41,  1.02it/s]
+Epoch 2:   5%|▍         | 5/108 [00:04<01:40,  1.02it/s]
+Epoch 2:   6%|▌         | 6/108 [00:05<01:39,  1.02it/s]
+Epoch 2:   6%|▋         | 7/108 [00:06<01:38,  1.03it/s]
+Epoch 2:   7%|▋         | 8/108 [00:07<01:37,  1.03it/s]
+Epoch 2:   8%|▊         | 9/108 [00:08<01:36,  1.03it/s]
+Epoch 2:   9%|▉         | 10/108 [00:09<01:35,  1.03it/s]
+Epoch 2:  10%|█         | 11/108 [00:10<01:34,  1.03it/s]
+Epoch 2:  11%|█         | 12/108 [00:11<01:32,  1.03it/s]
+Epoch 2:  12%|█▏        | 13/108 [00:12<01:32,  1.03it/s]
+Epoch 2:  13%|█▎        | 14/108 [00:13<01:31,  1.03it/s]
+Epoch 2:  14%|█▍        | 15/108 [00:14<01:30,  1.03it/s]
+Epoch 2:  15%|█▍        | 16/108 [00:15<01:29,  1.03it/s]
+Epoch 2:  16%|█▌        | 17/108 [00:16<01:29,  1.02it/s]
+Epoch 2:  17%|█▋        | 18/108 [00:17<01:28,  1.02it/s]
+Epoch 2:  18%|█▊        | 19/108 [00:18<01:27,  1.01it/s]
+Epoch 2:  19%|█▊        | 20/108 [00:19<01:26,  1.01it/s]
+Epoch 2:  19%|█▉        | 21/108 [00:20<01:25,  1.01it/s]
+Epoch 2:  20%|██        | 22/108 [00:21<01:24,  1.01it/s]
+Epoch 2:  21%|██▏       | 23/108 [00:22<01:23,  1.02it/s]
+Epoch 2:  22%|██▏       | 24/108 [00:23<01:22,  1.02it/s]
+Epoch 2:  23%|██▎       | 25/108 [00:24<01:21,  1.02it/s]
+Epoch 2:  24%|██▍       | 26/108 [00:25<01:20,  1.02it/s]
+Epoch 2:  25%|██▌       | 27/108 [00:26<01:19,  1.02it/s]
+Epoch 2:  26%|██▌       | 28/108 [00:27<01:18,  1.02it/s]
+Epoch 2:  27%|██▋       | 29/108 [00:28<01:17,  1.02it/s]
+Epoch 2:  28%|██▊       | 30/108 [00:29<01:16,  1.02it/s]
+Epoch 2:  29%|██▊       | 31/108 [00:30<01:15,  1.02it/s]
+Epoch 2:  30%|██▉       | 32/108 [00:31<01:14,  1.03it/s]
+Epoch 2:  31%|███       | 33/108 [00:32<01:12,  1.03it/s]
+Epoch 2:  31%|███▏      | 34/108 [00:33<01:11,  1.03it/s]
+Epoch 2:  32%|███▏      | 35/108 [00:34<01:11,  1.02it/s]
+Epoch 2:  33%|███▎      | 36/108 [00:35<01:10,  1.02it/s]
+Epoch 2:  34%|███▍      | 37/108 [00:36<01:09,  1.02it/s]
+Epoch 2:  35%|███▌      | 38/108 [00:37<01:08,  1.02it/s]
+Epoch 2:  36%|███▌      | 39/108 [00:38<01:07,  1.02it/s]
+Epoch 2:  37%|███▋      | 40/108 [00:39<01:06,  1.02it/s]
+Epoch 2:  38%|███▊      | 41/108 [00:40<01:05,  1.02it/s]
+Epoch 2:  39%|███▉      | 42/108 [00:41<01:04,  1.02it/s]
+Epoch 2:  40%|███▉      | 43/108 [00:42<01:03,  1.02it/s]
+Epoch 2:  41%|████      | 44/108 [00:42<01:02,  1.03it/s]
+Epoch 2:  42%|████▏     | 45/108 [00:43<01:01,  1.03it/s]
+Epoch 2:  43%|████▎     | 46/108 [00:44<01:00,  1.03it/s]
+Epoch 2:  44%|████▎     | 47/108 [00:45<00:59,  1.03it/s]
+Epoch 2:  44%|████▍     | 48/108 [00:46<00:58,  1.02it/s]
+Epoch 2:  45%|████▌     | 49/108 [00:47<00:57,  1.02it/s]
+Epoch 2:  46%|████▋     | 50/108 [00:48<00:56,  1.02it/s]
+Epoch 2:  47%|████▋     | 51/108 [00:49<00:55,  1.02it/s]
+Epoch 2:  48%|████▊     | 52/108 [00:50<00:55,  1.02it/s]
+Epoch 2:  49%|████▉     | 53/108 [00:51<00:54,  1.02it/s]
+Epoch 2:  50%|█████     | 54/108 [00:52<00:53,  1.01it/s]
+Epoch 2:  51%|█████     | 55/108 [00:53<00:51,  1.02it/s]
+Epoch 2:  52%|█████▏    | 56/108 [00:54<00:50,  1.02it/s]
+Epoch 2:  53%|█████▎    | 57/108 [00:55<00:50,  1.02it/s]
+Epoch 2:  54%|█████▎    | 58/108 [00:56<00:49,  1.02it/s]
+Epoch 2:  55%|█████▍    | 59/108 [00:57<00:47,  1.02it/s]
+Epoch 2:  56%|█████▌    | 60/108 [00:58<00:47,  1.02it/s]
+Epoch 2:  56%|█████▋    | 61/108 [00:59<00:45,  1.03it/s]
+Epoch 2:  57%|█████▋    | 62/108 [01:00<00:44,  1.03it/s]
+Epoch 2:  58%|█████▊    | 63/108 [01:01<00:43,  1.03it/s]
+Epoch 2:  59%|█████▉    | 64/108 [01:02<00:42,  1.03it/s]
+Epoch 2:  60%|██████    | 65/108 [01:03<00:41,  1.03it/s]
+Epoch 2:  61%|██████    | 66/108 [01:04<00:40,  1.03it/s]
+Epoch 2:  62%|██████▏   | 67/108 [01:05<00:39,  1.03it/s]
+Epoch 2:  63%|██████▎   | 68/108 [01:06<00:39,  1.02it/s]
+Epoch 2:  64%|██████▍   | 69/108 [01:07<00:37,  1.03it/s]
+Epoch 2:  65%|██████▍   | 70/108 [01:08<00:36,  1.03it/s]
+Epoch 2:  66%|██████▌   | 71/108 [01:09<00:35,  1.03it/s]
+Epoch 2:  67%|██████▋   | 72/108 [01:10<00:34,  1.03it/s]
+Epoch 2:  68%|██████▊   | 73/108 [01:11<00:34,  1.03it/s]
+Epoch 2:  69%|██████▊   | 74/108 [01:12<00:33,  1.03it/s]
+Epoch 2:  69%|██████▉   | 75/108 [01:13<00:32,  1.02it/s]
+Epoch 2:  70%|███████   | 76/108 [01:14<00:31,  1.03it/s]
+Epoch 2:  71%|███████▏  | 77/108 [01:15<00:30,  1.03it/s]
+Epoch 2:  72%|███████▏  | 78/108 [01:16<00:29,  1.03it/s]
+Epoch 2:  73%|███████▎  | 79/108 [01:17<00:28,  1.03it/s]
+Epoch 2:  74%|███████▍  | 80/108 [01:18<00:27,  1.02it/s]
+Epoch 2:  75%|███████▌  | 81/108 [01:19<00:26,  1.03it/s]
+Epoch 2:  76%|███████▌  | 82/108 [01:20<00:25,  1.03it/s]
+Epoch 2:  77%|███████▋  | 83/108 [01:21<00:24,  1.02it/s]10/20/2026 21:52:37 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv
+10/20/2026 21:52:37 - INFO - __main__ -   Finished creating features
+10/20/2026 21:52:37 - INFO - __main__ -   Finished converting features into tensors
+10/20/2026 21:52:37 - INFO - __main__ -   ***** Running evaluation:  on steganalysis dev *****
+10/20/2026 21:52:37 - INFO - __main__ -   Num examples = 1144
+10/20/2026 21:52:37 - INFO - __main__ -   Batch size = 32
+10/20/2026 21:52:49 - INFO - __main__ -   {"eval_accuracy": 0.756993006993007, "eval_macro_f1": 0.7525081321691491, "eval_precision": 0.8768472906403941, "eval_recall": 0.6095890410958904, "eval_f1_score": 0.7191919191919192, "step": 300}
+
+Epoch 2:  78%|███████▊  | 84/108 [01:33<01:46,  4.45s/it]
+Epoch 2:  79%|███████▊  | 85/108 [01:34<01:18,  3.41s/it]
+Epoch 2:  80%|███████▉  | 86/108 [01:35<00:58,  2.68s/it]
+Epoch 2:  81%|████████  | 87/108 [01:36<00:45,  2.19s/it]
+Epoch 2:  81%|████████▏ | 88/108 [01:37<00:36,  1.82s/it]
+Epoch 2:  82%|████████▏ | 89/108 [01:38<00:29,  1.56s/it]
+Epoch 2:  83%|████████▎ | 90/108 [01:39<00:24,  1.38s/it]
+Epoch 2:  84%|████████▍ | 91/108 [01:40<00:21,  1.26s/it]
+Epoch 2:  85%|████████▌ | 92/108 [01:41<00:18,  1.17s/it]
+Epoch 2:  86%|████████▌ | 93/108 [01:42<00:16,  1.10s/it]
+Epoch 2:  87%|████████▋ | 94/108 [01:43<00:14,  1.06s/it]
+Epoch 2:  88%|████████▊ | 95/108 [01:44<00:13,  1.03s/it]
+Epoch 2:  89%|████████▉ | 96/108 [01:45<00:12,  1.01s/it]
+Epoch 2:  90%|████████▉ | 97/108 [01:46<00:11,  1.00s/it]
+Epoch 2:  91%|█████████ | 98/108 [01:47<00:09,  1.00it/s]
+Epoch 2:  92%|█████████▏| 99/108 [01:48<00:08,  1.01it/s]
+Epoch 2:  93%|█████████▎| 100/108 [01:49<00:07,  1.02it/s]
+Epoch 2:  94%|█████████▎| 101/108 [01:50<00:06,  1.02it/s]
+Epoch 2:  94%|█████████▍| 102/108 [01:51<00:05,  1.02it/s]
+Epoch 2:  95%|█████████▌| 103/108 [01:52<00:04,  1.02it/s]
+Epoch 2:  96%|█████████▋| 104/108 [01:53<00:03,  1.03it/s]
+Epoch 2:  97%|█████████▋| 105/108 [01:54<00:02,  1.03it/s]
+Epoch 2:  98%|█████████▊| 106/108 [01:54<00:01,  1.04it/s]
+Epoch 2:  99%|█████████▉| 107/108 [01:55<00:00,  1.03it/s]
+Epoch 2: 100%|██████████| 108/108 [01:56<00:00,  1.19it/s]
+Epoch 2: 100%|██████████| 108/108 [01:56<00:00,  1.08s/it]
+10/20/2026 21:53:12 - INFO - __main__ -    global_step = 324, average loss = 0.441638924986308
+10/20/2026 21:53:12 - INFO - __main__ -   Evaluate the following checkpoints: ['/Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt6_luna_b5_lstmatt/best']
+10/20/2026 21:53:12 - INFO - __main__ -   ----------------init model-----------------------
+10/20/2026 21:53:12 - INFO - __main__ -   ---------------------loading model from /Users/po3na4skld/PycharmProjects/Personal/SynSteg/reports/textsteganalysis/gpt6_luna_b5_lstmatt/best------------
+
+
+10/20/2026 21:53:12 - INFO - __main__ -   Model Configs
+10/20/2026 21:53:12 - INFO - __main__ -   {"MODEL_TYPE": "lstmatt", "embed_size": 128, "hidden_dim": 256, "dropout_rate": 0.2, "criteration": "CrossEntropyLoss", "bidirectional": true}
+10/20/2026 21:53:12 - INFO - __main__ -   Creating features from dataset file at /Users/po3na4skld/PycharmProjects/Personal/SynSteg/datasets/textsteganalysis_runs/gpt6_luna_b5/csv
+10/20/2026 21:53:12 - INFO - __main__ -   Finished creating features
+10/20/2026 21:53:12 - INFO - __main__ -   Finished converting features into tensors
+10/20/2026 21:53:12 - INFO - __main__ -   ***** Running evaluation: best on steganalysis test *****
+10/20/2026 21:53:12 - INFO - __main__ -   Num examples = 1144
+10/20/2026 21:53:12 - INFO - __main__ -   Batch size = 32
+
+Evaluating:   0%|          | 0/36 [00:00<?, ?it/s]
+Evaluating:   3%|▎         | 1/36 [00:00<00:11,  2.99it/s]
+Evaluating:   6%|▌         | 2/36 [00:00<00:11,  3.05it/s]
+Evaluating:   8%|▊         | 3/36 [00:00<00:10,  3.10it/s]
+Evaluating:  11%|█         | 4/36 [00:01<00:10,  3.12it/s]
+Evaluating:  14%|█▍        | 5/36 [00:01<00:09,  3.13it/s]
+Evaluating:  17%|█▋        | 6/36 [00:01<00:09,  3.14it/s]
+Evaluating:  19%|█▉        | 7/36 [00:02<00:09,  3.15it/s]
+Evaluating:  22%|██▏       | 8/36 [00:02<00:08,  3.16it/s]
+Evaluating:  25%|██▌       | 9/36 [00:02<00:08,  3.16it/s]
+Evaluating:  28%|██▊       | 10/36 [00:03<00:08,  3.16it/s]
+Evaluating:  31%|███       | 11/36 [00:03<00:07,  3.15it/s]
+Evaluating:  33%|███▎      | 12/36 [00:03<00:07,  3.16it/s]
+Evaluating:  36%|███▌      | 13/36 [00:04<00:07,  3.17it/s]
+Evaluating:  39%|███▉      | 14/36 [00:04<00:06,  3.17it/s]
+Evaluating:  42%|████▏     | 15/36 [00:04<00:06,  3.16it/s]
+Evaluating:  44%|████▍     | 16/36 [00:05<00:06,  3.17it/s]
+Evaluating:  47%|████▋     | 17/36 [00:05<00:05,  3.17it/s]
+Evaluating:  50%|█████     | 18/36 [00:05<00:05,  3.18it/s]
+Evaluating:  53%|█████▎    | 19/36 [00:06<00:05,  3.16it/s]
+Evaluating:  56%|█████▌    | 20/36 [00:06<00:05,  3.13it/s]
+Evaluating:  58%|█████▊    | 21/36 [00:06<00:04,  3.14it/s]
+Evaluating:  61%|██████    | 22/36 [00:06<00:04,  3.14it/s]
+Evaluating:  64%|██████▍   | 23/36 [00:07<00:04,  3.12it/s]
+Evaluating:  67%|██████▋   | 24/36 [00:07<00:03,  3.12it/s]
+Evaluating:  69%|██████▉   | 25/36 [00:07<00:03,  3.11it/s]
+Evaluating:  72%|███████▏  | 26/36 [00:08<00:03,  3.11it/s]
+Evaluating:  75%|███████▌  | 27/36 [00:08<00:02,  3.10it/s]
+Evaluating:  78%|███████▊  | 28/36 [00:08<00:02,  3.12it/s]
+Evaluating:  81%|████████  | 29/36 [00:09<00:02,  3.11it/s]
+Evaluating:  83%|████████▎ | 30/36 [00:09<00:01,  3.08it/s]
+Evaluating:  86%|████████▌ | 31/36 [00:09<00:01,  3.09it/s]
+Evaluating:  89%|████████▉ | 32/36 [00:10<00:01,  3.11it/s]
+Evaluating:  92%|█████████▏| 33/36 [00:10<00:00,  3.10it/s]
+Evaluating:  94%|█████████▍| 34/36 [00:10<00:00,  3.12it/s]
+Evaluating:  97%|█████████▋| 35/36 [00:11<00:00,  3.12it/s]
+Evaluating: 100%|██████████| 36/36 [00:11<00:00,  3.28it/s]
+Evaluating: 100%|██████████| 36/36 [00:11<00:00,  3.14it/s]
+10/20/2026 21:53:23 - INFO - __main__ -   ***** test results: best *****
+10/20/2026 21:53:23 - INFO - __main__ -     accuracy = 0.7902097902097902
+10/20/2026 21:53:23 - INFO - __main__ -     f1_score = 0.7379912663755459
+10/20/2026 21:53:23 - INFO - __main__ -     macro_f1 = 0.781532076336461
+10/20/2026 21:53:23 - INFO - __main__ -     precision = 0.9441340782122905
+10/20/2026 21:53:23 - INFO - __main__ -     recall = 0.6057347670250897
+10/20/2026 21:53:23 - INFO - __main__ -   Final results
+(repeat times: 1):
+accuracy	79.02%+0.00%
+precision	94.41%+0.00%
+recall	60.57%+0.00%
+f1_score	73.80%+0.00%

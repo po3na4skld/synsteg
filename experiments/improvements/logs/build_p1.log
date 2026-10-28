@@ -1,0 +1,6 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-26 03:03:30,50 huggingface_hub.utils._http WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 2858.25it/s]
+c37_p1: n=299 rec=298 bpw=0.402 replaced=0.117 325s
+imp_p1 pairs 4331 identical 733
+ds_p1: n=300 rec=275 bpw=0.265 replaced=0.077 566s
