@@ -4,6 +4,8 @@ Code, data and experiments of the PhD dissertation of Kyrylo Chernov, «Анал
 стеганографічного захисту інформації з використанням глибинного навчання» (125 Cybersecurity, V. N. Karazin Kharkiv
 National University, 2026).
 
+Author: Kyrylo Chernov ([@po3na4skld](https://github.com/po3na4skld)).
+
 A large language model writes a cover text (the container) and, for every word, a table of 2^b contextual synonyms
 (the secret key). The message bits pick which synonym replaces each word. The receiver needs only the stegotext and
 the key. Published results: [DeepStego, *Computers* 14(5):165, 2025](https://doi.org/10.3390/computers14050165) and
