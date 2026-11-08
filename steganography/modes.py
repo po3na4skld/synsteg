@@ -368,11 +368,13 @@ def _rebuild(key, mode, secret):
     return out
 
 
-def decode(stegotext: str, keyfile: dict | list, passphrase: str | None = None, as_text: bool | None = None) -> str:
+def decode(stegotext: str, keyfile: dict | list, passphrase: str | None = None, as_text: bool | None = None,
+           legacy_2023: bool = False) -> str:
     """Message (text, or bits for as_text=False / a bit-string message) from a stegotext and its key file.
-    A plain list is an old key (before version 2) and decodes exactly as core.decode_message."""
+    A plain list is an old key (before version 2) and decodes exactly as core.decode_message; legacy_2023=True for
+    keys of the 2023 encoder (DS-2023 / GPT-4 series, reports/json_reports)."""
     if isinstance(keyfile, list):
-        return core.decode_message(stegotext, keyfile, clean_output=as_text is not False)[0]
+        return core.decode_message(stegotext, keyfile, clean_output=as_text is not False, legacy_2023=legacy_2023)[0]
     mode = keyfile["mode"]
     if Mode.from_dict(mode).needs_secret:
         if not passphrase:

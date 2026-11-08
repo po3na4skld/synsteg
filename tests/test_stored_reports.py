@@ -30,6 +30,26 @@ def test_old_keys_decode():
     assert len(reps) == 300
 
 
+def _bits(m):
+    return m if set(m) <= {"0", "1"} else "".join(f"{ord(c):08b}" for c in m)
+
+
+@pytest.mark.parametrize("folder,exact,prefix", [
+    ("gpt_omni_reports", 0, 299),   # encoder of 2024 had no capacity check: covers too short, 54% of bits embedded
+    ("json_reports", 288, 299),     # DS-2023: 12 capacity shortfalls
+    ("gpt6_luna_missing", 300, 300),
+    ("qwen_missing_b3", 75, 75),
+])
+def test_recovery_against_original_message(folder, exact, prefix):
+    """Recovery audit: decoded bits vs the ORIGINAL message (not vs the stored decoded_message)."""
+    reps = load(folder)
+    legacy = folder == "json_reports"  # keys of the 2023 encoder
+    got = [(_bits(d["message"]), decode(d["encoded_message"], d["secret_key"], as_text=False, legacy_2023=legacy))
+           for d in reps]
+    assert sum(m == g for m, g in got) == exact
+    assert sum(bool(g) and m.startswith(g) for m, g in got) == prefix  # decoded bits are a prefix of the message
+
+
 def test_binarize_rules():
     # 30 of 32 distinct -> usable, codes 11110/11111 absent; 20 of 32 -> unusable
     k = binarize_synonyms("base", [f"w{i}" for i in range(30)] + ["w0", "w1"], 5)

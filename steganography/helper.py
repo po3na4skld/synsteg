@@ -27,10 +27,12 @@ def check_endswith_special(token: str) -> (str, str):
     return '', token
 
 
-def has_duplicates(replacement_token: dict) -> bool:
-    """Check if the replacement token has duplicated values"""
+def has_duplicates(replacement_token: dict, base_in_values: bool = False) -> bool:
+    """Check if the replacement token has duplicated values. base_in_values=True also counts a table that contains
+    the original word (the rule of the 2023 encoder, DS-2023 / GPT-4 series)."""
     tokens = list(replacement_token.values())[0]
-    if len(tokens) != len(set(tokens.values())):
+    key = list(replacement_token.keys())[0]
+    if len(tokens) != len(set(tokens.values())) or (base_in_values and key in tokens.values()):
         return True
     return False
 

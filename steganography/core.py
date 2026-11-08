@@ -110,7 +110,7 @@ def embed(container: str, secret_key: SYNONYM_MAP, binary_message: str) -> tuple
     return " ".join(encoded_message), current_idx
 
 
-def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool = True) -> str:
+def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool = True, legacy_2023: bool = False) -> str:
     """
     Decode a message hidden within a container using a provided secret key.
 
@@ -144,7 +144,7 @@ def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool =
             span = clean_encoded_message[current_idx:current_idx + len(token)]
             is_end_of_word = helper.check_is_end_of_word(clean_encoded_message, current_idx + len(token))
 
-            if helper.has_duplicates(replacement_token):
+            if helper.has_duplicates(replacement_token, legacy_2023):  # 2023 keys: original word in table = no bits
                 current_idx += len(base_token) + 1
                 is_found = True
                 break
@@ -155,7 +155,7 @@ def decode_message(container: str, secret_key: SYNONYM_MAP, clean_output: bool =
                 is_found = True
                 break
 
-        if not is_found:  # the original word left in place carries no bits
+        if not is_found and not legacy_2023:  # the original word left in place carries no bits (2024+ encoder)
             span = clean_encoded_message[current_idx:current_idx + len(base_token)]
             if span.lower() == base_token.lower() and helper.check_is_end_of_word(clean_encoded_message, current_idx + len(base_token)):
                 current_idx += len(base_token) + 1
